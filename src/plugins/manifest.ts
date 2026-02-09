@@ -4,6 +4,7 @@ import path from "node:path";
 import type { PluginConfigUiHint, PluginKind } from "./types.js";
 
 export const PLUGIN_MANIFEST_FILENAME = "clawdbot.plugin.json";
+export const PLUGIN_MANIFEST_FILENAME_NEW = "openclaw.plugin.json";
 
 export type PluginManifest = {
   id: string;
@@ -32,6 +33,11 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 }
 
 export function resolvePluginManifestPath(rootDir: string): string {
+  // Try new name first, fallback to legacy name
+  const newPath = path.join(rootDir, PLUGIN_MANIFEST_FILENAME_NEW);
+  if (fs.existsSync(newPath)) {
+    return newPath;
+  }
   return path.join(rootDir, PLUGIN_MANIFEST_FILENAME);
 }
 
@@ -132,4 +138,5 @@ export type PackageManifest = {
   version?: string;
   description?: string;
   clawdbot?: ClawdbotPackageManifest;
+  openclaw?: ClawdbotPackageManifest; // Support new naming
 };

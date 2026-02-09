@@ -115,6 +115,13 @@ export const commandRegistry: CommandRegistration[] = [
   {
     id: "configure",
     register: ({ program }) => registerConfigureCommand(program),
+    routes: [
+      {
+        match: (path) => path[0] === "configure" || path[0] === "config",
+        loadPlugins: true,
+        run: async () => false, // Handled by Commander
+      },
+    ],
   },
   {
     id: "config",

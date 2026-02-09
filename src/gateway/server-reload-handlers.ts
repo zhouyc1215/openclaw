@@ -15,6 +15,7 @@ import type { ChannelKind, GatewayReloadPlan } from "./config-reload.js";
 import { resolveHooksConfig } from "./hooks.js";
 import { startBrowserControlServerIfEnabled } from "./server-browser.js";
 import { buildGatewayCronService, type GatewayCronState } from "./server-cron.js";
+import { areAllToolsDisabled, cleanAllSessionTranscripts } from "./session-tool-cleanup.js";
 
 type GatewayHotReloadState = {
   hooksConfig: ReturnType<typeof resolveHooksConfig>;
@@ -39,7 +40,11 @@ export function createGatewayReloadHandlers(params: {
   logChannels: { info: (msg: string) => void; error: (msg: string) => void };
   logCron: { error: (msg: string) => void };
   logReload: { info: (msg: string) => void; warn: (msg: string) => void };
+  prevConfig?: ReturnType<typeof loadConfig>;
 }) {
+  // Track previous config for comparison
+  let currentConfig = params.prevConfig;
+
   const applyHotReload = async (
     plan: GatewayReloadPlan,
     nextConfig: ReturnType<typeof loadConfig>,
@@ -47,6 +52,28 @@ export function createGatewayReloadHandlers(params: {
     setGatewaySigusr1RestartPolicy({ allowExternal: nextConfig.commands?.restart === true });
     const state = params.getState();
     const nextState = { ...state };
+
+    // Check if tools.deny changed to disable all tools
+    const prevToolsDeny = currentConfig?.tools?.deny;
+    const nextToolsDeny = nextConfig.tools?.deny;
+    const toolsWereEnabled = !areAllToolsDisabled(prevToolsDeny);
+    const toolsNowDisabled = areAllToolsDisabled(nextToolsDeny);
+
+    if (toolsWereEnabled && toolsNowDisabled) {
+      params.logReload.info(
+        "tools.deny changed to disable all tools; cleaning session transcripts to remove tool call history",
+      );
+
+      // Clean all session transcripts asynchronously
+      void cleanAllSessionTranscripts({
+        log: (msg) => params.logReload.info(msg),
+      }).catch((err) => {
+        params.logReload.warn(`session cleanup failed: ${String(err)}`);
+      });
+    }
+
+    // Update current config for next comparison
+    currentConfig = nextConfig;
 
     if (plan.reloadHooks) {
       try {

@@ -21,6 +21,7 @@ type PackageManifest = {
   version?: string;
   dependencies?: Record<string, string>;
   clawdbot?: { extensions?: string[] };
+  openclaw?: { extensions?: string[] };
 };
 
 export type InstallPluginResult =
@@ -53,13 +54,14 @@ function safeFileName(input: string): string {
 }
 
 async function ensureClawdbotExtensions(manifest: PackageManifest) {
-  const extensions = manifest.clawdbot?.extensions;
+  // Support both clawdbot.extensions (legacy) and openclaw.extensions (new)
+  const extensions = manifest.openclaw?.extensions ?? manifest.clawdbot?.extensions;
   if (!Array.isArray(extensions)) {
-    throw new Error("package.json missing clawdbot.extensions");
+    throw new Error("package.json missing clawdbot.extensions or openclaw.extensions");
   }
   const list = extensions.map((e) => (typeof e === "string" ? e.trim() : "")).filter(Boolean);
   if (list.length === 0) {
-    throw new Error("package.json clawdbot.extensions is empty");
+    throw new Error("package.json clawdbot.extensions or openclaw.extensions is empty");
   }
   return list;
 }

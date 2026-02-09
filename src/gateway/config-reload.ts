@@ -60,6 +60,7 @@ const BASE_RELOAD_RULES: ReloadRule[] = [
     kind: "hot",
     actions: ["restart-browser-control"],
   },
+  { prefix: "tools.deny", kind: "hot" },
 ];
 
 const BASE_RELOAD_RULES_TAIL: ReloadRule[] = [

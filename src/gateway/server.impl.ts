@@ -528,6 +528,7 @@ export async function startGatewayServer(
     logChannels,
     logCron,
     logReload,
+    prevConfig: cfgAtStart,
   });
 
   const configReloader = startGatewayConfigReloader({
