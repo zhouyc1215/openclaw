@@ -62,7 +62,9 @@ export function printModelTable(
 
     const coloredInput = colorize(
       rich,
-      row.input.includes("image") ? theme.accentBright : theme.info,
+      typeof row.input === "string" && row.input.includes("image")
+        ? theme.accentBright
+        : theme.info,
       inputLabel,
     );
     const coloredLocal = colorize(

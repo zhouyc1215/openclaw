@@ -197,8 +197,16 @@ export async function runEmbeddedAttempt(
 
     const agentDir = params.agentDir ?? resolveClawdbotAgentDir();
 
+    // Ensure model.input is always an array (defensive fix for external SDK)
+    // The @mariozechner/pi-coding-agent package expects model.input to be defined
+    // Create a safe copy of the model with guaranteed input array
+    const safeModel = {
+      ...params.model,
+      input: params.model.input ?? ["text"],
+    };
+
     // Check if the model supports native image input
-    const modelHasVision = params.model.input?.includes("image") ?? false;
+    const modelHasVision = safeModel.input?.includes("image") ?? false;
     const toolsRaw = params.disableTools
       ? []
       : createClawdbotCodingTools({
@@ -220,9 +228,9 @@ export async function runEmbeddedAttempt(
           workspaceDir: effectiveWorkspace,
           config: params.config,
           abortSignal: runAbortController.signal,
-          modelProvider: params.model.provider,
+          modelProvider: safeModel.provider,
           modelId: params.modelId,
-          modelAuthMode: resolveModelAuthMode(params.model.provider, params.config),
+          modelAuthMode: resolveModelAuthMode(safeModel.provider, params.config),
           currentChannelId: params.currentChannelId,
           currentThreadTs: params.currentThreadTs,
           replyToMode: params.replyToMode,
@@ -448,7 +456,7 @@ export async function runEmbeddedAttempt(
         agentDir,
         authStorage: params.authStorage,
         modelRegistry: params.modelRegistry,
-        model: params.model,
+        model: safeModel,
         thinkingLevel: mapThinkingLevel(params.thinkLevel),
         systemPrompt,
         tools: builtInTools,
@@ -471,7 +479,7 @@ export async function runEmbeddedAttempt(
         sessionKey: params.sessionKey,
         provider: params.provider,
         modelId: params.modelId,
-        modelApi: params.model.api,
+        modelApi: safeModel.api,
         workspaceDir: params.workspaceDir,
       });
       const anthropicPayloadLogger = createAnthropicPayloadLogger({
@@ -481,7 +489,7 @@ export async function runEmbeddedAttempt(
         sessionKey: params.sessionKey,
         provider: params.provider,
         modelId: params.modelId,
-        modelApi: params.model.api,
+        modelApi: safeModel.api,
         workspaceDir: params.workspaceDir,
       });
 
@@ -513,7 +521,7 @@ export async function runEmbeddedAttempt(
       try {
         const prior = await sanitizeSessionHistory({
           messages: activeSession.messages,
-          modelApi: params.model.api,
+          modelApi: safeModel.api,
           modelId: params.modelId,
           provider: params.provider,
           sessionManager,
