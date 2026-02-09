@@ -239,6 +239,17 @@ export function buildAgentSystemPrompt(params: {
 
   const rawToolNames = (params.toolNames ?? []).map((tool) => tool.trim());
   const canonicalToolNames = rawToolNames.filter(Boolean);
+
+  // Debug: log tool count
+  if (canonicalToolNames.length === 0) {
+    console.log("[system-prompt] No tools available - tools disabled mode");
+  } else {
+    console.log(
+      `[system-prompt] ${canonicalToolNames.length} tools available:`,
+      canonicalToolNames.slice(0, 5),
+    );
+  }
+
   // Preserve caller casing while deduping tool names by lowercase.
   const canonicalByNormalized = new Map<string, string>();
   for (const name of canonicalToolNames) {
@@ -334,28 +345,18 @@ export function buildAgentSystemPrompt(params: {
     "You are a personal assistant running inside Clawdbot.",
     "",
     "## Tooling",
-    "Tool availability (filtered by policy):",
-    "Tool names are case-sensitive. Call tools exactly as listed.",
     toolLines.length > 0
-      ? toolLines.join("\n")
+      ? [
+          "Tool availability (filtered by policy):",
+          "Tool names are case-sensitive. Call tools exactly as listed.",
+          toolLines.join("\n"),
+          "TOOLS.md does not control tool availability; it is user guidance for how to use external tools.",
+          "If a task is more complex or takes longer, spawn a sub-agent. It will do the work for you and ping you when it's done. You can always check up on it.",
+        ].join("\n")
       : [
-          "Pi lists the standard tools above. This runtime enables:",
-          "- grep: search file contents for patterns",
-          "- find: find files by glob pattern",
-          "- ls: list directory contents",
-          "- apply_patch: apply multi-file patches",
-          `- ${execToolName}: run shell commands (supports background via yieldMs/background)`,
-          `- ${processToolName}: manage background exec sessions`,
-          "- browser: control clawd's dedicated browser",
-          "- canvas: present/eval/snapshot the Canvas",
-          "- nodes: list/describe/notify/camera/screen on paired nodes",
-          "- cron: manage cron jobs and wake events (use for reminders; when scheduling a reminder, write the systemEvent text as something that will read like a reminder when it fires, and mention that it is a reminder depending on the time gap between setting and firing; include recent context in reminder text if appropriate)",
-          "- sessions_list: list sessions",
-          "- sessions_history: fetch session history",
-          "- sessions_send: send to another session",
+          "Tools are disabled in this session. Do not call tools.",
+          "Respond directly to user queries with text only.",
         ].join("\n"),
-    "TOOLS.md does not control tool availability; it is user guidance for how to use external tools.",
-    "If a task is more complex or takes longer, spawn a sub-agent. It will do the work for you and ping you when it's done. You can always check up on it.",
     "",
     "## Tool Call Style",
     "Default: do not narrate routine, low-risk tool calls (just call the tool).",
