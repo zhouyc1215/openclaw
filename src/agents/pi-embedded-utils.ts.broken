@@ -345,6 +345,8 @@ export function inferToolMetaFromArgs(toolName: string, args: unknown): string |
   const display = resolveToolDisplay({ name: toolName, args });
   return formatToolDetail(display);
 }
+import type { AssistantMessage, ToolCall, TextContent } from "@mariozechner/pi-ai";
+import { randomUUID } from "crypto";
 
 /**
  * 解析后的工具调用信息
@@ -359,16 +361,18 @@ interface ParsedToolCall {
  */
 function hasMinimaxXmlToolCall(text: string): boolean {
   if (!text) return false;
-
+  
   // 检测多种可能的 XML 格式
   return (
-    /<tool_call\b/i.test(text) || /<invoke\b/i.test(text) || /<minimax:tool_call\b/i.test(text)
+    /<tool_call\b/i.test(text) ||
+    /<invoke\b/i.test(text) ||
+    /<minimax:tool_call\b/i.test(text)
   );
 }
 
 /**
  * 从 XML 内容中提取工具调用信息
- *
+ * 
  * 支持的格式:
  * 1. <tool_call><name>func</name><arguments>{...}</arguments></tool_call>
  * 2. <invoke><exec><cmd>...</cmd></exec></invoke>
@@ -376,21 +380,21 @@ function hasMinimaxXmlToolCall(text: string): boolean {
  */
 function parseMinimaxXmlToolCalls(content: string): ParsedToolCall[] {
   const toolCalls: ParsedToolCall[] = [];
-
+  
   // 格式 1: 标准 tool_call 格式
   const toolCallRegex = /<tool_call[^>]*>([\s\S]*?)<\/tool_call>/gi;
   let match: RegExpExecArray | null;
-
+  
   while ((match = toolCallRegex.exec(content)) !== null) {
     const toolCallContent = match[1];
-
+    
     const nameMatch = toolCallContent.match(/<name>([^<]+)<\/name>/i);
     const argsMatch = toolCallContent.match(/<arguments>([\s\S]*?)<\/arguments>/i);
-
+    
     if (nameMatch) {
       const name = nameMatch[1].trim();
       let args: Record<string, any> = {};
-
+      
       if (argsMatch) {
         const argsStr = argsMatch[1].trim();
         try {
@@ -400,47 +404,47 @@ function parseMinimaxXmlToolCalls(content: string): ParsedToolCall[] {
           args = { value: argsStr };
         }
       }
-
+      
       toolCalls.push({ name, arguments: args });
     }
   }
-
+  
   // 格式 2: invoke/exec 格式 (MiniMax 特有)
   if (toolCalls.length === 0) {
     const invokeRegex = /<invoke[^>]*>([\s\S]*?)<\/invoke>/gi;
-
+    
     while ((match = invokeRegex.exec(content)) !== null) {
       const invokeContent = match[1];
-
+      
       // 检测 exec 类型
       if (/<exec[^>]*>/i.test(invokeContent)) {
         const cmdMatch = invokeContent.match(/<cmd>([^<]+)<\/cmd>/i);
         const timeoutMatch = invokeContent.match(/<timeout>([^<]*)<\/timeout>/i);
         const envMatch = invokeContent.match(/<env>([^<]*)<\/env>/i);
-
+        
         if (cmdMatch) {
           const args: Record<string, any> = {
             cmd: cmdMatch[1].trim(),
           };
-
+          
           if (timeoutMatch && timeoutMatch[1].trim()) {
             args.timeout = timeoutMatch[1].trim();
           }
           if (envMatch && envMatch[1].trim()) {
             args.env = envMatch[1].trim();
           }
-
+          
           toolCalls.push({
             name: "exec",
             arguments: args,
           });
         }
       }
-
+      
       // 检测 read 类型
       if (/<read[^>]*>/i.test(invokeContent)) {
         const pathMatch = invokeContent.match(/<path>([^<]+)<\/path>/i);
-
+        
         if (pathMatch) {
           toolCalls.push({
             name: "read",
@@ -450,12 +454,12 @@ function parseMinimaxXmlToolCalls(content: string): ParsedToolCall[] {
           });
         }
       }
-
+      
       // 检测 write 类型
       if (/<write[^>]*>/i.test(invokeContent)) {
         const pathMatch = invokeContent.match(/<path>([^<]+)<\/path>/i);
         const contentMatch = invokeContent.match(/<content>([\s\S]*?)<\/content>/i);
-
+        
         if (pathMatch) {
           toolCalls.push({
             name: "write",
@@ -468,7 +472,7 @@ function parseMinimaxXmlToolCalls(content: string): ParsedToolCall[] {
       }
     }
   }
-
+  
   return toolCalls;
 }
 
@@ -477,74 +481,74 @@ function parseMinimaxXmlToolCalls(content: string): ParsedToolCall[] {
  */
 function stripXmlToolCallTags(content: string): string {
   let cleaned = content;
-
+  
   // 移除 tool_call 标签
   cleaned = cleaned.replace(/<tool_call[^>]*>[\s\S]*?<\/tool_call>/gi, "");
-
+  
   // 移除 invoke 标签
   cleaned = cleaned.replace(/<invoke[^>]*>[\s\S]*?<\/invoke>/gi, "");
-
+  
   // 移除 minimax:tool_call 标签
   cleaned = cleaned.replace(/<\/?minimax:tool_call[^>]*>/gi, "");
-
+  
   // 移除多余的空白
   cleaned = cleaned.trim();
-
+  
   return cleaned;
 }
 
 /**
  * 转换 MiniMax XML 工具调用为标准 ToolCall 对象
- *
+ * 
  * 在 handleMessageEnd 中调用此函数,在 AssistantMessage 被处理之前拦截并转换
- *
+ * 
  * @param message - AssistantMessage 对象
  * @returns 是否进行了转换
  */
 export function convertMinimaxXmlToolCalls(message: AssistantMessage): boolean {
   if (!Array.isArray(message.content)) return false;
-
+  
   let converted = false;
-  const newContent: (typeof message.content)[number][] = [];
-
+  const newContent: (TextContent | ToolCall)[] = [];
+  
   for (const block of message.content) {
     if (!block || typeof block !== "object") {
       newContent.push(block);
       continue;
     }
-
+    
     const record = block as unknown as Record<string, unknown>;
-
+    
     // 只处理 TextContent
     if (record.type === "text" && typeof record.text === "string") {
       const text = record.text;
-
+      
       // 检测是否包含 XML 工具调用
       if (hasMinimaxXmlToolCall(text)) {
         // 解析工具调用
         const parsedToolCalls = parseMinimaxXmlToolCalls(text);
-
+        
         if (parsedToolCalls.length > 0) {
           // 转换为 ToolCall 对象
           for (const tc of parsedToolCalls) {
-            const toolCall = {
-              type: "toolCall" as const,
-              id: `call_${Math.random().toString(36).substring(2, 26)}`,
+            const toolCall: ToolCall = {
+              type: "toolCall",
+              id: `call_${randomUUID().replace(/-/g, "").substring(0, 24)}`,
               name: tc.name,
               arguments: tc.arguments,
             };
-            newContent.push(toolCall as any);
+            newContent.push(toolCall);
           }
-
+          
           // 移除 XML 标记后的剩余文本
           const cleanedText = stripXmlToolCallTags(text);
           if (cleanedText) {
             newContent.push({
               type: "text",
               text: cleanedText,
-            } as any);
+            });
           }
-
+          
           converted = true;
         } else {
           // 解析失败,保留原文本但移除 XML
@@ -552,7 +556,7 @@ export function convertMinimaxXmlToolCalls(message: AssistantMessage): boolean {
           newContent.push({
             type: "text",
             text: cleanedText || "抱歉,我遇到了一些技术问题。",
-          } as any);
+          });
           converted = true;
         }
       } else {
@@ -561,17 +565,251 @@ export function convertMinimaxXmlToolCalls(message: AssistantMessage): boolean {
       }
     } else {
       // 非 TextContent,原样保留
-      newContent.push(block);
+      newContent.push(block as any);
     }
   }
-
+  
   if (converted) {
     message.content = newContent as any;
     // 更新 stopReason 为 toolUse
-    if (newContent.some((c: any) => c.type === "toolCall")) {
+    if (newContent.some((c) => (c as any).type === "toolCall")) {
       message.stopReason = "toolUse";
     }
   }
+  
+  return converted;
+}
+import type { AssistantMessage, ToolCall, TextContent } from "@mariozechner/pi-ai";
+import { randomUUID } from "crypto";
 
+/**
+ * 解析后的工具调用信息
+ */
+interface ParsedToolCall {
+  name: string;
+  arguments: Record<string, any>;
+}
+
+/**
+ * 检测内容是否包含 MiniMax XML 工具调用
+ */
+function hasMinimaxXmlToolCall(text: string): boolean {
+  if (!text) return false;
+  
+  // 检测多种可能的 XML 格式
+  return (
+    /<tool_call\b/i.test(text) ||
+    /<invoke\b/i.test(text) ||
+    /<minimax:tool_call\b/i.test(text)
+  );
+}
+
+/**
+ * 从 XML 内容中提取工具调用信息
+ * 
+ * 支持的格式:
+ * 1. <tool_call><name>func</name><arguments>{...}</arguments></tool_call>
+ * 2. <invoke><exec><cmd>...</cmd></exec></invoke>
+ * 3. <minimax:tool_call>...</minimax:tool_call>
+ */
+function parseMinimaxXmlToolCalls(content: string): ParsedToolCall[] {
+  const toolCalls: ParsedToolCall[] = [];
+  
+  // 格式 1: 标准 tool_call 格式
+  const toolCallRegex = /<tool_call[^>]*>([\s\S]*?)<\/tool_call>/gi;
+  let match: RegExpExecArray | null;
+  
+  while ((match = toolCallRegex.exec(content)) !== null) {
+    const toolCallContent = match[1];
+    
+    const nameMatch = toolCallContent.match(/<name>([^<]+)<\/name>/i);
+    const argsMatch = toolCallContent.match(/<arguments>([\s\S]*?)<\/arguments>/i);
+    
+    if (nameMatch) {
+      const name = nameMatch[1].trim();
+      let args: Record<string, any> = {};
+      
+      if (argsMatch) {
+        const argsStr = argsMatch[1].trim();
+        try {
+          args = JSON.parse(argsStr);
+        } catch {
+          // 如果不是 JSON,尝试作为单个参数
+          args = { value: argsStr };
+        }
+      }
+      
+      toolCalls.push({ name, arguments: args });
+    }
+  }
+  
+  // 格式 2: invoke/exec 格式 (MiniMax 特有)
+  if (toolCalls.length === 0) {
+    const invokeRegex = /<invoke[^>]*>([\s\S]*?)<\/invoke>/gi;
+    
+    while ((match = invokeRegex.exec(content)) !== null) {
+      const invokeContent = match[1];
+      
+      // 检测 exec 类型
+      if (/<exec[^>]*>/i.test(invokeContent)) {
+        const cmdMatch = invokeContent.match(/<cmd>([^<]+)<\/cmd>/i);
+        const timeoutMatch = invokeContent.match(/<timeout>([^<]*)<\/timeout>/i);
+        const envMatch = invokeContent.match(/<env>([^<]*)<\/env>/i);
+        
+        if (cmdMatch) {
+          const args: Record<string, any> = {
+            cmd: cmdMatch[1].trim(),
+          };
+          
+          if (timeoutMatch && timeoutMatch[1].trim()) {
+            args.timeout = timeoutMatch[1].trim();
+          }
+          if (envMatch && envMatch[1].trim()) {
+            args.env = envMatch[1].trim();
+          }
+          
+          toolCalls.push({
+            name: "exec",
+            arguments: args,
+          });
+        }
+      }
+      
+      // 检测 read 类型
+      if (/<read[^>]*>/i.test(invokeContent)) {
+        const pathMatch = invokeContent.match(/<path>([^<]+)<\/path>/i);
+        
+        if (pathMatch) {
+          toolCalls.push({
+            name: "read",
+            arguments: {
+              path: pathMatch[1].trim(),
+            },
+          });
+        }
+      }
+      
+      // 检测 write 类型
+      if (/<write[^>]*>/i.test(invokeContent)) {
+        const pathMatch = invokeContent.match(/<path>([^<]+)<\/path>/i);
+        const contentMatch = invokeContent.match(/<content>([\s\S]*?)<\/content>/i);
+        
+        if (pathMatch) {
+          toolCalls.push({
+            name: "write",
+            arguments: {
+              path: pathMatch[1].trim(),
+              content: contentMatch ? contentMatch[1].trim() : "",
+            },
+          });
+        }
+      }
+    }
+  }
+  
+  return toolCalls;
+}
+
+/**
+ * 从内容中移除 XML 工具调用标记
+ */
+function stripXmlToolCallTags(content: string): string {
+  let cleaned = content;
+  
+  // 移除 tool_call 标签
+  cleaned = cleaned.replace(/<tool_call[^>]*>[\s\S]*?<\/tool_call>/gi, "");
+  
+  // 移除 invoke 标签
+  cleaned = cleaned.replace(/<invoke[^>]*>[\s\S]*?<\/invoke>/gi, "");
+  
+  // 移除 minimax:tool_call 标签
+  cleaned = cleaned.replace(/<\/?minimax:tool_call[^>]*>/gi, "");
+  
+  // 移除多余的空白
+  cleaned = cleaned.trim();
+  
+  return cleaned;
+}
+
+/**
+ * 转换 MiniMax XML 工具调用为标准 ToolCall 对象
+ * 
+ * 在 handleMessageEnd 中调用此函数,在 AssistantMessage 被处理之前拦截并转换
+ * 
+ * @param message - AssistantMessage 对象
+ * @returns 是否进行了转换
+ */
+export function convertMinimaxXmlToolCalls(message: AssistantMessage): boolean {
+  if (!Array.isArray(message.content)) return false;
+  
+  let converted = false;
+  const newContent: (TextContent | ToolCall)[] = [];
+  
+  for (const block of message.content) {
+    if (!block || typeof block !== "object") {
+      newContent.push(block);
+      continue;
+    }
+    
+    const record = block as unknown as Record<string, unknown>;
+    
+    // 只处理 TextContent
+    if (record.type === "text" && typeof record.text === "string") {
+      const text = record.text;
+      
+      // 检测是否包含 XML 工具调用
+      if (hasMinimaxXmlToolCall(text)) {
+        // 解析工具调用
+        const parsedToolCalls = parseMinimaxXmlToolCalls(text);
+        
+        if (parsedToolCalls.length > 0) {
+          // 转换为 ToolCall 对象
+          for (const tc of parsedToolCalls) {
+            const toolCall: ToolCall = {
+              type: "toolCall",
+              id: `call_${randomUUID().replace(/-/g, "").substring(0, 24)}`,
+              name: tc.name,
+              arguments: tc.arguments,
+            };
+            newContent.push(toolCall);
+          }
+          
+          // 移除 XML 标记后的剩余文本
+          const cleanedText = stripXmlToolCallTags(text);
+          if (cleanedText) {
+            newContent.push({
+              type: "text",
+              text: cleanedText,
+            });
+          }
+          
+          converted = true;
+        } else {
+          // 解析失败,保留原文本但移除 XML
+          const cleanedText = stripXmlToolCallTags(text);
+          newContent.push({
+            type: "text",
+            text: cleanedText || "抱歉,我遇到了一些技术问题。",
+          });
+          converted = true;
+        }
+      } else {
+        // 不包含 XML 工具调用,原样保留
+        newContent.push(block);
+      }
+    } else {
+      // 非 TextContent,原样保留
+      newContent.push(block as any);
+    }
+  }
+  
+  if (converted) {
+    message.content = newContent as any;
+    // 更新 stopReason 为 toolUse
+    if (newContent.some((c) => (c as any).type === "toolCall")) {
+      message.stopReason = "toolUse";
+    }
+  }
+  
   return converted;
 }

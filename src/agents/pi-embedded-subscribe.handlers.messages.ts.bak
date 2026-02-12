@@ -16,7 +16,6 @@ import {
   extractThinkingFromTaggedText,
   formatReasoningMessage,
   promoteThinkingTagsToBlocks,
-  convertMinimaxXmlToolCalls,
 } from "./pi-embedded-utils.js";
 import { createInlineCodeState } from "../markdown/code-spans.js";
 
@@ -164,7 +163,6 @@ export function handleMessageEnd(
   if (msg?.role !== "assistant") return;
 
   const assistantMessage = msg as AssistantMessage;
-  convertMinimaxXmlToolCalls(assistantMessage);
   promoteThinkingTagsToBlocks(assistantMessage);
 
   const rawText = extractAssistantText(assistantMessage);
