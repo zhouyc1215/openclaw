@@ -156,9 +156,68 @@ export function createCronTool(opts?: CronToolOptions): AnyAgentTool {
           );
         case "add": {
           if (!params.job || typeof params.job !== "object") {
-            throw new Error("job required");
+            throw new Error(
+              "job required. Example: { name: 'Daily Task', schedule: { kind: 'cron', expr: '0 9 * * *' }, " +
+                "sessionTarget: 'main', wakeMode: 'next-heartbeat', " +
+                "payload: { kind: 'systemEvent', text: 'Your task description' } }",
+            );
           }
           const job = normalizeCronJobCreate(params.job) ?? params.job;
+
+          // Pre-validate payload to provide better error messages
+          if (job && typeof job === "object" && "payload" in job) {
+            const payload = (job as { payload?: { kind?: string } }).payload;
+            const sessionTarget = (job as { sessionTarget?: string }).sessionTarget;
+
+            if (payload && typeof payload === "object") {
+              const kind = payload.kind;
+
+              // Check for invalid kind values
+              if (kind && kind !== "systemEvent" && kind !== "agentTurn") {
+                throw new Error(
+                  `Invalid payload.kind: "${kind}". Must be "systemEvent" (for main session) or "agentTurn" (for isolated session). ` +
+                    `Cron jobs cannot directly execute commands. For main session, use: { kind: "systemEvent", text: "Task description" }. ` +
+                    `For isolated session, use: { kind: "agentTurn", message: "Task description" }.`,
+                );
+              }
+
+              // Check sessionTarget and payload.kind match
+              if (sessionTarget === "main" && kind && kind !== "systemEvent") {
+                throw new Error(
+                  `sessionTarget "main" requires payload.kind "systemEvent" (not "${kind}"). ` +
+                    `Example: { kind: "systemEvent", text: "Your task description" }`,
+                );
+              }
+
+              if (sessionTarget === "isolated" && kind && kind !== "agentTurn") {
+                throw new Error(
+                  `sessionTarget "isolated" requires payload.kind "agentTurn" (not "${kind}"). ` +
+                    `Example: { kind: "agentTurn", message: "Your task description" }`,
+                );
+              }
+
+              // Check for required fields based on kind
+              if (kind === "systemEvent") {
+                const text = (payload as { text?: unknown }).text;
+                if (typeof text !== "string" || !text.trim()) {
+                  throw new Error(
+                    'payload.kind "systemEvent" requires a non-empty "text" field. ' +
+                      `Example: { kind: "systemEvent", text: "Your task description" }`,
+                  );
+                }
+              }
+
+              if (kind === "agentTurn") {
+                const message = (payload as { message?: unknown }).message;
+                if (typeof message !== "string" || !message.trim()) {
+                  throw new Error(
+                    'payload.kind "agentTurn" requires a non-empty "message" field (not "text"). ' +
+                      `Example: { kind: "agentTurn", message: "Your task description" }`,
+                  );
+                }
+              }
+            }
+          }
           if (job && typeof job === "object" && !("agentId" in job)) {
             const cfg = loadConfig();
             const agentId = opts?.agentSessionKey

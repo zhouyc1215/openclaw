@@ -8,6 +8,7 @@ import type { ClientToolDefinition } from "./pi-embedded-runner/run/params.js";
 import { logDebug, logError } from "../logger.js";
 import { normalizeToolName } from "./tool-policy.js";
 import { jsonResult } from "./tools/common.js";
+import { ToolRetryGuard } from "./tool-retry-guard.js";
 
 // biome-ignore lint/suspicious/noExplicitAny: TypeBox schema type from pi-agent-core uses a different module instance.
 type AnyAgentTool = AgentTool<any, unknown>;
@@ -23,7 +24,10 @@ function describeToolExecutionError(err: unknown): {
   return { message: String(err) };
 }
 
-export function toToolDefinitions(tools: AnyAgentTool[]): ToolDefinition[] {
+export function toToolDefinitions(
+  tools: AnyAgentTool[],
+  guard?: ToolRetryGuard,
+): ToolDefinition[] {
   return tools.map((tool) => {
     const name = tool.name || "tool";
     const normalizedName = normalizeToolName(name);
@@ -42,8 +46,32 @@ export function toToolDefinitions(tools: AnyAgentTool[]): ToolDefinition[] {
       ): Promise<AgentToolResult<unknown>> => {
         // KNOWN: pi-coding-agent `ToolDefinition.execute` has a different signature/order
         // than pi-agent-core `AgentTool.execute`. This adapter keeps our existing tools intact.
+        
+        // Check retry guard before execution
+        if (guard) {
+          const blockCheck = guard.shouldBlockTool(normalizedName, params as Record<string, unknown>);
+          if (blockCheck.blocked) {
+            const errorMsg =
+              `Tool "${normalizedName}" has failed ${blockCheck.failureCount} consecutive times with similar parameters. ` +
+              `Stopping execution to prevent infinite loop. ` +
+              `Please review the error messages and try a different approach.`;
+            logError(`[tools] ${normalizedName} blocked by retry guard: ${blockCheck.reason}`);
+            return jsonResult({
+              status: "error",
+              tool: normalizedName,
+              error: errorMsg,
+              blocked: true,
+            });
+          }
+        }
+        
         try {
-          return await tool.execute(toolCallId, params, signal, onUpdate);
+          const result = await tool.execute(toolCallId, params, signal, onUpdate);
+          
+          // Tool succeeded - no need to record anything
+          // (guard only tracks failures)
+          
+          return result;
         } catch (err) {
           if (signal?.aborted) throw err;
           const name =
@@ -56,6 +84,17 @@ export function toToolDefinitions(tools: AnyAgentTool[]): ToolDefinition[] {
             logDebug(`tools: ${normalizedName} failed stack:\n${described.stack}`);
           }
           logError(`[tools] ${normalizedName} failed: ${described.message}`);
+          
+          // Record failure in guard
+          if (guard) {
+            guard.recordFailure({
+              toolName: normalizedName,
+              timestamp: Date.now(),
+              errorMessage: described.message,
+              params: params as Record<string, unknown>,
+            });
+          }
+          
           return jsonResult({
             status: "error",
             tool: normalizedName,

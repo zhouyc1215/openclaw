@@ -43,6 +43,7 @@ import { resolveSandboxContext } from "../../sandbox.js";
 import { guardSessionManager } from "../../session-tool-result-guard-wrapper.js";
 import { resolveTranscriptPolicy } from "../../transcript-policy.js";
 import { acquireSessionWriteLock } from "../../session-write-lock.js";
+import { ToolRetryGuard } from "../../tool-retry-guard.js";
 import {
   applySkillEnvOverrides,
   applySkillEnvOverridesFromSnapshot,
@@ -436,9 +437,17 @@ export async function runEmbeddedAttempt(
         model: params.model,
       });
 
+      // Create tool retry guard to prevent infinite loops
+      const toolRetryGuard = new ToolRetryGuard({
+        maxConsecutiveFailures: 3,
+        failureWindowMs: 5 * 60 * 1000, // 5 minutes
+        checkParamSimilarity: true,
+      });
+
       const { builtInTools, customTools } = splitSdkTools({
         tools,
         sandboxEnabled: !!sandbox?.enabled,
+        guard: toolRetryGuard,
       });
 
       // Add client tools (OpenResponses hosted tools) to customTools

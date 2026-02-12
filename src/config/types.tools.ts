@@ -370,6 +370,12 @@ export type ToolsConfig = {
       };
     };
   };
+  weather?: {
+    /** Enable weather tool (default: true). */
+    enabled?: boolean;
+    /** Timeout in seconds for weather API requests. */
+    timeoutSeconds?: number;
+  };
   media?: MediaToolsConfig;
   links?: LinkToolsConfig;
   /** Message tool configuration. */
