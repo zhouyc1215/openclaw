@@ -217,7 +217,7 @@ Manually trigger a job (ignores schedule).
 {
   "action": "run",
   "jobId": "job-id-here",
-  "mode": "force"  // or "due" to only run if due
+  "runMode": "force"  // "force" (default) = run immediately, "due" = only run if due
 }
 ```
 
