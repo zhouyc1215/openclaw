@@ -217,9 +217,12 @@ Manually trigger a job (ignores schedule).
 {
   "action": "run",
   "jobId": "job-id-here",
-  "runMode": "force"  // "force" (default) = run immediately, "due" = only run if due
+  "runMode": "force",  // "force" (default) = run immediately, "due" = only run if due
+  "timeoutMs": 60000   // Increase timeout for isolated sessions (default: 10000ms)
 }
 ```
+
+**Note**: Isolated session jobs may take 30-60 seconds to complete. If you get a timeout error, increase `timeoutMs` to 60000 or higher.
 
 ### runs
 Get execution history for a job.
@@ -333,6 +336,7 @@ Send a wake event to the main session (not a cron job).
 4. **One-time jobs** - Set `deleteAfterRun: true` for one-time reminders to auto-cleanup
 5. **Isolated for heavy tasks** - Use isolated sessions for long-running or resource-intensive tasks
 6. **Wake mode** - Use `"now"` for urgent tasks, `"next-heartbeat"` for normal priority
+7. **Timeout for manual runs** - When manually running jobs via agent, increase `timeoutMs` to 60000+ for isolated sessions (default 10000ms may be too short)
 
 ## Troubleshooting
 
@@ -353,6 +357,7 @@ Send a wake event to the main session (not a cron job).
 - For isolated jobs, set `deliver: true` to see results
 - Check `channel` setting (use `"last"` for most recent channel)
 - Verify the agent has permissions for the target channel
+- **Timeout errors**: Isolated jobs may take 30-60 seconds; increase `timeoutMs` to 60000+ when manually running via agent
 
 ## Related
 
