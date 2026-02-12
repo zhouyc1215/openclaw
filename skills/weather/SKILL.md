@@ -1,8 +1,14 @@
 ---
 name: weather
+<<<<<<< HEAD
 description: Get current weather and forecasts using the weather tool (powered by Open-Meteo API, no API key required).
 homepage: https://open-meteo.com/en/docs
 metadata: {"clawdbot":{"emoji":"🌤️"}}
+=======
+description: Get current weather and forecasts (no API key required).
+homepage: https://wttr.in/:help
+metadata: { "openclaw": { "emoji": "🌤️", "requires": { "bins": ["curl"] } } }
+>>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 ---
 
 # Weather
@@ -11,6 +17,7 @@ Use the `weather` tool to get current weather and forecasts. No API keys needed.
 
 ## Quick Start
 
+<<<<<<< HEAD
 Query weather by city name or coordinates:
 
 ```json
@@ -23,8 +30,32 @@ Query weather by city name or coordinates:
 
 ## Supported Cities
 
+=======
+Quick one-liner:
+
+```bash
+curl -s "wttr.in/London?format=3"
+# Output: London: ⛅️ +8°C
+```
+
+Compact format:
+
+```bash
+curl -s "wttr.in/London?format=%l:+%c+%t+%h+%w"
+# Output: London: ⛅️ +8°C 71% ↙5km/h
+```
+
+Full forecast:
+
+```bash
+curl -s "wttr.in/London?T"
+```
+
+> > > > > > > 69aa3df116d38141626fcdc29fc16b5f31f08d6c
+
 Major Chinese cities can be queried by name (pinyin):
 
+<<<<<<< HEAD
 | 城市 | City Name | Latitude | Longitude |
 |------|-----------|----------|-----------|
 | 北京 | beijing | 39.9042 | 116.4074 |
@@ -39,17 +70,33 @@ Major Chinese cities can be queried by name (pinyin):
 | 重庆 | chongqing | 29.4316 | 106.9123 |
 | 天津 | tianjin | 39.3434 | 117.3616 |
 | 苏州 | suzhou | 31.2989 | 120.5853 |
+=======
+Tips:
+
+- URL-encode spaces: `wttr.in/New+York`
+- Airport codes: `wttr.in/JFK`
+- Units: `?m` (metric) `?u` (USCS)
+- Today only: `?1` · Current only: `?0`
+- PNG: `curl -s "wttr.in/Berlin.png" -o /tmp/weather.png`
+  > > > > > > > 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 
 ## Using Coordinates
 
+<<<<<<< HEAD
 For locations not in the list, use coordinates:
 
-```json
+````json
 {
   "location": "33.07,107.02",
   "units": "celsius"
 }
-```
+=======
+Free, no key, good for programmatic use:
+
+```bash
+curl -s "https://api.open-meteo.com/v1/forecast?latitude=51.5&longitude=-0.12&current_weather=true"
+>>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
+````
 
 ## Parameters
 
@@ -60,6 +107,7 @@ For locations not in the list, use coordinates:
 ## Response Format
 
 The tool returns:
+
 - `current`: Current weather conditions
   - `temperature`: Temperature with unit
   - `windspeed`: Wind speed with unit
@@ -92,6 +140,7 @@ The tool automatically translates weather codes to Chinese and English:
 When user asks "查询西安天气" or "What's the weather in Xi'an":
 
 1. Call the weather tool:
+
    ```json
    {
      "location": "xian",
