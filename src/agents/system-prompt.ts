@@ -401,10 +401,6 @@ export function buildAgentSystemPrompt(params: {
           "If a task is more complex or takes longer, spawn a sub-agent. It will do the work for you and ping you when it's done. You can always check up on it.",
         ].join("\n")
       : [
-<<<<<<< HEAD
-          "Tools are disabled in this session. Do not call tools.",
-          "Respond directly to user queries with text only.",
-=======
           "Pi lists the standard tools above. This runtime enables:",
           "- grep: search file contents for patterns",
           "- find: find files by glob pattern",
@@ -420,7 +416,6 @@ export function buildAgentSystemPrompt(params: {
           "- sessions_history: fetch session history",
           "- sessions_send: send to another session",
           '- session_status: show usage/time/model state and answer "what model are we using?"',
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
         ].join("\n"),
     "",
     "## Tool Call Style",

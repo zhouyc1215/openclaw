@@ -1,9 +1,8 @@
 import { Type } from "@sinclair/typebox";
 import https from "node:https";
-
-import type { ClawdbotConfig } from "../../config/config.js";
-import { assertPublicHostname } from "../../infra/net/ssrf.js";
+import type { OpenClawConfig } from "../../config/config.js";
 import type { AnyAgentTool } from "./common.js";
+import { assertPublicHostname } from "../../infra/net/ssrf.js";
 import { jsonResult, readNumberParam, readStringParam } from "./common.js";
 import { withTimeout } from "./web-shared.js";
 
@@ -25,18 +24,18 @@ const CITY_COORDINATES: Record<string, { lat: number; lon: number; name: string 
   nanjing: { lat: 32.0603, lon: 118.7969, name: "南京" },
   suzhou: { lat: 31.2989, lon: 120.5853, name: "苏州" },
   // 中文别名
-  "北京": { lat: 39.9042, lon: 116.4074, name: "北京" },
-  "上海": { lat: 31.2304, lon: 121.4737, name: "上海" },
-  "广州": { lat: 23.1291, lon: 113.2644, name: "广州" },
-  "深圳": { lat: 22.5431, lon: 114.0579, name: "深圳" },
-  "成都": { lat: 30.5728, lon: 104.0668, name: "成都" },
-  "杭州": { lat: 30.2741, lon: 120.1551, name: "杭州" },
-  "武汉": { lat: 30.5928, lon: 114.3055, name: "武汉" },
-  "西安": { lat: 34.34, lon: 108.93, name: "西安" },
-  "重庆": { lat: 29.4316, lon: 106.9123, name: "重庆" },
-  "天津": { lat: 39.3434, lon: 117.3616, name: "天津" },
-  "南京": { lat: 32.0603, lon: 118.7969, name: "南京" },
-  "苏州": { lat: 31.2989, lon: 120.5853, name: "苏州" },
+  北京: { lat: 39.9042, lon: 116.4074, name: "北京" },
+  上海: { lat: 31.2304, lon: 121.4737, name: "上海" },
+  广州: { lat: 23.1291, lon: 113.2644, name: "广州" },
+  深圳: { lat: 22.5431, lon: 114.0579, name: "深圳" },
+  成都: { lat: 30.5728, lon: 104.0668, name: "成都" },
+  杭州: { lat: 30.2741, lon: 120.1551, name: "杭州" },
+  武汉: { lat: 30.5928, lon: 114.3055, name: "武汉" },
+  西安: { lat: 34.34, lon: 108.93, name: "西安" },
+  重庆: { lat: 29.4316, lon: 106.9123, name: "重庆" },
+  天津: { lat: 39.3434, lon: 117.3616, name: "天津" },
+  南京: { lat: 32.0603, lon: 118.7969, name: "南京" },
+  苏州: { lat: 31.2989, lon: 120.5853, name: "苏州" },
 };
 
 const WeatherSchema = Type.Object({
@@ -67,17 +66,18 @@ type WeatherConfig =
     }
   | undefined;
 
-function resolveWeatherConfig(cfg?: ClawdbotConfig): WeatherConfig {
+function resolveWeatherConfig(cfg?: OpenClawConfig): WeatherConfig {
   const weather = cfg?.tools?.weather;
-  if (!weather || typeof weather !== "object") return undefined;
+  if (!weather || typeof weather !== "object") {
+    return undefined;
+  }
   return weather as WeatherConfig;
 }
 
-function resolveWeatherEnabled(params: {
-  weather?: WeatherConfig;
-  sandboxed?: boolean;
-}): boolean {
-  if (typeof params.weather?.enabled === "boolean") return params.weather.enabled;
+function resolveWeatherEnabled(params: { weather?: WeatherConfig; sandboxed?: boolean }): boolean {
+  if (typeof params.weather?.enabled === "boolean") {
+    return params.weather.enabled;
+  }
   return true;
 }
 
@@ -88,9 +88,9 @@ function resolveTimeoutSeconds(value: unknown, fallback: number): number {
 
 function parseLocation(location: string): { lat: number; lon: number; name?: string } {
   const trimmed = location.trim().toLowerCase();
-  
+
   // Remove quotes and apostrophes for better matching
-  const normalized = trimmed.replace(/['"]/g, '');
+  const normalized = trimmed.replace(/['"]/g, "");
 
   // Check if it's a known city
   if (CITY_COORDINATES[normalized]) {
@@ -153,10 +153,7 @@ async function fetchWeather(params: {
   url.searchParams.set("latitude", params.lat.toString());
   url.searchParams.set("longitude", params.lon.toString());
   url.searchParams.set("current_weather", "true");
-  url.searchParams.set(
-    "hourly",
-    "temperature_2m,relativehumidity_2m,windspeed_10m,weathercode",
-  );
+  url.searchParams.set("hourly", "temperature_2m,relativehumidity_2m,windspeed_10m,weathercode");
   url.searchParams.set("forecast_days", params.forecastDays.toString());
   url.searchParams.set("timezone", "auto");
 
@@ -307,11 +304,13 @@ function formatWeatherResponse(params: {
 }
 
 export function createWeatherTool(options?: {
-  config?: ClawdbotConfig;
+  config?: OpenClawConfig;
   sandboxed?: boolean;
 }): AnyAgentTool | null {
   const weather = resolveWeatherConfig(options?.config);
-  if (!resolveWeatherEnabled({ weather, sandboxed: options?.sandboxed })) return null;
+  if (!resolveWeatherEnabled({ weather, sandboxed: options?.sandboxed })) {
+    return null;
+  }
 
   return {
     label: "Weather",

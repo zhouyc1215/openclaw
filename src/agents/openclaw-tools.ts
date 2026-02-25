@@ -17,11 +17,8 @@ import { createSessionsListTool } from "./tools/sessions-list-tool.js";
 import { createSessionsSendTool } from "./tools/sessions-send-tool.js";
 import { createSessionsSpawnTool } from "./tools/sessions-spawn-tool.js";
 import { createTtsTool } from "./tools/tts-tool.js";
-<<<<<<< HEAD:src/agents/clawdbot-tools.ts
 import { createWeatherTool } from "./tools/weather-tool.js";
-=======
 import { createWebFetchTool, createWebSearchTool } from "./tools/web-tools.js";
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c:src/agents/openclaw-tools.ts
 
 export function createOpenClawTools(options?: {
   sandboxBrowserBridgeUrl?: string;
@@ -78,12 +75,10 @@ export function createOpenClawTools(options?: {
     config: options?.config,
     sandboxed: options?.sandboxed,
   });
-<<<<<<< HEAD:src/agents/clawdbot-tools.ts
   const weatherTool = createWeatherTool({
     config: options?.config,
     sandboxed: options?.sandboxed,
   });
-=======
   const messageTool = options?.disableMessageTool
     ? null
     : createMessageTool({
@@ -98,7 +93,6 @@ export function createOpenClawTools(options?: {
         sandboxRoot: options?.sandboxRoot,
         requireExplicitTarget: options?.requireExplicitMessageTarget,
       });
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c:src/agents/openclaw-tools.ts
   const tools: AnyAgentTool[] = [
     createBrowserTool({
       sandboxBridgeUrl: options?.sandboxBrowserBridgeUrl,

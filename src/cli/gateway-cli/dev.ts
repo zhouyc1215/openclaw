@@ -3,7 +3,6 @@ import os from "node:os";
 import path from "node:path";
 import { resolveWorkspaceTemplateDir } from "../../agents/workspace-templates.js";
 import { resolveDefaultAgentWorkspaceDir } from "../../agents/workspace.js";
-import { resolveWorkspaceTemplateDir } from "../../agents/workspace-templates.js";
 import { handleReset } from "../../commands/onboard-helpers.js";
 import { createConfigIO, writeConfigFile } from "../../config/config.js";
 import { defaultRuntime } from "../../runtime.js";
@@ -18,13 +17,9 @@ async function loadDevTemplate(name: string, fallback: string): Promise<string> 
   try {
     const templateDir = await resolveWorkspaceTemplateDir();
     const raw = await fs.promises.readFile(path.join(templateDir, name), "utf-8");
-<<<<<<< HEAD
-    if (!raw.startsWith("---")) return raw;
-=======
     if (!raw.startsWith("---")) {
       return raw;
     }
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
     const endIndex = raw.indexOf("\n---", 3);
     if (endIndex === -1) {
       return raw;

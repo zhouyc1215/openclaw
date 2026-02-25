@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-=======
 import fsSync from "node:fs";
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-<<<<<<< HEAD
-// 简化版：只支持 clawdbot (适配 v2026.1.24-1)
-const CORE_PACKAGE_NAMES = new Set(["clawdbot"]);
-=======
 const CORE_PACKAGE_NAMES = new Set(["openclaw"]);
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 
 async function readPackageName(dir: string): Promise<string | null> {
   try {
@@ -23,8 +15,6 @@ async function readPackageName(dir: string): Promise<string | null> {
   }
 }
 
-<<<<<<< HEAD
-=======
 function readPackageNameSync(dir: string): string | null {
   try {
     const raw = fsSync.readFileSync(path.join(dir, "package.json"), "utf-8");
@@ -35,16 +25,10 @@ function readPackageNameSync(dir: string): string | null {
   }
 }
 
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 async function findPackageRoot(startDir: string, maxDepth = 12): Promise<string | null> {
   let current = path.resolve(startDir);
   for (let i = 0; i < maxDepth; i += 1) {
     const name = await readPackageName(current);
-<<<<<<< HEAD
-    if (name && CORE_PACKAGE_NAMES.has(name)) return current;
-    const parent = path.dirname(current);
-    if (parent === current) break;
-=======
     if (name && CORE_PACKAGE_NAMES.has(name)) {
       return current;
     }
@@ -68,7 +52,6 @@ function findPackageRootSync(startDir: string, maxDepth = 12): string | null {
     if (parent === current) {
       break;
     }
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
     current = parent;
   }
   return null;
@@ -105,10 +88,6 @@ export async function resolveOpenClawPackageRoot(opts: {
   }
 
   for (const candidate of candidates) {
-<<<<<<< HEAD
-    const root = await findPackageRoot(candidate);
-    if (root) return root;
-=======
     const found = await findPackageRoot(candidate);
     if (found) {
       return found;
@@ -140,7 +119,6 @@ export function resolveOpenClawPackageRootSync(opts: {
     if (found) {
       return found;
     }
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
   }
 
   return null;

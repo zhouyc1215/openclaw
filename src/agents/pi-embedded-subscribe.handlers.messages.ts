@@ -198,13 +198,8 @@ export function handleMessageEnd(
     return;
   }
 
-<<<<<<< HEAD
-  const assistantMessage = msg as AssistantMessage;
-  convertMinimaxXmlToolCalls(assistantMessage);
-=======
   const assistantMessage = msg;
   ctx.recordAssistantUsage((assistantMessage as { usage?: unknown }).usage);
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
   promoteThinkingTagsToBlocks(assistantMessage);
 
   const rawText = extractAssistantText(assistantMessage);

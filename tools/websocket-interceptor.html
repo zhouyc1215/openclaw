@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenClaw WebSocket 拦截器工具</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        opacity: 0.9;
+        font-size: 14px;
+      }
+
+      .content {
+        padding: 30px;
+      }
+
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .section h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #667eea;
+        border-bottom: 2px solid #667eea;
+        padding-bottom: 8px;
+      }
+
+      .method {
+        background: #f8f9fa;
+        border-left: 4px solid #667eea;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+
+      .method h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .method ol,
+      .method ul {
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+
+      .method li {
+        margin-bottom: 8px;
+      }
+
+      .code-block {
+        background: #2d2d2d;
+        color: #f8f8f2;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+        font-family: "Courier New", monospace;
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 15px 0;
+      }
+
+      .bookmarklet {
+        background: #fff3cd;
+        border: 2px dashed #ffc107;
+        padding: 20px;
+        border-radius: 6px;
+        margin: 15px 0;
+      }
+
+      .bookmarklet-link {
+        display: inline-block;
+        background: #667eea;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px;
+        transition: background 0.3s;
+      }
+
+      .bookmarklet-link:hover {
+        background: #5568d3;
+      }
+
+      .warning {
+        background: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 4px;
+      }
+
+      .warning strong {
+        color: #856404;
+      }
+
+      .success {
+        background: #d4edda;
+        border-left: 4px solid #28a745;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 4px;
+      }
+
+      .success strong {
+        color: #155724;
+      }
+
+      .button {
+        display: inline-block;
+        background: #667eea;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background 0.3s;
+        text-decoration: none;
+      }
+
+      .button:hover {
+        background: #5568d3;
+      }
+
+      .button-secondary {
+        background: #6c757d;
+      }
+
+      .button-secondary:hover {
+        background: #5a6268;
+      }
+
+      .allowed-ids {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .allowed-id {
+        background: #e7f3ff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 13px;
+        border: 1px solid #b3d9ff;
+      }
+
+      .allowed-id.recommended {
+        background: #d4edda;
+        border-color: #28a745;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🔧 OpenClaw WebSocket 拦截器</h1>
+        <p>修复 WebSocket 连接中的 client.id 验证问题</p>
+      </div>
+
+      <div class="content">
+        <div class="section">
+          <h2>📋 问题说明</h2>
+          <p>
+            当浏览器缓存了旧版本的 Control UI 时，WebSocket 连接会因为 client.id
+            验证失败而被拒绝（错误码 1008）。
+          </p>
+          <p>
+            本工具提供了一个临时解决方案，通过拦截 WebSocket 连接并修改 client.id 为服务器允许的值。
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>🚀 使用方法</h2>
+
+          <div class="method">
+            <h3>方法 1：浏览器控制台（推荐）</h3>
+            <ol>
+              <li>访问 OpenClaw Control UI 页面</li>
+              <li>按 <kbd>F12</kbd> 打开开发者工具</li>
+              <li>切换到 <strong>Console</strong> 标签</li>
+              <li>复制下面的代码并粘贴到控制台</li>
+              <li>按 <kbd>Enter</kbd> 执行</li>
+              <li>刷新页面（<kbd>F5</kbd>）</li>
+            </ol>
+
+            <button class="button" onclick="copyConsoleCode()">📋 复制控制台代码</button>
+
+            <div class="code-block" id="consoleCode" style="display: none">
+              (function(){if(window.__OPENCLAW_WS_INTERCEPTOR_INSTALLED__){console.log('[OpenClaw]
+              拦截器已安装');return;}const
+              t='openclaw-control-ui',o=window.WebSocket;window.WebSocket=function(e,n){console.log('[OpenClaw]
+              创建连接:',e);const s=new o(e,n),c=s.send.bind(s);return s.send=function(e){try{const
+              n=JSON.parse(e);if('req'===n.type&&'connect'===n.method){const
+              e=n.params?.client?.id;if(console.log('[OpenClaw] 原始
+              client.id:',e),n.params?.client){n.params.client.id=t,console.log('[OpenClaw] 修改后
+              client.id:',t);const e=JSON.stringify(n);return c(e)}}}catch(e){}return
+              c(e)},s.addEventListener('open',()=>console.log('[OpenClaw]
+              连接已建立')),s.addEventListener('close',e=>{console.log('[OpenClaw]
+              连接关闭:',e.code,e.reason),1008===e.code&&console.error('[OpenClaw] 连接被拒绝
+              (1008):',e.reason)}),s},Object.setPrototypeOf(window.WebSocket,o),window.WebSocket.prototype=o.prototype,window.__OPENCLAW_WS_INTERCEPTOR_INSTALLED__=!0,console.log('%c[OpenClaw]
+              拦截器已安装','color: green; font-weight: bold'),console.log('[OpenClaw]
+              请刷新页面')})();
+            </div>
+          </div>
+
+          <div class="method">
+            <h3>方法 2：浏览器书签（Bookmarklet）</h3>
+            <ol>
+              <li>将下面的链接拖拽到浏览器书签栏</li>
+              <li>或右键点击链接，选择"添加到书签"</li>
+              <li>访问 OpenClaw Control UI 页面</li>
+              <li>点击书签注入拦截器</li>
+              <li>刷新页面（<kbd>F5</kbd>）</li>
+            </ol>
+
+            <div class="bookmarklet">
+              <p><strong>拖拽此链接到书签栏：</strong></p>
+              <a
+                href="javascript:(function(){if(window.__OPENCLAW_WS_INTERCEPTOR_INSTALLED__){console.log('[OpenClaw] 拦截器已安装');return;}const t='openclaw-control-ui',o=window.WebSocket;window.WebSocket=function(e,n){console.log('[OpenClaw] 创建连接:',e);const s=new o(e,n),c=s.send.bind(s);return s.send=function(e){try{const n=JSON.parse(e);if('req'===n.type&&'connect'===n.method){const e=n.params?.client?.id;if(console.log('[OpenClaw] 原始 client.id:',e),n.params?.client){n.params.client.id=t,console.log('[OpenClaw] 修改后 client.id:',t);const e=JSON.stringify(n);return c(e)}}}catch(e){}return c(e)},s.addEventListener('open',()=>console.log('[OpenClaw] 连接已建立')),s.addEventListener('close',e=>{console.log('[OpenClaw] 连接关闭:',e.code,e.reason),1008===e.code&&console.error('[OpenClaw] 连接被拒绝 (1008):',e.reason)}),s},Object.setPrototypeOf(window.WebSocket,o),window.WebSocket.prototype=o.prototype,window.__OPENCLAW_WS_INTERCEPTOR_INSTALLED__=!0,console.log('%c[OpenClaw] 拦截器已安装','color: green; font-weight: bold'),console.log('[OpenClaw] 请刷新页面')})();"
+                class="bookmarklet-link"
+                >🔧 OpenClaw WS 拦截器</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>✅ 允许的 client.id 值</h2>
+          <p>服务器当前接受以下 client.id 值：</p>
+          <div class="allowed-ids">
+            <div class="allowed-id recommended">openclaw-control-ui ✓</div>
+            <div class="allowed-id">webchat-ui</div>
+            <div class="allowed-id">webchat</div>
+            <div class="allowed-id">cli</div>
+            <div class="allowed-id">gateway-client</div>
+            <div class="allowed-id">openclaw-macos</div>
+            <div class="allowed-id">openclaw-ios</div>
+            <div class="allowed-id">openclaw-android</div>
+            <div class="allowed-id">node-host</div>
+            <div class="allowed-id">test</div>
+            <div class="allowed-id">fingerprint</div>
+            <div class="allowed-id">openclaw-probe</div>
+          </div>
+          <p style="margin-top: 15px">
+            <small>✓ 推荐使用 <code>openclaw-control-ui</code></small>
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>⚠️ 注意事项</h2>
+          <div class="warning">
+            <strong>临时解决方案：</strong>
+            这个拦截器只是临时解决方案，每次刷新页面前都需要重新注入。
+          </div>
+          <div class="warning">
+            <strong>推荐做法：</strong> 建议清除浏览器缓存（<kbd>Ctrl + Shift + Delete</kbd
+            >）或强制刷新（<kbd>Ctrl + F5</kbd>）来加载最新版本的 Control UI。
+          </div>
+          <div class="warning">
+            <strong>仅用于调试：</strong> 此工具仅用于调试和测试，生产环境应该使用正确版本的 Control
+            UI。
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>🔍 验证连接</h2>
+          <p>成功连接后，你应该能看到：</p>
+          <div class="success">
+            <ul>
+              <li>✅ Control UI 界面正常显示</li>
+              <li>✅ 没有 "disconnected (1008)" 错误</li>
+              <li>✅ 可以看到 Gateway 状态信息</li>
+              <li>✅ 可以与 Agent 进行对话</li>
+            </ul>
+          </div>
+
+          <p style="margin-top: 15px">在浏览器控制台中，你应该能看到：</p>
+          <div class="code-block">
+            [OpenClaw] 拦截器已安装 [OpenClaw] 创建连接: ws://10.71.1.116:18789/ [OpenClaw] 原始
+            client.id: xxx [OpenClaw] 修改后 client.id: openclaw-control-ui [OpenClaw] 连接已建立
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>📚 相关文档</h2>
+          <ul>
+            <li><a href="../WEBSOCKET-CONNECTION-FIX.md">WebSocket 连接修复指南</a></li>
+            <li><a href="../WEBSOCKET-PROTOCOL-GUIDE.md">WebSocket 协议详解</a></li>
+            <li><a href="../OPENCLAW-ARCHITECTURE.md">OpenClaw 架构文档</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function copyConsoleCode() {
+        const code = document.getElementById("consoleCode").textContent;
+        navigator.clipboard
+          .writeText(code)
+          .then(() => {
+            alert(
+              "✅ 代码已复制到剪贴板！\n\n请：\n1. 打开浏览器控制台（F12）\n2. 粘贴代码并按 Enter\n3. 刷新页面（F5）",
+            );
+          })
+          .catch((err) => {
+            alert("❌ 复制失败，请手动复制代码");
+            document.getElementById("consoleCode").style.display = "block";
+          });
+      }
+    </script>
+  </body>
+</html>

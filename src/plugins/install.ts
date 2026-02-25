@@ -22,13 +22,7 @@ type PackageManifest = {
   name?: string;
   version?: string;
   dependencies?: Record<string, string>;
-<<<<<<< HEAD
-  clawdbot?: { extensions?: string[] };
-  openclaw?: { extensions?: string[] };
-};
-=======
 } & Partial<Record<typeof MANIFEST_KEY, { extensions?: string[] }>>;
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 
 export type InstallPluginResult =
   | {
@@ -63,17 +57,6 @@ function safeFileName(input: string): string {
   return safeDirName(input);
 }
 
-<<<<<<< HEAD
-async function ensureClawdbotExtensions(manifest: PackageManifest) {
-  // Support both clawdbot.extensions (legacy) and openclaw.extensions (new)
-  const extensions = manifest.openclaw?.extensions ?? manifest.clawdbot?.extensions;
-  if (!Array.isArray(extensions)) {
-    throw new Error("package.json missing clawdbot.extensions or openclaw.extensions");
-  }
-  const list = extensions.map((e) => (typeof e === "string" ? e.trim() : "")).filter(Boolean);
-  if (list.length === 0) {
-    throw new Error("package.json clawdbot.extensions or openclaw.extensions is empty");
-=======
 function validatePluginId(pluginId: string): string | null {
   if (!pluginId) {
     return "invalid plugin name: missing";
@@ -111,7 +94,6 @@ async function ensureOpenClawExtensions(manifest: PackageManifest) {
   const list = extensions.map((e) => (typeof e === "string" ? e.trim() : "")).filter(Boolean);
   if (list.length === 0) {
     throw new Error("package.json openclaw.extensions is empty");
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
   }
   return list;
 }

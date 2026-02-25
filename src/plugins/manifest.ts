@@ -3,13 +3,8 @@ import path from "node:path";
 import type { PluginConfigUiHint, PluginKind } from "./types.js";
 import { MANIFEST_KEY } from "../compat/legacy-names.js";
 
-<<<<<<< HEAD
-export const PLUGIN_MANIFEST_FILENAME = "clawdbot.plugin.json";
-export const PLUGIN_MANIFEST_FILENAME_NEW = "openclaw.plugin.json";
-=======
 export const PLUGIN_MANIFEST_FILENAME = "openclaw.plugin.json";
 export const PLUGIN_MANIFEST_FILENAMES = [PLUGIN_MANIFEST_FILENAME] as const;
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 
 export type PluginManifest = {
   id: string;
@@ -40,18 +35,11 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 }
 
 export function resolvePluginManifestPath(rootDir: string): string {
-<<<<<<< HEAD
-  // Try new name first, fallback to legacy name
-  const newPath = path.join(rootDir, PLUGIN_MANIFEST_FILENAME_NEW);
-  if (fs.existsSync(newPath)) {
-    return newPath;
-=======
   for (const filename of PLUGIN_MANIFEST_FILENAMES) {
     const candidate = path.join(rootDir, filename);
     if (fs.existsSync(candidate)) {
       return candidate;
     }
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
   }
   return path.join(rootDir, PLUGIN_MANIFEST_FILENAME);
 }
@@ -154,11 +142,6 @@ export type PackageManifest = {
   name?: string;
   version?: string;
   description?: string;
-<<<<<<< HEAD
-  clawdbot?: ClawdbotPackageManifest;
-  openclaw?: ClawdbotPackageManifest; // Support new naming
-};
-=======
 } & Partial<Record<ManifestKey, OpenClawPackageManifest>>;
 
 export function getPackageManifestMetadata(
@@ -169,4 +152,3 @@ export function getPackageManifestMetadata(
   }
   return manifest[MANIFEST_KEY];
 }
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c

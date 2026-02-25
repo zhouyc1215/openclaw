@@ -37,11 +37,7 @@ const CronToolSchema = Type.Object({
   id: Type.Optional(Type.String()),
   patch: Type.Optional(Type.Object({}, { additionalProperties: true })),
   text: Type.Optional(Type.String()),
-<<<<<<< HEAD
-  mode: Type.Optional(Type.String()),
-=======
   mode: optionalStringEnum(CRON_WAKE_MODES),
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
   runMode: optionalStringEnum(CRON_RUN_MODES),
   contextMessages: Type.Optional(
     Type.Number({ minimum: 0, maximum: REMINDER_CONTEXT_MESSAGES_MAX }),
@@ -232,10 +228,6 @@ export function createCronTool(opts?: CronToolOptions): AnyAgentTool {
   return {
     label: "Cron",
     name: "cron",
-<<<<<<< HEAD
-    description:
-      "Manage Gateway cron jobs (status/list/add/update/remove/run/runs) and send wake events. Use `jobId` as the canonical identifier; `id` is accepted for compatibility. Use `contextMessages` (0-10) to add previous messages as context to the job text. For `run` action, use `runMode: 'force'` to execute immediately or `runMode: 'due'` to only run if due (default: 'force').",
-=======
     description: `Manage Gateway cron jobs (status/list/add/update/remove/run/runs) and send wake events.
 
 ACTIONS:
@@ -289,7 +281,6 @@ WAKE MODES (for wake action):
 - "now": Wake immediately
 
 Use jobId as the canonical identifier; id is accepted for compatibility. Use contextMessages (0-10) to add previous messages as context to the job text.`,
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
     parameters: CronToolSchema,
     execute: async (_toolCallId, args) => {
       const params = args as Record<string, unknown>;

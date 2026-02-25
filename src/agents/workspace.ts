@@ -1,12 +1,7 @@
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-<<<<<<< HEAD
-
-import { isSubagentSessionKey } from "../routing/session-key.js";
-=======
 import { resolveRequiredHomeDir } from "../infra/home-dir.js";
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 import { runCommandWithTimeout } from "../process/exec.js";
 import { isSubagentSessionKey } from "../routing/session-key.js";
 import { resolveUserPath } from "../utils.js";
@@ -32,11 +27,8 @@ export const DEFAULT_IDENTITY_FILENAME = "IDENTITY.md";
 export const DEFAULT_USER_FILENAME = "USER.md";
 export const DEFAULT_HEARTBEAT_FILENAME = "HEARTBEAT.md";
 export const DEFAULT_BOOTSTRAP_FILENAME = "BOOTSTRAP.md";
-<<<<<<< HEAD
-=======
 export const DEFAULT_MEMORY_FILENAME = "MEMORY.md";
 export const DEFAULT_MEMORY_ALT_FILENAME = "memory.md";
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 
 function stripFrontMatter(content: string): string {
   if (!content.startsWith("---")) {

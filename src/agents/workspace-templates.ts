@@ -1,10 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-<<<<<<< HEAD
-
-=======
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 import { resolveOpenClawPackageRoot } from "../infra/openclaw-root.js";
 
 const FALLBACK_TEMPLATE_DIR = path.resolve(

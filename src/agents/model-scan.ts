@@ -345,13 +345,9 @@ async function probeImage(
 }
 
 function ensureImageInput(model: OpenAIModel): OpenAIModel {
-<<<<<<< HEAD
-  if (model.input?.includes("image")) return model;
-=======
   if (model.input.includes("image")) {
     return model;
   }
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
   return {
     ...model,
     input: Array.from(new Set([...(model.input || []), "image"])),

@@ -49,11 +49,7 @@ import { resolveSandboxRuntimeStatus } from "../../sandbox/runtime-status.js";
 import { repairSessionFileIfNeeded } from "../../session-file-repair.js";
 import { guardSessionManager } from "../../session-tool-result-guard-wrapper.js";
 import { acquireSessionWriteLock } from "../../session-write-lock.js";
-<<<<<<< HEAD
-import { ToolRetryGuard } from "../../tool-retry-guard.js";
-=======
 import { detectRuntimeShell } from "../../shell-utils.js";
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
 import {
   applySkillEnvOverrides,
   applySkillEnvOverridesFromSnapshot,
@@ -62,6 +58,7 @@ import {
 } from "../../skills.js";
 import { buildSystemPromptParams } from "../../system-prompt-params.js";
 import { buildSystemPromptReport } from "../../system-prompt-report.js";
+import { ToolRetryGuard } from "../../tool-retry-guard.js";
 import { resolveTranscriptPolicy } from "../../transcript-policy.js";
 import { DEFAULT_BOOTSTRAP_FILENAME } from "../../workspace.js";
 import { isAbortError } from "../abort.js";

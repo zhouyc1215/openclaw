@@ -213,14 +213,7 @@ export function loadOpenClawPlugins(options: PluginLoadOptions = {}): PluginRegi
     extensions: [".ts", ".tsx", ".mts", ".cts", ".mtsx", ".ctsx", ".js", ".mjs", ".cjs", ".json"],
     ...(pluginSdkAlias
       ? {
-<<<<<<< HEAD
-          alias: {
-            "clawdbot/plugin-sdk": pluginSdkAlias,
-            "openclaw/plugin-sdk": pluginSdkAlias, // Support new naming
-          },
-=======
           alias: { "openclaw/plugin-sdk": pluginSdkAlias },
->>>>>>> 69aa3df116d38141626fcdc29fc16b5f31f08d6c
         }
       : {}),
   });
