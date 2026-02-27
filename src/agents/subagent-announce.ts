@@ -112,7 +112,7 @@ function resolveAnnounceOrigin(
   return mergeDeliveryContext(requesterOrigin, deliveryContextFromSession(entry));
 }
 
-async function sendAnnounce(item: AnnounceQueueItem) {
+async function sendAnnounce(item: AnnounceQueueItem, timeoutMs = 60_000) {
   const origin = item.origin;
   const threadId =
     origin?.threadId != null && origin.threadId !== "" ? String(origin.threadId) : undefined;
@@ -129,7 +129,7 @@ async function sendAnnounce(item: AnnounceQueueItem) {
       idempotencyKey: crypto.randomUUID(),
     },
     expectFinal: true,
-    timeoutMs: 60_000,
+    timeoutMs,
   });
 }
 
@@ -170,6 +170,7 @@ async function maybeQueueSubagentAnnounce(params: {
   triggerMessage: string;
   summaryLine?: string;
   requesterOrigin?: DeliveryContext;
+  timeoutMs?: number;
 }): Promise<"steered" | "queued" | "none"> {
   const { cfg, entry } = loadRequesterSessionEntry(params.requesterSessionKey);
   const canonicalKey = resolveRequesterStoreKey(cfg, params.requesterSessionKey);
@@ -200,6 +201,7 @@ async function maybeQueueSubagentAnnounce(params: {
     queueSettings.mode === "interrupt";
   if (isActive && (shouldFollowup || queueSettings.mode === "steer")) {
     const origin = resolveAnnounceOrigin(entry, params.requesterOrigin);
+    const timeoutMs = params.timeoutMs ?? 60_000;
     enqueueAnnounce({
       key: canonicalKey,
       item: {
@@ -210,7 +212,7 @@ async function maybeQueueSubagentAnnounce(params: {
         origin,
       },
       settings: queueSettings,
-      send: sendAnnounce,
+      send: (item) => sendAnnounce(item, timeoutMs),
     });
     return "queued";
   }
@@ -504,6 +506,7 @@ export async function runSubagentAnnounceFlow(params: {
       triggerMessage,
       summaryLine: taskLabel,
       requesterOrigin,
+      timeoutMs: params.timeoutMs,
     });
     if (queued === "steered") {
       didAnnounce = true;
@@ -536,7 +539,7 @@ export async function runSubagentAnnounceFlow(params: {
         idempotencyKey: crypto.randomUUID(),
       },
       expectFinal: true,
-      timeoutMs: 60_000,
+      timeoutMs: params.timeoutMs,
     });
 
     didAnnounce = true;
