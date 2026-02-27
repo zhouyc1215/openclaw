@@ -97,6 +97,59 @@ backup_cron_results: channel=feishu to=ou_b3afb7d2133e4d689be523fc48f3d2b3
    - 09:00 - 热门 AI 项目
    - 10:00 - 备份完成通知
 
+## 更新：错误码 520 问题
+
+### 新错误描述
+
+修复 798 错误后，出现新的错误：`unknown error, 520 (1000)`
+
+### 错误分析
+
+1. **错误码 520** - 这不是飞书 API 错误码，而是 HTTP 520 错误（通常由 Cloudflare 或其他 CDN 返回，表示"Unknown Error"）
+2. **错误来源** - 这个错误消息是由 `console.log` 打印的，然后被误认为是要发送给用户的消息
+3. **根本原因** - 某个地方的代码在打印错误日志，而这个日志内容被错误地发送到飞书
+
+### 可能的原因
+
+1. **飞书 API 调用失败** - 发送消息时遇到网络问题或 API 限流
+2. **目标用户 ID 无效** - 虽然配置了 `ou_b3afb7d2133e4d689be523fc48f3d2b3`，但可能存在权限或其他问题
+3. **消息格式问题** - 发送的消息内容可能不符合飞书 API 要求
+
+### 临时解决方案
+
+将 cron 任务的 delivery 模式改为 `silent`（不发送消息）：
+
+```bash
+# 编辑配置
+nano ~/.openclaw/cron/jobs.json
+
+# 将所有任务的 delivery.mode 改为 "silent"
+```
+
+或使用命令：
+
+```bash
+cat ~/.openclaw/cron/jobs.json | jq '.jobs[].delivery.mode = "silent"' > /tmp/jobs.json && mv /tmp/jobs.json ~/.openclaw/cron/jobs.json
+```
+
+### 调试建议
+
+1. **查看完整错误日志**
+
+   ```bash
+   tail -200 /tmp/openclaw/openclaw-$(date +%Y-%m-%d).log | grep -B 20 "520"
+   ```
+
+2. **测试飞书发送**
+
+   ```bash
+   pnpm openclaw message send feishu:ou_b3afb7d2133e4d689be523fc48f3d2b3 "测试消息"
+   ```
+
+3. **检查飞书权限**
+   - 确认机器人有权限向你的账号发送消息
+   - 检查是否需要先在飞书中与机器人建立会话
+
 ## 其他发现
 
 ### 飞书插件重复加载警告
