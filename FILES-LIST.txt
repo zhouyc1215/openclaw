@@ -1,0 +1,68 @@
+awesome-openclaw-usecases 部署包文件清单
+========================================
+
+📚 文档文件（7 个）
+-------------------
+1. INDEX.md (5.3K)
+   - 文件索引和导航
+   - 推荐从这里开始
+   
+2. 快速参考.md (2.6K)
+   - 一页纸快速参考
+   - 包含所有核心信息
+   
+3. README-USECASES.md (4.7K)
+   - 完整总览和快速开始
+   - 用例对比和推荐
+   
+4. DEPLOYMENT-SUMMARY.md (5.8K)
+   - 部署总结和下一步
+   - 预期效果说明
+   
+5. USECASES-QUICK-START.md (5.1K)
+   - 快速开始指南
+   - 详细配置说明
+   
+6. AWESOME-USECASES-DEPLOYMENT.md (5.5K)
+   - 详细部署方案
+   - 每个用例的完整说明
+   
+7. 部署完成通知.md (3.2K)
+   - 部署完成总结
+   - 立即开始指南
+
+🛠️ 工具脚本（3 个）
+-------------------
+8. deploy-usecases.sh (9.8K) [可执行]
+   - 自动部署脚本
+   - 交互式菜单
+   
+9. test-usecases.sh (4.0K) [可执行]
+   - 测试脚本
+   - 查看任务状态
+   
+10. manual-add-task.sh (1.4K) [可执行]
+    - 手动添加任务工具
+    - 备用方案
+
+📋 配置文件（1 个）
+------------------
+11. example-task-config.json (1.2K)
+    - 任务配置示例
+    - 参考模板
+
+总计：11 个文件，约 53.6K
+
+🚀 快速开始
+-----------
+1. cat INDEX.md
+2. ./deploy-usecases.sh
+3. openclaw gateway restart
+4. ./test-usecases.sh
+
+📖 推荐阅读顺序
+--------------
+新手：INDEX.md → 快速参考.md → 运行脚本
+进阶：README-USECASES.md → AWESOME-USECASES-DEPLOYMENT.md → 运行脚本
+完整：所有文档 → 自定义配置 → 运行脚本
+

@@ -1,0 +1,33 @@
+{
+  "id": "REPLACE_WITH_UUID",
+  "agentId": "main",
+  "name": "tech_news_digest",
+  "enabled": true,
+  "createdAtMs": 1772164000000,
+  "updatedAtMs": 1772164000000,
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 8 * * *",
+    "tz": "Asia/Shanghai"
+  },
+  "sessionTarget": "isolated",
+  "wakeMode": "now",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "生成过去 24 小时的科技新闻摘要。搜索 AI、开源项目、前沿技术相关的重要新闻。\n\n要求：\n1. 按重要性排序（优先 AI 和开源项目）\n2. 每条新闻包含：标题、来源、关键信息摘要、链接\n3. 去除重复和低质量内容\n4. 格式化为清晰的列表，使用 emoji 标记类别\n5. 总数控制在 10-15 条\n\n分类：\n🤖 AI/机器学习\n🔧 开源项目\n💡 技术创新\n📱 产品发布",
+    "timeoutSeconds": 240
+  },
+  "state": {
+    "nextRunAtMs": 0,
+    "lastRunAtMs": 0,
+    "lastStatus": "pending",
+    "lastDurationMs": 0,
+    "consecutiveErrors": 0
+  },
+  "delivery": {
+    "mode": "announce",
+    "channel": "feishu",
+    "to": "ou_b3afb7d2133e4d689be523fc48f3d2b3",
+    "bestEffort": true
+  }
+}

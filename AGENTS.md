@@ -132,6 +132,7 @@
 
 ## Agent-Specific Notes
 
+- **Default Language: Chinese (中文)** - Always respond in Chinese unless the user explicitly requests English or another language. This applies to all agent responses, error messages, and user-facing output.
 - Vocabulary: "makeup" = "mac app".
 - Never edit `node_modules` (global/Homebrew/npm/git installs too). Updates overwrite. Skill notes go in `tools.md` or `AGENTS.md`.
 - Signal: "update fly" => `fly ssh console -a flawd-bot -C "bash -lc 'cd /data/clawd/openclaw && git pull --rebase origin main'"` then `fly machines restart e825232f34d058 -a flawd-bot`.
@@ -177,6 +178,12 @@
   - Command template should stay `openclaw-mac agent --message "${text}" --thinking low`; `VoiceWakeForwarder` already shell-escapes `${text}`. Don’t add extra quotes.
   - launchd PATH is minimal; ensure the app’s launch agent PATH includes standard system paths plus your pnpm bin (typically `$HOME/Library/pnpm`) so `pnpm`/`openclaw` binaries resolve when invoked via `openclaw-mac`.
 - For manual `openclaw message send` messages that include `!`, use the heredoc pattern noted below to avoid the Bash tool’s escaping.
+- **Shell script creation:** NEVER use `cat > file << 'EOF'` or `cat << 'EOF' > file` patterns to create files; these heredoc patterns cause the process to hang in certain environments. Instead use:
+  - `fsWrite` tool for creating files (preferred for multi-line scripts and content)
+  - `printf '...\n' > file` for single-line or simple multi-line content
+  - `echo '...' > file` for simple single-line content
+  - Multiple `echo` or `printf` commands with `>>` for appending lines
+  - Example: `printf '#!/bin/bash\necho "hello"\n' > script.sh` instead of `cat > script.sh << 'EOF'`
 - Release guardrails: do not change version numbers without operator’s explicit consent; always ask permission before running any npm publish/release step.
 
 ## NPM + 1Password (publish/verify)
