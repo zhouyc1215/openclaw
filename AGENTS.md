@@ -133,6 +133,7 @@
 ## Agent-Specific Notes
 
 - **Default Language: Chinese (中文)** - Always respond in Chinese unless the user explicitly requests English or another language. This applies to all agent responses, error messages, and user-facing output.
+- **No Automatic Reports** - Do NOT create summary reports, documentation files, or markdown files to document your work unless the user explicitly requests them. Focus on completing the task and providing a brief verbal summary only. Exception: technical documentation that is part of the deliverable (like README files for new projects).
 - Vocabulary: "makeup" = "mac app".
 - Never edit `node_modules` (global/Homebrew/npm/git installs too). Updates overwrite. Skill notes go in `tools.md` or `AGENTS.md`.
 - Signal: "update fly" => `fly ssh console -a flawd-bot -C "bash -lc 'cd /data/clawd/openclaw && git pull --rebase origin main'"` then `fly machines restart e825232f34d058 -a flawd-bot`.
@@ -184,6 +185,15 @@
   - `echo '...' > file` for simple single-line content
   - Multiple `echo` or `printf` commands with `>>` for appending lines
   - Example: `printf '#!/bin/bash\necho "hello"\n' > script.sh` instead of `cat > script.sh << 'EOF'`
+- **Command hang detection and recovery:** When a bash command appears to hang or timeout, automatically switch to alternative methods without asking:
+  - If `cat` command hangs: use `head`, `tail`, `less`, or `readFile` tool instead
+  - If `printf` with multi-line content hangs: use `fsWrite` or `fsAppend` tool instead
+  - If heredoc patterns (`<< 'EOF'`) hang: use `fsWrite` tool or multiple `echo` commands
+  - If file creation commands hang: always prefer `fsWrite`/`fsAppend` tools over shell commands
+  - If reading commands hang: prefer `readFile`/`readCode` tools over `cat`/`head`/`tail`
+  - Pattern: detect hang → immediately switch to tool-based approach → continue execution
+  - Never retry the same hanging command; always use a different method
+  - Common hanging patterns to avoid: `cat > file`, `cat file`, `printf 'multi\nline\ncontent' > file`, any heredoc usage
 - Release guardrails: do not change version numbers without operator’s explicit consent; always ask permission before running any npm publish/release step.
 
 ## NPM + 1Password (publish/verify)

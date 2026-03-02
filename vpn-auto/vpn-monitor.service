@@ -1,0 +1,23 @@
+[Unit]
+Description=VPN Monitor Service (Semi-Auto Mode)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tsl
+Group=tsl
+WorkingDirectory=/home/tsl/openclaw/vpn-auto
+ExecStart=/home/tsl/openclaw/vpn-auto/vpn-monitor.sh
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# 环境变量
+Environment="PATH=/home/tsl/.local/share/pnpm:/usr/local/bin:/usr/bin:/bin"
+Environment="DISPLAY=:1"
+Environment="XAUTHORITY=/home/tsl/.Xauthority"
+
+[Install]
+WantedBy=multi-user.target

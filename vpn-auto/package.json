@@ -1,0 +1,16 @@
+{
+  "name": "vpn-auto",
+  "version": "1.0.0",
+  "description": "这是一个\"伪无人值守\"VPN 自动重连系统，用于在 SAML 强制认证下实现接近无人值守的 VPN 连接管理。",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "auto-saml-login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}
