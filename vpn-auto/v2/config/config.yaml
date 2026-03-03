@@ -1,0 +1,88 @@
+# VPN 自动重连系统配置文件
+
+# VPN 配置
+vpn:
+  process_name: forticlient
+  launch_method: gui_click # gui_click 或 command
+  gui_sidebar_x: 40
+  gui_sidebar_y: 200
+  window_name: FortiClient
+  window_width: 1200
+  window_height: 800
+
+  # VPN 凭据
+  username: yuchao.zhou@dasanns.com
+  password: Dasanzyc1215
+
+# 网络检测配置
+network:
+  check_interval: 60 # 检测间隔（秒）
+  check_hosts:
+    - 8.8.8.8
+    - 1.1.1.1
+  ping_count: 2
+  ping_timeout: 5
+  vpn_interface: fctvpn16ec49c7 # FortiClient VPN 接口
+
+# 重连策略配置
+reconnect:
+  max_failures: 3 # 最大连续失败次数
+  retry_delay: 10 # 重试延迟（秒）
+  restart_delay: 2 # 重启延迟（秒）
+  window_wait_timeout: 30 # 窗口等待超时（秒）
+  gui_load_delay: 15 # GUI 加载延迟（秒）
+  vpn_connect_timeout: 60 # VPN 连接超时（秒），每 10 秒检查一次
+
+# 按钮识别配置
+button:
+  # HSV 颜色范围
+  hsv_lower: [100, 100, 100]
+  hsv_upper: [130, 255, 255]
+
+  # 按钮尺寸范围
+  min_area: 2000
+  max_area: 50000
+  min_width: 80
+  max_width: 300
+  min_height: 25
+  max_height: 80
+
+# 系统配置
+system:
+  display: ":1"
+  sudo_password: tsl123
+  screenshot_path: /tmp/vpn-screenshot.png
+  log_level: INFO # DEBUG, INFO, WARNING, ERROR
+
+# 飞书通知配置
+feishu:
+  enabled: true
+  user_id: "ou_b3afb7d2133e4d689be523fc48f3d2b3"
+  openclaw_bin: "/usr/bin/pnpm openclaw" # openclaw 命令路径
+
+# 驱动优先级
+drivers:
+  priority:
+    - atspi # AT-SPI 驱动（主方案）
+    - pyauto # PyAutoGUI 驱动（备用）
+    - vision # OpenCV 驱动（兜底）
+
+  # 驱动配置
+  atspi:
+    enabled: true
+    timeout: 10
+
+  pyauto:
+    enabled: true
+    confidence: 0.8
+    button_image: /home/tsl/vpn-auto/v2/config/button.png
+
+  vision:
+    enabled: true
+    debug_output: false
+
+# 虚拟桌面配置
+xvfb:
+  enabled: false # 是否使用虚拟桌面
+  display: ":99"
+  resolution: "1920x1080x24"

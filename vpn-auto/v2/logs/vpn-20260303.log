@@ -1,0 +1,3634 @@
+[2026-03-03 11:15:59] ==========================================
+[2026-03-03 11:15:59] VPN 自动重连系统启动
+[2026-03-03 11:15:59] ==========================================
+[2026-03-03 11:15:59] DISPLAY: :1
+[2026-03-03 11:15:59] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 11:15:59] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 11:15:59] 
+[2026-03-03 11:15:59] Python 版本: Python 3.8.10
+[2026-03-03 11:15:59] 检查依赖...
+[2026-03-03 11:15:59] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 11:15:59] 
+[2026-03-03 11:15:59] 启动 VPN Watchdog...
+[2026-03-03 11:15:59] 
+[2026-03-03 11:15:59] [INFO] AT-SPI 驱动已加载
+[2026-03-03 11:15:59] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 11:15:59] [INFO] OpenCV 驱动已加载
+[2026-03-03 11:15:59] [INFO] 已加载 3 个驱动
+[2026-03-03 11:15:59] [INFO] VPN Watchdog 已启动
+[2026-03-03 11:15:59] [INFO] 检测间隔: 60 秒
+[2026-03-03 11:15:59] [INFO] 最大失败次数: 3
+[2026-03-03 11:15:59] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 11:17:20] ==========================================
+[2026-03-03 11:17:20] VPN 自动重连系统启动
+[2026-03-03 11:17:20] ==========================================
+[2026-03-03 11:17:20] DISPLAY: :1
+[2026-03-03 11:17:20] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 11:17:20] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 11:17:20] 
+[2026-03-03 11:17:20] Python 版本: Python 3.8.10
+[2026-03-03 11:17:20] 检查依赖...
+[2026-03-03 11:17:20] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 11:17:20] 
+[2026-03-03 11:17:20] 启动 VPN Watchdog...
+[2026-03-03 11:17:20] 
+[2026-03-03 11:17:20] [INFO] AT-SPI 驱动已加载
+[2026-03-03 11:17:21] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 11:17:21] [INFO] OpenCV 驱动已加载
+[2026-03-03 11:17:21] [INFO] 已加载 3 个驱动
+[2026-03-03 11:17:21] [INFO] VPN Watchdog 已启动
+[2026-03-03 11:17:21] [INFO] 检测间隔: 60 秒
+[2026-03-03 11:17:21] [INFO] 最大失败次数: 3
+[2026-03-03 11:17:21] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 11:18:21] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 11:19:21] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 11:19:21] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 11:19:21] [INFO] ============================================================
+[2026-03-03 11:19:21] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:19:21] [INFO] ============================================================
+[2026-03-03 11:19:21] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:19:23] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:19:26] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:19:26] [INFO] 启动 FortiClient...
+[2026-03-03 11:19:26] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:19:29] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:19:29] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:19:29] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:19:29] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 11:19:30] [INFO] ✅ 窗口已调整
+[2026-03-03 11:19:30] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:19:45] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:19:45] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:19:45] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:19:45] [INFO] 找到应用: FortiClient
+[2026-03-03 11:19:45] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:19:45] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:19:45] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:19:45] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:19:45] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:19:45] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:19:45] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:19:45] [INFO] 找到按钮: (996, 751)
+[2026-03-03 11:19:47] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:19:47] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:19:47] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:20:17] [INFO] 检查 VPN 状态...
+[2026-03-03 11:20:17] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:20:17] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:20:17] [ERROR] ============================================================
+[2026-03-03 11:20:17] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:20:17] [ERROR] ============================================================
+[2026-03-03 11:21:23] ==========================================
+[2026-03-03 11:21:23] VPN 自动重连系统启动
+[2026-03-03 11:21:23] ==========================================
+[2026-03-03 11:21:23] DISPLAY: :1
+[2026-03-03 11:21:23] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 11:21:23] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 11:21:23] 
+[2026-03-03 11:21:23] Python 版本: Python 3.8.10
+[2026-03-03 11:21:23] 检查依赖...
+[2026-03-03 11:21:24] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 11:21:24] 
+[2026-03-03 11:21:24] 启动 VPN Watchdog...
+[2026-03-03 11:21:24] 
+[2026-03-03 11:21:24] [INFO] AT-SPI 驱动已加载
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 32, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 50, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-03 11:21:35] ==========================================
+[2026-03-03 11:21:35] VPN 自动重连系统启动
+[2026-03-03 11:21:35] ==========================================
+[2026-03-03 11:21:35] DISPLAY: :1
+[2026-03-03 11:21:35] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 11:21:35] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 11:21:35] 
+[2026-03-03 11:21:35] Python 版本: Python 3.8.10
+[2026-03-03 11:21:35] 检查依赖...
+[2026-03-03 11:21:35] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 11:21:35] 
+[2026-03-03 11:21:35] 启动 VPN Watchdog...
+[2026-03-03 11:21:35] 
+[2026-03-03 11:21:35] [INFO] AT-SPI 驱动已加载
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 32, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 50, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-03 11:21:46] ==========================================
+[2026-03-03 11:21:46] VPN 自动重连系统启动
+[2026-03-03 11:21:46] ==========================================
+[2026-03-03 11:21:46] DISPLAY: :1
+[2026-03-03 11:21:46] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 11:21:46] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 11:21:46] 
+[2026-03-03 11:21:46] Python 版本: Python 3.8.10
+[2026-03-03 11:21:46] 检查依赖...
+[2026-03-03 11:21:46] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 11:21:46] 
+[2026-03-03 11:21:46] 启动 VPN Watchdog...
+[2026-03-03 11:21:46] 
+[2026-03-03 11:21:46] [INFO] AT-SPI 驱动已加载
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 32, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 50, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-03 11:21:56] ==========================================
+[2026-03-03 11:21:56] VPN 自动重连系统启动
+[2026-03-03 11:21:56] ==========================================
+[2026-03-03 11:21:56] DISPLAY: :1
+[2026-03-03 11:21:56] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 11:21:56] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 11:21:56] 
+[2026-03-03 11:21:56] Python 版本: Python 3.8.10
+[2026-03-03 11:21:56] 检查依赖...
+[2026-03-03 11:21:56] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 11:21:56] 
+[2026-03-03 11:21:56] 启动 VPN Watchdog...
+[2026-03-03 11:21:56] 
+[2026-03-03 11:21:56] [INFO] AT-SPI 驱动已加载
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 32, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 50, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 129, in __init__
+    raise error.DisplayConnectionError(self.display_name, r.reason)
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": b'No protocol specified\n'
+[2026-03-03 11:22:07] ==========================================
+[2026-03-03 11:22:07] VPN 自动重连系统启动
+[2026-03-03 11:22:07] ==========================================
+[2026-03-03 11:22:07] DISPLAY: :1
+[2026-03-03 11:22:07] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 11:22:07] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 11:22:07] 
+[2026-03-03 11:22:07] Python 版本: Python 3.8.10
+[2026-03-03 11:22:07] 检查依赖...
+[2026-03-03 11:22:07] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 11:22:07] 
+[2026-03-03 11:22:07] 启动 VPN Watchdog...
+[2026-03-03 11:22:07] 
+[2026-03-03 11:22:07] [INFO] AT-SPI 驱动已加载
+[2026-03-03 11:22:07] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 11:22:07] [INFO] OpenCV 驱动已加载
+[2026-03-03 11:22:07] [INFO] 已加载 3 个驱动
+[2026-03-03 11:22:07] [INFO] VPN Watchdog 已启动
+[2026-03-03 11:22:07] [INFO] 检测间隔: 60 秒
+[2026-03-03 11:22:07] [INFO] 最大失败次数: 3
+[2026-03-03 11:22:07] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 11:23:07] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 11:24:07] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 11:24:07] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 11:24:07] [INFO] ============================================================
+[2026-03-03 11:24:07] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:24:07] [INFO] ============================================================
+[2026-03-03 11:24:07] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:24:09] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:24:13] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:24:13] [INFO] 启动 FortiClient...
+[2026-03-03 11:24:13] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:24:16] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:24:16] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:24:16] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:24:16] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 11:24:16] [INFO] ✅ 窗口已调整
+[2026-03-03 11:24:16] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:24:31] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:24:31] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:24:31] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:24:32] [INFO] 找到应用: fortitray
+[2026-03-03 11:24:32] [INFO] 找到应用: FortiClient
+[2026-03-03 11:24:32] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:24:32] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:24:32] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:24:32] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:24:32] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:24:32] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:24:32] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:24:32] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:24:34] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:24:34] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:24:34] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:25:04] [INFO] 检查 VPN 状态...
+[2026-03-03 11:25:04] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:25:04] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:25:04] [ERROR] ============================================================
+[2026-03-03 11:25:04] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:25:04] [ERROR] ============================================================
+[2026-03-03 11:26:04] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-03 11:26:04] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-03 11:26:04] [INFO] ============================================================
+[2026-03-03 11:26:04] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:26:04] [INFO] ============================================================
+[2026-03-03 11:26:04] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:26:06] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:26:10] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:26:10] [INFO] 启动 FortiClient...
+[2026-03-03 11:26:10] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:26:12] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:26:12] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:26:12] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:26:12] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 11:26:13] [INFO] ✅ 窗口已调整
+[2026-03-03 11:26:13] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:26:28] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:26:28] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:26:28] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:26:28] [INFO] 找到应用: fortitray
+[2026-03-03 11:26:28] [INFO] 找到应用: FortiClient
+[2026-03-03 11:26:28] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:26:28] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:26:28] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:26:28] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:26:28] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:26:28] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:26:28] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:26:28] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:26:30] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:26:30] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:26:30] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:27:00] [INFO] 检查 VPN 状态...
+[2026-03-03 11:27:01] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:27:01] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:27:01] [ERROR] ============================================================
+[2026-03-03 11:27:01] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:27:01] [ERROR] ============================================================
+[2026-03-03 11:28:01] [WARNING] ⚠️  VPN 断开 (失败次数: 5/3)
+[2026-03-03 11:28:01] [ERROR] ❌ VPN 连续失败 5 次，触发重连
+[2026-03-03 11:28:01] [INFO] ============================================================
+[2026-03-03 11:28:01] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:28:01] [INFO] ============================================================
+[2026-03-03 11:28:01] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:28:03] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:28:06] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:28:06] [INFO] 启动 FortiClient...
+[2026-03-03 11:28:06] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:28:09] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:28:09] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:28:09] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:28:09] [INFO] 窗口大小正常
+[2026-03-03 11:28:09] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:28:24] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:28:24] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:28:24] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:28:24] [INFO] 找到应用: fortitray
+[2026-03-03 11:28:24] [INFO] 找到应用: FortiClient
+[2026-03-03 11:28:24] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:28:24] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:28:24] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:28:24] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:28:24] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:28:24] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:28:24] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:28:24] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:28:26] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:28:26] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:28:26] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:28:56] [INFO] 检查 VPN 状态...
+[2026-03-03 11:28:56] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:28:56] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:28:56] [ERROR] ============================================================
+[2026-03-03 11:28:56] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:28:56] [ERROR] ============================================================
+[2026-03-03 11:29:56] [WARNING] ⚠️  VPN 断开 (失败次数: 6/3)
+[2026-03-03 11:29:56] [ERROR] ❌ VPN 连续失败 6 次，触发重连
+[2026-03-03 11:29:56] [INFO] ============================================================
+[2026-03-03 11:29:56] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:29:56] [INFO] ============================================================
+[2026-03-03 11:29:56] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:29:58] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:30:02] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:30:02] [INFO] 启动 FortiClient...
+[2026-03-03 11:30:02] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:30:05] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:30:05] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:30:05] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:30:05] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 11:30:05] [INFO] ✅ 窗口已调整
+[2026-03-03 11:30:05] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:30:20] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:30:20] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:30:20] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:30:20] [INFO] 找到应用: fortitray
+[2026-03-03 11:30:20] [INFO] 找到应用: FortiClient
+[2026-03-03 11:30:20] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:30:20] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:30:20] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:30:20] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:30:20] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:30:20] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:30:20] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:30:21] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:30:23] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:30:23] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:30:23] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:30:53] [INFO] 检查 VPN 状态...
+[2026-03-03 11:30:53] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:30:53] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:30:53] [ERROR] ============================================================
+[2026-03-03 11:30:53] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:30:53] [ERROR] ============================================================
+[2026-03-03 11:31:53] [WARNING] ⚠️  VPN 断开 (失败次数: 7/3)
+[2026-03-03 11:31:53] [ERROR] ❌ VPN 连续失败 7 次，触发重连
+[2026-03-03 11:31:53] [INFO] ============================================================
+[2026-03-03 11:31:53] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:31:53] [INFO] ============================================================
+[2026-03-03 11:31:53] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:31:55] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:31:58] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:31:58] [INFO] 启动 FortiClient...
+[2026-03-03 11:31:58] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:32:01] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:32:01] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:32:01] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:32:01] [INFO] 窗口大小正常
+[2026-03-03 11:32:01] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:32:16] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:32:16] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:32:16] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:32:16] [INFO] 找到应用: fortitray
+[2026-03-03 11:32:16] [INFO] 找到应用: FortiClient
+[2026-03-03 11:32:16] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:32:16] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:32:16] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:32:16] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:32:16] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:32:16] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:32:16] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:32:16] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:32:19] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:32:19] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:32:19] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:32:49] [INFO] 检查 VPN 状态...
+[2026-03-03 11:32:49] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:32:49] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:32:49] [ERROR] ============================================================
+[2026-03-03 11:32:49] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:32:49] [ERROR] ============================================================
+[2026-03-03 11:33:49] [WARNING] ⚠️  VPN 断开 (失败次数: 8/3)
+[2026-03-03 11:33:49] [ERROR] ❌ VPN 连续失败 8 次，触发重连
+[2026-03-03 11:33:49] [INFO] ============================================================
+[2026-03-03 11:33:49] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:33:49] [INFO] ============================================================
+[2026-03-03 11:33:49] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:33:51] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:33:54] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:33:54] [INFO] 启动 FortiClient...
+[2026-03-03 11:33:54] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:33:57] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:33:57] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:33:57] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:33:57] [INFO] 窗口大小正常
+[2026-03-03 11:33:57] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:34:12] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:34:12] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:34:12] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:34:12] [INFO] 找到应用: fortitray
+[2026-03-03 11:34:12] [INFO] 找到应用: FortiClient
+[2026-03-03 11:34:12] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:34:12] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:34:12] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:34:12] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:34:12] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:34:12] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:34:12] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:34:12] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:34:14] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:34:14] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:34:14] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:34:44] [INFO] 检查 VPN 状态...
+[2026-03-03 11:34:44] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:34:44] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:34:44] [ERROR] ============================================================
+[2026-03-03 11:34:44] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:34:44] [ERROR] ============================================================
+[2026-03-03 11:35:44] [WARNING] ⚠️  VPN 断开 (失败次数: 9/3)
+[2026-03-03 11:35:44] [ERROR] ❌ VPN 连续失败 9 次，触发重连
+[2026-03-03 11:35:44] [INFO] ============================================================
+[2026-03-03 11:35:44] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:35:44] [INFO] ============================================================
+[2026-03-03 11:35:44] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:35:46] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:35:50] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:35:50] [INFO] 启动 FortiClient...
+[2026-03-03 11:35:50] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:35:53] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:35:53] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:35:53] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:35:53] [INFO] 窗口大小正常
+[2026-03-03 11:35:53] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:36:08] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:36:08] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:36:08] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:36:08] [INFO] 找到应用: fortitray
+[2026-03-03 11:36:08] [INFO] 找到应用: FortiClient
+[2026-03-03 11:36:08] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:36:08] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:36:08] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:36:08] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:36:08] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:36:08] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:36:08] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:36:08] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:36:10] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:36:10] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:36:10] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:36:40] [INFO] 检查 VPN 状态...
+[2026-03-03 11:36:40] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:36:40] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:36:40] [ERROR] ============================================================
+[2026-03-03 11:36:40] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:36:40] [ERROR] ============================================================
+[2026-03-03 11:37:40] [WARNING] ⚠️  VPN 断开 (失败次数: 10/3)
+[2026-03-03 11:37:40] [ERROR] ❌ VPN 连续失败 10 次，触发重连
+[2026-03-03 11:37:40] [INFO] ============================================================
+[2026-03-03 11:37:40] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:37:40] [INFO] ============================================================
+[2026-03-03 11:37:40] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:37:42] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:37:46] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:37:46] [INFO] 启动 FortiClient...
+[2026-03-03 11:37:46] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:37:48] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:37:48] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:37:48] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:37:48] [INFO] 窗口大小正常
+[2026-03-03 11:37:48] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:38:03] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:38:03] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:38:03] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:38:03] [INFO] 找到应用: fortitray
+[2026-03-03 11:38:03] [INFO] 找到应用: FortiClient
+[2026-03-03 11:38:03] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:38:03] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:38:03] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:38:03] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:38:03] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:38:03] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:38:03] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:38:04] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:38:06] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:38:06] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:38:06] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:38:36] [INFO] 检查 VPN 状态...
+[2026-03-03 11:38:36] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:38:36] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:38:36] [ERROR] ============================================================
+[2026-03-03 11:38:36] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:38:36] [ERROR] ============================================================
+[2026-03-03 11:39:36] [WARNING] ⚠️  VPN 断开 (失败次数: 11/3)
+[2026-03-03 11:39:36] [ERROR] ❌ VPN 连续失败 11 次，触发重连
+[2026-03-03 11:39:36] [INFO] ============================================================
+[2026-03-03 11:39:36] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:39:36] [INFO] ============================================================
+[2026-03-03 11:39:36] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:39:38] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:39:41] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:39:41] [INFO] 启动 FortiClient...
+[2026-03-03 11:39:41] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:39:44] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:39:44] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:39:44] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:39:44] [INFO] 窗口大小正常
+[2026-03-03 11:39:44] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:39:59] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:39:59] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:39:59] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:39:59] [INFO] 找到应用: fortitray
+[2026-03-03 11:39:59] [INFO] 找到应用: FortiClient
+[2026-03-03 11:39:59] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:39:59] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:39:59] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:39:59] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:39:59] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:39:59] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:39:59] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:39:59] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:40:02] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:40:02] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:40:02] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:40:32] [INFO] 检查 VPN 状态...
+[2026-03-03 11:40:32] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:40:32] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:40:32] [ERROR] ============================================================
+[2026-03-03 11:40:32] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:40:32] [ERROR] ============================================================
+[2026-03-03 11:41:32] [WARNING] ⚠️  VPN 断开 (失败次数: 12/3)
+[2026-03-03 11:41:32] [ERROR] ❌ VPN 连续失败 12 次，触发重连
+[2026-03-03 11:41:32] [INFO] ============================================================
+[2026-03-03 11:41:32] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:41:32] [INFO] ============================================================
+[2026-03-03 11:41:32] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:41:34] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:41:37] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:41:37] [INFO] 启动 FortiClient...
+[2026-03-03 11:41:37] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:41:40] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:41:40] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:41:40] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:41:40] [INFO] 窗口大小正常
+[2026-03-03 11:41:40] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:41:55] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:41:55] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:41:55] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:41:55] [INFO] 找到应用: fortitray
+[2026-03-03 11:41:55] [INFO] 找到应用: FortiClient
+[2026-03-03 11:41:55] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:41:55] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:41:55] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:41:55] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:41:55] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:41:55] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:41:55] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:41:55] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:41:57] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:41:57] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:41:57] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:42:27] [INFO] 检查 VPN 状态...
+[2026-03-03 11:42:27] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:42:27] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:42:27] [ERROR] ============================================================
+[2026-03-03 11:42:27] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:42:27] [ERROR] ============================================================
+[2026-03-03 11:43:27] [WARNING] ⚠️  VPN 断开 (失败次数: 13/3)
+[2026-03-03 11:43:27] [ERROR] ❌ VPN 连续失败 13 次，触发重连
+[2026-03-03 11:43:27] [INFO] ============================================================
+[2026-03-03 11:43:27] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:43:27] [INFO] ============================================================
+[2026-03-03 11:43:27] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:43:29] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:43:33] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:43:33] [INFO] 启动 FortiClient...
+[2026-03-03 11:43:33] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:43:36] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:43:36] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:43:36] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:43:36] [INFO] 窗口大小正常
+[2026-03-03 11:43:36] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:43:51] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:43:51] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:43:51] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:43:51] [INFO] 找到应用: fortitray
+[2026-03-03 11:43:51] [INFO] 找到应用: FortiClient
+[2026-03-03 11:43:51] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:43:51] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:43:51] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:43:51] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:43:51] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:43:51] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:43:51] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:43:51] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:43:53] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:43:53] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:43:53] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:44:23] [INFO] 检查 VPN 状态...
+[2026-03-03 11:44:23] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:44:23] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:44:23] [ERROR] ============================================================
+[2026-03-03 11:44:23] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:44:23] [ERROR] ============================================================
+[2026-03-03 11:45:23] [WARNING] ⚠️  VPN 断开 (失败次数: 14/3)
+[2026-03-03 11:45:23] [ERROR] ❌ VPN 连续失败 14 次，触发重连
+[2026-03-03 11:45:23] [INFO] ============================================================
+[2026-03-03 11:45:23] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:45:23] [INFO] ============================================================
+[2026-03-03 11:45:23] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:45:25] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:45:29] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:45:29] [INFO] 启动 FortiClient...
+[2026-03-03 11:45:29] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:45:31] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:45:31] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:45:31] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:45:31] [INFO] 窗口大小正常
+[2026-03-03 11:45:31] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:45:46] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:45:46] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:45:46] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:45:46] [INFO] 找到应用: fortitray
+[2026-03-03 11:45:46] [INFO] 找到应用: FortiClient
+[2026-03-03 11:45:46] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:45:46] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:45:46] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:45:46] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:45:46] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:45:46] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:45:46] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:45:47] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:45:49] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:45:49] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:45:49] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:46:19] [INFO] 检查 VPN 状态...
+[2026-03-03 11:46:19] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:46:19] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:46:19] [ERROR] ============================================================
+[2026-03-03 11:46:19] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:46:19] [ERROR] ============================================================
+[2026-03-03 11:47:19] [WARNING] ⚠️  VPN 断开 (失败次数: 15/3)
+[2026-03-03 11:47:19] [ERROR] ❌ VPN 连续失败 15 次，触发重连
+[2026-03-03 11:47:19] [INFO] ============================================================
+[2026-03-03 11:47:19] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:47:19] [INFO] ============================================================
+[2026-03-03 11:47:19] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:47:21] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:47:24] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:47:24] [INFO] 启动 FortiClient...
+[2026-03-03 11:47:24] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:47:27] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:47:27] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:47:27] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:47:27] [INFO] 窗口大小正常
+[2026-03-03 11:47:27] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:47:42] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:47:42] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:47:42] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:47:42] [INFO] 找到应用: fortitray
+[2026-03-03 11:47:42] [INFO] 找到应用: FortiClient
+[2026-03-03 11:47:42] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:47:42] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:47:42] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:47:42] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:47:42] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:47:42] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:47:42] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:47:42] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:47:44] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:47:44] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:47:44] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:48:14] [INFO] 检查 VPN 状态...
+[2026-03-03 11:48:14] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:48:14] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:48:14] [ERROR] ============================================================
+[2026-03-03 11:48:14] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:48:14] [ERROR] ============================================================
+[2026-03-03 11:49:15] [WARNING] ⚠️  VPN 断开 (失败次数: 16/3)
+[2026-03-03 11:49:15] [ERROR] ❌ VPN 连续失败 16 次，触发重连
+[2026-03-03 11:49:15] [INFO] ============================================================
+[2026-03-03 11:49:15] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:49:15] [INFO] ============================================================
+[2026-03-03 11:49:15] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:49:17] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:49:20] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:49:20] [INFO] 启动 FortiClient...
+[2026-03-03 11:49:20] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:49:23] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:49:23] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:49:23] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:49:23] [INFO] 窗口大小正常
+[2026-03-03 11:49:23] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:49:38] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:49:38] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:49:38] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:49:38] [INFO] 找到应用: fortitray
+[2026-03-03 11:49:38] [INFO] 找到应用: FortiClient
+[2026-03-03 11:49:38] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:49:38] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:49:38] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:49:38] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:49:38] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:49:38] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:49:38] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:49:38] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:49:40] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:49:40] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:49:40] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:50:10] [INFO] 检查 VPN 状态...
+[2026-03-03 11:50:10] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:50:10] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:50:10] [ERROR] ============================================================
+[2026-03-03 11:50:10] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:50:10] [ERROR] ============================================================
+[2026-03-03 11:51:10] [WARNING] ⚠️  VPN 断开 (失败次数: 17/3)
+[2026-03-03 11:51:10] [ERROR] ❌ VPN 连续失败 17 次，触发重连
+[2026-03-03 11:51:10] [INFO] ============================================================
+[2026-03-03 11:51:10] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:51:10] [INFO] ============================================================
+[2026-03-03 11:51:10] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:51:12] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:51:16] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:51:16] [INFO] 启动 FortiClient...
+[2026-03-03 11:51:16] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:51:19] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:51:19] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:51:19] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:51:19] [INFO] 窗口大小正常
+[2026-03-03 11:51:19] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:51:34] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:51:34] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:51:34] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:51:34] [INFO] 找到应用: fortitray
+[2026-03-03 11:51:34] [INFO] 找到应用: FortiClient
+[2026-03-03 11:51:34] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:51:34] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:51:34] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:51:34] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:51:34] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:51:34] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:51:34] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:51:34] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:51:36] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:51:36] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:51:36] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:52:06] [INFO] 检查 VPN 状态...
+[2026-03-03 11:52:06] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:52:06] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:52:06] [ERROR] ============================================================
+[2026-03-03 11:52:06] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:52:06] [ERROR] ============================================================
+[2026-03-03 11:53:06] [WARNING] ⚠️  VPN 断开 (失败次数: 18/3)
+[2026-03-03 11:53:06] [ERROR] ❌ VPN 连续失败 18 次，触发重连
+[2026-03-03 11:53:06] [INFO] ============================================================
+[2026-03-03 11:53:06] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:53:06] [INFO] ============================================================
+[2026-03-03 11:53:06] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:53:08] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:53:12] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:53:12] [INFO] 启动 FortiClient...
+[2026-03-03 11:53:12] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:53:14] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:53:14] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:53:14] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:53:14] [INFO] 窗口大小正常
+[2026-03-03 11:53:14] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:53:29] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:53:29] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:53:29] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:53:29] [INFO] 找到应用: fortitray
+[2026-03-03 11:53:29] [INFO] 找到应用: FortiClient
+[2026-03-03 11:53:29] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:53:29] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:53:29] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:53:29] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:53:29] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:53:29] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:53:29] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:53:30] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:53:32] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:53:32] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:53:32] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:54:02] [INFO] 检查 VPN 状态...
+[2026-03-03 11:54:02] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:54:02] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:54:02] [ERROR] ============================================================
+[2026-03-03 11:54:02] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:54:02] [ERROR] ============================================================
+[2026-03-03 11:55:02] [WARNING] ⚠️  VPN 断开 (失败次数: 19/3)
+[2026-03-03 11:55:02] [ERROR] ❌ VPN 连续失败 19 次，触发重连
+[2026-03-03 11:55:02] [INFO] ============================================================
+[2026-03-03 11:55:02] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:55:02] [INFO] ============================================================
+[2026-03-03 11:55:02] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:55:04] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:55:07] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:55:07] [INFO] 启动 FortiClient...
+[2026-03-03 11:55:07] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:55:10] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:55:10] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:55:10] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:55:10] [INFO] 窗口大小正常
+[2026-03-03 11:55:10] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:55:25] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:55:25] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:55:25] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:55:25] [INFO] 找到应用: fortitray
+[2026-03-03 11:55:25] [INFO] 找到应用: FortiClient
+[2026-03-03 11:55:25] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:55:25] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:55:25] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:55:25] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:55:25] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:55:25] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:55:25] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:55:25] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:55:27] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:55:27] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:55:27] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:55:57] [INFO] 检查 VPN 状态...
+[2026-03-03 11:55:57] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:55:57] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:55:57] [ERROR] ============================================================
+[2026-03-03 11:55:57] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:55:57] [ERROR] ============================================================
+[2026-03-03 11:56:58] [WARNING] ⚠️  VPN 断开 (失败次数: 20/3)
+[2026-03-03 11:56:58] [ERROR] ❌ VPN 连续失败 20 次，触发重连
+[2026-03-03 11:56:58] [INFO] ============================================================
+[2026-03-03 11:56:58] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:56:58] [INFO] ============================================================
+[2026-03-03 11:56:58] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:57:00] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:57:03] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:57:03] [INFO] 启动 FortiClient...
+[2026-03-03 11:57:03] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:57:06] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:57:06] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:57:06] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:57:06] [INFO] 窗口大小正常
+[2026-03-03 11:57:06] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:57:21] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:57:21] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:57:21] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:57:21] [INFO] 找到应用: fortitray
+[2026-03-03 11:57:21] [INFO] 找到应用: FortiClient
+[2026-03-03 11:57:21] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:57:21] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:57:21] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:57:21] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:57:21] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:57:21] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:57:21] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:57:21] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:57:23] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:57:23] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:57:23] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:57:53] [INFO] 检查 VPN 状态...
+[2026-03-03 11:57:53] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:57:53] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:57:53] [ERROR] ============================================================
+[2026-03-03 11:57:53] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:57:53] [ERROR] ============================================================
+[2026-03-03 11:58:53] [WARNING] ⚠️  VPN 断开 (失败次数: 21/3)
+[2026-03-03 11:58:53] [ERROR] ❌ VPN 连续失败 21 次，触发重连
+[2026-03-03 11:58:53] [INFO] ============================================================
+[2026-03-03 11:58:53] [INFO] 开始 VPN 重连流程
+[2026-03-03 11:58:53] [INFO] ============================================================
+[2026-03-03 11:58:53] [INFO] 停止 FortiClient 进程...
+[2026-03-03 11:58:55] [INFO] 自动输入 sudo 密码...
+[2026-03-03 11:58:59] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 11:58:59] [INFO] 启动 FortiClient...
+[2026-03-03 11:58:59] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 11:59:02] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 11:59:02] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 11:59:02] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 11:59:02] [INFO] 窗口大小正常
+[2026-03-03 11:59:02] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 11:59:17] [INFO] 尝试点击连接按钮...
+[2026-03-03 11:59:17] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 11:59:17] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 11:59:17] [INFO] 找到应用: fortitray
+[2026-03-03 11:59:17] [INFO] 找到应用: FortiClient
+[2026-03-03 11:59:17] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 11:59:17] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 11:59:17] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 11:59:17] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 11:59:17] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 11:59:17] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 11:59:17] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 11:59:17] [INFO] 找到按钮: (993, 723)
+[2026-03-03 11:59:19] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 11:59:19] [INFO] ✅ VisionDriver 成功
+[2026-03-03 11:59:19] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 11:59:49] [INFO] 检查 VPN 状态...
+[2026-03-03 11:59:49] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 11:59:49] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 11:59:49] [ERROR] ============================================================
+[2026-03-03 11:59:49] [ERROR] ❌ VPN 重连失败
+[2026-03-03 11:59:49] [ERROR] ============================================================
+[2026-03-03 12:00:49] [WARNING] ⚠️  VPN 断开 (失败次数: 22/3)
+[2026-03-03 12:00:49] [ERROR] ❌ VPN 连续失败 22 次，触发重连
+[2026-03-03 12:00:49] [INFO] ============================================================
+[2026-03-03 12:00:49] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:00:49] [INFO] ============================================================
+[2026-03-03 12:00:49] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:00:51] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:00:55] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:00:55] [INFO] 启动 FortiClient...
+[2026-03-03 12:00:55] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:00:57] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:00:57] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:00:57] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:00:57] [INFO] 窗口大小正常
+[2026-03-03 12:00:57] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:01:12] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:01:12] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:01:12] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:01:12] [INFO] 找到应用: fortitray
+[2026-03-03 12:01:12] [INFO] 找到应用: FortiClient
+[2026-03-03 12:01:12] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:01:12] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:01:12] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:01:12] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:01:12] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:01:12] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:01:12] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:01:13] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:01:15] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:01:15] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:01:15] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:01:45] [INFO] 检查 VPN 状态...
+[2026-03-03 12:01:45] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:01:45] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:01:45] [ERROR] ============================================================
+[2026-03-03 12:01:45] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:01:45] [ERROR] ============================================================
+[2026-03-03 12:02:45] [WARNING] ⚠️  VPN 断开 (失败次数: 23/3)
+[2026-03-03 12:02:45] [ERROR] ❌ VPN 连续失败 23 次，触发重连
+[2026-03-03 12:02:45] [INFO] ============================================================
+[2026-03-03 12:02:45] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:02:45] [INFO] ============================================================
+[2026-03-03 12:02:45] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:02:47] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:02:50] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:02:50] [INFO] 启动 FortiClient...
+[2026-03-03 12:02:50] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:02:53] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:02:53] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:02:53] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:02:53] [INFO] 窗口大小正常
+[2026-03-03 12:02:53] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:03:08] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:03:08] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:03:08] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:03:08] [INFO] 找到应用: fortitray
+[2026-03-03 12:03:08] [INFO] 找到应用: FortiClient
+[2026-03-03 12:03:08] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:03:08] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:03:08] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:03:08] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:03:08] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:03:08] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:03:08] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:03:08] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:03:11] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:03:11] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:03:11] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:03:41] [INFO] 检查 VPN 状态...
+[2026-03-03 12:03:41] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:03:41] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:03:41] [ERROR] ============================================================
+[2026-03-03 12:03:41] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:03:41] [ERROR] ============================================================
+[2026-03-03 12:04:41] [WARNING] ⚠️  VPN 断开 (失败次数: 24/3)
+[2026-03-03 12:04:41] [ERROR] ❌ VPN 连续失败 24 次，触发重连
+[2026-03-03 12:04:41] [INFO] ============================================================
+[2026-03-03 12:04:41] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:04:41] [INFO] ============================================================
+[2026-03-03 12:04:41] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:04:43] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:04:46] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:04:46] [INFO] 启动 FortiClient...
+[2026-03-03 12:04:46] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:04:49] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:04:49] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:04:49] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:04:49] [INFO] 窗口大小正常
+[2026-03-03 12:04:49] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:05:04] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:05:04] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:05:04] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:05:04] [INFO] 找到应用: fortitray
+[2026-03-03 12:05:04] [INFO] 找到应用: FortiClient
+[2026-03-03 12:05:04] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:05:04] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:05:04] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:05:04] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:05:04] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:05:04] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:05:04] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:05:04] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:05:06] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:05:06] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:05:06] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:05:36] [INFO] 检查 VPN 状态...
+[2026-03-03 12:05:36] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:05:36] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:05:36] [ERROR] ============================================================
+[2026-03-03 12:05:36] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:05:36] [ERROR] ============================================================
+[2026-03-03 12:06:36] [WARNING] ⚠️  VPN 断开 (失败次数: 25/3)
+[2026-03-03 12:06:36] [ERROR] ❌ VPN 连续失败 25 次，触发重连
+[2026-03-03 12:06:36] [INFO] ============================================================
+[2026-03-03 12:06:36] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:06:36] [INFO] ============================================================
+[2026-03-03 12:06:36] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:06:38] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:06:42] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:06:42] [INFO] 启动 FortiClient...
+[2026-03-03 12:06:42] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:06:45] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:06:45] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:06:45] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:06:45] [INFO] 窗口大小正常
+[2026-03-03 12:06:45] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:07:00] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:07:00] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:07:00] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:07:00] [INFO] 找到应用: fortitray
+[2026-03-03 12:07:00] [INFO] 找到应用: FortiClient
+[2026-03-03 12:07:00] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:07:00] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:07:00] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:07:00] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:07:00] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:07:00] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:07:00] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:07:00] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:07:02] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:07:02] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:07:02] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:07:32] [INFO] 检查 VPN 状态...
+[2026-03-03 12:07:32] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:07:32] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:07:32] [ERROR] ============================================================
+[2026-03-03 12:07:32] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:07:32] [ERROR] ============================================================
+[2026-03-03 12:08:32] [WARNING] ⚠️  VPN 断开 (失败次数: 26/3)
+[2026-03-03 12:08:32] [ERROR] ❌ VPN 连续失败 26 次，触发重连
+[2026-03-03 12:08:32] [INFO] ============================================================
+[2026-03-03 12:08:32] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:08:32] [INFO] ============================================================
+[2026-03-03 12:08:32] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:08:34] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:08:38] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:08:38] [INFO] 启动 FortiClient...
+[2026-03-03 12:08:38] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:08:40] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:08:40] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:08:40] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:08:40] [INFO] 窗口大小正常
+[2026-03-03 12:08:40] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:08:55] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:08:55] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:08:55] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:08:55] [INFO] 找到应用: fortitray
+[2026-03-03 12:08:55] [INFO] 找到应用: FortiClient
+[2026-03-03 12:08:55] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:08:55] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:08:55] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:08:55] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:08:55] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:08:55] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:08:55] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:08:56] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:08:58] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:08:58] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:08:58] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:09:28] [INFO] 检查 VPN 状态...
+[2026-03-03 12:09:28] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:09:28] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:09:28] [ERROR] ============================================================
+[2026-03-03 12:09:28] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:09:28] [ERROR] ============================================================
+[2026-03-03 12:10:28] [WARNING] ⚠️  VPN 断开 (失败次数: 27/3)
+[2026-03-03 12:10:28] [ERROR] ❌ VPN 连续失败 27 次，触发重连
+[2026-03-03 12:10:28] [INFO] ============================================================
+[2026-03-03 12:10:28] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:10:28] [INFO] ============================================================
+[2026-03-03 12:10:28] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:10:30] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:10:34] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:10:34] [INFO] 启动 FortiClient...
+[2026-03-03 12:10:34] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:10:36] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:10:36] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:10:36] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:10:36] [INFO] 窗口大小正常
+[2026-03-03 12:10:36] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:10:51] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:10:51] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:10:51] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:10:51] [INFO] 找到应用: fortitray
+[2026-03-03 12:10:51] [INFO] 找到应用: FortiClient
+[2026-03-03 12:10:51] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:10:51] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:10:51] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:10:51] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:10:51] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:10:51] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:10:51] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:10:51] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:10:54] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:10:54] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:10:54] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:11:24] [INFO] 检查 VPN 状态...
+[2026-03-03 12:11:24] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:11:24] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:11:24] [ERROR] ============================================================
+[2026-03-03 12:11:24] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:11:24] [ERROR] ============================================================
+[2026-03-03 12:12:24] [WARNING] ⚠️  VPN 断开 (失败次数: 28/3)
+[2026-03-03 12:12:24] [ERROR] ❌ VPN 连续失败 28 次，触发重连
+[2026-03-03 12:12:24] [INFO] ============================================================
+[2026-03-03 12:12:24] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:12:24] [INFO] ============================================================
+[2026-03-03 12:12:24] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:12:26] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:12:29] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:12:29] [INFO] 启动 FortiClient...
+[2026-03-03 12:12:29] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:12:32] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:12:32] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:12:32] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:12:32] [INFO] 窗口大小正常
+[2026-03-03 12:12:32] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:12:47] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:12:47] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:12:47] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:12:47] [INFO] 找到应用: fortitray
+[2026-03-03 12:12:47] [INFO] 找到应用: FortiClient
+[2026-03-03 12:12:47] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:12:47] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:12:47] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:12:47] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:12:47] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:12:47] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:12:47] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:12:47] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:12:49] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:12:49] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:12:49] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:13:19] [INFO] 检查 VPN 状态...
+[2026-03-03 12:13:19] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:13:19] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:13:19] [ERROR] ============================================================
+[2026-03-03 12:13:19] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:13:19] [ERROR] ============================================================
+[2026-03-03 12:14:20] [WARNING] ⚠️  VPN 断开 (失败次数: 29/3)
+[2026-03-03 12:14:20] [ERROR] ❌ VPN 连续失败 29 次，触发重连
+[2026-03-03 12:14:20] [INFO] ============================================================
+[2026-03-03 12:14:20] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:14:20] [INFO] ============================================================
+[2026-03-03 12:14:20] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:14:22] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:14:25] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:14:25] [INFO] 启动 FortiClient...
+[2026-03-03 12:14:25] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:14:28] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:14:28] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:14:28] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:14:28] [INFO] 窗口大小正常
+[2026-03-03 12:14:28] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:14:43] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:14:43] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:14:43] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:14:43] [INFO] 找到应用: fortitray
+[2026-03-03 12:14:43] [INFO] 找到应用: FortiClient
+[2026-03-03 12:14:43] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:14:43] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:14:43] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:14:43] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:14:43] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:14:43] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:14:43] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:14:43] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:14:45] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:14:45] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:14:45] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:15:15] [INFO] 检查 VPN 状态...
+[2026-03-03 12:15:15] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:15:15] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:15:15] [ERROR] ============================================================
+[2026-03-03 12:15:15] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:15:15] [ERROR] ============================================================
+[2026-03-03 12:16:15] [WARNING] ⚠️  VPN 断开 (失败次数: 30/3)
+[2026-03-03 12:16:15] [ERROR] ❌ VPN 连续失败 30 次，触发重连
+[2026-03-03 12:16:15] [INFO] ============================================================
+[2026-03-03 12:16:15] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:16:15] [INFO] ============================================================
+[2026-03-03 12:16:15] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:16:17] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:16:21] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:16:21] [INFO] 启动 FortiClient...
+[2026-03-03 12:16:21] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:16:24] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:16:24] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:16:24] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:16:24] [INFO] 窗口大小正常
+[2026-03-03 12:16:24] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:16:39] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:16:39] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:16:39] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:16:39] [INFO] 找到应用: fortitray
+[2026-03-03 12:16:39] [INFO] 找到应用: FortiClient
+[2026-03-03 12:16:39] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:16:39] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:16:39] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:16:39] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:16:39] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:16:39] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:16:39] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:16:39] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:16:41] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:16:41] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:16:41] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:17:11] [INFO] 检查 VPN 状态...
+[2026-03-03 12:17:11] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:17:11] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:17:11] [ERROR] ============================================================
+[2026-03-03 12:17:11] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:17:11] [ERROR] ============================================================
+[2026-03-03 12:18:11] [WARNING] ⚠️  VPN 断开 (失败次数: 31/3)
+[2026-03-03 12:18:11] [ERROR] ❌ VPN 连续失败 31 次，触发重连
+[2026-03-03 12:18:11] [INFO] ============================================================
+[2026-03-03 12:18:11] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:18:11] [INFO] ============================================================
+[2026-03-03 12:18:11] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:18:13] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:18:17] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:18:17] [INFO] 启动 FortiClient...
+[2026-03-03 12:18:17] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:18:19] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:18:19] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:18:19] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:18:19] [INFO] 窗口大小正常
+[2026-03-03 12:18:19] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:18:34] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:18:34] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:18:34] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:18:34] [INFO] 找到应用: fortitray
+[2026-03-03 12:18:34] [INFO] 找到应用: FortiClient
+[2026-03-03 12:18:34] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:18:34] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:18:34] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:18:34] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:18:34] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:18:34] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:18:34] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:18:35] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:18:37] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:18:37] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:18:37] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:19:07] [INFO] 检查 VPN 状态...
+[2026-03-03 12:19:07] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:19:07] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:19:07] [ERROR] ============================================================
+[2026-03-03 12:19:07] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:19:07] [ERROR] ============================================================
+[2026-03-03 12:20:07] [WARNING] ⚠️  VPN 断开 (失败次数: 32/3)
+[2026-03-03 12:20:07] [ERROR] ❌ VPN 连续失败 32 次，触发重连
+[2026-03-03 12:20:07] [INFO] ============================================================
+[2026-03-03 12:20:07] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:20:07] [INFO] ============================================================
+[2026-03-03 12:20:07] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:20:09] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:20:12] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:20:12] [INFO] 启动 FortiClient...
+[2026-03-03 12:20:12] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:20:15] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:20:15] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:20:15] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:20:15] [INFO] 窗口大小正常
+[2026-03-03 12:20:15] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:20:30] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:20:30] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:20:30] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:20:30] [INFO] 找到应用: fortitray
+[2026-03-03 12:20:30] [INFO] 找到应用: FortiClient
+[2026-03-03 12:20:30] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:20:30] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:20:30] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:20:30] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:20:30] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:20:30] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:20:30] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:20:30] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:20:33] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:20:33] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:20:33] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:21:03] [INFO] 检查 VPN 状态...
+[2026-03-03 12:21:03] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:21:03] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:21:03] [ERROR] ============================================================
+[2026-03-03 12:21:03] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:21:03] [ERROR] ============================================================
+[2026-03-03 12:22:03] [WARNING] ⚠️  VPN 断开 (失败次数: 33/3)
+[2026-03-03 12:22:03] [ERROR] ❌ VPN 连续失败 33 次，触发重连
+[2026-03-03 12:22:03] [INFO] ============================================================
+[2026-03-03 12:22:03] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:22:03] [INFO] ============================================================
+[2026-03-03 12:22:03] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:22:05] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:22:08] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:22:08] [INFO] 启动 FortiClient...
+[2026-03-03 12:22:08] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:22:11] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:22:11] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:22:11] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:22:11] [INFO] 窗口大小正常
+[2026-03-03 12:22:11] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:22:26] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:22:26] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:22:26] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:22:26] [INFO] 找到应用: fortitray
+[2026-03-03 12:22:26] [INFO] 找到应用: FortiClient
+[2026-03-03 12:22:26] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:22:26] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:22:26] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:22:26] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:22:26] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:22:26] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:22:26] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:22:26] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:22:28] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:22:28] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:22:28] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:22:58] [INFO] 检查 VPN 状态...
+[2026-03-03 12:22:58] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:22:58] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:22:58] [ERROR] ============================================================
+[2026-03-03 12:22:58] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:22:58] [ERROR] ============================================================
+[2026-03-03 12:23:58] [WARNING] ⚠️  VPN 断开 (失败次数: 34/3)
+[2026-03-03 12:23:58] [ERROR] ❌ VPN 连续失败 34 次，触发重连
+[2026-03-03 12:23:58] [INFO] ============================================================
+[2026-03-03 12:23:58] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:23:58] [INFO] ============================================================
+[2026-03-03 12:23:58] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:24:00] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:24:04] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:24:04] [INFO] 启动 FortiClient...
+[2026-03-03 12:24:04] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:24:07] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:24:07] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:24:07] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:24:07] [INFO] 窗口大小正常
+[2026-03-03 12:24:07] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:24:22] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:24:22] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:24:22] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:24:22] [INFO] 找到应用: fortitray
+[2026-03-03 12:24:22] [INFO] 找到应用: FortiClient
+[2026-03-03 12:24:22] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:24:22] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:24:22] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:24:22] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:24:22] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:24:22] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:24:22] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:24:22] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:24:24] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:24:24] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:24:24] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:24:54] [INFO] 检查 VPN 状态...
+[2026-03-03 12:24:54] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:24:54] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:24:54] [ERROR] ============================================================
+[2026-03-03 12:24:54] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:24:54] [ERROR] ============================================================
+[2026-03-03 12:25:54] [WARNING] ⚠️  VPN 断开 (失败次数: 35/3)
+[2026-03-03 12:25:54] [ERROR] ❌ VPN 连续失败 35 次，触发重连
+[2026-03-03 12:25:54] [INFO] ============================================================
+[2026-03-03 12:25:54] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:25:54] [INFO] ============================================================
+[2026-03-03 12:25:54] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:25:56] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:26:00] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:26:00] [INFO] 启动 FortiClient...
+[2026-03-03 12:26:00] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:26:02] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:26:02] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:26:02] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:26:02] [INFO] 窗口大小正常
+[2026-03-03 12:26:02] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:26:17] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:26:17] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:26:17] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:26:18] [INFO] 找到应用: fortitray
+[2026-03-03 12:26:18] [INFO] 找到应用: FortiClient
+[2026-03-03 12:26:18] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:26:18] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:26:18] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:26:18] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:26:18] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:26:18] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:26:18] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:26:18] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:26:20] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:26:20] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:26:20] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:26:50] [INFO] 检查 VPN 状态...
+[2026-03-03 12:26:50] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:26:50] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:26:50] [ERROR] ============================================================
+[2026-03-03 12:26:50] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:26:50] [ERROR] ============================================================
+[2026-03-03 12:27:50] [WARNING] ⚠️  VPN 断开 (失败次数: 36/3)
+[2026-03-03 12:27:50] [ERROR] ❌ VPN 连续失败 36 次，触发重连
+[2026-03-03 12:27:50] [INFO] ============================================================
+[2026-03-03 12:27:50] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:27:50] [INFO] ============================================================
+[2026-03-03 12:27:50] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:27:52] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:27:56] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:27:56] [INFO] 启动 FortiClient...
+[2026-03-03 12:27:56] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:27:58] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:27:58] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:27:58] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:27:58] [INFO] 窗口大小正常
+[2026-03-03 12:27:58] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:28:13] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:28:13] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:28:13] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:28:13] [INFO] 找到应用: fortitray
+[2026-03-03 12:28:13] [INFO] 找到应用: FortiClient
+[2026-03-03 12:28:13] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:28:13] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:28:13] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:28:13] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:28:13] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:28:13] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:28:13] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:28:14] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:28:16] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:28:16] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:28:16] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:28:46] [INFO] 检查 VPN 状态...
+[2026-03-03 12:28:46] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:28:46] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:28:46] [ERROR] ============================================================
+[2026-03-03 12:28:46] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:28:46] [ERROR] ============================================================
+[2026-03-03 12:29:46] [WARNING] ⚠️  VPN 断开 (失败次数: 37/3)
+[2026-03-03 12:29:46] [ERROR] ❌ VPN 连续失败 37 次，触发重连
+[2026-03-03 12:29:46] [INFO] ============================================================
+[2026-03-03 12:29:46] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:29:46] [INFO] ============================================================
+[2026-03-03 12:29:46] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:29:48] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:29:51] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:29:51] [INFO] 启动 FortiClient...
+[2026-03-03 12:29:51] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:29:54] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:29:54] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:29:54] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:29:54] [INFO] 窗口大小正常
+[2026-03-03 12:29:54] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:30:09] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:30:09] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:30:09] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:30:09] [INFO] 找到应用: fortitray
+[2026-03-03 12:30:09] [INFO] 找到应用: FortiClient
+[2026-03-03 12:30:09] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:30:09] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:30:09] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:30:09] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:30:09] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:30:09] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:30:09] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:30:09] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:30:12] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:30:12] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:30:12] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:30:42] [INFO] 检查 VPN 状态...
+[2026-03-03 12:30:42] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:30:42] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:30:42] [ERROR] ============================================================
+[2026-03-03 12:30:42] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:30:42] [ERROR] ============================================================
+[2026-03-03 12:31:42] [WARNING] ⚠️  VPN 断开 (失败次数: 38/3)
+[2026-03-03 12:31:42] [ERROR] ❌ VPN 连续失败 38 次，触发重连
+[2026-03-03 12:31:42] [INFO] ============================================================
+[2026-03-03 12:31:42] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:31:42] [INFO] ============================================================
+[2026-03-03 12:31:42] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:31:44] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:31:47] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:31:47] [INFO] 启动 FortiClient...
+[2026-03-03 12:31:47] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:31:50] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:31:50] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:31:50] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:31:50] [INFO] 窗口大小正常
+[2026-03-03 12:31:50] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:32:05] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:32:05] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:32:05] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:32:05] [INFO] 找到应用: fortitray
+[2026-03-03 12:32:05] [INFO] 找到应用: FortiClient
+[2026-03-03 12:32:05] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:32:05] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:32:05] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:32:05] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:32:05] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:32:05] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:32:05] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:32:05] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:32:07] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:32:07] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:32:07] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:32:37] [INFO] 检查 VPN 状态...
+[2026-03-03 12:32:37] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:32:37] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:32:37] [ERROR] ============================================================
+[2026-03-03 12:32:37] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:32:37] [ERROR] ============================================================
+[2026-03-03 12:33:37] [WARNING] ⚠️  VPN 断开 (失败次数: 39/3)
+[2026-03-03 12:33:37] [ERROR] ❌ VPN 连续失败 39 次，触发重连
+[2026-03-03 12:33:37] [INFO] ============================================================
+[2026-03-03 12:33:37] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:33:37] [INFO] ============================================================
+[2026-03-03 12:33:37] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:33:39] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:33:43] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:33:43] [INFO] 启动 FortiClient...
+[2026-03-03 12:33:43] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:33:46] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:33:46] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:33:46] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:33:46] [INFO] 窗口大小正常
+[2026-03-03 12:33:46] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:34:01] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:34:01] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:34:01] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:34:01] [INFO] 找到应用: fortitray
+[2026-03-03 12:34:01] [INFO] 找到应用: FortiClient
+[2026-03-03 12:34:01] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:34:01] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:34:01] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:34:01] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:34:01] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:34:01] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:34:01] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:34:01] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:34:03] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:34:03] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:34:03] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:34:33] [INFO] 检查 VPN 状态...
+[2026-03-03 12:34:33] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:34:33] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:34:33] [ERROR] ============================================================
+[2026-03-03 12:34:33] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:34:33] [ERROR] ============================================================
+[2026-03-03 12:35:33] [WARNING] ⚠️  VPN 断开 (失败次数: 40/3)
+[2026-03-03 12:35:33] [ERROR] ❌ VPN 连续失败 40 次，触发重连
+[2026-03-03 12:35:33] [INFO] ============================================================
+[2026-03-03 12:35:33] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:35:33] [INFO] ============================================================
+[2026-03-03 12:35:33] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:35:35] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:35:39] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:35:39] [INFO] 启动 FortiClient...
+[2026-03-03 12:35:39] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:35:41] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:35:41] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:35:41] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:35:41] [INFO] 窗口大小正常
+[2026-03-03 12:35:41] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:35:56] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:35:56] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:35:56] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:35:56] [INFO] 找到应用: fortitray
+[2026-03-03 12:35:56] [INFO] 找到应用: FortiClient
+[2026-03-03 12:35:56] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:35:56] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:35:56] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:35:56] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:35:56] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:35:56] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:35:56] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:35:57] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:35:59] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:35:59] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:35:59] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:36:29] [INFO] 检查 VPN 状态...
+[2026-03-03 12:36:29] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:36:29] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:36:29] [ERROR] ============================================================
+[2026-03-03 12:36:29] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:36:29] [ERROR] ============================================================
+[2026-03-03 12:37:29] [WARNING] ⚠️  VPN 断开 (失败次数: 41/3)
+[2026-03-03 12:37:29] [ERROR] ❌ VPN 连续失败 41 次，触发重连
+[2026-03-03 12:37:29] [INFO] ============================================================
+[2026-03-03 12:37:29] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:37:29] [INFO] ============================================================
+[2026-03-03 12:37:29] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:37:31] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:37:34] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:37:34] [INFO] 启动 FortiClient...
+[2026-03-03 12:37:34] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:37:37] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:37:37] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:37:37] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:37:37] [INFO] 窗口大小正常
+[2026-03-03 12:37:37] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:37:52] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:37:52] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:37:52] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:37:52] [INFO] 找到应用: fortitray
+[2026-03-03 12:37:52] [INFO] 找到应用: FortiClient
+[2026-03-03 12:37:52] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:37:52] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:37:52] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:37:52] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:37:52] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:37:52] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:37:52] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:37:52] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:37:55] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:37:55] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:37:55] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:38:25] [INFO] 检查 VPN 状态...
+[2026-03-03 12:38:25] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:38:25] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:38:25] [ERROR] ============================================================
+[2026-03-03 12:38:25] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:38:25] [ERROR] ============================================================
+[2026-03-03 12:39:25] [WARNING] ⚠️  VPN 断开 (失败次数: 42/3)
+[2026-03-03 12:39:25] [ERROR] ❌ VPN 连续失败 42 次，触发重连
+[2026-03-03 12:39:25] [INFO] ============================================================
+[2026-03-03 12:39:25] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:39:25] [INFO] ============================================================
+[2026-03-03 12:39:25] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:39:27] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:39:30] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:39:30] [INFO] 启动 FortiClient...
+[2026-03-03 12:39:30] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:39:33] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:39:33] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:39:33] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:39:33] [INFO] 窗口大小正常
+[2026-03-03 12:39:33] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:39:48] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:39:48] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:39:48] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:39:48] [INFO] 找到应用: fortitray
+[2026-03-03 12:39:48] [INFO] 找到应用: FortiClient
+[2026-03-03 12:39:48] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:39:48] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:39:48] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:39:48] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:39:48] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:39:48] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:39:48] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:39:48] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:39:50] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:39:50] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:39:50] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:40:20] [INFO] 检查 VPN 状态...
+[2026-03-03 12:40:20] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:40:20] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:40:20] [ERROR] ============================================================
+[2026-03-03 12:40:20] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:40:20] [ERROR] ============================================================
+[2026-03-03 12:41:20] [WARNING] ⚠️  VPN 断开 (失败次数: 43/3)
+[2026-03-03 12:41:20] [ERROR] ❌ VPN 连续失败 43 次，触发重连
+[2026-03-03 12:41:20] [INFO] ============================================================
+[2026-03-03 12:41:20] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:41:20] [INFO] ============================================================
+[2026-03-03 12:41:20] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:41:22] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:41:26] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:41:26] [INFO] 启动 FortiClient...
+[2026-03-03 12:41:26] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:41:29] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:41:29] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:41:29] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:41:29] [INFO] 窗口大小正常
+[2026-03-03 12:41:29] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:41:44] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:41:44] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:41:44] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:41:44] [INFO] 找到应用: fortitray
+[2026-03-03 12:41:44] [INFO] 找到应用: FortiClient
+[2026-03-03 12:41:44] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:41:44] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:41:44] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:41:44] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:41:44] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:41:44] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:41:44] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:41:44] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:41:46] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:41:46] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:41:46] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:42:16] [INFO] 检查 VPN 状态...
+[2026-03-03 12:42:16] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:42:16] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:42:16] [ERROR] ============================================================
+[2026-03-03 12:42:16] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:42:16] [ERROR] ============================================================
+[2026-03-03 12:43:16] [WARNING] ⚠️  VPN 断开 (失败次数: 44/3)
+[2026-03-03 12:43:16] [ERROR] ❌ VPN 连续失败 44 次，触发重连
+[2026-03-03 12:43:16] [INFO] ============================================================
+[2026-03-03 12:43:16] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:43:16] [INFO] ============================================================
+[2026-03-03 12:43:16] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:43:18] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:43:22] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:43:22] [INFO] 启动 FortiClient...
+[2026-03-03 12:43:22] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:43:24] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:43:24] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:43:24] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:43:24] [INFO] 窗口大小正常
+[2026-03-03 12:43:24] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:43:39] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:43:39] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:43:39] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:43:39] [INFO] 找到应用: fortitray
+[2026-03-03 12:43:39] [INFO] 找到应用: FortiClient
+[2026-03-03 12:43:39] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:43:39] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:43:39] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:43:39] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:43:39] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:43:39] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:43:39] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:43:40] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:43:42] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:43:42] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:43:42] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:44:12] [INFO] 检查 VPN 状态...
+[2026-03-03 12:44:12] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:44:12] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:44:12] [ERROR] ============================================================
+[2026-03-03 12:44:12] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:44:12] [ERROR] ============================================================
+[2026-03-03 12:45:12] [WARNING] ⚠️  VPN 断开 (失败次数: 45/3)
+[2026-03-03 12:45:12] [ERROR] ❌ VPN 连续失败 45 次，触发重连
+[2026-03-03 12:45:12] [INFO] ============================================================
+[2026-03-03 12:45:12] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:45:12] [INFO] ============================================================
+[2026-03-03 12:45:12] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:45:14] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:45:17] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:45:17] [INFO] 启动 FortiClient...
+[2026-03-03 12:45:17] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:45:20] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:45:20] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:45:20] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:45:20] [INFO] 窗口大小正常
+[2026-03-03 12:45:20] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:45:35] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:45:35] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:45:35] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:45:35] [INFO] 找到应用: fortitray
+[2026-03-03 12:45:35] [INFO] 找到应用: FortiClient
+[2026-03-03 12:45:35] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:45:35] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:45:35] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:45:35] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:45:35] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:45:35] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:45:35] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:45:35] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:45:38] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:45:38] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:45:38] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:46:08] [INFO] 检查 VPN 状态...
+[2026-03-03 12:46:08] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:46:08] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:46:08] [ERROR] ============================================================
+[2026-03-03 12:46:08] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:46:08] [ERROR] ============================================================
+[2026-03-03 12:47:08] [WARNING] ⚠️  VPN 断开 (失败次数: 46/3)
+[2026-03-03 12:47:08] [ERROR] ❌ VPN 连续失败 46 次，触发重连
+[2026-03-03 12:47:08] [INFO] ============================================================
+[2026-03-03 12:47:08] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:47:08] [INFO] ============================================================
+[2026-03-03 12:47:08] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:47:10] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:47:13] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:47:13] [INFO] 启动 FortiClient...
+[2026-03-03 12:47:13] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:47:16] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:47:16] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:47:16] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:47:16] [INFO] 窗口大小正常
+[2026-03-03 12:47:16] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:47:31] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:47:31] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:47:31] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:47:31] [INFO] 找到应用: fortitray
+[2026-03-03 12:47:31] [INFO] 找到应用: FortiClient
+[2026-03-03 12:47:31] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:47:31] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:47:31] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:47:31] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:47:31] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:47:31] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:47:31] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:47:31] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:47:33] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:47:33] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:47:33] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:48:03] [INFO] 检查 VPN 状态...
+[2026-03-03 12:48:03] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:48:03] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:48:03] [ERROR] ============================================================
+[2026-03-03 12:48:03] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:48:03] [ERROR] ============================================================
+[2026-03-03 12:49:04] [WARNING] ⚠️  VPN 断开 (失败次数: 47/3)
+[2026-03-03 12:49:04] [ERROR] ❌ VPN 连续失败 47 次，触发重连
+[2026-03-03 12:49:04] [INFO] ============================================================
+[2026-03-03 12:49:04] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:49:04] [INFO] ============================================================
+[2026-03-03 12:49:04] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:49:06] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:49:09] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:49:09] [INFO] 启动 FortiClient...
+[2026-03-03 12:49:09] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:49:12] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:49:12] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:49:12] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:49:12] [INFO] 窗口大小正常
+[2026-03-03 12:49:12] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:49:27] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:49:27] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:49:27] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:49:27] [INFO] 找到应用: fortitray
+[2026-03-03 12:49:27] [INFO] 找到应用: FortiClient
+[2026-03-03 12:49:27] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:49:27] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:49:27] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:49:27] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:49:27] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:49:27] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:49:27] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:49:27] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:49:29] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:49:29] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:49:29] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:49:59] [INFO] 检查 VPN 状态...
+[2026-03-03 12:49:59] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:49:59] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:49:59] [ERROR] ============================================================
+[2026-03-03 12:49:59] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:49:59] [ERROR] ============================================================
+[2026-03-03 12:50:59] [WARNING] ⚠️  VPN 断开 (失败次数: 48/3)
+[2026-03-03 12:50:59] [ERROR] ❌ VPN 连续失败 48 次，触发重连
+[2026-03-03 12:50:59] [INFO] ============================================================
+[2026-03-03 12:50:59] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:50:59] [INFO] ============================================================
+[2026-03-03 12:50:59] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:51:01] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:51:05] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:51:05] [INFO] 启动 FortiClient...
+[2026-03-03 12:51:05] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:51:07] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:51:07] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:51:07] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:51:07] [INFO] 窗口大小正常
+[2026-03-03 12:51:07] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:51:22] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:51:22] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:51:22] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:51:23] [INFO] 找到应用: fortitray
+[2026-03-03 12:51:23] [INFO] 找到应用: FortiClient
+[2026-03-03 12:51:23] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:51:23] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:51:23] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:51:23] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:51:23] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:51:23] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:51:23] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:51:23] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:51:25] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:51:25] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:51:25] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:51:55] [INFO] 检查 VPN 状态...
+[2026-03-03 12:51:55] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:51:55] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:51:55] [ERROR] ============================================================
+[2026-03-03 12:51:55] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:51:55] [ERROR] ============================================================
+[2026-03-03 12:52:55] [WARNING] ⚠️  VPN 断开 (失败次数: 49/3)
+[2026-03-03 12:52:55] [ERROR] ❌ VPN 连续失败 49 次，触发重连
+[2026-03-03 12:52:55] [INFO] ============================================================
+[2026-03-03 12:52:55] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:52:55] [INFO] ============================================================
+[2026-03-03 12:52:55] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:52:57] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:53:01] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:53:01] [INFO] 启动 FortiClient...
+[2026-03-03 12:53:01] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:53:03] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:53:03] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:53:03] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:53:03] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 12:53:04] [INFO] ✅ 窗口已调整
+[2026-03-03 12:53:04] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:53:19] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:53:19] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:53:19] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:53:19] [INFO] 找到应用: fortitray
+[2026-03-03 12:53:19] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:53:19] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:53:19] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:53:19] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:53:19] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:53:19] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:53:19] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:53:19] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:53:22] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:53:22] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:53:22] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:53:52] [INFO] 检查 VPN 状态...
+[2026-03-03 12:53:52] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:53:52] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:53:52] [ERROR] ============================================================
+[2026-03-03 12:53:52] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:53:52] [ERROR] ============================================================
+[2026-03-03 12:54:52] [WARNING] ⚠️  VPN 断开 (失败次数: 50/3)
+[2026-03-03 12:54:52] [ERROR] ❌ VPN 连续失败 50 次，触发重连
+[2026-03-03 12:54:52] [INFO] ============================================================
+[2026-03-03 12:54:52] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:54:52] [INFO] ============================================================
+[2026-03-03 12:54:52] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:54:54] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:54:57] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:54:57] [INFO] 启动 FortiClient...
+[2026-03-03 12:54:57] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:55:00] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:55:00] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:55:00] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:55:00] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 12:55:01] [INFO] ✅ 窗口已调整
+[2026-03-03 12:55:01] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:55:16] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:55:16] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:55:16] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:55:16] [INFO] 找到应用: fortitray
+[2026-03-03 12:55:16] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:55:16] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:55:16] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:55:16] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:55:16] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:55:16] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:55:16] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:55:16] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:55:18] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:55:18] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:55:18] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:55:48] [INFO] 检查 VPN 状态...
+[2026-03-03 12:55:48] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:55:48] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:55:48] [ERROR] ============================================================
+[2026-03-03 12:55:48] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:55:48] [ERROR] ============================================================
+[2026-03-03 12:56:48] [WARNING] ⚠️  VPN 断开 (失败次数: 51/3)
+[2026-03-03 12:56:48] [ERROR] ❌ VPN 连续失败 51 次，触发重连
+[2026-03-03 12:56:48] [INFO] ============================================================
+[2026-03-03 12:56:48] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:56:48] [INFO] ============================================================
+[2026-03-03 12:56:48] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:56:50] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:56:54] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:56:54] [INFO] 启动 FortiClient...
+[2026-03-03 12:56:54] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:56:57] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:56:57] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:56:57] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:56:57] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 12:56:57] [INFO] ✅ 窗口已调整
+[2026-03-03 12:56:57] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:57:12] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:57:12] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:57:12] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:57:12] [INFO] 找到应用: fortitray
+[2026-03-03 12:57:12] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:57:12] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:57:12] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:57:12] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:57:12] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:57:12] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:57:12] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:57:13] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:57:15] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:57:15] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:57:15] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:57:45] [INFO] 检查 VPN 状态...
+[2026-03-03 12:57:45] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:57:45] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:57:45] [ERROR] ============================================================
+[2026-03-03 12:57:45] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:57:45] [ERROR] ============================================================
+[2026-03-03 12:58:45] [WARNING] ⚠️  VPN 断开 (失败次数: 52/3)
+[2026-03-03 12:58:45] [ERROR] ❌ VPN 连续失败 52 次，触发重连
+[2026-03-03 12:58:45] [INFO] ============================================================
+[2026-03-03 12:58:45] [INFO] 开始 VPN 重连流程
+[2026-03-03 12:58:45] [INFO] ============================================================
+[2026-03-03 12:58:45] [INFO] 停止 FortiClient 进程...
+[2026-03-03 12:58:47] [INFO] 自动输入 sudo 密码...
+[2026-03-03 12:58:51] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 12:58:51] [INFO] 启动 FortiClient...
+[2026-03-03 12:58:51] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 12:58:53] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 12:58:53] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 12:58:53] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 12:58:53] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 12:58:54] [INFO] ✅ 窗口已调整
+[2026-03-03 12:58:54] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 12:59:09] [INFO] 尝试点击连接按钮...
+[2026-03-03 12:59:09] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 12:59:09] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 12:59:09] [INFO] 找到应用: fortitray
+[2026-03-03 12:59:09] [INFO] 找到应用: FortiClient
+[2026-03-03 12:59:09] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 12:59:09] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 12:59:09] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 12:59:09] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 12:59:09] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 12:59:09] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 12:59:09] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 12:59:09] [INFO] 找到按钮: (993, 723)
+[2026-03-03 12:59:11] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 12:59:11] [INFO] ✅ VisionDriver 成功
+[2026-03-03 12:59:11] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 12:59:41] [INFO] 检查 VPN 状态...
+[2026-03-03 12:59:41] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 12:59:41] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 12:59:41] [ERROR] ============================================================
+[2026-03-03 12:59:41] [ERROR] ❌ VPN 重连失败
+[2026-03-03 12:59:41] [ERROR] ============================================================
+[2026-03-03 13:00:41] [WARNING] ⚠️  VPN 断开 (失败次数: 53/3)
+[2026-03-03 13:00:41] [ERROR] ❌ VPN 连续失败 53 次，触发重连
+[2026-03-03 13:00:41] [INFO] ============================================================
+[2026-03-03 13:00:41] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:00:41] [INFO] ============================================================
+[2026-03-03 13:00:41] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:00:43] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:00:47] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:00:47] [INFO] 启动 FortiClient...
+[2026-03-03 13:00:47] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:00:50] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:00:50] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:00:50] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:00:50] [INFO] 窗口大小正常
+[2026-03-03 13:00:50] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:01:05] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:01:05] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:01:05] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:01:05] [INFO] 找到应用: fortitray
+[2026-03-03 13:01:05] [INFO] 找到应用: FortiClient
+[2026-03-03 13:01:05] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:01:05] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:01:05] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:01:05] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:01:05] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:01:05] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:01:05] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:01:05] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:01:07] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:01:07] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:01:07] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:01:37] [INFO] 检查 VPN 状态...
+[2026-03-03 13:01:37] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:01:37] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:01:37] [ERROR] ============================================================
+[2026-03-03 13:01:37] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:01:37] [ERROR] ============================================================
+[2026-03-03 13:02:37] [WARNING] ⚠️  VPN 断开 (失败次数: 54/3)
+[2026-03-03 13:02:37] [ERROR] ❌ VPN 连续失败 54 次，触发重连
+[2026-03-03 13:02:37] [INFO] ============================================================
+[2026-03-03 13:02:37] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:02:37] [INFO] ============================================================
+[2026-03-03 13:02:37] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:02:39] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:02:43] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:02:43] [INFO] 启动 FortiClient...
+[2026-03-03 13:02:43] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:02:46] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:02:46] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:02:46] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:02:46] [INFO] 窗口大小正常
+[2026-03-03 13:02:46] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:03:01] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:03:01] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:03:01] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:03:01] [INFO] 找到应用: fortitray
+[2026-03-03 13:03:01] [INFO] 找到应用: FortiClient
+[2026-03-03 13:03:01] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:03:01] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:03:01] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:03:01] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:03:01] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:03:01] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:03:01] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:03:01] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:03:03] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:03:03] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:03:03] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:03:33] [INFO] 检查 VPN 状态...
+[2026-03-03 13:03:33] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:03:33] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:03:33] [ERROR] ============================================================
+[2026-03-03 13:03:33] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:03:33] [ERROR] ============================================================
+[2026-03-03 13:04:33] [WARNING] ⚠️  VPN 断开 (失败次数: 55/3)
+[2026-03-03 13:04:33] [ERROR] ❌ VPN 连续失败 55 次，触发重连
+[2026-03-03 13:04:33] [INFO] ============================================================
+[2026-03-03 13:04:33] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:04:33] [INFO] ============================================================
+[2026-03-03 13:04:33] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:04:35] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:04:39] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:04:39] [INFO] 启动 FortiClient...
+[2026-03-03 13:04:39] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:04:41] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:04:41] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:04:41] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:04:41] [INFO] 窗口大小正常
+[2026-03-03 13:04:41] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:04:56] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:04:56] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:04:56] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:04:56] [INFO] 找到应用: fortitray
+[2026-03-03 13:04:56] [INFO] 找到应用: FortiClient
+[2026-03-03 13:04:56] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:04:56] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:04:56] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:04:56] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:04:56] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:04:56] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:04:56] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:04:57] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:04:59] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:04:59] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:04:59] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:05:29] [INFO] 检查 VPN 状态...
+[2026-03-03 13:05:29] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:05:29] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:05:29] [ERROR] ============================================================
+[2026-03-03 13:05:29] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:05:29] [ERROR] ============================================================
+[2026-03-03 13:06:29] [WARNING] ⚠️  VPN 断开 (失败次数: 56/3)
+[2026-03-03 13:06:29] [ERROR] ❌ VPN 连续失败 56 次，触发重连
+[2026-03-03 13:06:29] [INFO] ============================================================
+[2026-03-03 13:06:29] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:06:29] [INFO] ============================================================
+[2026-03-03 13:06:29] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:06:31] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:06:34] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:06:34] [INFO] 启动 FortiClient...
+[2026-03-03 13:06:34] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:06:37] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:06:37] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:06:37] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:06:37] [INFO] 窗口大小正常
+[2026-03-03 13:06:37] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:06:52] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:06:52] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:06:52] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:06:52] [INFO] 找到应用: fortitray
+[2026-03-03 13:06:52] [INFO] 找到应用: FortiClient
+[2026-03-03 13:06:52] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:06:52] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:06:52] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:06:52] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:06:52] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:06:52] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:06:52] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:06:52] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:06:55] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:06:55] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:06:55] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:07:25] [INFO] 检查 VPN 状态...
+[2026-03-03 13:07:25] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:07:25] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:07:25] [ERROR] ============================================================
+[2026-03-03 13:07:25] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:07:25] [ERROR] ============================================================
+[2026-03-03 13:08:25] [WARNING] ⚠️  VPN 断开 (失败次数: 57/3)
+[2026-03-03 13:08:25] [ERROR] ❌ VPN 连续失败 57 次，触发重连
+[2026-03-03 13:08:25] [INFO] ============================================================
+[2026-03-03 13:08:25] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:08:25] [INFO] ============================================================
+[2026-03-03 13:08:25] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:08:27] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:08:30] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:08:30] [INFO] 启动 FortiClient...
+[2026-03-03 13:08:30] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:08:33] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:08:33] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:08:33] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:08:33] [INFO] 窗口大小正常
+[2026-03-03 13:08:33] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:08:48] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:08:48] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:08:48] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:08:48] [INFO] 找到应用: fortitray
+[2026-03-03 13:08:48] [INFO] 找到应用: FortiClient
+[2026-03-03 13:08:48] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:08:48] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:08:48] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:08:48] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:08:48] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:08:48] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:08:48] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:08:48] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:08:50] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:08:50] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:08:50] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:09:20] [INFO] 检查 VPN 状态...
+[2026-03-03 13:09:20] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:09:20] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:09:20] [ERROR] ============================================================
+[2026-03-03 13:09:20] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:09:20] [ERROR] ============================================================
+[2026-03-03 13:10:20] [WARNING] ⚠️  VPN 断开 (失败次数: 58/3)
+[2026-03-03 13:10:20] [ERROR] ❌ VPN 连续失败 58 次，触发重连
+[2026-03-03 13:10:20] [INFO] ============================================================
+[2026-03-03 13:10:20] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:10:20] [INFO] ============================================================
+[2026-03-03 13:10:20] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:10:22] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:10:26] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:10:26] [INFO] 启动 FortiClient...
+[2026-03-03 13:10:26] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:10:29] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:10:29] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:10:29] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:10:29] [INFO] 窗口大小正常
+[2026-03-03 13:10:29] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:10:44] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:10:44] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:10:44] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:10:44] [INFO] 找到应用: fortitray
+[2026-03-03 13:10:44] [INFO] 找到应用: FortiClient
+[2026-03-03 13:10:44] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:10:44] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:10:44] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:10:44] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:10:44] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:10:44] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:10:44] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:10:44] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:10:46] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:10:46] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:10:46] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:11:16] [INFO] 检查 VPN 状态...
+[2026-03-03 13:11:16] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:11:16] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:11:16] [ERROR] ============================================================
+[2026-03-03 13:11:16] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:11:16] [ERROR] ============================================================
+[2026-03-03 13:12:16] [WARNING] ⚠️  VPN 断开 (失败次数: 59/3)
+[2026-03-03 13:12:16] [ERROR] ❌ VPN 连续失败 59 次，触发重连
+[2026-03-03 13:12:16] [INFO] ============================================================
+[2026-03-03 13:12:16] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:12:16] [INFO] ============================================================
+[2026-03-03 13:12:16] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:12:18] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:12:22] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:12:22] [INFO] 启动 FortiClient...
+[2026-03-03 13:12:22] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:12:24] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:12:24] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:12:24] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:12:24] [INFO] 窗口大小正常
+[2026-03-03 13:12:24] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:12:39] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:12:39] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:12:39] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:12:39] [INFO] 找到应用: fortitray
+[2026-03-03 13:12:39] [INFO] 找到应用: FortiClient
+[2026-03-03 13:12:39] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:12:39] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:12:39] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:12:39] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:12:39] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:12:39] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:12:39] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:12:40] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:12:42] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:12:42] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:12:42] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:13:12] [INFO] 检查 VPN 状态...
+[2026-03-03 13:13:12] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:13:12] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:13:12] [ERROR] ============================================================
+[2026-03-03 13:13:12] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:13:12] [ERROR] ============================================================
+[2026-03-03 13:14:12] [WARNING] ⚠️  VPN 断开 (失败次数: 60/3)
+[2026-03-03 13:14:12] [ERROR] ❌ VPN 连续失败 60 次，触发重连
+[2026-03-03 13:14:12] [INFO] ============================================================
+[2026-03-03 13:14:12] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:14:12] [INFO] ============================================================
+[2026-03-03 13:14:12] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:14:14] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:14:17] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:14:17] [INFO] 启动 FortiClient...
+[2026-03-03 13:14:17] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:14:20] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:14:20] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:14:20] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:14:20] [INFO] 窗口大小正常
+[2026-03-03 13:14:20] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:14:35] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:14:35] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:14:35] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:14:35] [INFO] 找到应用: fortitray
+[2026-03-03 13:14:35] [INFO] 找到应用: FortiClient
+[2026-03-03 13:14:35] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:14:35] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:14:35] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:14:35] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:14:35] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:14:35] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:14:35] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:14:35] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:14:38] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:14:38] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:14:38] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:15:08] [INFO] 检查 VPN 状态...
+[2026-03-03 13:15:08] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:15:08] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:15:08] [ERROR] ============================================================
+[2026-03-03 13:15:08] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:15:08] [ERROR] ============================================================
+[2026-03-03 13:16:08] [WARNING] ⚠️  VPN 断开 (失败次数: 61/3)
+[2026-03-03 13:16:08] [ERROR] ❌ VPN 连续失败 61 次，触发重连
+[2026-03-03 13:16:08] [INFO] ============================================================
+[2026-03-03 13:16:08] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:16:08] [INFO] ============================================================
+[2026-03-03 13:16:08] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:16:10] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:16:13] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:16:13] [INFO] 启动 FortiClient...
+[2026-03-03 13:16:13] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:16:16] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:16:16] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:16:16] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:16:16] [INFO] 窗口大小正常
+[2026-03-03 13:16:16] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:16:31] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:16:31] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:16:31] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:16:31] [INFO] 找到应用: fortitray
+[2026-03-03 13:16:31] [INFO] 找到应用: FortiClient
+[2026-03-03 13:16:31] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:16:31] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:16:31] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:16:31] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:16:31] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:16:31] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:16:31] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:16:31] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:16:33] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:16:33] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:16:33] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:17:03] [INFO] 检查 VPN 状态...
+[2026-03-03 13:17:03] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:17:03] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:17:03] [ERROR] ============================================================
+[2026-03-03 13:17:03] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:17:03] [ERROR] ============================================================
+[2026-03-03 13:18:03] [WARNING] ⚠️  VPN 断开 (失败次数: 62/3)
+[2026-03-03 13:18:03] [ERROR] ❌ VPN 连续失败 62 次，触发重连
+[2026-03-03 13:18:03] [INFO] ============================================================
+[2026-03-03 13:18:03] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:18:03] [INFO] ============================================================
+[2026-03-03 13:18:03] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:18:05] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:18:09] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:18:09] [INFO] 启动 FortiClient...
+[2026-03-03 13:18:09] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:18:12] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:18:12] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:18:12] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:18:12] [INFO] 窗口大小正常
+[2026-03-03 13:18:12] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:18:27] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:18:27] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:18:27] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:18:27] [INFO] 找到应用: fortitray
+[2026-03-03 13:18:27] [INFO] 找到应用: FortiClient
+[2026-03-03 13:18:27] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:18:27] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:18:27] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:18:27] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:18:27] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:18:27] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:18:27] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:18:27] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:18:29] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:18:29] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:18:29] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:18:59] [INFO] 检查 VPN 状态...
+[2026-03-03 13:18:59] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:18:59] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:18:59] [ERROR] ============================================================
+[2026-03-03 13:18:59] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:18:59] [ERROR] ============================================================
+[2026-03-03 13:19:59] [WARNING] ⚠️  VPN 断开 (失败次数: 63/3)
+[2026-03-03 13:19:59] [ERROR] ❌ VPN 连续失败 63 次，触发重连
+[2026-03-03 13:19:59] [INFO] ============================================================
+[2026-03-03 13:19:59] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:19:59] [INFO] ============================================================
+[2026-03-03 13:19:59] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:20:01] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:20:05] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:20:05] [INFO] 启动 FortiClient...
+[2026-03-03 13:20:05] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:20:07] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:20:07] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:20:07] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:20:07] [INFO] 窗口大小正常
+[2026-03-03 13:20:07] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:20:22] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:20:22] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:20:22] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:20:22] [INFO] 找到应用: fortitray
+[2026-03-03 13:20:22] [INFO] 找到应用: FortiClient
+[2026-03-03 13:20:23] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:20:23] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:20:23] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:20:23] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:20:23] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:20:23] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:20:23] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:20:23] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:20:25] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:20:25] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:20:25] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:20:55] [INFO] 检查 VPN 状态...
+[2026-03-03 13:20:55] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:20:55] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:20:55] [ERROR] ============================================================
+[2026-03-03 13:20:55] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:20:55] [ERROR] ============================================================
+[2026-03-03 13:21:55] [WARNING] ⚠️  VPN 断开 (失败次数: 64/3)
+[2026-03-03 13:21:55] [ERROR] ❌ VPN 连续失败 64 次，触发重连
+[2026-03-03 13:21:55] [INFO] ============================================================
+[2026-03-03 13:21:55] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:21:55] [INFO] ============================================================
+[2026-03-03 13:21:55] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:21:57] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:22:01] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:22:01] [INFO] 启动 FortiClient...
+[2026-03-03 13:22:01] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:22:03] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:22:03] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:22:03] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:22:03] [INFO] 窗口大小正常
+[2026-03-03 13:22:03] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:22:18] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:22:18] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:22:18] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:22:18] [INFO] 找到应用: fortitray
+[2026-03-03 13:22:18] [INFO] 找到应用: FortiClient
+[2026-03-03 13:22:18] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:22:18] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:22:18] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:22:18] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:22:18] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:22:18] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:22:18] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:22:19] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:22:21] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:22:21] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:22:21] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:22:51] [INFO] 检查 VPN 状态...
+[2026-03-03 13:22:51] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:22:51] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:22:51] [ERROR] ============================================================
+[2026-03-03 13:22:51] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:22:51] [ERROR] ============================================================
+[2026-03-03 13:23:51] [WARNING] ⚠️  VPN 断开 (失败次数: 65/3)
+[2026-03-03 13:23:51] [ERROR] ❌ VPN 连续失败 65 次，触发重连
+[2026-03-03 13:23:51] [INFO] ============================================================
+[2026-03-03 13:23:51] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:23:51] [INFO] ============================================================
+[2026-03-03 13:23:51] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:23:53] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:23:56] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:23:56] [INFO] 启动 FortiClient...
+[2026-03-03 13:23:56] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:23:59] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:23:59] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:23:59] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:23:59] [INFO] 窗口大小正常
+[2026-03-03 13:23:59] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:24:14] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:24:14] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:24:14] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:24:14] [INFO] 找到应用: fortitray
+[2026-03-03 13:24:14] [INFO] 找到应用: FortiClient
+[2026-03-03 13:24:14] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:24:14] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:24:14] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:24:14] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:24:14] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:24:14] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:24:14] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:24:14] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:24:16] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:24:16] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:24:16] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:24:46] [INFO] 检查 VPN 状态...
+[2026-03-03 13:24:46] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:24:46] [WARNING] VPN 可能需要手动完成 SAML 认证
+[2026-03-03 13:24:46] [ERROR] ============================================================
+[2026-03-03 13:24:46] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:24:46] [ERROR] ============================================================
+[2026-03-03 13:25:47] [WARNING] ⚠️  VPN 断开 (失败次数: 66/3)
+[2026-03-03 13:25:47] [ERROR] ❌ VPN 连续失败 66 次，触发重连
+[2026-03-03 13:25:47] [INFO] ============================================================
+[2026-03-03 13:25:47] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:25:47] [INFO] ============================================================
+[2026-03-03 13:25:47] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:25:49] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:25:52] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:25:52] [INFO] 启动 FortiClient...
+[2026-03-03 13:25:52] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:25:55] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:25:55] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:25:55] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:25:55] [INFO] 窗口大小正常
+[2026-03-03 13:25:55] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:26:10] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:26:10] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:26:10] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:26:10] [INFO] 找到应用: fortitray
+[2026-03-03 13:26:10] [INFO] 找到应用: FortiClient
+[2026-03-03 13:26:10] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:26:10] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:26:10] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:26:10] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:26:10] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:26:10] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:26:10] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:26:10] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:26:12] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:26:12] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:26:12] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:26:34] ==========================================
+[2026-03-03 13:26:34] VPN 自动重连系统启动
+[2026-03-03 13:26:34] ==========================================
+[2026-03-03 13:26:34] DISPLAY: :1
+[2026-03-03 13:26:34] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 13:26:34] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 13:26:34] 
+[2026-03-03 13:26:34] Python 版本: Python 3.8.10
+[2026-03-03 13:26:34] 检查依赖...
+[2026-03-03 13:26:35] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 13:26:35] 
+[2026-03-03 13:26:35] 启动 VPN Watchdog...
+[2026-03-03 13:26:35] 
+[2026-03-03 13:26:35] [INFO] AT-SPI 驱动已加载
+[2026-03-03 13:26:35] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 13:26:35] [INFO] OpenCV 驱动已加载
+[2026-03-03 13:26:35] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 13:26:35] [INFO] 已加载 3 个驱动
+[2026-03-03 13:26:35] [INFO] VPN Watchdog 已启动
+[2026-03-03 13:26:35] [INFO] 检测间隔: 60 秒
+[2026-03-03 13:26:35] [INFO] 最大失败次数: 3
+[2026-03-03 13:30:39] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 13:31:39] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 13:32:40] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 13:32:40] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 13:32:40] [INFO] ============================================================
+[2026-03-03 13:32:40] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:32:40] [INFO] ============================================================
+[2026-03-03 13:32:40] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:32:42] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:32:45] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:32:45] [INFO] 启动 FortiClient...
+[2026-03-03 13:32:45] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:32:48] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:32:48] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:33:18] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-03-03 13:33:18] [ERROR] FortiClient 窗口未出现
+[2026-03-03 13:33:18] [ERROR] ============================================================
+[2026-03-03 13:33:18] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:33:18] [ERROR] ============================================================
+[2026-03-03 13:34:18] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-03 13:34:18] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-03 13:34:18] [INFO] ============================================================
+[2026-03-03 13:34:18] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:34:18] [INFO] ============================================================
+[2026-03-03 13:34:18] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:34:20] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:34:24] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:34:24] [INFO] 启动 FortiClient...
+[2026-03-03 13:34:24] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:34:42] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:34:42] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:35:12] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-03-03 13:35:12] [ERROR] FortiClient 窗口未出现
+[2026-03-03 13:35:12] [ERROR] ============================================================
+[2026-03-03 13:35:12] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:35:12] [ERROR] ============================================================
+[2026-03-03 13:35:56] ==========================================
+[2026-03-03 13:35:56] VPN 自动重连系统启动
+[2026-03-03 13:35:56] ==========================================
+[2026-03-03 13:35:56] DISPLAY: :1
+[2026-03-03 13:35:56] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 13:35:56] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 13:35:56] 
+[2026-03-03 13:35:56] Python 版本: Python 3.8.10
+[2026-03-03 13:35:56] 检查依赖...
+[2026-03-03 13:35:56] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 13:35:56] 
+[2026-03-03 13:35:56] 启动 VPN Watchdog...
+[2026-03-03 13:35:56] 
+[2026-03-03 13:35:56] [INFO] AT-SPI 驱动已加载
+[2026-03-03 13:35:56] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 13:35:56] [INFO] OpenCV 驱动已加载
+[2026-03-03 13:35:56] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 13:35:56] [INFO] 已加载 3 个驱动
+[2026-03-03 13:35:56] [INFO] VPN Watchdog 已启动
+[2026-03-03 13:35:56] [INFO] 检测间隔: 60 秒
+[2026-03-03 13:35:56] [INFO] 最大失败次数: 3
+[2026-03-03 13:35:56] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 13:36:56] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 13:37:43] ==========================================
+[2026-03-03 13:37:43] VPN 自动重连系统启动
+[2026-03-03 13:37:43] ==========================================
+[2026-03-03 13:37:43] DISPLAY: :1
+[2026-03-03 13:37:43] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 13:37:43] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 13:37:43] 
+[2026-03-03 13:37:43] Python 版本: Python 3.8.10
+[2026-03-03 13:37:43] 检查依赖...
+[2026-03-03 13:37:44] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 13:37:44] 
+[2026-03-03 13:37:44] 启动 VPN Watchdog...
+[2026-03-03 13:37:44] 
+[2026-03-03 13:37:44] [INFO] AT-SPI 驱动已加载
+[2026-03-03 13:37:44] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 13:37:44] [INFO] OpenCV 驱动已加载
+[2026-03-03 13:37:44] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 13:37:44] [INFO] 已加载 3 个驱动
+[2026-03-03 13:37:44] [INFO] VPN Watchdog 已启动
+[2026-03-03 13:37:44] [INFO] 检测间隔: 60 秒
+[2026-03-03 13:37:44] [INFO] 最大失败次数: 3
+[2026-03-03 13:37:44] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 13:38:44] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 13:39:44] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 13:39:44] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 13:39:44] [INFO] ============================================================
+[2026-03-03 13:39:44] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:39:44] [INFO] ============================================================
+[2026-03-03 13:39:44] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:39:44] [INFO] 需要 sudo 密码，使用 GUI 自动输入...
+[2026-03-03 13:39:46] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:39:50] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:39:50] [INFO] 启动 FortiClient...
+[2026-03-03 13:39:50] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:39:52] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:39:52] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:39:52] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 13:39:52] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 13:39:53] [INFO] ✅ 窗口已调整
+[2026-03-03 13:39:53] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 13:40:08] [INFO] 尝试点击连接按钮...
+[2026-03-03 13:40:08] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 13:40:08] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 13:40:08] [INFO] 找到应用: FortiClient
+[2026-03-03 13:40:08] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 13:40:08] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 13:40:08] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 13:40:08] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 13:40:08] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 13:40:08] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 13:40:08] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 13:40:08] [INFO] 找到按钮: (993, 723)
+[2026-03-03 13:40:11] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 13:40:11] [INFO] ✅ VisionDriver 成功
+[2026-03-03 13:40:11] [INFO] 等待 VPN 连接（30 秒）...
+[2026-03-03 13:40:41] [INFO] 检查 VPN 状态...
+[2026-03-03 13:40:41] [WARNING] ⚠️  VPN 未连接
+[2026-03-03 13:40:41] [WARNING] ⚠️  VPN 需要手动完成 SAML 认证
+[2026-03-03 13:40:41] [INFO] 正在截取屏幕...
+[2026-03-03 13:40:41] [INFO] 截图已保存: /tmp/vpn-saml-50364.png
+[2026-03-03 13:40:51] [INFO] ✅ 飞书图片发送成功
+[2026-03-03 13:40:56] [INFO] ✅ 飞书消息发送成功
+[2026-03-03 13:40:56] [ERROR] ============================================================
+[2026-03-03 13:40:56] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:40:56] [ERROR] ============================================================
+[2026-03-03 13:41:57] [INFO] ✅ VPN 已恢复连接
+[2026-03-03 13:45:22] ==========================================
+[2026-03-03 13:45:22] VPN 自动重连系统启动
+[2026-03-03 13:45:22] ==========================================
+[2026-03-03 13:45:22] DISPLAY: :1
+[2026-03-03 13:45:22] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 13:45:22] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 13:45:22] 
+[2026-03-03 13:45:22] Python 版本: Python 3.8.10
+[2026-03-03 13:45:22] 检查依赖...
+[2026-03-03 13:45:22] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 13:45:22] 
+[2026-03-03 13:45:22] 启动 VPN Watchdog...
+[2026-03-03 13:45:22] 
+[2026-03-03 13:45:22] [INFO] AT-SPI 驱动已加载
+[2026-03-03 13:45:22] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 13:45:22] [INFO] OpenCV 驱动已加载
+[2026-03-03 13:45:22] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 13:45:22] [INFO] 已加载 3 个驱动
+[2026-03-03 13:45:22] [INFO] VPN Watchdog 已启动
+[2026-03-03 13:45:22] [INFO] 检测间隔: 60 秒
+[2026-03-03 13:45:22] [INFO] 最大失败次数: 3
+[2026-03-03 13:49:35] ==========================================
+[2026-03-03 13:49:35] VPN 自动重连系统启动
+[2026-03-03 13:49:35] ==========================================
+[2026-03-03 13:49:35] DISPLAY: :1
+[2026-03-03 13:49:35] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 13:49:35] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 13:49:35] 
+[2026-03-03 13:49:35] Python 版本: Python 3.8.10
+[2026-03-03 13:49:35] 检查依赖...
+[2026-03-03 13:49:35] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 13:49:35] 
+[2026-03-03 13:49:35] 启动 VPN Watchdog...
+[2026-03-03 13:49:35] 
+[2026-03-03 13:49:35] [INFO] AT-SPI 驱动已加载
+[2026-03-03 13:49:35] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 13:49:35] [INFO] OpenCV 驱动已加载
+[2026-03-03 13:49:35] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 13:49:35] [INFO] 已加载 3 个驱动
+[2026-03-03 13:49:35] [INFO] VPN Watchdog 已启动
+[2026-03-03 13:49:35] [INFO] 检测间隔: 60 秒
+[2026-03-03 13:49:35] [INFO] 最大失败次数: 3
+[2026-03-03 13:53:40] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 13:54:40] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 13:55:40] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 13:55:40] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 13:55:40] [INFO] ============================================================
+[2026-03-03 13:55:40] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:55:40] [INFO] ============================================================
+[2026-03-03 13:55:40] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:55:40] [INFO] 需要 sudo 密码，使用 GUI 自动输入...
+[2026-03-03 13:55:42] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:55:46] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:55:46] [INFO] 启动 FortiClient...
+[2026-03-03 13:55:46] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:55:49] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:55:49] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:56:19] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-03-03 13:56:19] [ERROR] FortiClient 窗口未出现
+[2026-03-03 13:56:19] [ERROR] ============================================================
+[2026-03-03 13:56:19] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:56:19] [ERROR] ============================================================
+[2026-03-03 13:57:19] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-03 13:57:19] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-03 13:57:19] [INFO] ============================================================
+[2026-03-03 13:57:19] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:57:19] [INFO] ============================================================
+[2026-03-03 13:57:19] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:57:19] [INFO] 需要 sudo 密码，使用 GUI 自动输入...
+[2026-03-03 13:57:21] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:57:25] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:57:25] [INFO] 启动 FortiClient...
+[2026-03-03 13:57:25] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:57:43] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 13:57:43] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 13:58:13] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-03-03 13:58:13] [ERROR] FortiClient 窗口未出现
+[2026-03-03 13:58:13] [ERROR] ============================================================
+[2026-03-03 13:58:13] [ERROR] ❌ VPN 重连失败
+[2026-03-03 13:58:13] [ERROR] ============================================================
+[2026-03-03 13:59:13] [WARNING] ⚠️  VPN 断开 (失败次数: 5/3)
+[2026-03-03 13:59:13] [ERROR] ❌ VPN 连续失败 5 次，触发重连
+[2026-03-03 13:59:13] [INFO] ============================================================
+[2026-03-03 13:59:13] [INFO] 开始 VPN 重连流程
+[2026-03-03 13:59:13] [INFO] ============================================================
+[2026-03-03 13:59:13] [INFO] 停止 FortiClient 进程...
+[2026-03-03 13:59:13] [INFO] 需要 sudo 密码，使用 GUI 自动输入...
+[2026-03-03 13:59:15] [INFO] 自动输入 sudo 密码...
+[2026-03-03 13:59:19] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 13:59:19] [INFO] 启动 FortiClient...
+[2026-03-03 13:59:19] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 13:59:20] ==========================================
+[2026-03-03 13:59:20] VPN 自动重连系统启动
+[2026-03-03 13:59:20] ==========================================
+[2026-03-03 13:59:20] DISPLAY: :1
+[2026-03-03 13:59:20] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 13:59:20] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 13:59:20] 
+[2026-03-03 13:59:20] Python 版本: Python 3.8.10
+[2026-03-03 13:59:20] 检查依赖...
+[2026-03-03 13:59:21] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 13:59:21] 
+[2026-03-03 13:59:21] 启动 VPN Watchdog...
+[2026-03-03 13:59:21] 
+[2026-03-03 13:59:21] [INFO] AT-SPI 驱动已加载
+[2026-03-03 13:59:21] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 13:59:21] [INFO] OpenCV 驱动已加载
+[2026-03-03 13:59:21] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 13:59:21] [INFO] 已加载 3 个驱动
+[2026-03-03 13:59:21] [INFO] VPN Watchdog 已启动
+[2026-03-03 13:59:21] [INFO] 检测间隔: 60 秒
+[2026-03-03 13:59:21] [INFO] 最大失败次数: 3
+[2026-03-03 13:59:21] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 14:00:21] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 14:01:21] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 14:01:21] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 14:01:21] [INFO] ============================================================
+[2026-03-03 14:01:21] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:01:21] [INFO] ============================================================
+[2026-03-03 14:01:21] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:01:21] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:01:21] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:01:23] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:01:23] [INFO] 启动 FortiClient...
+[2026-03-03 14:01:23] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:01:41] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:01:41] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:01:41] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:01:41] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 14:01:42] [INFO] ✅ 窗口已调整
+[2026-03-03 14:01:42] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:01:57] [INFO] 尝试点击连接按钮...
+[2026-03-03 14:01:57] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 14:01:57] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 14:01:57] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 14:01:57] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 14:01:57] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 14:01:57] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 14:01:57] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 14:01:57] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 14:01:57] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 14:01:57] [INFO] 找到按钮: (993, 723)
+[2026-03-03 14:01:59] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 14:01:59] [INFO] ✅ VisionDriver 成功
+[2026-03-03 14:01:59] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 14:02:09] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-03 14:02:19] [INFO] 检查 VPN 状态（第 2/6 次）...
+[2026-03-03 14:02:29] [INFO] 检查 VPN 状态（第 3/6 次）...
+[2026-03-03 14:02:40] [INFO] 检查 VPN 状态（第 4/6 次）...
+[2026-03-03 14:02:50] [INFO] 检查 VPN 状态（第 5/6 次）...
+[2026-03-03 14:03:00] [INFO] 检查 VPN 状态（第 6/6 次）...
+[2026-03-03 14:03:00] [WARNING] ⚠️  VPN 在 60 秒内未连接
+[2026-03-03 14:03:00] [WARNING] ⚠️  VPN 需要手动完成 SAML 认证
+[2026-03-03 14:03:00] [INFO] 正在截取屏幕...
+[2026-03-03 14:03:00] [INFO] 截图已保存: /tmp/vpn-saml-60844.png
+[2026-03-03 14:03:07] [INFO] ✅ 飞书图片发送成功
+[2026-03-03 14:03:12] [INFO] ✅ 飞书消息发送成功
+[2026-03-03 14:03:12] [ERROR] ============================================================
+[2026-03-03 14:03:12] [ERROR] ❌ VPN 重连失败
+[2026-03-03 14:03:12] [ERROR] ============================================================
+[2026-03-03 14:04:12] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-03 14:04:12] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-03 14:04:12] [INFO] ============================================================
+[2026-03-03 14:04:12] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:04:12] [INFO] ============================================================
+[2026-03-03 14:04:12] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:04:12] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:04:12] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:04:14] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:04:14] [INFO] 启动 FortiClient...
+[2026-03-03 14:04:14] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:04:17] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:04:17] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:04:17] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:04:17] [INFO] 窗口太小，调整为 1200x800...
+[2026-03-03 14:04:17] [INFO] ✅ 窗口已调整
+[2026-03-03 14:04:17] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:04:32] [INFO] 尝试点击连接按钮...
+[2026-03-03 14:04:32] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 14:04:32] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 14:04:32] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 14:04:32] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 14:04:32] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 14:04:32] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 14:04:32] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 14:04:32] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 14:04:32] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 14:04:33] [INFO] 找到按钮: (993, 723)
+[2026-03-03 14:04:35] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 14:04:35] [INFO] ✅ VisionDriver 成功
+[2026-03-03 14:04:35] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 14:04:45] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-03 14:04:55] [INFO] 检查 VPN 状态（第 2/6 次）...
+[2026-03-03 14:05:05] [INFO] 检查 VPN 状态（第 3/6 次）...
+[2026-03-03 14:05:15] [INFO] 检查 VPN 状态（第 4/6 次）...
+[2026-03-03 14:05:25] [INFO] 检查 VPN 状态（第 5/6 次）...
+[2026-03-03 14:05:32] ==========================================
+[2026-03-03 14:05:32] VPN 自动重连系统启动
+[2026-03-03 14:05:32] ==========================================
+[2026-03-03 14:05:32] DISPLAY: :1
+[2026-03-03 14:05:32] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 14:05:32] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 14:05:32] 
+[2026-03-03 14:05:32] Python 版本: Python 3.8.10
+[2026-03-03 14:05:32] 检查依赖...
+[2026-03-03 14:05:32] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 14:05:32] 
+[2026-03-03 14:05:32] 启动 VPN Watchdog...
+[2026-03-03 14:05:32] 
+[2026-03-03 14:05:32] [INFO] AT-SPI 驱动已加载
+[2026-03-03 14:05:33] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 14:05:33] [INFO] OpenCV 驱动已加载
+[2026-03-03 14:05:33] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 14:05:33] [INFO] 已加载 3 个驱动
+[2026-03-03 14:05:33] [INFO] VPN Watchdog 已启动
+[2026-03-03 14:05:33] [INFO] 检测间隔: 60 秒
+[2026-03-03 14:05:33] [INFO] 最大失败次数: 3
+[2026-03-03 14:05:33] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 14:06:33] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 14:07:05] ==========================================
+[2026-03-03 14:07:05] VPN 自动重连系统启动
+[2026-03-03 14:07:05] ==========================================
+[2026-03-03 14:07:05] DISPLAY: :1
+[2026-03-03 14:07:05] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 14:07:05] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 14:07:05] 
+[2026-03-03 14:07:05] Python 版本: Python 3.8.10
+[2026-03-03 14:07:05] 检查依赖...
+[2026-03-03 14:07:05] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 14:07:05] 
+[2026-03-03 14:07:05] 启动 VPN Watchdog...
+[2026-03-03 14:07:05] 
+[2026-03-03 14:07:05] [INFO] AT-SPI 驱动已加载
+[2026-03-03 14:07:05] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 14:07:05] [INFO] OpenCV 驱动已加载
+[2026-03-03 14:07:05] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 14:07:05] [INFO] 已加载 3 个驱动
+[2026-03-03 14:07:05] [INFO] VPN Watchdog 已启动
+[2026-03-03 14:07:05] [INFO] 检测间隔: 60 秒
+[2026-03-03 14:07:05] [INFO] 最大失败次数: 3
+[2026-03-03 14:07:05] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 14:08:06] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 14:08:17] ==========================================
+[2026-03-03 14:08:17] VPN 自动重连系统启动
+[2026-03-03 14:08:17] ==========================================
+[2026-03-03 14:08:17] DISPLAY: :1
+[2026-03-03 14:08:17] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 14:08:17] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 14:08:17] 
+[2026-03-03 14:08:17] Python 版本: Python 3.8.10
+[2026-03-03 14:08:17] 检查依赖...
+[2026-03-03 14:08:17] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 14:08:17] 
+[2026-03-03 14:08:17] 启动 VPN Watchdog...
+[2026-03-03 14:08:17] 
+[2026-03-03 14:08:17] [INFO] AT-SPI 驱动已加载
+[2026-03-03 14:08:17] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 14:08:17] [INFO] OpenCV 驱动已加载
+[2026-03-03 14:08:17] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 14:08:17] [INFO] 已加载 3 个驱动
+[2026-03-03 14:08:17] [INFO] VPN Watchdog 已启动
+[2026-03-03 14:08:17] [INFO] 检测间隔: 60 秒
+[2026-03-03 14:08:17] [INFO] 最大失败次数: 3
+[2026-03-03 14:08:17] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 14:09:17] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 14:10:17] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 14:10:17] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 14:10:17] [INFO] ============================================================
+[2026-03-03 14:10:17] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:10:17] [INFO] ============================================================
+[2026-03-03 14:10:17] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:10:17] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:10:17] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:10:19] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:10:19] [INFO] 启动 FortiClient...
+[2026-03-03 14:10:19] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:10:22] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:10:22] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:10:22] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:10:22] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:10:37] [INFO] 尝试点击连接按钮...
+[2026-03-03 14:10:37] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 14:10:37] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 14:10:37] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 14:10:37] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 14:10:37] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 14:10:37] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 14:10:37] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 14:10:37] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 14:10:37] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 14:10:37] [INFO] 找到按钮: (993, 723)
+[2026-03-03 14:10:40] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 14:10:40] [INFO] ✅ VisionDriver 成功
+[2026-03-03 14:10:40] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 14:10:50] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-03 14:11:00] [INFO] 检查 VPN 状态（第 2/6 次）...
+[2026-03-03 14:11:10] [INFO] 检查 VPN 状态（第 3/6 次）...
+[2026-03-03 14:11:20] [INFO] 检查 VPN 状态（第 4/6 次）...
+[2026-03-03 14:11:30] [INFO] 检查 VPN 状态（第 5/6 次）...
+[2026-03-03 14:11:40] [INFO] 检查 VPN 状态（第 6/6 次）...
+[2026-03-03 14:11:40] [WARNING] ⚠️  VPN 在 60 秒内未连接
+[2026-03-03 14:11:40] [WARNING] ⚠️  VPN 需要手动完成 SAML 认证
+[2026-03-03 14:11:40] [INFO] 正在截取屏幕...
+[2026-03-03 14:11:40] [INFO] 截图已保存: /tmp/vpn-saml-65099.png
+[2026-03-03 14:11:48] [INFO] ✅ 飞书图片发送成功
+[2026-03-03 14:11:53] [INFO] ✅ 飞书消息发送成功
+[2026-03-03 14:11:53] [ERROR] ============================================================
+[2026-03-03 14:11:53] [ERROR] ❌ VPN 重连失败
+[2026-03-03 14:11:53] [ERROR] ============================================================
+[2026-03-03 14:12:53] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-03 14:12:53] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-03 14:12:53] [INFO] ============================================================
+[2026-03-03 14:12:53] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:12:53] [INFO] ============================================================
+[2026-03-03 14:12:53] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:12:53] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:12:53] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:12:55] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:12:55] [INFO] 启动 FortiClient...
+[2026-03-03 14:12:55] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:12:57] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:12:57] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:12:57] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:12:57] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:13:12] [INFO] 尝试点击连接按钮...
+[2026-03-03 14:13:12] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 14:13:12] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 14:13:12] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 14:13:12] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 14:13:12] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 14:13:12] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 14:13:12] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 14:13:12] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 14:13:12] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 14:13:13] [INFO] 找到按钮: (993, 723)
+[2026-03-03 14:13:15] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 14:13:15] [INFO] ✅ VisionDriver 成功
+[2026-03-03 14:13:15] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 14:13:20] ==========================================
+[2026-03-03 14:13:20] VPN 自动重连系统启动
+[2026-03-03 14:13:20] ==========================================
+[2026-03-03 14:13:20] DISPLAY: :1
+[2026-03-03 14:13:20] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 14:13:20] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 14:13:20] 
+[2026-03-03 14:13:20] Python 版本: Python 3.8.10
+[2026-03-03 14:13:20] 检查依赖...
+[2026-03-03 14:13:20] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 14:13:20] 
+[2026-03-03 14:13:20] 启动 VPN Watchdog...
+[2026-03-03 14:13:20] 
+[2026-03-03 14:13:20] [INFO] AT-SPI 驱动已加载
+[2026-03-03 14:13:20] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 14:13:20] [INFO] OpenCV 驱动已加载
+[2026-03-03 14:13:20] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 14:13:20] [INFO] 已加载 3 个驱动
+[2026-03-03 14:13:20] [INFO] VPN Watchdog 已启动
+[2026-03-03 14:13:20] [INFO] 检测间隔: 60 秒
+[2026-03-03 14:13:20] [INFO] 最大失败次数: 3
+[2026-03-03 14:13:20] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 14:14:20] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 14:15:20] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 14:15:20] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 14:15:20] [INFO] ============================================================
+[2026-03-03 14:15:20] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:15:20] [INFO] ============================================================
+[2026-03-03 14:15:20] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:15:20] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:15:20] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:15:22] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:15:22] [INFO] 启动 FortiClient...
+[2026-03-03 14:15:22] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:15:25] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:15:25] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:15:25] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:15:25] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:15:40] [INFO] 尝试点击连接按钮...
+[2026-03-03 14:15:40] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 14:15:40] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 14:15:40] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 14:15:40] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 14:15:40] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 14:15:40] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 14:15:40] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 14:15:40] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 14:15:40] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 14:15:40] [INFO] 找到按钮: (993, 723)
+[2026-03-03 14:15:42] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 14:15:42] [INFO] ✅ VisionDriver 成功
+[2026-03-03 14:15:42] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 14:15:52] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-03 14:16:03] [INFO] 检查 VPN 状态（第 2/6 次）...
+[2026-03-03 14:16:13] [INFO] 检查 VPN 状态（第 3/6 次）...
+[2026-03-03 14:16:23] [INFO] 检查 VPN 状态（第 4/6 次）...
+[2026-03-03 14:16:33] [INFO] 检查 VPN 状态（第 5/6 次）...
+[2026-03-03 14:16:43] [INFO] 检查 VPN 状态（第 6/6 次）...
+[2026-03-03 14:16:43] [WARNING] ⚠️  VPN 在 60 秒内未连接
+[2026-03-03 14:16:43] [WARNING] ⚠️  VPN 需要手动完成 SAML 认证
+[2026-03-03 14:16:43] [INFO] 正在截取屏幕...
+[2026-03-03 14:16:43] [INFO] 截图已保存: /tmp/vpn-saml-67768.png
+[2026-03-03 14:16:49] [INFO] ✅ 飞书图片发送成功
+[2026-03-03 14:16:54] [INFO] ✅ 飞书消息发送成功
+[2026-03-03 14:16:54] [ERROR] ============================================================
+[2026-03-03 14:16:54] [ERROR] ❌ VPN 重连失败
+[2026-03-03 14:16:54] [ERROR] ============================================================
+[2026-03-03 14:17:54] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-03 14:17:54] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-03 14:17:54] [INFO] ============================================================
+[2026-03-03 14:17:54] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:17:54] [INFO] ============================================================
+[2026-03-03 14:17:54] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:17:54] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:17:54] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:17:56] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:17:56] [INFO] 启动 FortiClient...
+[2026-03-03 14:17:56] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:17:58] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:17:58] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:17:58] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:17:58] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:18:13] [INFO] 尝试点击连接按钮...
+[2026-03-03 14:18:13] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 14:18:13] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 14:18:13] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 14:18:13] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 14:18:13] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 14:18:13] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 14:18:13] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 14:18:13] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 14:18:13] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 14:18:14] [INFO] 找到按钮: (993, 723)
+[2026-03-03 14:18:16] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 14:18:16] [INFO] ✅ VisionDriver 成功
+[2026-03-03 14:18:16] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 14:18:26] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-03 14:18:36] [INFO] 检查 VPN 状态（第 2/6 次）...
+[2026-03-03 14:18:46] [INFO] 检查 VPN 状态（第 3/6 次）...
+[2026-03-03 14:18:56] [INFO] 检查 VPN 状态（第 4/6 次）...
+[2026-03-03 14:19:06] [INFO] 检查 VPN 状态（第 5/6 次）...
+[2026-03-03 14:19:16] [INFO] 检查 VPN 状态（第 6/6 次）...
+[2026-03-03 14:19:16] [WARNING] ⚠️  VPN 在 60 秒内未连接
+[2026-03-03 14:19:16] [WARNING] ⚠️  VPN 需要手动完成 SAML 认证
+[2026-03-03 14:19:16] [INFO] 正在截取屏幕...
+[2026-03-03 14:19:16] [INFO] 截图已保存: /tmp/vpn-saml-67768.png
+[2026-03-03 14:19:24] [INFO] ✅ 飞书图片发送成功
+[2026-03-03 14:19:28] [INFO] ✅ 飞书消息发送成功
+[2026-03-03 14:19:28] [ERROR] ============================================================
+[2026-03-03 14:19:28] [ERROR] ❌ VPN 重连失败
+[2026-03-03 14:19:28] [ERROR] ============================================================
+[2026-03-03 14:20:28] [WARNING] ⚠️  VPN 断开 (失败次数: 5/3)
+[2026-03-03 14:20:28] [ERROR] ❌ VPN 连续失败 5 次，触发重连
+[2026-03-03 14:20:28] [INFO] ============================================================
+[2026-03-03 14:20:28] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:20:28] [INFO] ============================================================
+[2026-03-03 14:20:28] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:20:28] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:20:28] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:20:30] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:20:30] [INFO] 启动 FortiClient...
+[2026-03-03 14:20:30] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:20:33] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:20:33] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:21:03] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-03-03 14:21:03] [ERROR] FortiClient 窗口未出现
+[2026-03-03 14:21:03] [ERROR] ============================================================
+[2026-03-03 14:21:03] [ERROR] ❌ VPN 重连失败
+[2026-03-03 14:21:03] [ERROR] ============================================================
+[2026-03-03 14:22:04] [WARNING] ⚠️  VPN 断开 (失败次数: 6/3)
+[2026-03-03 14:22:04] [ERROR] ❌ VPN 连续失败 6 次，触发重连
+[2026-03-03 14:22:04] [INFO] ============================================================
+[2026-03-03 14:22:04] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:22:04] [INFO] ============================================================
+[2026-03-03 14:22:04] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:22:04] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:22:04] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:22:06] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:22:06] [INFO] 启动 FortiClient...
+[2026-03-03 14:22:06] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:22:23] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:22:23] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:22:54] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-03-03 14:22:54] [ERROR] FortiClient 窗口未出现
+[2026-03-03 14:22:54] [ERROR] ============================================================
+[2026-03-03 14:22:54] [ERROR] ❌ VPN 重连失败
+[2026-03-03 14:22:54] [ERROR] ============================================================
+[2026-03-03 14:23:54] [WARNING] ⚠️  VPN 断开 (失败次数: 7/3)
+[2026-03-03 14:23:54] [ERROR] ❌ VPN 连续失败 7 次，触发重连
+[2026-03-03 14:23:54] [INFO] ============================================================
+[2026-03-03 14:23:54] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:23:54] [INFO] ============================================================
+[2026-03-03 14:23:54] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:23:54] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:23:54] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:23:56] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:23:56] [INFO] 启动 FortiClient...
+[2026-03-03 14:23:56] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:23:59] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:23:59] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:23:59] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:23:59] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:24:14] [INFO] 尝试点击连接按钮...
+[2026-03-03 14:24:14] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 14:24:14] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 14:24:14] [INFO] 找到应用: FortiClient
+[2026-03-03 14:24:14] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 14:24:14] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 14:24:14] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 14:24:14] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 14:24:14] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 14:24:14] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 14:24:14] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 14:24:14] [INFO] 找到按钮: (993, 723)
+[2026-03-03 14:24:16] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 14:24:16] [INFO] ✅ VisionDriver 成功
+[2026-03-03 14:24:16] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 14:24:26] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-03 14:24:26] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-03-03 14:24:26] [INFO] ============================================================
+[2026-03-03 14:24:26] [INFO] ✅ VPN 重连成功
+[2026-03-03 14:24:26] [INFO] ============================================================
+[2026-03-03 14:37:41] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 14:38:41] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 14:39:41] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 14:39:41] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 14:39:41] [INFO] ============================================================
+[2026-03-03 14:39:41] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:39:41] [INFO] ============================================================
+[2026-03-03 14:39:41] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:39:41] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:39:41] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:39:43] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:39:43] [INFO] 启动 FortiClient...
+[2026-03-03 14:39:43] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:39:45] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:39:45] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:40:16] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-03-03 14:40:16] [ERROR] FortiClient 窗口未出现
+[2026-03-03 14:40:16] [ERROR] ============================================================
+[2026-03-03 14:40:16] [ERROR] ❌ VPN 重连失败
+[2026-03-03 14:40:16] [ERROR] ============================================================
+[2026-03-03 14:41:16] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-03 14:41:16] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-03 14:41:16] [INFO] ============================================================
+[2026-03-03 14:41:16] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:41:16] [INFO] ============================================================
+[2026-03-03 14:41:16] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:41:16] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:41:16] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:41:18] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:41:18] [INFO] 启动 FortiClient...
+[2026-03-03 14:41:18] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:41:36] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:41:36] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:41:36] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:41:36] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:41:51] [INFO] 尝试点击连接按钮...
+[2026-03-03 14:41:51] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 14:41:51] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 14:41:51] [INFO] 找到应用: FortiClient
+[2026-03-03 14:41:51] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 14:41:51] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 14:41:51] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 14:41:51] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 14:41:51] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 14:41:51] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 14:41:51] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 14:41:51] [INFO] 找到按钮: (993, 723)
+[2026-03-03 14:41:53] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 14:41:53] [INFO] ✅ VisionDriver 成功
+[2026-03-03 14:41:53] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 14:42:03] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-03 14:42:03] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-03-03 14:42:03] [INFO] ============================================================
+[2026-03-03 14:42:03] [INFO] ✅ VPN 重连成功
+[2026-03-03 14:42:03] [INFO] ============================================================
+[2026-03-03 14:45:35] ==========================================
+[2026-03-03 14:45:35] VPN 自动重连系统启动
+[2026-03-03 14:45:35] ==========================================
+[2026-03-03 14:45:35] DISPLAY: :1
+[2026-03-03 14:45:35] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 14:45:35] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 14:45:35] 
+[2026-03-03 14:45:35] Python 版本: Python 3.8.10
+[2026-03-03 14:45:35] 检查依赖...
+[2026-03-03 14:45:35] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 14:45:35] 
+[2026-03-03 14:45:35] 启动 VPN Watchdog...
+[2026-03-03 14:45:35] 
+[2026-03-03 14:45:35] [INFO] AT-SPI 驱动已加载
+[2026-03-03 14:45:35] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 14:45:35] [INFO] OpenCV 驱动已加载
+[2026-03-03 14:45:35] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 14:45:35] [INFO] 已加载 3 个驱动
+[2026-03-03 14:45:35] [INFO] VPN Watchdog 已启动
+[2026-03-03 14:45:35] [INFO] 检测间隔: 60 秒
+[2026-03-03 14:45:35] [INFO] 最大失败次数: 3
+[2026-03-03 14:47:08] ==========================================
+[2026-03-03 14:47:08] VPN 自动重连系统启动
+[2026-03-03 14:47:08] ==========================================
+[2026-03-03 14:47:08] DISPLAY: :1
+[2026-03-03 14:47:08] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 14:47:08] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 14:47:08] 
+[2026-03-03 14:47:08] Python 版本: Python 3.8.10
+[2026-03-03 14:47:08] 检查依赖...
+[2026-03-03 14:47:08] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 14:47:08] 
+[2026-03-03 14:47:08] 启动 VPN Watchdog...
+[2026-03-03 14:47:08] 
+[2026-03-03 14:47:08] [INFO] AT-SPI 驱动已加载
+[2026-03-03 14:47:08] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 14:47:08] [INFO] OpenCV 驱动已加载
+[2026-03-03 14:47:08] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 14:47:08] [INFO] 已加载 3 个驱动
+[2026-03-03 14:47:08] [INFO] VPN Watchdog 已启动
+[2026-03-03 14:47:08] [INFO] 检测间隔: 60 秒
+[2026-03-03 14:47:08] [INFO] 最大失败次数: 3
+[2026-03-03 14:48:09] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 14:49:10] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 14:50:10] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 14:50:10] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 14:50:10] [INFO] ============================================================
+[2026-03-03 14:50:10] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:50:10] [INFO] ============================================================
+[2026-03-03 14:50:10] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:50:10] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:50:10] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:50:12] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:50:12] [INFO] 启动 FortiClient...
+[2026-03-03 14:50:12] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:50:14] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:50:14] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:50:14] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:50:14] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:50:29] [INFO] 尝试点击连接按钮...
+[2026-03-03 14:50:29] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 14:50:29] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 14:50:29] [INFO] 找到应用: FortiClient
+[2026-03-03 14:50:29] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 14:50:29] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 14:50:29] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 14:50:29] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 14:50:29] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 14:50:29] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 14:50:29] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 14:50:30] [INFO] 找到按钮: (993, 723)
+[2026-03-03 14:50:32] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 14:50:32] [INFO] ✅ VisionDriver 成功
+[2026-03-03 14:50:32] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 14:50:42] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-03 14:50:42] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-03-03 14:50:42] [INFO] ============================================================
+[2026-03-03 14:50:42] [INFO] ✅ VPN 重连成功
+[2026-03-03 14:50:42] [INFO] ============================================================
+[2026-03-03 14:53:44] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 14:54:45] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 14:55:45] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 14:55:45] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 14:55:45] [INFO] ============================================================
+[2026-03-03 14:55:45] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:55:45] [INFO] ============================================================
+[2026-03-03 14:55:45] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:55:45] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:55:45] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:55:47] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:55:47] [INFO] 启动 FortiClient...
+[2026-03-03 14:55:47] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:55:49] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:55:49] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:55:49] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:55:49] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:55:59] ==========================================
+[2026-03-03 14:55:59] VPN 自动重连系统启动
+[2026-03-03 14:55:59] ==========================================
+[2026-03-03 14:55:59] DISPLAY: :1
+[2026-03-03 14:55:59] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 14:55:59] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 14:55:59] 
+[2026-03-03 14:55:59] Python 版本: Python 3.8.10
+[2026-03-03 14:55:59] 检查依赖...
+[2026-03-03 14:55:59] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 14:55:59] 
+[2026-03-03 14:55:59] 启动 VPN Watchdog...
+[2026-03-03 14:55:59] 
+[2026-03-03 14:55:59] [INFO] AT-SPI 驱动已加载
+[2026-03-03 14:55:59] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 14:55:59] [INFO] OpenCV 驱动已加载
+[2026-03-03 14:55:59] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 14:55:59] [INFO] 已加载 3 个驱动
+[2026-03-03 14:55:59] [INFO] VPN Watchdog 已启动
+[2026-03-03 14:55:59] [INFO] 检测间隔: 60 秒
+[2026-03-03 14:55:59] [INFO] 最大失败次数: 3
+[2026-03-03 14:55:59] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 14:56:59] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 14:58:00] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 14:58:00] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 14:58:00] [INFO] ============================================================
+[2026-03-03 14:58:00] [INFO] 开始 VPN 重连流程
+[2026-03-03 14:58:00] [INFO] ============================================================
+[2026-03-03 14:58:00] [INFO] 停止 FortiClient 进程...
+[2026-03-03 14:58:00] [WARNING] ⚠️  sudo 免密码失败，请配置 /etc/sudoers.d/forticlient
+[2026-03-03 14:58:00] [INFO] 尝试不使用 sudo 停止进程...
+[2026-03-03 14:58:02] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 14:58:02] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-03 14:58:02] [INFO] 启动 FortiClient...
+[2026-03-03 14:58:02] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 14:58:04] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 14:58:04] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 14:58:04] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 14:58:04] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 14:58:19] [INFO] 尝试点击连接按钮...
+[2026-03-03 14:58:19] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 14:58:19] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 14:58:19] [INFO] 找到应用: FortiClient
+[2026-03-03 14:58:19] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 14:58:19] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 14:58:19] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 14:58:19] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 14:58:19] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 14:58:19] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 14:58:19] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 14:58:20] [INFO] 找到按钮: (993, 723)
+[2026-03-03 14:58:22] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 14:58:22] [INFO] ✅ VisionDriver 成功
+[2026-03-03 14:58:22] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 14:58:28] ==========================================
+[2026-03-03 14:58:28] VPN 自动重连系统启动
+[2026-03-03 14:58:28] ==========================================
+[2026-03-03 14:58:28] DISPLAY: :1
+[2026-03-03 14:58:28] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-03 14:58:28] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260303.log
+[2026-03-03 14:58:28] 
+[2026-03-03 14:58:28] Python 版本: Python 3.8.10
+[2026-03-03 14:58:28] 检查依赖...
+[2026-03-03 14:58:28] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-03 14:58:28] 
+[2026-03-03 14:58:28] 启动 VPN Watchdog...
+[2026-03-03 14:58:28] 
+[2026-03-03 14:58:28] [INFO] AT-SPI 驱动已加载
+[2026-03-03 14:58:28] [INFO] PyAutoGUI 驱动已加载
+[2026-03-03 14:58:28] [INFO] OpenCV 驱动已加载
+[2026-03-03 14:58:28] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-03 14:58:28] [INFO] 已加载 3 个驱动
+[2026-03-03 14:58:28] [INFO] VPN Watchdog 已启动
+[2026-03-03 14:58:28] [INFO] 检测间隔: 60 秒
+[2026-03-03 14:58:28] [INFO] 最大失败次数: 3
+[2026-03-03 22:58:50] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-03 22:59:50] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-03 23:00:50] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-03 23:00:50] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-03 23:00:50] [INFO] ============================================================
+[2026-03-03 23:00:50] [INFO] 开始 VPN 重连流程
+[2026-03-03 23:00:50] [INFO] ============================================================
+[2026-03-03 23:00:50] [INFO] 停止 FortiClient 进程...
+[2026-03-03 23:00:50] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-03 23:00:52] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 23:00:52] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-03 23:00:52] [INFO] 启动 FortiClient...
+[2026-03-03 23:00:52] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 23:00:55] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 23:00:55] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 23:00:55] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 23:00:55] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 23:01:10] [INFO] 尝试点击连接按钮...
+[2026-03-03 23:01:10] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 23:01:10] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 23:01:10] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 23:01:10] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 23:01:10] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 23:01:10] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 23:01:10] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 23:01:10] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 23:01:10] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 23:01:10] [INFO] 找到按钮: (993, 723)
+[2026-03-03 23:01:12] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 23:01:12] [INFO] ✅ VisionDriver 成功
+[2026-03-03 23:01:12] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 23:01:22] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-03 23:01:33] [INFO] 检查 VPN 状态（第 2/6 次）...
+[2026-03-03 23:01:43] [INFO] 检查 VPN 状态（第 3/6 次）...
+[2026-03-03 23:01:53] [INFO] 检查 VPN 状态（第 4/6 次）...
+[2026-03-03 23:02:03] [INFO] 检查 VPN 状态（第 5/6 次）...
+[2026-03-03 23:02:13] [INFO] 检查 VPN 状态（第 6/6 次）...
+[2026-03-03 23:02:13] [WARNING] ⚠️  VPN 在 60 秒内未连接
+[2026-03-03 23:02:13] [WARNING] ⚠️  VPN 需要手动完成 SAML 认证
+[2026-03-03 23:02:13] [INFO] 正在截取屏幕...
+[2026-03-03 23:02:13] [INFO] 截图已保存: /tmp/vpn-saml-92502.png
+[2026-03-03 23:02:20] [INFO] ✅ 飞书图片发送成功
+[2026-03-03 23:02:24] [INFO] ✅ 飞书消息发送成功
+[2026-03-03 23:02:24] [ERROR] ============================================================
+[2026-03-03 23:02:24] [ERROR] ❌ VPN 重连失败
+[2026-03-03 23:02:24] [ERROR] ============================================================
+[2026-03-03 23:03:24] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-03 23:03:24] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-03 23:03:24] [INFO] ============================================================
+[2026-03-03 23:03:24] [INFO] 开始 VPN 重连流程
+[2026-03-03 23:03:24] [INFO] ============================================================
+[2026-03-03 23:03:24] [INFO] 停止 FortiClient 进程...
+[2026-03-03 23:03:24] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-03 23:03:26] [INFO] ✅ FortiClient 进程已停止
+[2026-03-03 23:03:26] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-03 23:03:26] [INFO] 启动 FortiClient...
+[2026-03-03 23:03:26] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-03 23:03:29] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-03 23:03:29] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-03 23:03:29] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-03 23:03:29] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-03 23:03:44] [INFO] 尝试点击连接按钮...
+[2026-03-03 23:03:44] [INFO] 尝试驱动: ATSPIDriver
+[2026-03-03 23:03:44] [INFO] 使用 AT-SPI 查找按钮...
+[2026-03-03 23:03:44] [INFO] 找到应用: FortiClient
+[2026-03-03 23:03:44] [WARNING] 未找到 FortiClient 应用或按钮
+[2026-03-03 23:03:44] [WARNING] ⚠️  ATSPIDriver 失败
+[2026-03-03 23:03:44] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-03 23:03:44] [WARNING] 按钮图像不存在: /home/tsl/vpn-auto/v2/config/button.png
+[2026-03-03 23:03:44] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-03 23:03:44] [INFO] 尝试驱动: VisionDriver
+[2026-03-03 23:03:44] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-03 23:03:44] [INFO] 找到按钮: (993, 723)
+[2026-03-03 23:03:46] [INFO] ✅ OpenCV 点击成功
+[2026-03-03 23:03:46] [INFO] ✅ VisionDriver 成功
+[2026-03-03 23:03:46] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-03 23:03:56] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-03 23:03:56] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-03-03 23:03:56] [INFO] ============================================================
+[2026-03-03 23:03:56] [INFO] ✅ VPN 重连成功
+[2026-03-03 23:03:56] [INFO] ============================================================

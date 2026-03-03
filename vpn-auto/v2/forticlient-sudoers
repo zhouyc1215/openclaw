@@ -1,0 +1,2 @@
+# Allow tsl to kill forticlient without password
+tsl ALL=(ALL) NOPASSWD: /usr/bin/pkill -9 -f forticlient

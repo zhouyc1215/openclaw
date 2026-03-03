@@ -1,0 +1,33 @@
+[Unit]
+Description=VPN Auto Reconnect Service
+Documentation=https://github.com/openclaw/openclaw
+After=network.target
+
+[Service]
+Type=simple
+User=tsl
+Group=tsl
+WorkingDirectory=/home/tsl/openclaw/vpn-auto/v2
+
+# 环境变量
+Environment=DISPLAY=:1
+Environment=NO_AT_BRIDGE=0
+Environment=PYTHONUNBUFFERED=1
+
+# 启动命令
+ExecStart=/home/tsl/openclaw/vpn-auto/v2/run.sh
+
+# 重启策略
+Restart=always
+RestartSec=10
+
+# 日志
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=vpn-auto
+
+# 资源限制
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

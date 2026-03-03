@@ -1,0 +1,6 @@
+[Allow tsl to run FortiClient without password]
+Identity=unix-user:tsl
+Action=org.fortinet.forticlient.elevate;org.fortinet.fortitray.quit
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes

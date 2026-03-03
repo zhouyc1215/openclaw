@@ -1,0 +1,8 @@
+/* Allow tsl user to run FortiClient without password */
+polkit.addRule(function(action, subject) {
+    if ((action.id == "org.fortinet.forticlient.elevate" ||
+         action.id == "org.fortinet.fortitray.quit") &&
+        subject.user == "tsl") {
+        return polkit.Result.YES;
+    }
+});
