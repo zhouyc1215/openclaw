@@ -4,6 +4,10 @@
 DISPLAY="${DISPLAY:-:1}"
 SUDO_PASSWORD="${SUDO_PASSWORD:-tsl123}"
 
+# Qt 无障碍支持
+export QT_ACCESSIBILITY=1
+export QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
+
 start_forticlient() {
     echo "启动 FortiClient..."
     

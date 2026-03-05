@@ -63,19 +63,18 @@ feishu:
 # 驱动优先级
 drivers:
   priority:
-    - atspi # AT-SPI 驱动（主方案）
-    - pyauto # PyAutoGUI 驱动（备用）
-    - vision # OpenCV 驱动（兜底）
+    - pyauto # PyAutoGUI 驱动（快速且可靠）
+    - vision # OpenCV 驱动（兜底方案）
 
   # 驱动配置
   atspi:
-    enabled: true
+    enabled: false # FortiClient 不支持 AT-SPI（使用 CEF 渲染）
     timeout: 10
 
   pyauto:
     enabled: true
     confidence: 0.8
-    button_image: /home/tsl/vpn-auto/v2/config/button.png
+    button_image: /home/tsl/openclaw/vpn-auto/v2/config/button.png
 
   vision:
     enabled: true

@@ -13,6 +13,8 @@ WorkingDirectory=/home/tsl/openclaw/vpn-auto/v2
 Environment=DISPLAY=:1
 Environment=NO_AT_BRIDGE=0
 Environment=PYTHONUNBUFFERED=1
+Environment=QT_ACCESSIBILITY=1
+Environment=QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
 
 # 启动命令
 ExecStart=/home/tsl/openclaw/vpn-auto/v2/run.sh
