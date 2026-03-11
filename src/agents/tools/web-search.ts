@@ -17,7 +17,7 @@ import {
   writeCache,
 } from "./web-shared.js";
 
-const SEARCH_PROVIDERS = ["brave", "perplexity"] as const;
+const SEARCH_PROVIDERS = ["brave", "perplexity", "tavily"] as const;
 const DEFAULT_SEARCH_COUNT = 5;
 const MAX_SEARCH_COUNT = 10;
 
@@ -27,6 +27,7 @@ const PERPLEXITY_DIRECT_BASE_URL = "https://api.perplexity.ai";
 const DEFAULT_PERPLEXITY_MODEL = "perplexity/sonar-pro";
 const PERPLEXITY_KEY_PREFIXES = ["pplx-"];
 const OPENROUTER_KEY_PREFIXES = ["sk-or-"];
+const TAVILY_API_ENDPOINT = "https://api.tavily.com/search";
 
 const SEARCH_CACHE = new Map<string, CacheEntry<Record<string, unknown>>>();
 const BRAVE_FRESHNESS_SHORTCUTS = new Set(["pd", "pw", "pm", "py"]);
@@ -90,6 +91,10 @@ type PerplexityConfig = {
   model?: string;
 };
 
+type TavilyConfig = {
+  apiKey?: string;
+};
+
 type PerplexityApiKeySource = "config" | "perplexity_env" | "openrouter_env" | "none";
 
 type PerplexitySearchResponse = {
@@ -102,6 +107,16 @@ type PerplexitySearchResponse = {
 };
 
 type PerplexityBaseUrlHint = "direct" | "openrouter";
+
+type TavilySearchResponse = {
+  results?: Array<{
+    title?: string;
+    url?: string;
+    content?: string;
+    published_timestamp?: string;
+    score?: number;
+  }>;
+};
 
 function resolveSearchConfig(cfg?: OpenClawConfig): WebSearchConfig {
   const search = cfg?.tools?.web?.search;
@@ -128,12 +143,43 @@ function resolveSearchApiKey(search?: WebSearchConfig): string | undefined {
   return fromConfig || fromEnv || undefined;
 }
 
+function resolveTavilyConfig(search?: WebSearchConfig): TavilyConfig {
+  if (!search || typeof search !== "object") {
+    return {};
+  }
+  const tavily = "tavily" in search ? search.tavily : undefined;
+  if (!tavily || typeof tavily !== "object") {
+    return {};
+  }
+  return tavily as TavilyConfig;
+}
+
+function resolveTavilyApiKey(tavily?: TavilyConfig): string | undefined {
+  const fromConfig = normalizeApiKey(tavily?.apiKey);
+  if (fromConfig) {
+    return fromConfig;
+  }
+  const fromEnv = normalizeApiKey(process.env.TAVILY_API_KEY);
+  if (fromEnv) {
+    return fromEnv;
+  }
+  return undefined;
+}
+
 function missingSearchKeyPayload(provider: (typeof SEARCH_PROVIDERS)[number]) {
   if (provider === "perplexity") {
     return {
       error: "missing_perplexity_api_key",
       message:
         "web_search (perplexity) needs an API key. Set PERPLEXITY_API_KEY or OPENROUTER_API_KEY in the Gateway environment, or configure tools.web.search.perplexity.apiKey.",
+      docs: "https://docs.openclaw.ai/tools/web",
+    };
+  }
+  if (provider === "tavily") {
+    return {
+      error: "missing_tavily_api_key",
+      message:
+        "web_search (tavily) needs an API key. Set TAVILY_API_KEY in the Gateway environment, or configure tools.web.search.tavily.apiKey.",
       docs: "https://docs.openclaw.ai/tools/web",
     };
   }
@@ -151,6 +197,9 @@ function resolveSearchProvider(search?: WebSearchConfig): (typeof SEARCH_PROVIDE
       : "";
   if (raw === "perplexity") {
     return "perplexity";
+  }
+  if (raw === "tavily") {
+    return "tavily";
   }
   if (raw === "brave") {
     return "brave";
@@ -350,6 +399,50 @@ async function runPerplexitySearch(params: {
   return { content, citations };
 }
 
+async function runTavilySearch(params: {
+  query: string;
+  apiKey: string;
+  count: number;
+  timeoutSeconds: number;
+}): Promise<{
+  content: string;
+  results: Array<{ title: string; url: string; content: string; published: string | undefined }>;
+}> {
+  const res = await fetch(TAVILY_API_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      api_key: params.apiKey,
+      query: params.query,
+      max_results: params.count,
+      include_answer: true,
+      include_raw_content: false,
+      include_images: false,
+    }),
+    signal: withTimeout(undefined, params.timeoutSeconds * 1000),
+  });
+
+  if (!res.ok) {
+    const detail = await readResponseText(res);
+    throw new Error(`Tavily API error (${res.status}): ${detail || res.statusText}`);
+  }
+
+  const data = (await res.json()) as TavilySearchResponse;
+  const results = (data.results ?? []).map((entry) => ({
+    title: entry.title ?? "",
+    url: entry.url ?? "",
+    content: entry.content ?? "",
+    published: entry.published_timestamp || undefined,
+  }));
+
+  // Tavily returns an AI-generated answer in the answer field
+  const answer = (data as { answer?: string }).answer;
+
+  return { content: answer ?? "", results };
+}
+
 async function runWebSearch(params: {
   query: string;
   count: number;
@@ -392,6 +485,34 @@ async function runWebSearch(params: {
       tookMs: Date.now() - start,
       content: wrapWebContent(content),
       citations,
+    };
+    writeCache(SEARCH_CACHE, cacheKey, payload, params.cacheTtlMs);
+    return payload;
+  }
+
+  if (params.provider === "tavily") {
+    const { content, results: tavilyResults } = await runTavilySearch({
+      query: params.query,
+      apiKey: params.apiKey,
+      count: params.count,
+      timeoutSeconds: params.timeoutSeconds,
+    });
+
+    const mapped = tavilyResults.map((entry) => ({
+      title: entry.title ? wrapWebContent(entry.title, "web_search") : "",
+      url: entry.url,
+      description: entry.content ? wrapWebContent(entry.content, "web_search") : "",
+      published: entry.published || undefined,
+      siteName: resolveSiteName(entry.url) || undefined,
+    }));
+
+    const payload = {
+      query: params.query,
+      provider: params.provider,
+      count: mapped.length,
+      tookMs: Date.now() - start,
+      content: content ? wrapWebContent(content) : undefined,
+      results: mapped,
     };
     writeCache(SEARCH_CACHE, cacheKey, payload, params.cacheTtlMs);
     return payload;
@@ -469,11 +590,25 @@ export function createWebSearchTool(options?: {
 
   const provider = resolveSearchProvider(search);
   const perplexityConfig = resolvePerplexityConfig(search);
+  const tavilyConfig = resolveTavilyConfig(search);
 
-  const description =
-    provider === "perplexity"
-      ? "Search the web using Perplexity Sonar (direct or via OpenRouter). Returns AI-synthesized answers with citations from real-time web search."
-      : "Search the web using Brave Search API. Supports region-specific and localized search via country and language parameters. Returns titles, URLs, and snippets for fast research.";
+  let description: string;
+  let apiKey: string | undefined;
+
+  if (provider === "perplexity") {
+    const perplexityAuth = resolvePerplexityApiKey(perplexityConfig);
+    apiKey = perplexityAuth?.apiKey;
+    description =
+      "Search the web using Perplexity Sonar (direct or via OpenRouter). Returns AI-synthesized answers with citations from real-time web search.";
+  } else if (provider === "tavily") {
+    apiKey = resolveTavilyApiKey(tavilyConfig);
+    description =
+      "Search the web using Tavily API. Returns search results with AI-generated answers and citations.";
+  } else {
+    apiKey = resolveSearchApiKey(search);
+    description =
+      "Search the web using Brave Search API. Supports region-specific and localized search via country and language parameters. Returns titles, URLs, and snippets for fast research.";
+  }
 
   return {
     label: "Web Search",
@@ -481,11 +616,6 @@ export function createWebSearchTool(options?: {
     description,
     parameters: WebSearchSchema,
     execute: async (_toolCallId, args) => {
-      const perplexityAuth =
-        provider === "perplexity" ? resolvePerplexityApiKey(perplexityConfig) : undefined;
-      const apiKey =
-        provider === "perplexity" ? perplexityAuth?.apiKey : resolveSearchApiKey(search);
-
       if (!apiKey) {
         return jsonResult(missingSearchKeyPayload(provider));
       }
@@ -526,8 +656,8 @@ export function createWebSearchTool(options?: {
         freshness,
         perplexityBaseUrl: resolvePerplexityBaseUrl(
           perplexityConfig,
-          perplexityAuth?.source,
-          perplexityAuth?.apiKey,
+          provider === "perplexity" ? resolvePerplexityApiKey(perplexityConfig).source : "none",
+          provider === "perplexity" ? resolvePerplexityApiKey(perplexityConfig).apiKey : undefined,
         ),
         perplexityModel: resolvePerplexityModel(perplexityConfig),
       });
