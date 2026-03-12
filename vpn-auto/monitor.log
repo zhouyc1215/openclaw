@@ -5465,3 +5465,733 @@ Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id d
 Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
 [info]: [ 'client ready' ]
 ✅ Sent via Feishu. Message ID: om_x100b5422c6a8d8b0b3f140290391a76 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-12 05:05:38] ❌ VPN 未连接
+[2026-03-12 05:05:38] 启动 FortiClient GUI...
+[2026-03-12 05:05:41] ✅ FortiClient GUI 已启动
+[2026-03-12 05:05:41] 尝试触发 VPN 连接...
+[2026-03-12 05:05:41] 触发 VPN 连接...
+[2026-03-12 05:05:41] 使用 GUI 自动化点击连接按钮...
+[2026-03-12 05:05:41] ========================================
+[2026-03-12 05:05:41] 开始 VPN 自动连接
+[2026-03-12 05:05:41] ========================================
+[2026-03-12 05:05:41] 设置 DISPLAY=:1
+[2026-03-12 05:05:42] FortiClient 已在运行
+[2026-03-12 05:05:44] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-12 05:05:44] 尝试 1/5...
+[2026-03-12 05:05:44] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-12 05:05:44] 点击坐标: (60, 17)
+[2026-03-12 05:05:44] ✅ 成功点击连接按钮
+[2026-03-12 05:05:44] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-12 05:05:44] 请在手机上完成 MFA 认证
+[2026-03-12 05:05:44] ✅ GUI 自动化成功
+[2026-03-12 05:05:44] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-12 05:05:44
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-12 05:05:44
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+[openclaw] Building TypeScript (dist is stale).
+ℹ tsdown v0.20.3 powered by rolldown v1.0.0-rc.3
+ℹ config file: /home/tsl/openclaw/tsdown.config.ts 
+ℹ entry: src/index.ts
+ℹ target: node22.12.0
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/entry.ts
+ℹ target: node22.12.0
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/infra/warning-filter.ts
+ℹ target: node22.12.0
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/plugin-sdk/index.ts
+ℹ target: node22.12.0
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/extensionAPI.ts
+ℹ target: node22.12.0
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+ℹ dist/warning-filter.js  1.74 kB │ gzip: 0.65 kB
+ℹ 1 files, total: 1.74 kB
+✔ Build complete in 117ms
+ℹ dist/plugin-sdk/index.js                        822.08 kB │ gzip: 179.71 kB
+ℹ dist/plugin-sdk/pi-model-discovery-Dw3A6oXH.js    1.12 kB │ gzip:   0.52 kB
+ℹ 2 files, total: 823.20 kB
+✔ Build complete in 580ms
+ℹ Granting execute permission to dist/entry.js
+ℹ dist/extensionAPI.js                   2418.69 kB
+ℹ dist/pi-embedded-helpers-DsaKxAVf.js    300.32 kB │ gzip: 66.46 kB
+ℹ dist/config---uJ8Vlm.js                 200.39 kB │ gzip: 39.86 kB
+ℹ dist/manager-C0h8rvv7.js                118.65 kB │ gzip: 24.63 kB
+ℹ dist/model-selection-Cd0yo-9k.js         91.51 kB │ gzip: 20.38 kB
+ℹ dist/deliver-C3ArV7oS.js                 83.15 kB │ gzip: 20.83 kB
+ℹ dist/chrome-CY_eTdv6.js                  62.07 kB │ gzip: 15.74 kB
+ℹ dist/pw-ai-DiVBx055.js                   54.74 kB │ gzip: 12.63 kB
+ℹ dist/image-CRbmF6hm.js                   38.52 kB │ gzip: 10.06 kB
+ℹ dist/exec-C4A4g_rd.js                    36.17 kB │ gzip: 10.65 kB
+ℹ dist/qmd-manager-CMWVcx4T.js             23.33 kB │ gzip:  6.67 kB
+ℹ dist/agent-scope-CM0eqaaC.js             22.80 kB │ gzip:  5.44 kB
+ℹ dist/login-qr-BL0rGGlc.js                16.05 kB │ gzip:  5.23 kB
+ℹ dist/paths-rb94mUrR.js                    8.32 kB │ gzip:  2.25 kB
+ℹ dist/sqlite-CJOl_xf8.js                   8.28 kB │ gzip:  2.71 kB
+ℹ dist/github-copilot-token-wCk9Fg_E.js     3.97 kB │ gzip:  1.55 kB
+ℹ dist/redact-BIMJ3ntQ.js                   3.51 kB │ gzip:  1.40 kB
+ℹ dist/paths-DaZSp3nJ.js                    2.36 kB │ gzip:  0.78 kB
+ℹ dist/command-format-CFzL448l.js           1.93 kB │ gzip:  0.74 kB
+ℹ dist/pi-model-discovery-EhM2JAQo.js       0.84 kB │ gzip:  0.37 kB
+ℹ dist/transcript-events-JLH5W4He.js        0.59 kB │ gzip:  0.29 kB
+ℹ dist/rolldown-runtime-Cbj13DAv.js         0.42 kB │ gzip:  0.28 kB
+ℹ 22 files, total: 3496.60 kB
+✔ Build complete in 658ms
+ℹ Granting execute permission to dist/index.js
+ℹ dist/entry.js                              47.98 kB │ gzip:  13.24 kB
+ℹ dist/loader-DNxGQ5jg.js                  2316.05 kB
+ℹ dist/gateway-cli-CuDv5tvp.js              659.05 kB │ gzip: 154.51 kB
+ℹ dist/config-guard-FmijxX2V.js             227.31 kB │ gzip:  49.38 kB
+ℹ dist/config-Asj4jZHz.js                   177.79 kB │ gzip:  34.62 kB
+ℹ dist/status-ChIEgZ0T.js                   119.66 kB │ gzip:  30.89 kB
+ℹ dist/manager-YTo-bo5Y.js                  118.64 kB │ gzip:  24.62 kB
+ℹ dist/onboard-skills-Czh4xTVK.js           117.38 kB │ gzip:  25.25 kB
+ℹ dist/sandbox-BgdlnwW6.js                  108.23 kB │ gzip:  24.05 kB
+ℹ dist/doctor-BzYspL1S.js                   101.30 kB │ gzip:  25.69 kB
+ℹ dist/auth-profiles-C07O95mq.js            100.73 kB │ gzip:  22.40 kB
+ℹ dist/models-cli-ZeIpjkHF.js                97.99 kB │ gzip:  22.12 kB
+ℹ dist/deliver-D1M75Buj.js                   84.53 kB │ gzip:  21.11 kB
+ℹ dist/tui-BKmJuMZa.js                       83.58 kB │ gzip:  19.90 kB
+ℹ dist/routes-B2UX5usb.js                    79.09 kB │ gzip:  15.67 kB
+ℹ dist/audit-D3gTQHuT.js                     74.55 kB │ gzip:  18.24 kB
+ℹ dist/client-ugwFfEL7.js                    73.42 kB │ gzip:  13.69 kB
+ℹ dist/errors-BG3c6ZRr.js                    62.00 kB │ gzip:  15.75 kB
+ℹ dist/channels-cli-s5qmIhav.js              55.51 kB │ gzip:  14.02 kB
+ℹ dist/pw-ai-r46-UCv1.js                     54.74 kB │ gzip:  12.64 kB
+ℹ dist/health-format-CepeJeGW.js             53.71 kB │ gzip:  13.04 kB
+ℹ dist/nodes-cli-GFNu-AzY.js                 51.76 kB │ gzip:  11.19 kB
+ℹ dist/node-cli-DOnmOpQb.js                  48.70 kB │ gzip:  12.30 kB
+ℹ dist/pi-embedded-helpers-BxyMN7jn.js       45.43 kB │ gzip:  11.93 kB
+ℹ dist/update-runner-B0AnWfb0.js             42.52 kB │ gzip:   9.39 kB
+ℹ dist/github-copilot-auth-Ca6rzhDW.js       40.90 kB │ gzip:   7.87 kB
+ℹ dist/update-cli-DDZTQqEV.js                38.77 kB │ gzip:  10.83 kB
+ℹ dist/hooks-cli-DbPVLyOk.js                 35.47 kB │ gzip:   8.12 kB
+ℹ dist/tui-formatters-DvTqzl7G.js            30.54 kB │ gzip:   6.96 kB
+ℹ dist/configure-CqxqH8bq.js                 29.85 kB │ gzip:   7.80 kB
+ℹ dist/daemon-cli-BlwpKAoY.js                29.73 kB │ gzip:   7.08 kB
+ℹ dist/exec-approvals-BFwlLJhq.js            29.48 kB │ gzip:   6.89 kB
+ℹ dist/agent-B__FCQxu.js                     28.99 kB │ gzip:   7.28 kB
+ℹ dist/acp-cli-SuXh5UrA.js                   28.73 kB │ gzip:   7.81 kB
+ℹ dist/server-context-CKPYjMMF.js            27.80 kB │ gzip:   7.23 kB
+ℹ dist/skills-Bk3KVbnS.js                    26.75 kB │ gzip:   6.92 kB
+ℹ dist/session-cost-usage-CjMi32nY.js        25.86 kB │ gzip:   6.05 kB
+ℹ dist/cron-cli-CYyAD9aJ.js                  23.40 kB │ gzip:   5.81 kB
+ℹ dist/qmd-manager-DH4qlPfb.js               23.39 kB │ gzip:   6.70 kB
+ℹ dist/service-Dske8Qko.js                   23.22 kB │ gzip:   5.55 kB
+ℹ dist/onboard-channels-DfQYlgjq.js          22.92 kB │ gzip:   5.85 kB
+ℹ dist/image-Bmvq5mec.js                     22.26 kB │ gzip:   6.53 kB
+ℹ dist/sandbox-cli-JKVJZ2a2.js               21.65 kB │ gzip:   5.54 kB
+ℹ dist/manifest-registry-xsRp0Pze.js         20.28 kB │ gzip:   5.10 kB
+ℹ dist/service-audit-DOTtFM6P.js             18.65 kB │ gzip:   4.84 kB
+ℹ dist/daemon-runtime-DA8LplPd.js            18.23 kB │ gzip:   5.09 kB
+ℹ dist/plugins-Biw0T1QS.js                   17.93 kB │ gzip:   3.93 kB
+ℹ dist/completion-cli-COgWvyLy.js            16.66 kB │ gzip:   4.44 kB
+ℹ dist/plugin-auto-enable-DlLTqHD2.js        16.60 kB │ gzip:   4.30 kB
+ℹ dist/tool-display-zPRg7PTT.js              16.39 kB │ gzip:   3.81 kB
+ℹ dist/security-cli-DLapx__h.js              16.17 kB │ gzip:   4.61 kB
+ℹ dist/login-qr-D7hA3UQw.js                  16.16 kB │ gzip:   5.26 kB
+ℹ dist/plugins-cli-Dwu2zPUa.js               16.13 kB │ gzip:   4.42 kB
+ℹ dist/hooks-status-BFG9s9X4.js              16.06 kB │ gzip:   4.23 kB
+ℹ dist/gmail-setup-utils-DmiMAEIG.js         15.37 kB │ gzip:   4.46 kB
+ℹ dist/webhooks-cli-RAJwURmW.js              14.46 kB │ gzip:   3.95 kB
+ℹ dist/systemd-Ck_Nhe7b.js                   14.34 kB │ gzip:   4.12 kB
+ℹ dist/installs-yYLLxaN7.js                  14.05 kB │ gzip:   3.50 kB
+ℹ dist/exec-approvals-cli-CRLU_OBM.js        13.75 kB │ gzip:   3.42 kB
+ℹ dist/agent-scope-CSKN0lv4.js               13.48 kB │ gzip:   3.58 kB
+ℹ dist/pairing-store-DwiHDjgb.js             12.00 kB │ gzip:   3.14 kB
+ℹ dist/skills-cli-B0ffxr_P.js                11.83 kB │ gzip:   2.93 kB
+ℹ dist/ws-log-C3o22vc7.js                    11.82 kB │ gzip:   2.86 kB
+ℹ dist/call-Cg_9dTHU.js                      11.40 kB │ gzip:   3.43 kB
+ℹ dist/register.subclis-BL5vtb-s.js          10.61 kB │ gzip:   2.90 kB
+ℹ dist/accounts-BBa0tXwh.js                   8.84 kB │ gzip:   2.57 kB
+ℹ dist/commands-fvYA7C5T.js                   8.81 kB │ gzip:   2.43 kB
+ℹ dist/update-Nq0yTqxk.js                     8.71 kB │ gzip:   2.19 kB
+ℹ dist/table-CerhH9E2.js                      8.47 kB │ gzip:   2.75 kB
+ℹ dist/logs-cli-DQxdYTnm.js                   8.22 kB │ gzip:   2.76 kB
+ℹ dist/program-segrtBOp.js                    8.14 kB │ gzip:   3.25 kB
+ℹ dist/tailscale-9MusRvOi.js                  8.09 kB │ gzip:   2.48 kB
+ℹ dist/directory-cli-B10_WMjt.js              7.79 kB │ gzip:   1.86 kB
+ℹ dist/session-key-BRdRr5Ah.js                7.70 kB │ gzip:   1.88 kB
+ℹ dist/server-node-events-PjYuUpx8.js         7.68 kB │ gzip:   2.20 kB
+ℹ dist/dns-cli-BvLwLPqn.js                    7.68 kB │ gzip:   2.85 kB
+ℹ dist/skill-scanner-COatt01v.js              7.68 kB │ gzip:   2.56 kB
+ℹ dist/skills-status-BLqxN4r-.js              7.28 kB │ gzip:   2.27 kB
+ℹ dist/run-main-lJeRC14S.js                   7.25 kB │ gzip:   2.83 kB
+ℹ dist/exec-B8JKbXKW.js                       7.15 kB │ gzip:   2.38 kB
+ℹ dist/utils-iyydkbnu.js                      7.00 kB │ gzip:   2.55 kB
+ℹ dist/devices-cli-BUlSPs9_.js                6.97 kB │ gzip:   2.07 kB
+ℹ dist/sqlite-BjhYBODp.js                     6.67 kB │ gzip:   2.25 kB
+ℹ dist/auth-DTa0F2x9.js                       6.36 kB │ gzip:   1.80 kB
+ℹ dist/shared-DvsW5l22.js                     5.81 kB │ gzip:   2.07 kB
+ℹ dist/docs-cli-pjjRnxVE.js                   5.47 kB │ gzip:   1.97 kB
+ℹ dist/pairing-cli-DYM2slVA.js                5.09 kB │ gzip:   1.87 kB
+ℹ dist/widearea-dns-BYrQA0kE.js               5.04 kB │ gzip:   1.93 kB
+ℹ dist/nodes-screen-DtXuFQdk.js               4.96 kB │ gzip:   1.32 kB
+ℹ dist/auth-health-C90NCYAQ.js                4.93 kB │ gzip:   1.51 kB
+ℹ dist/message-channel-CQ6DgRUw.js            4.29 kB │ gzip:   1.27 kB
+ℹ dist/progress-Bcjniu7m.js                   4.14 kB │ gzip:   1.37 kB
+ℹ dist/github-copilot-token-SLWintYd.js       3.96 kB │ gzip:   1.54 kB
+ℹ dist/wsl-BkarWA1T.js                        3.93 kB │ gzip:   1.59 kB
+ℹ dist/rpc-D9TOsr2f.js                        3.84 kB │ gzip:   1.63 kB
+ℹ dist/system-cli-BFtnlrxp.js                 3.79 kB │ gzip:   1.15 kB
+ℹ dist/redact-B8YiFlwn.js                     3.62 kB │ gzip:   1.43 kB
+ℹ dist/shared-CyXSjVqR.js                     3.20 kB │ gzip:   1.15 kB
+ℹ dist/systemd-linger-ZzQSRx53.js             3.19 kB │ gzip:   1.01 kB
+ℹ dist/ports-CYvwRROk.js                      3.14 kB │ gzip:   1.11 kB
+ℹ dist/archive-ccN9aDgq.js                    3.00 kB │ gzip:   1.16 kB
+ℹ dist/cli-Cgk63VgH.js                        2.97 kB │ gzip:   1.27 kB
+ℹ dist/constants-D1op9uGI.js                  2.88 kB │ gzip:   0.79 kB
+ℹ dist/path-env-h3xp5PqO.js                   2.83 kB │ gzip:   1.10 kB
+ℹ dist/openclaw-root-9ILYSmJ9.js              2.80 kB │ gzip:   0.80 kB
+ℹ dist/tui-cli-BXh395nc.js                    2.70 kB │ gzip:   1.26 kB
+ℹ dist/clack-prompter-B9yLhyOm.js             2.60 kB │ gzip:   0.84 kB
+ℹ dist/paths-Cn1z_xve.js                      2.57 kB │ gzip:   0.79 kB
+ℹ dist/note-_C44YfAQ.js                       2.45 kB │ gzip:   0.89 kB
+ℹ dist/control-service-iyOF3VfA.js            2.42 kB │ gzip:   0.95 kB
+ℹ dist/format-duration-DgTEOMRq.js            2.42 kB │ gzip:   0.91 kB
+ℹ dist/format-relative-C6kUHuOj.js            2.13 kB │ gzip:   0.86 kB
+ℹ dist/node-service-jk0qQXlk.js               2.09 kB │ gzip:   0.62 kB
+ℹ dist/channel-selection-DMx1s14f.js          2.06 kB │ gzip:   0.73 kB
+ℹ dist/brew-CcZV0dSS.js                       1.65 kB │ gzip:   0.58 kB
+ℹ dist/command-format-ayFsmwwz.js             1.58 kB │ gzip:   0.64 kB
+ℹ dist/usage-format-BAirWUSO.js               1.50 kB │ gzip:   0.58 kB
+ℹ dist/parse-log-line-BansDQPa.js             1.23 kB │ gzip:   0.52 kB
+ℹ dist/tailnet-Byp3obcc.js                    1.21 kB │ gzip:   0.55 kB
+ℹ dist/channel-options-SD3DZCOY.js            1.18 kB │ gzip:   0.56 kB
+ℹ dist/gateway-rpc-Ddm9UT_Z.js                1.17 kB │ gzip:   0.63 kB
+ℹ dist/command-options-zIGzHi6i.js            1.13 kB │ gzip:   0.51 kB
+ℹ dist/systemd-hints-Dg2ngQkt.js              1.11 kB │ gzip:   0.55 kB
+ℹ dist/is-main-PYGa3tDA.js                    1.00 kB │ gzip:   0.40 kB
+ℹ dist/cli-utils-B8g_-5XH.js                  0.98 kB │ gzip:   0.47 kB
+ℹ dist/status-DfRyILSf.js                     0.96 kB │ gzip:   0.43 kB
+ℹ dist/pi-model-discovery-DzEIEgHL.js         0.84 kB │ gzip:   0.37 kB
+ℹ dist/status-BbTBC4KO.js                     0.82 kB │ gzip:   0.35 kB
+ℹ dist/deps-C3FVsd2d.js                       0.81 kB │ gzip:   0.32 kB
+ℹ dist/helpers-Cu2lpAMT.js                    0.79 kB │ gzip:   0.39 kB
+ℹ dist/format-C3B4xLIp.js                     0.76 kB │ gzip:   0.40 kB
+ℹ dist/parse-gTOGQPH6.js                      0.70 kB │ gzip:   0.36 kB
+ℹ dist/help-format-C6fHtnxd.js                0.66 kB │ gzip:   0.28 kB
+ℹ dist/transcript-events-Bv_eRVym.js          0.59 kB │ gzip:   0.29 kB
+ℹ dist/channels-status-issues-s0547Khf.js     0.55 kB │ gzip:   0.30 kB
+ℹ dist/links-fWsDyfm8.js                      0.49 kB │ gzip:   0.30 kB
+ℹ dist/logging-CHk_Rj6I.js                    0.49 kB │ gzip:   0.29 kB
+ℹ dist/ws-D091yo4M.js                         0.47 kB │ gzip:   0.24 kB
+ℹ dist/parse-timeout-CbVKLZ4B.js              0.46 kB │ gzip:   0.26 kB
+ℹ dist/prompt-style-CFsleyxV.js               0.44 kB │ gzip:   0.23 kB
+ℹ dist/rolldown-runtime-Cbj13DAv.js           0.42 kB │ gzip:   0.28 kB
+ℹ dist/helpers-C5Z7UeFM.js                    0.41 kB │ gzip:   0.26 kB
+ℹ dist/pairing-labels-Be4dMThh.js             0.26 kB │ gzip:   0.18 kB
+ℹ dist/prompts-CudpZgTI.js                    0.24 kB │ gzip:   0.17 kB
+ℹ dist/logging-pqyrk15z.js                    0.01 kB │ gzip:   0.03 kB
+ℹ 145 files, total: 6119.41 kB
+✔ Build complete in 797ms
+ℹ dist/index.js                             235.49 kB │ gzip:  52.42 kB
+ℹ dist/reply-Bf732dhs.js                   2316.20 kB
+ℹ dist/gateway-cli-BiMHXcZW.js              659.10 kB │ gzip: 154.54 kB
+ℹ dist/config-CAZ323Dw.js                   177.84 kB │ gzip:  34.63 kB
+ℹ dist/onboarding-CLAVZgjC.js               122.72 kB │ gzip:  31.82 kB
+ℹ dist/manager-BZJJsEsW.js                  118.73 kB │ gzip:  24.65 kB
+ℹ dist/onboard-skills-B29Xzaa5.js           117.39 kB │ gzip:  25.16 kB
+ℹ dist/sandbox-Mf7-kVP7.js                  108.31 kB │ gzip:  24.21 kB
+ℹ dist/doctor-Bu4dOqEo.js                   101.40 kB │ gzip:  25.73 kB
+ℹ dist/model-selection-D90LTtqR.js          100.82 kB │ gzip:  22.10 kB
+ℹ dist/models-cli-C075Jdt5.js                98.11 kB │ gzip:  22.20 kB
+ℹ dist/deliver-Bn7DzFJy.js                   84.54 kB │ gzip:  21.11 kB
+ℹ dist/tui-m6tMXNpV.js                       83.63 kB │ gzip:  19.92 kB
+ℹ dist/routes-BLtwIxYc.js                    79.10 kB │ gzip:  15.64 kB
+ℹ dist/audit-CzECtONf.js                     74.56 kB │ gzip:  18.25 kB
+ℹ dist/net-uM9SCmy-.js                       73.42 kB │ gzip:  13.66 kB
+ℹ dist/chrome-D8Bw26P4.js                    63.21 kB │ gzip:  16.15 kB
+ℹ dist/channels-cli-CnyVKJu9.js              55.58 kB │ gzip:  14.06 kB
+ℹ dist/pw-ai-DGxsk0vE.js                     54.80 kB │ gzip:  12.66 kB
+ℹ dist/health-format-DjQbSTB-.js             53.76 kB │ gzip:  13.06 kB
+ℹ dist/nodes-cli-B4n5ketp.js                 51.86 kB │ gzip:  11.24 kB
+ℹ dist/node-cli-BH3Du1vA.js                  48.81 kB │ gzip:  12.35 kB
+ℹ dist/pi-embedded-helpers-fpUF33jL.js       45.45 kB │ gzip:  11.97 kB
+ℹ dist/update-runner-BByTRxAC.js             42.52 kB │ gzip:   9.38 kB
+ℹ dist/github-copilot-auth-BnEuM0t0.js       40.92 kB │ gzip:   7.88 kB
+ℹ dist/update-cli-CuHJkPfr.js                38.85 kB │ gzip:  10.90 kB
+ℹ dist/hooks-cli-Db1ELhIK.js                 35.58 kB │ gzip:   8.17 kB
+ℹ dist/tui-formatters-BLlLbv35.js            30.55 kB │ gzip:   6.97 kB
+ℹ dist/configure-Cfk5qY1E.js                 29.91 kB │ gzip:   7.83 kB
+ℹ dist/daemon-cli-DOmfhWdu.js                29.79 kB │ gzip:   7.10 kB
+ℹ dist/exec-approvals-BACItfG5.js            29.48 kB │ gzip:   6.88 kB
+ℹ dist/agent-DvTf3RGt.js                     29.00 kB │ gzip:   7.28 kB
+ℹ dist/acp-cli-HOSFtY4d.js                   28.83 kB │ gzip:   7.87 kB
+ℹ dist/subsystem-B4kzjhsh.js                 28.12 kB │ gzip:   8.09 kB
+ℹ dist/server-context-gYz2bz18.js            27.81 kB │ gzip:   7.25 kB
+ℹ dist/skills-C6W7scFn.js                    26.80 kB │ gzip:   6.94 kB
+ℹ dist/completion-cli-XV2LQn6-.js            26.79 kB │ gzip:   6.87 kB
+ℹ dist/session-cost-usage-Cm_oiDyT.js        25.86 kB │ gzip:   6.05 kB
+ℹ dist/cron-cli-CyMjl6mt.js                  23.50 kB │ gzip:   5.87 kB
+ℹ dist/qmd-manager-B2XoWJsx.js               23.44 kB │ gzip:   6.72 kB
+ℹ dist/service-BCexhvtE.js                   23.23 kB │ gzip:   5.57 kB
+ℹ dist/onboard-channels-DgNugrNA.js          22.93 kB │ gzip:   5.87 kB
+ℹ dist/image-DJJLPo8r.js                     22.27 kB │ gzip:   6.54 kB
+ℹ dist/sandbox-cli-5GyNL-Un.js               21.75 kB │ gzip:   5.59 kB
+ℹ dist/manifest-registry-3t0Q3zjC.js         20.28 kB │ gzip:   5.10 kB
+ℹ dist/service-audit-2EcZnCff.js             18.65 kB │ gzip:   4.85 kB
+ℹ dist/daemon-runtime-1-ULNsBf.js            18.24 kB │ gzip:   5.12 kB
+ℹ dist/plugins-DQnOyLTX.js                   17.98 kB │ gzip:   3.96 kB
+ℹ dist/plugin-auto-enable-l4OmS0M9.js        16.61 kB │ gzip:   4.32 kB
+ℹ dist/tool-display-ZFn2Us5Z.js              16.39 kB │ gzip:   3.82 kB
+ℹ dist/security-cli-B_Wy4_RF.js              16.28 kB │ gzip:   4.68 kB
+ℹ dist/plugins-cli-Bit3nuv3.js               16.24 kB │ gzip:   4.48 kB
+ℹ dist/login-qr-CIXGOuxy.js                  16.17 kB │ gzip:   5.28 kB
+ℹ dist/hooks-status-ZctAZsuf.js              16.07 kB │ gzip:   4.24 kB
+ℹ dist/gmail-setup-utils-CgGRUvec.js         15.38 kB │ gzip:   4.47 kB
+ℹ dist/webhooks-cli-9ukHg84h.js              14.57 kB │ gzip:   4.00 kB
+ℹ dist/systemd-n9nTNXpn.js                   14.35 kB │ gzip:   4.13 kB
+ℹ dist/installs-D3HFTWjQ.js                  14.05 kB │ gzip:   3.50 kB
+ℹ dist/exec-approvals-cli-C5dYWFxc.js        13.85 kB │ gzip:   3.47 kB
+ℹ dist/agent-scope-Cor4Kh77.js               13.49 kB │ gzip:   3.59 kB
+ℹ dist/pairing-store-aKQgLre8.js             12.01 kB │ gzip:   3.14 kB
+ℹ dist/skills-cli-B9XKuNn8.js                11.94 kB │ gzip:   2.98 kB
+ℹ dist/ws-log-B48jgoHr.js                    11.83 kB │ gzip:   2.87 kB
+ℹ dist/call-D0n2Pb8Q.js                      11.40 kB │ gzip:   3.44 kB
+ℹ dist/paths-SRVTAxbc.js                      9.12 kB │ gzip:   2.47 kB
+ℹ dist/tailscale-CfJ6bm8B.js                  9.01 kB │ gzip:   2.82 kB
+ℹ dist/accounts-CxV9NFjx.js                   8.89 kB │ gzip:   2.59 kB
+ℹ dist/pi-tools.policy-CUD3HE2O.js            8.81 kB │ gzip:   2.44 kB
+ℹ dist/update-DKoKonTb.js                     8.71 kB │ gzip:   2.20 kB
+ℹ dist/table-DSi2l-mO.js                      8.48 kB │ gzip:   2.76 kB
+ℹ dist/logs-cli-mAJh2J4a.js                   8.32 kB │ gzip:   2.81 kB
+ℹ dist/sqlite-svkL1VGv.js                     8.28 kB │ gzip:   2.71 kB
+ℹ dist/directory-cli-DnNykAH1.js              7.90 kB │ gzip:   1.92 kB
+ℹ dist/server-node-events-Cu5Fsu4r.js         7.80 kB │ gzip:   2.24 kB
+ℹ dist/dns-cli-Dk6TgfaC.js                    7.79 kB │ gzip:   2.90 kB
+ℹ dist/session-key-fpow76MW.js                7.70 kB │ gzip:   1.88 kB
+ℹ dist/skill-scanner-CUM6Dbt8.js              7.68 kB │ gzip:   2.56 kB
+ℹ dist/skills-status-BfRnBFkY.js              7.29 kB │ gzip:   2.28 kB
+ℹ dist/utils-BYNOwFpc.js                      7.17 kB │ gzip:   2.63 kB
+ℹ dist/exec-iWHtgUiq.js                       7.16 kB │ gzip:   2.39 kB
+ℹ dist/devices-cli-DN3ksCEO.js                7.07 kB │ gzip:   2.13 kB
+ℹ dist/auth-DKTgIImx.js                       6.35 kB │ gzip:   1.80 kB
+ℹ dist/shared-D7GfM6b2.js                     5.82 kB │ gzip:   2.08 kB
+ℹ dist/docs-cli-BmujOWxJ.js                   5.55 kB │ gzip:   2.02 kB
+ℹ dist/pairing-cli-WnP5BHRp.js                5.19 kB │ gzip:   1.93 kB
+ℹ dist/widearea-dns-Bqt1Va10.js               5.04 kB │ gzip:   1.93 kB
+ℹ dist/nodes-screen-DTMjsnoe.js               4.96 kB │ gzip:   1.32 kB
+ℹ dist/auth-health-BHe5gVEB.js                4.94 kB │ gzip:   1.51 kB
+ℹ dist/message-channel-BabDQlTL.js            4.30 kB │ gzip:   1.28 kB
+ℹ dist/progress-BlTNu7qU.js                   4.16 kB │ gzip:   1.38 kB
+ℹ dist/github-copilot-token-BdJzOAgf.js       3.97 kB │ gzip:   1.55 kB
+ℹ dist/dispatcher-CoU3e-gX.js                 3.93 kB │ gzip:   1.58 kB
+ℹ dist/system-cli-CcvsmVAZ.js                 3.89 kB │ gzip:   1.20 kB
+ℹ dist/rpc-CcNKd3Ny.js                        3.84 kB │ gzip:   1.63 kB
+ℹ dist/redact-DJCFY628.js                     3.62 kB │ gzip:   1.43 kB
+ℹ dist/shared-jt6QafAo.js                     3.21 kB │ gzip:   1.16 kB
+ℹ dist/systemd-linger-ukzZsWiW.js             3.19 kB │ gzip:   1.01 kB
+ℹ dist/cli-DrsgF6Cg.js                        3.09 kB │ gzip:   1.32 kB
+ℹ dist/archive-BWQ0r9Dh.js                    3.00 kB │ gzip:   1.16 kB
+ℹ dist/constants-CLUi6T-M.js                  2.88 kB │ gzip:   0.79 kB
+ℹ dist/path-env-CxTVkI4c.js                   2.83 kB │ gzip:   1.11 kB
+ℹ dist/tui-cli-lVblMN3X.js                    2.81 kB │ gzip:   1.31 kB
+ℹ dist/openclaw-root-Cvotktkd.js              2.80 kB │ gzip:   0.80 kB
+ℹ dist/clack-prompter-BpAstZ4v.js             2.61 kB │ gzip:   0.86 kB
+ℹ dist/paths-DmunCygQ.js                      2.58 kB │ gzip:   0.80 kB
+ℹ dist/note-CnJ9D5VA.js                       2.46 kB │ gzip:   0.91 kB
+ℹ dist/control-service-BFlZpmaO.js            2.44 kB │ gzip:   0.95 kB
+ℹ dist/format-duration-OAZcbB85.js            2.42 kB │ gzip:   0.91 kB
+ℹ dist/channel-options-BwJsXih2.js            2.24 kB │ gzip:   0.92 kB
+ℹ dist/format-relative-CSIe06AP.js            2.13 kB │ gzip:   0.86 kB
+ℹ dist/node-service-BPZsSkUQ.js               2.09 kB │ gzip:   0.62 kB
+ℹ dist/channel-selection-C_hAFM14.js          2.06 kB │ gzip:   0.73 kB
+ℹ dist/command-format-ChfKqObn.js             1.95 kB │ gzip:   0.74 kB
+ℹ dist/brew-FoIha3w0.js                       1.65 kB │ gzip:   0.58 kB
+ℹ dist/usage-format-C0mOZv3Q.js               1.50 kB │ gzip:   0.58 kB
+ℹ dist/parse-log-line-BxDgv4Uo.js             1.23 kB │ gzip:   0.52 kB
+ℹ dist/env-CxGlKA1g.js                        1.21 kB │ gzip:   0.58 kB
+ℹ dist/tailnet-DLDGNuH2.js                    1.21 kB │ gzip:   0.55 kB
+ℹ dist/gateway-rpc-CD-10403.js                1.17 kB │ gzip:   0.62 kB
+ℹ dist/systemd-hints-snqJtVcY.js              1.11 kB │ gzip:   0.55 kB
+ℹ dist/is-main-BI9IbomE.js                    1.00 kB │ gzip:   0.40 kB
+ℹ dist/cli-utils-Yv4G3uEz.js                  0.98 kB │ gzip:   0.47 kB
+ℹ dist/status-DPvbDpz4.js                     0.97 kB │ gzip:   0.44 kB
+ℹ dist/boolean-BgXe2hyu.js                    0.86 kB │ gzip:   0.38 kB
+ℹ dist/pi-model-discovery-CV2V1HHz.js         0.84 kB │ gzip:   0.37 kB
+ℹ dist/status-BqtiImKF.js                     0.82 kB │ gzip:   0.35 kB
+ℹ dist/deps-CZs9xlW8.js                       0.81 kB │ gzip:   0.32 kB
+ℹ dist/helpers-BewDYqlx.js                    0.79 kB │ gzip:   0.39 kB
+ℹ dist/format-C81JRZRI.js                     0.76 kB │ gzip:   0.40 kB
+ℹ dist/parse-87ybtYW1.js                      0.70 kB │ gzip:   0.36 kB
+ℹ dist/help-format-BNz4LbKq.js                0.67 kB │ gzip:   0.30 kB
+ℹ dist/transcript-events-ChU6IQwp.js          0.59 kB │ gzip:   0.29 kB
+ℹ dist/channels-status-issues-Bg0bD1Q4.js     0.55 kB │ gzip:   0.31 kB
+ℹ dist/logging-DglXOVol.js                    0.50 kB │ gzip:   0.30 kB
+ℹ dist/links-X2qCZFkO.js                      0.49 kB │ gzip:   0.31 kB
+ℹ dist/ws-CEcdsnN9.js                         0.47 kB │ gzip:   0.24 kB
+ℹ dist/parse-timeout-BIB19Upi.js              0.46 kB │ gzip:   0.26 kB
+ℹ dist/prompt-style-Wng6RpTa.js               0.45 kB │ gzip:   0.24 kB
+ℹ dist/rolldown-runtime-Cbj13DAv.js           0.42 kB │ gzip:   0.28 kB
+ℹ dist/helpers-Ze4BYH3e.js                    0.41 kB │ gzip:   0.26 kB
+ℹ dist/pairing-labels-CAmDU-SP.js             0.26 kB │ gzip:   0.18 kB
+ℹ dist/prompts-DSJM8mlO.js                    0.24 kB │ gzip:   0.17 kB
+ℹ dist/logging-BWRYHvLp.js                    0.01 kB │ gzip:   0.03 kB
+ℹ 143 files, total: 6111.18 kB
+✔ Build complete in 809ms
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5429dc25d0a0b2961478dc152f2 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-12 05:07:53] ✅ VPN 已连接
+[2026-03-12 05:07:53] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-12 05:07:53
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-12 05:07:53
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5429d42764a4b3cc1d422913eb4 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-12 08:33:11] ❌ VPN 未连接
+[2026-03-12 08:33:11] 启动 FortiClient GUI...
+[2026-03-12 08:33:14] ✅ FortiClient GUI 已启动
+[2026-03-12 08:33:14] 尝试触发 VPN 连接...
+[2026-03-12 08:33:14] 触发 VPN 连接...
+[2026-03-12 08:33:14] 使用 GUI 自动化点击连接按钮...
+[2026-03-12 08:33:15] ========================================
+[2026-03-12 08:33:15] 开始 VPN 自动连接
+[2026-03-12 08:33:15] ========================================
+[2026-03-12 08:33:15] 设置 DISPLAY=:1
+[2026-03-12 08:33:15] FortiClient 已在运行
+[2026-03-12 08:33:17] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-12 08:33:17] 尝试 1/5...
+[2026-03-12 08:33:17] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-12 08:33:17] 点击坐标: (60, 17)
+[2026-03-12 08:33:17] ✅ 成功点击连接按钮
+[2026-03-12 08:33:17] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-12 08:33:17] 请在手机上完成 MFA 认证
+[2026-03-12 08:33:18] ✅ GUI 自动化成功
+[2026-03-12 08:33:18] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-12 08:33:18
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-12 08:33:18
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5414d3ee70b8b4921d080ff5b0d (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-12 08:36:28] ✅ VPN 已连接
+[2026-03-12 08:36:28] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-12 08:36:28
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-12 08:36:28
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5414e7dedca8b24f245496d2ef0 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-12 13:00:50] ❌ VPN 未连接
+[2026-03-12 13:00:50] 启动 FortiClient GUI...
+[2026-03-12 13:00:53] ✅ FortiClient GUI 已启动
+[2026-03-12 13:00:53] 尝试触发 VPN 连接...
+[2026-03-12 13:00:53] 触发 VPN 连接...
+[2026-03-12 13:00:53] 使用 GUI 自动化点击连接按钮...
+[2026-03-12 13:00:53] ========================================
+[2026-03-12 13:00:53] 开始 VPN 自动连接
+[2026-03-12 13:00:53] ========================================
+[2026-03-12 13:00:53] 设置 DISPLAY=:1
+[2026-03-12 13:00:53] FortiClient 已在运行
+[2026-03-12 13:00:56] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-12 13:00:56] 尝试 1/5...
+[2026-03-12 13:00:56] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-12 13:00:56] 点击坐标: (60, 17)
+[2026-03-12 13:00:56] ✅ 成功点击连接按钮
+[2026-03-12 13:00:56] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-12 13:00:56] 请在手机上完成 MFA 认证
+[2026-03-12 13:00:56] ✅ GUI 自动化成功
+[2026-03-12 13:00:56] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-12 13:00:56
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-12 13:00:56
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5410c6129d3cb32c05d3d26e3da (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-12 13:05:11] ✅ VPN 已连接
+[2026-03-12 13:05:11] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-12 13:05:11
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-12 13:05:11
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5410d60f88acb4a32b69e4dbc2c (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-12 21:05:46] ❌ VPN 未连接
+[2026-03-12 21:05:46] 启动 FortiClient GUI...
+[2026-03-12 21:05:49] ✅ FortiClient GUI 已启动
+[2026-03-12 21:05:49] 尝试触发 VPN 连接...
+[2026-03-12 21:05:49] 触发 VPN 连接...
+[2026-03-12 21:05:49] 使用 GUI 自动化点击连接按钮...
+[2026-03-12 21:05:49] ========================================
+[2026-03-12 21:05:49] 开始 VPN 自动连接
+[2026-03-12 21:05:49] ========================================
+[2026-03-12 21:05:49] 设置 DISPLAY=:1
+[2026-03-12 21:05:49] FortiClient 已在运行
+[2026-03-12 21:05:52] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-12 21:05:52] 尝试 1/5...
+[2026-03-12 21:05:52] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-12 21:05:52] 点击坐标: (60, 17)
+[2026-03-12 21:05:52] ✅ 成功点击连接按钮
+[2026-03-12 21:05:52] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-12 21:05:52] 请在手机上完成 MFA 认证
+[2026-03-12 21:05:52] ✅ GUI 自动化成功
+[2026-03-12 21:05:52] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-12 21:05:52
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-12 21:05:52
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+ ELIFECYCLE  Command failed.
+Terminated
+✅ Sent via Feishu. Message ID: om_x100b541feda770a4b33d0b6a9511687 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-12 21:11:11] ✅ VPN 已连接
+[2026-03-12 21:11:11] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-12 21:11:11
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-12 21:11:11
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b541ff98d0ca8b3ceab94201c272 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
