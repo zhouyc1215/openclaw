@@ -1,0 +1,2784 @@
+[2026-03-19 10:35:52] ==========================================
+[2026-03-19 10:35:52] VPN 自动重连系统启动
+[2026-03-19 10:35:52] ==========================================
+[2026-03-19 10:35:52] DISPLAY: :1
+[2026-03-19 10:35:52] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:35:52] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:35:52] 
+[2026-03-19 10:35:52] Python 版本: Python 3.8.10
+[2026-03-19 10:35:52] 检查依赖...
+[2026-03-19 10:35:53] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:35:53] 
+[2026-03-19 10:35:53] 启动 VPN Watchdog...
+[2026-03-19 10:35:53] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:36:04] ==========================================
+[2026-03-19 10:36:04] VPN 自动重连系统启动
+[2026-03-19 10:36:04] ==========================================
+[2026-03-19 10:36:04] DISPLAY: :1
+[2026-03-19 10:36:04] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:36:04] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:36:04] 
+[2026-03-19 10:36:04] Python 版本: Python 3.8.10
+[2026-03-19 10:36:04] 检查依赖...
+[2026-03-19 10:36:04] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:36:04] 
+[2026-03-19 10:36:04] 启动 VPN Watchdog...
+[2026-03-19 10:36:04] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:36:15] ==========================================
+[2026-03-19 10:36:15] VPN 自动重连系统启动
+[2026-03-19 10:36:15] ==========================================
+[2026-03-19 10:36:15] DISPLAY: :1
+[2026-03-19 10:36:15] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:36:15] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:36:15] 
+[2026-03-19 10:36:15] Python 版本: Python 3.8.10
+[2026-03-19 10:36:15] 检查依赖...
+[2026-03-19 10:36:16] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:36:16] 
+[2026-03-19 10:36:16] 启动 VPN Watchdog...
+[2026-03-19 10:36:16] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:36:26] ==========================================
+[2026-03-19 10:36:26] VPN 自动重连系统启动
+[2026-03-19 10:36:26] ==========================================
+[2026-03-19 10:36:26] DISPLAY: :1
+[2026-03-19 10:36:26] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:36:26] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:36:26] 
+[2026-03-19 10:36:26] Python 版本: Python 3.8.10
+[2026-03-19 10:36:26] 检查依赖...
+[2026-03-19 10:36:26] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:36:26] 
+[2026-03-19 10:36:26] 启动 VPN Watchdog...
+[2026-03-19 10:36:26] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:36:37] ==========================================
+[2026-03-19 10:36:37] VPN 自动重连系统启动
+[2026-03-19 10:36:37] ==========================================
+[2026-03-19 10:36:37] DISPLAY: :1
+[2026-03-19 10:36:37] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:36:37] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:36:37] 
+[2026-03-19 10:36:37] Python 版本: Python 3.8.10
+[2026-03-19 10:36:37] 检查依赖...
+[2026-03-19 10:36:37] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:36:37] 
+[2026-03-19 10:36:37] 启动 VPN Watchdog...
+[2026-03-19 10:36:37] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:36:47] ==========================================
+[2026-03-19 10:36:47] VPN 自动重连系统启动
+[2026-03-19 10:36:47] ==========================================
+[2026-03-19 10:36:47] DISPLAY: :1
+[2026-03-19 10:36:47] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:36:47] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:36:47] 
+[2026-03-19 10:36:47] Python 版本: Python 3.8.10
+[2026-03-19 10:36:47] 检查依赖...
+[2026-03-19 10:36:48] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:36:48] 
+[2026-03-19 10:36:48] 启动 VPN Watchdog...
+[2026-03-19 10:36:48] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:36:58] ==========================================
+[2026-03-19 10:36:58] VPN 自动重连系统启动
+[2026-03-19 10:36:58] ==========================================
+[2026-03-19 10:36:58] DISPLAY: :1
+[2026-03-19 10:36:58] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:36:58] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:36:58] 
+[2026-03-19 10:36:58] Python 版本: Python 3.8.10
+[2026-03-19 10:36:58] 检查依赖...
+[2026-03-19 10:36:58] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:36:58] 
+[2026-03-19 10:36:58] 启动 VPN Watchdog...
+[2026-03-19 10:36:58] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:37:09] ==========================================
+[2026-03-19 10:37:09] VPN 自动重连系统启动
+[2026-03-19 10:37:09] ==========================================
+[2026-03-19 10:37:09] DISPLAY: :1
+[2026-03-19 10:37:09] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:37:09] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:37:09] 
+[2026-03-19 10:37:09] Python 版本: Python 3.8.10
+[2026-03-19 10:37:09] 检查依赖...
+[2026-03-19 10:37:09] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:37:09] 
+[2026-03-19 10:37:09] 启动 VPN Watchdog...
+[2026-03-19 10:37:09] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:37:20] ==========================================
+[2026-03-19 10:37:20] VPN 自动重连系统启动
+[2026-03-19 10:37:20] ==========================================
+[2026-03-19 10:37:20] DISPLAY: :1
+[2026-03-19 10:37:20] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:37:20] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:37:20] 
+[2026-03-19 10:37:20] Python 版本: Python 3.8.10
+[2026-03-19 10:37:20] 检查依赖...
+[2026-03-19 10:37:20] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:37:20] 
+[2026-03-19 10:37:20] 启动 VPN Watchdog...
+[2026-03-19 10:37:20] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:37:30] ==========================================
+[2026-03-19 10:37:30] VPN 自动重连系统启动
+[2026-03-19 10:37:30] ==========================================
+[2026-03-19 10:37:30] DISPLAY: :1
+[2026-03-19 10:37:30] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:37:30] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:37:30] 
+[2026-03-19 10:37:30] Python 版本: Python 3.8.10
+[2026-03-19 10:37:30] 检查依赖...
+[2026-03-19 10:37:31] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:37:31] 
+[2026-03-19 10:37:31] 启动 VPN Watchdog...
+[2026-03-19 10:37:31] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:37:41] ==========================================
+[2026-03-19 10:37:41] VPN 自动重连系统启动
+[2026-03-19 10:37:41] ==========================================
+[2026-03-19 10:37:41] DISPLAY: :1
+[2026-03-19 10:37:41] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:37:41] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:37:41] 
+[2026-03-19 10:37:41] Python 版本: Python 3.8.10
+[2026-03-19 10:37:41] 检查依赖...
+[2026-03-19 10:37:42] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:37:42] 
+[2026-03-19 10:37:42] 启动 VPN Watchdog...
+[2026-03-19 10:37:42] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:37:52] ==========================================
+[2026-03-19 10:37:52] VPN 自动重连系统启动
+[2026-03-19 10:37:52] ==========================================
+[2026-03-19 10:37:52] DISPLAY: :1
+[2026-03-19 10:37:52] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:37:52] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:37:52] 
+[2026-03-19 10:37:52] Python 版本: Python 3.8.10
+[2026-03-19 10:37:52] 检查依赖...
+[2026-03-19 10:37:52] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:37:52] 
+[2026-03-19 10:37:52] 启动 VPN Watchdog...
+[2026-03-19 10:37:52] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:38:03] ==========================================
+[2026-03-19 10:38:03] VPN 自动重连系统启动
+[2026-03-19 10:38:03] ==========================================
+[2026-03-19 10:38:03] DISPLAY: :1
+[2026-03-19 10:38:03] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:38:03] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:38:03] 
+[2026-03-19 10:38:03] Python 版本: Python 3.8.10
+[2026-03-19 10:38:03] 检查依赖...
+[2026-03-19 10:38:03] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:38:03] 
+[2026-03-19 10:38:03] 启动 VPN Watchdog...
+[2026-03-19 10:38:03] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:38:14] ==========================================
+[2026-03-19 10:38:14] VPN 自动重连系统启动
+[2026-03-19 10:38:14] ==========================================
+[2026-03-19 10:38:14] DISPLAY: :1
+[2026-03-19 10:38:14] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:38:14] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:38:14] 
+[2026-03-19 10:38:14] Python 版本: Python 3.8.10
+[2026-03-19 10:38:14] 检查依赖...
+[2026-03-19 10:38:14] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:38:14] 
+[2026-03-19 10:38:14] 启动 VPN Watchdog...
+[2026-03-19 10:38:14] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:38:24] ==========================================
+[2026-03-19 10:38:24] VPN 自动重连系统启动
+[2026-03-19 10:38:24] ==========================================
+[2026-03-19 10:38:24] DISPLAY: :1
+[2026-03-19 10:38:24] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:38:24] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:38:24] 
+[2026-03-19 10:38:24] Python 版本: Python 3.8.10
+[2026-03-19 10:38:24] 检查依赖...
+[2026-03-19 10:38:25] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:38:25] 
+[2026-03-19 10:38:25] 启动 VPN Watchdog...
+[2026-03-19 10:38:25] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:38:35] ==========================================
+[2026-03-19 10:38:35] VPN 自动重连系统启动
+[2026-03-19 10:38:35] ==========================================
+[2026-03-19 10:38:35] DISPLAY: :1
+[2026-03-19 10:38:35] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:38:35] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:38:35] 
+[2026-03-19 10:38:35] Python 版本: Python 3.8.10
+[2026-03-19 10:38:35] 检查依赖...
+[2026-03-19 10:38:35] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:38:35] 
+[2026-03-19 10:38:35] 启动 VPN Watchdog...
+[2026-03-19 10:38:35] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:38:46] ==========================================
+[2026-03-19 10:38:46] VPN 自动重连系统启动
+[2026-03-19 10:38:46] ==========================================
+[2026-03-19 10:38:46] DISPLAY: :1
+[2026-03-19 10:38:46] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:38:46] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:38:46] 
+[2026-03-19 10:38:46] Python 版本: Python 3.8.10
+[2026-03-19 10:38:46] 检查依赖...
+[2026-03-19 10:38:46] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:38:46] 
+[2026-03-19 10:38:46] 启动 VPN Watchdog...
+[2026-03-19 10:38:46] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:38:56] ==========================================
+[2026-03-19 10:38:56] VPN 自动重连系统启动
+[2026-03-19 10:38:56] ==========================================
+[2026-03-19 10:38:56] DISPLAY: :1
+[2026-03-19 10:38:56] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:38:56] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:38:56] 
+[2026-03-19 10:38:56] Python 版本: Python 3.8.10
+[2026-03-19 10:38:56] 检查依赖...
+[2026-03-19 10:38:57] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:38:57] 
+[2026-03-19 10:38:57] 启动 VPN Watchdog...
+[2026-03-19 10:38:57] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:39:07] ==========================================
+[2026-03-19 10:39:07] VPN 自动重连系统启动
+[2026-03-19 10:39:07] ==========================================
+[2026-03-19 10:39:07] DISPLAY: :1
+[2026-03-19 10:39:07] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:39:07] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:39:07] 
+[2026-03-19 10:39:07] Python 版本: Python 3.8.10
+[2026-03-19 10:39:07] 检查依赖...
+[2026-03-19 10:39:07] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:39:07] 
+[2026-03-19 10:39:07] 启动 VPN Watchdog...
+[2026-03-19 10:39:07] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:39:18] ==========================================
+[2026-03-19 10:39:18] VPN 自动重连系统启动
+[2026-03-19 10:39:18] ==========================================
+[2026-03-19 10:39:18] DISPLAY: :1
+[2026-03-19 10:39:18] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:39:18] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:39:18] 
+[2026-03-19 10:39:18] Python 版本: Python 3.8.10
+[2026-03-19 10:39:18] 检查依赖...
+[2026-03-19 10:39:18] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:39:18] 
+[2026-03-19 10:39:18] 启动 VPN Watchdog...
+[2026-03-19 10:39:18] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:39:29] ==========================================
+[2026-03-19 10:39:29] VPN 自动重连系统启动
+[2026-03-19 10:39:29] ==========================================
+[2026-03-19 10:39:29] DISPLAY: :1
+[2026-03-19 10:39:29] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:39:29] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:39:29] 
+[2026-03-19 10:39:29] Python 版本: Python 3.8.10
+[2026-03-19 10:39:29] 检查依赖...
+[2026-03-19 10:39:29] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:39:29] 
+[2026-03-19 10:39:29] 启动 VPN Watchdog...
+[2026-03-19 10:39:29] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:39:40] ==========================================
+[2026-03-19 10:39:40] VPN 自动重连系统启动
+[2026-03-19 10:39:40] ==========================================
+[2026-03-19 10:39:40] DISPLAY: :1
+[2026-03-19 10:39:40] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:39:40] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:39:40] 
+[2026-03-19 10:39:40] Python 版本: Python 3.8.10
+[2026-03-19 10:39:40] 检查依赖...
+[2026-03-19 10:39:40] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:39:40] 
+[2026-03-19 10:39:40] 启动 VPN Watchdog...
+[2026-03-19 10:39:40] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:39:50] ==========================================
+[2026-03-19 10:39:50] VPN 自动重连系统启动
+[2026-03-19 10:39:50] ==========================================
+[2026-03-19 10:39:50] DISPLAY: :1
+[2026-03-19 10:39:50] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:39:50] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:39:50] 
+[2026-03-19 10:39:50] Python 版本: Python 3.8.10
+[2026-03-19 10:39:50] 检查依赖...
+[2026-03-19 10:39:51] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:39:51] 
+[2026-03-19 10:39:51] 启动 VPN Watchdog...
+[2026-03-19 10:39:51] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:40:01] ==========================================
+[2026-03-19 10:40:01] VPN 自动重连系统启动
+[2026-03-19 10:40:01] ==========================================
+[2026-03-19 10:40:01] DISPLAY: :1
+[2026-03-19 10:40:01] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:40:01] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:40:01] 
+[2026-03-19 10:40:01] Python 版本: Python 3.8.10
+[2026-03-19 10:40:01] 检查依赖...
+[2026-03-19 10:40:02] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:40:02] 
+[2026-03-19 10:40:02] 启动 VPN Watchdog...
+[2026-03-19 10:40:02] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:40:12] ==========================================
+[2026-03-19 10:40:12] VPN 自动重连系统启动
+[2026-03-19 10:40:12] ==========================================
+[2026-03-19 10:40:12] DISPLAY: :1
+[2026-03-19 10:40:12] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:40:12] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:40:12] 
+[2026-03-19 10:40:12] Python 版本: Python 3.8.10
+[2026-03-19 10:40:12] 检查依赖...
+[2026-03-19 10:40:13] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:40:13] 
+[2026-03-19 10:40:13] 启动 VPN Watchdog...
+[2026-03-19 10:40:13] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 10:40:23] ==========================================
+[2026-03-19 10:40:23] VPN 自动重连系统启动
+[2026-03-19 10:40:23] ==========================================
+[2026-03-19 10:40:23] DISPLAY: :1
+[2026-03-19 10:40:23] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 10:40:23] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 10:40:23] 
+[2026-03-19 10:40:23] Python 版本: Python 3.8.10
+[2026-03-19 10:40:23] 检查依赖...
+[2026-03-19 10:40:23] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 10:40:23] 
+[2026-03-19 10:40:23] 启动 VPN Watchdog...
+[2026-03-19 10:40:23] 
+[2026-03-19 10:40:23] [INFO] PyAutoGUI 驱动已加载
+[2026-03-19 10:40:23] [INFO] OpenCV 驱动已加载
+[2026-03-19 10:40:23] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-19 10:40:23] [INFO] 已加载 2 个驱动
+[2026-03-19 10:40:23] [INFO] VPN Watchdog 已启动
+[2026-03-19 10:40:23] [INFO] 检测间隔: 60 秒
+[2026-03-19 10:40:23] [INFO] 最大失败次数: 3
+[2026-03-19 10:40:23] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-19 10:41:24] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-19 10:42:25] [INFO] ✅ VPN 已恢复连接
+[2026-03-19 11:53:59] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-19 11:55:12] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-19 11:56:24] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-19 11:56:24] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-19 11:56:24] [INFO] ============================================================
+[2026-03-19 11:56:24] [INFO] 开始 VPN 重连流程
+[2026-03-19 11:56:24] [INFO] ============================================================
+[2026-03-19 11:56:24] [INFO] 停止 FortiClient 进程...
+[2026-03-19 11:56:24] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 11:56:26] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 11:56:26] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 11:56:26] [INFO] 启动 FortiClient...
+[2026-03-19 11:56:26] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 11:56:28] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 11:56:28] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 11:56:28] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 11:56:28] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 11:56:43] [INFO] 尝试点击连接按钮...
+[2026-03-19 11:56:43] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 11:56:43] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 11:56:44] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 11:56:44] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 11:56:44] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 11:56:44] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 11:56:44] [WARNING] 未找到按钮
+[2026-03-19 11:56:44] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 11:56:44] [ERROR] 所有驱动都失败了
+[2026-03-19 11:56:44] [ERROR] 点击连接按钮失败
+[2026-03-19 11:56:44] [ERROR] ============================================================
+[2026-03-19 11:56:44] [ERROR] ❌ VPN 重连失败
+[2026-03-19 11:56:44] [ERROR] ============================================================
+[2026-03-19 11:57:56] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-19 11:57:56] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-19 11:57:56] [INFO] ============================================================
+[2026-03-19 11:57:56] [INFO] 开始 VPN 重连流程
+[2026-03-19 11:57:56] [INFO] ============================================================
+[2026-03-19 11:57:56] [INFO] 停止 FortiClient 进程...
+[2026-03-19 11:57:56] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 11:57:58] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 11:57:58] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 11:57:58] [INFO] 启动 FortiClient...
+[2026-03-19 11:57:58] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 11:58:01] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 11:58:01] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 11:58:01] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 11:58:01] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 11:58:16] [INFO] 尝试点击连接按钮...
+[2026-03-19 11:58:16] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 11:58:16] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 11:58:16] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 11:58:16] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 11:58:16] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 11:58:16] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 11:58:16] [WARNING] 未找到按钮
+[2026-03-19 11:58:16] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 11:58:16] [ERROR] 所有驱动都失败了
+[2026-03-19 11:58:16] [ERROR] 点击连接按钮失败
+[2026-03-19 11:58:16] [ERROR] ============================================================
+[2026-03-19 11:58:16] [ERROR] ❌ VPN 重连失败
+[2026-03-19 11:58:16] [ERROR] ============================================================
+[2026-03-19 11:59:28] [WARNING] ⚠️  VPN 断开 (失败次数: 5/3)
+[2026-03-19 11:59:28] [ERROR] ❌ VPN 连续失败 5 次，触发重连
+[2026-03-19 11:59:28] [INFO] ============================================================
+[2026-03-19 11:59:28] [INFO] 开始 VPN 重连流程
+[2026-03-19 11:59:28] [INFO] ============================================================
+[2026-03-19 11:59:28] [INFO] 停止 FortiClient 进程...
+[2026-03-19 11:59:28] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 11:59:30] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 11:59:30] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 11:59:30] [INFO] 启动 FortiClient...
+[2026-03-19 11:59:30] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 11:59:33] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 11:59:33] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 11:59:33] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 11:59:33] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 11:59:48] [INFO] 尝试点击连接按钮...
+[2026-03-19 11:59:48] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 11:59:48] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 11:59:48] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 11:59:48] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 11:59:48] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 11:59:48] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 11:59:48] [WARNING] 未找到按钮
+[2026-03-19 11:59:48] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 11:59:48] [ERROR] 所有驱动都失败了
+[2026-03-19 11:59:48] [ERROR] 点击连接按钮失败
+[2026-03-19 11:59:48] [ERROR] ============================================================
+[2026-03-19 11:59:48] [ERROR] ❌ VPN 重连失败
+[2026-03-19 11:59:48] [ERROR] ============================================================
+[2026-03-19 12:01:01] [WARNING] ⚠️  VPN 断开 (失败次数: 6/3)
+[2026-03-19 12:01:01] [ERROR] ❌ VPN 连续失败 6 次，触发重连
+[2026-03-19 12:01:01] [INFO] ============================================================
+[2026-03-19 12:01:01] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:01:01] [INFO] ============================================================
+[2026-03-19 12:01:01] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:01:01] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:01:03] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:01:03] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:01:03] [INFO] 启动 FortiClient...
+[2026-03-19 12:01:03] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:01:05] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:01:05] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:01:05] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:01:05] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:01:20] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:01:20] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:01:20] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:01:20] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:01:20] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:01:20] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:01:20] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:01:21] [WARNING] 未找到按钮
+[2026-03-19 12:01:21] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:01:21] [ERROR] 所有驱动都失败了
+[2026-03-19 12:01:21] [ERROR] 点击连接按钮失败
+[2026-03-19 12:01:21] [ERROR] ============================================================
+[2026-03-19 12:01:21] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:01:21] [ERROR] ============================================================
+[2026-03-19 12:02:33] [WARNING] ⚠️  VPN 断开 (失败次数: 7/3)
+[2026-03-19 12:02:33] [ERROR] ❌ VPN 连续失败 7 次，触发重连
+[2026-03-19 12:02:33] [INFO] ============================================================
+[2026-03-19 12:02:33] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:02:33] [INFO] ============================================================
+[2026-03-19 12:02:33] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:02:33] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:02:35] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:02:35] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:02:35] [INFO] 启动 FortiClient...
+[2026-03-19 12:02:35] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:02:37] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:02:37] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:02:37] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:02:37] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:02:52] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:02:52] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:02:52] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:02:53] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:02:53] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:02:53] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:02:53] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:02:53] [WARNING] 未找到按钮
+[2026-03-19 12:02:53] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:02:53] [ERROR] 所有驱动都失败了
+[2026-03-19 12:02:53] [ERROR] 点击连接按钮失败
+[2026-03-19 12:02:53] [ERROR] ============================================================
+[2026-03-19 12:02:53] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:02:53] [ERROR] ============================================================
+[2026-03-19 12:04:05] [WARNING] ⚠️  VPN 断开 (失败次数: 8/3)
+[2026-03-19 12:04:05] [ERROR] ❌ VPN 连续失败 8 次，触发重连
+[2026-03-19 12:04:05] [INFO] ============================================================
+[2026-03-19 12:04:05] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:04:05] [INFO] ============================================================
+[2026-03-19 12:04:05] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:04:05] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:04:07] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:04:07] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:04:07] [INFO] 启动 FortiClient...
+[2026-03-19 12:04:07] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:04:10] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:04:10] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:04:10] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:04:10] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:04:25] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:04:25] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:04:25] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:04:25] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:04:25] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:04:25] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:04:25] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:04:25] [WARNING] 未找到按钮
+[2026-03-19 12:04:25] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:04:25] [ERROR] 所有驱动都失败了
+[2026-03-19 12:04:25] [ERROR] 点击连接按钮失败
+[2026-03-19 12:04:25] [ERROR] ============================================================
+[2026-03-19 12:04:25] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:04:25] [ERROR] ============================================================
+[2026-03-19 12:05:37] [WARNING] ⚠️  VPN 断开 (失败次数: 9/3)
+[2026-03-19 12:05:37] [ERROR] ❌ VPN 连续失败 9 次，触发重连
+[2026-03-19 12:05:37] [INFO] ============================================================
+[2026-03-19 12:05:37] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:05:37] [INFO] ============================================================
+[2026-03-19 12:05:37] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:05:37] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:05:39] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:05:39] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:05:39] [INFO] 启动 FortiClient...
+[2026-03-19 12:05:39] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:05:42] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:05:42] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:05:42] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:05:42] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:05:57] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:05:57] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:05:57] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:05:57] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:05:57] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:05:57] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:05:57] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:05:57] [WARNING] 未找到按钮
+[2026-03-19 12:05:57] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:05:57] [ERROR] 所有驱动都失败了
+[2026-03-19 12:05:57] [ERROR] 点击连接按钮失败
+[2026-03-19 12:05:57] [ERROR] ============================================================
+[2026-03-19 12:05:57] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:05:57] [ERROR] ============================================================
+[2026-03-19 12:07:09] [WARNING] ⚠️  VPN 断开 (失败次数: 10/3)
+[2026-03-19 12:07:09] [ERROR] ❌ VPN 连续失败 10 次，触发重连
+[2026-03-19 12:07:09] [INFO] ============================================================
+[2026-03-19 12:07:09] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:07:09] [INFO] ============================================================
+[2026-03-19 12:07:09] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:07:09] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:07:11] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:07:11] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:07:11] [INFO] 启动 FortiClient...
+[2026-03-19 12:07:11] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:07:14] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:07:14] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:07:14] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:07:14] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:07:29] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:07:29] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:07:29] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:07:29] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:07:29] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:07:29] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:07:29] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:07:29] [WARNING] 未找到按钮
+[2026-03-19 12:07:29] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:07:29] [ERROR] 所有驱动都失败了
+[2026-03-19 12:07:29] [ERROR] 点击连接按钮失败
+[2026-03-19 12:07:29] [ERROR] ============================================================
+[2026-03-19 12:07:29] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:07:29] [ERROR] ============================================================
+[2026-03-19 12:08:41] [WARNING] ⚠️  VPN 断开 (失败次数: 11/3)
+[2026-03-19 12:08:41] [ERROR] ❌ VPN 连续失败 11 次，触发重连
+[2026-03-19 12:08:41] [INFO] ============================================================
+[2026-03-19 12:08:41] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:08:41] [INFO] ============================================================
+[2026-03-19 12:08:41] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:08:41] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:08:44] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:08:44] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:08:44] [INFO] 启动 FortiClient...
+[2026-03-19 12:08:44] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:08:46] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:08:46] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:08:46] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:08:46] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:09:01] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:09:01] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:09:01] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:09:01] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:09:01] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:09:01] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:09:01] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:09:02] [WARNING] 未找到按钮
+[2026-03-19 12:09:02] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:09:02] [ERROR] 所有驱动都失败了
+[2026-03-19 12:09:02] [ERROR] 点击连接按钮失败
+[2026-03-19 12:09:02] [ERROR] ============================================================
+[2026-03-19 12:09:02] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:09:02] [ERROR] ============================================================
+[2026-03-19 12:10:14] [WARNING] ⚠️  VPN 断开 (失败次数: 12/3)
+[2026-03-19 12:10:14] [ERROR] ❌ VPN 连续失败 12 次，触发重连
+[2026-03-19 12:10:14] [INFO] ============================================================
+[2026-03-19 12:10:14] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:10:14] [INFO] ============================================================
+[2026-03-19 12:10:14] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:10:14] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:10:16] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:10:16] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:10:16] [INFO] 启动 FortiClient...
+[2026-03-19 12:10:16] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:10:18] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:10:18] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:10:18] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:10:18] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:10:33] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:10:33] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:10:33] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:10:34] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:10:34] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:10:34] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:10:34] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:10:34] [WARNING] 未找到按钮
+[2026-03-19 12:10:34] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:10:34] [ERROR] 所有驱动都失败了
+[2026-03-19 12:10:34] [ERROR] 点击连接按钮失败
+[2026-03-19 12:10:34] [ERROR] ============================================================
+[2026-03-19 12:10:34] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:10:34] [ERROR] ============================================================
+[2026-03-19 12:11:46] [WARNING] ⚠️  VPN 断开 (失败次数: 13/3)
+[2026-03-19 12:11:46] [ERROR] ❌ VPN 连续失败 13 次，触发重连
+[2026-03-19 12:11:46] [INFO] ============================================================
+[2026-03-19 12:11:46] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:11:46] [INFO] ============================================================
+[2026-03-19 12:11:46] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:11:46] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:11:48] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:11:48] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:11:48] [INFO] 启动 FortiClient...
+[2026-03-19 12:11:48] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:11:51] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:11:51] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:11:51] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:11:51] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:12:06] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:12:06] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:12:06] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:12:06] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:12:06] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:12:06] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:12:06] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:12:06] [WARNING] 未找到按钮
+[2026-03-19 12:12:06] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:12:06] [ERROR] 所有驱动都失败了
+[2026-03-19 12:12:06] [ERROR] 点击连接按钮失败
+[2026-03-19 12:12:06] [ERROR] ============================================================
+[2026-03-19 12:12:06] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:12:06] [ERROR] ============================================================
+[2026-03-19 12:13:18] [WARNING] ⚠️  VPN 断开 (失败次数: 14/3)
+[2026-03-19 12:13:18] [ERROR] ❌ VPN 连续失败 14 次，触发重连
+[2026-03-19 12:13:18] [INFO] ============================================================
+[2026-03-19 12:13:18] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:13:18] [INFO] ============================================================
+[2026-03-19 12:13:18] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:13:18] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:13:20] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:13:20] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:13:20] [INFO] 启动 FortiClient...
+[2026-03-19 12:13:20] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:13:23] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:13:23] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:13:23] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:13:23] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:13:38] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:13:38] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:13:38] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:13:38] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:13:38] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:13:38] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:13:38] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:13:38] [WARNING] 未找到按钮
+[2026-03-19 12:13:38] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:13:38] [ERROR] 所有驱动都失败了
+[2026-03-19 12:13:38] [ERROR] 点击连接按钮失败
+[2026-03-19 12:13:38] [ERROR] ============================================================
+[2026-03-19 12:13:38] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:13:38] [ERROR] ============================================================
+[2026-03-19 12:14:50] [WARNING] ⚠️  VPN 断开 (失败次数: 15/3)
+[2026-03-19 12:14:50] [ERROR] ❌ VPN 连续失败 15 次，触发重连
+[2026-03-19 12:14:50] [INFO] ============================================================
+[2026-03-19 12:14:50] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:14:50] [INFO] ============================================================
+[2026-03-19 12:14:50] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:14:50] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:14:52] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:14:52] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:14:52] [INFO] 启动 FortiClient...
+[2026-03-19 12:14:52] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:14:55] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:14:55] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:14:55] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:14:55] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:15:10] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:15:10] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:15:10] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:15:10] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:15:10] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:15:10] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:15:10] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:15:11] [WARNING] 未找到按钮
+[2026-03-19 12:15:11] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:15:11] [ERROR] 所有驱动都失败了
+[2026-03-19 12:15:11] [ERROR] 点击连接按钮失败
+[2026-03-19 12:15:11] [ERROR] ============================================================
+[2026-03-19 12:15:11] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:15:11] [ERROR] ============================================================
+[2026-03-19 12:16:23] [WARNING] ⚠️  VPN 断开 (失败次数: 16/3)
+[2026-03-19 12:16:23] [ERROR] ❌ VPN 连续失败 16 次，触发重连
+[2026-03-19 12:16:23] [INFO] ============================================================
+[2026-03-19 12:16:23] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:16:23] [INFO] ============================================================
+[2026-03-19 12:16:23] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:16:23] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:16:25] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:16:25] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:16:25] [INFO] 启动 FortiClient...
+[2026-03-19 12:16:25] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:16:27] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:16:27] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:16:27] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:16:27] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:16:42] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:16:42] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:16:42] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:16:42] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:16:42] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:16:42] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:16:42] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:16:43] [WARNING] 未找到按钮
+[2026-03-19 12:16:43] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:16:43] [ERROR] 所有驱动都失败了
+[2026-03-19 12:16:43] [ERROR] 点击连接按钮失败
+[2026-03-19 12:16:43] [ERROR] ============================================================
+[2026-03-19 12:16:43] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:16:43] [ERROR] ============================================================
+[2026-03-19 12:17:55] [WARNING] ⚠️  VPN 断开 (失败次数: 17/3)
+[2026-03-19 12:17:55] [ERROR] ❌ VPN 连续失败 17 次，触发重连
+[2026-03-19 12:17:55] [INFO] ============================================================
+[2026-03-19 12:17:55] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:17:55] [INFO] ============================================================
+[2026-03-19 12:17:55] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:17:55] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:17:57] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:17:57] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:17:57] [INFO] 启动 FortiClient...
+[2026-03-19 12:17:57] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:18:00] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:18:00] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:18:00] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:18:00] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:18:15] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:18:15] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:18:15] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:18:15] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:18:15] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:18:15] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:18:15] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:18:15] [WARNING] 未找到按钮
+[2026-03-19 12:18:15] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:18:15] [ERROR] 所有驱动都失败了
+[2026-03-19 12:18:15] [ERROR] 点击连接按钮失败
+[2026-03-19 12:18:15] [ERROR] ============================================================
+[2026-03-19 12:18:15] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:18:15] [ERROR] ============================================================
+[2026-03-19 12:19:27] [WARNING] ⚠️  VPN 断开 (失败次数: 18/3)
+[2026-03-19 12:19:27] [ERROR] ❌ VPN 连续失败 18 次，触发重连
+[2026-03-19 12:19:27] [INFO] ============================================================
+[2026-03-19 12:19:27] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:19:27] [INFO] ============================================================
+[2026-03-19 12:19:27] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:19:27] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:19:29] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:19:29] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:19:29] [INFO] 启动 FortiClient...
+[2026-03-19 12:19:29] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:19:32] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:19:32] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:19:32] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:19:32] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:19:47] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:19:47] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:19:47] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:19:47] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:19:47] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:19:47] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:19:47] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:19:47] [WARNING] 未找到按钮
+[2026-03-19 12:19:47] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:19:47] [ERROR] 所有驱动都失败了
+[2026-03-19 12:19:47] [ERROR] 点击连接按钮失败
+[2026-03-19 12:19:47] [ERROR] ============================================================
+[2026-03-19 12:19:47] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:19:47] [ERROR] ============================================================
+[2026-03-19 12:20:59] [WARNING] ⚠️  VPN 断开 (失败次数: 19/3)
+[2026-03-19 12:20:59] [ERROR] ❌ VPN 连续失败 19 次，触发重连
+[2026-03-19 12:20:59] [INFO] ============================================================
+[2026-03-19 12:20:59] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:20:59] [INFO] ============================================================
+[2026-03-19 12:20:59] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:20:59] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:21:01] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:21:01] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:21:01] [INFO] 启动 FortiClient...
+[2026-03-19 12:21:01] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:21:04] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:21:04] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:21:04] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:21:04] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:21:19] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:21:19] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:21:19] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:21:19] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:21:19] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:21:19] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:21:19] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:21:19] [WARNING] 未找到按钮
+[2026-03-19 12:21:19] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:21:19] [ERROR] 所有驱动都失败了
+[2026-03-19 12:21:19] [ERROR] 点击连接按钮失败
+[2026-03-19 12:21:19] [ERROR] ============================================================
+[2026-03-19 12:21:19] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:21:19] [ERROR] ============================================================
+[2026-03-19 12:22:32] [WARNING] ⚠️  VPN 断开 (失败次数: 20/3)
+[2026-03-19 12:22:32] [ERROR] ❌ VPN 连续失败 20 次，触发重连
+[2026-03-19 12:22:32] [INFO] ============================================================
+[2026-03-19 12:22:32] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:22:32] [INFO] ============================================================
+[2026-03-19 12:22:32] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:22:32] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:22:34] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:22:34] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:22:34] [INFO] 启动 FortiClient...
+[2026-03-19 12:22:34] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:22:36] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:22:36] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:22:36] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:22:36] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:22:51] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:22:51] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:22:51] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:22:51] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:22:51] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:22:51] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:22:51] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:22:52] [WARNING] 未找到按钮
+[2026-03-19 12:22:52] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:22:52] [ERROR] 所有驱动都失败了
+[2026-03-19 12:22:52] [ERROR] 点击连接按钮失败
+[2026-03-19 12:22:52] [ERROR] ============================================================
+[2026-03-19 12:22:52] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:22:52] [ERROR] ============================================================
+[2026-03-19 12:24:04] [WARNING] ⚠️  VPN 断开 (失败次数: 21/3)
+[2026-03-19 12:24:04] [ERROR] ❌ VPN 连续失败 21 次，触发重连
+[2026-03-19 12:24:04] [INFO] ============================================================
+[2026-03-19 12:24:04] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:24:04] [INFO] ============================================================
+[2026-03-19 12:24:04] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:24:04] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:24:06] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:24:06] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:24:06] [INFO] 启动 FortiClient...
+[2026-03-19 12:24:06] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:24:08] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:24:08] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:24:24] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-03-19 12:24:24] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:24:43] [INFO] ✅ 窗口已出现（等待 17 秒）
+[2026-03-19 12:24:43] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:24:58] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:24:58] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:24:58] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:24:58] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:24:58] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:24:58] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:24:58] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:24:58] [WARNING] 未找到按钮
+[2026-03-19 12:24:58] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:24:58] [ERROR] 所有驱动都失败了
+[2026-03-19 12:24:58] [ERROR] 点击连接按钮失败
+[2026-03-19 12:24:58] [ERROR] ============================================================
+[2026-03-19 12:24:58] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:24:58] [ERROR] ============================================================
+[2026-03-19 12:26:10] [WARNING] ⚠️  VPN 断开 (失败次数: 22/3)
+[2026-03-19 12:26:10] [ERROR] ❌ VPN 连续失败 22 次，触发重连
+[2026-03-19 12:26:10] [INFO] ============================================================
+[2026-03-19 12:26:10] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:26:10] [INFO] ============================================================
+[2026-03-19 12:26:10] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:26:10] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:26:12] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:26:12] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:26:12] [INFO] 启动 FortiClient...
+[2026-03-19 12:26:12] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:26:15] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:26:15] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:26:15] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:26:15] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:26:30] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:26:30] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:26:30] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:26:30] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:26:30] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:26:30] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:26:30] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:26:30] [WARNING] 未找到按钮
+[2026-03-19 12:26:30] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:26:30] [ERROR] 所有驱动都失败了
+[2026-03-19 12:26:30] [ERROR] 点击连接按钮失败
+[2026-03-19 12:26:30] [ERROR] ============================================================
+[2026-03-19 12:26:30] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:26:30] [ERROR] ============================================================
+[2026-03-19 12:27:42] [WARNING] ⚠️  VPN 断开 (失败次数: 23/3)
+[2026-03-19 12:27:42] [ERROR] ❌ VPN 连续失败 23 次，触发重连
+[2026-03-19 12:27:42] [INFO] ============================================================
+[2026-03-19 12:27:42] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:27:42] [INFO] ============================================================
+[2026-03-19 12:27:42] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:27:42] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:27:44] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:27:44] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:27:44] [INFO] 启动 FortiClient...
+[2026-03-19 12:27:44] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:27:47] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:27:47] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:27:47] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:27:47] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:28:02] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:28:02] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:28:02] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:28:02] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:28:02] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:28:02] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:28:02] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:28:02] [WARNING] 未找到按钮
+[2026-03-19 12:28:02] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:28:02] [ERROR] 所有驱动都失败了
+[2026-03-19 12:28:02] [ERROR] 点击连接按钮失败
+[2026-03-19 12:28:02] [ERROR] ============================================================
+[2026-03-19 12:28:02] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:28:02] [ERROR] ============================================================
+[2026-03-19 12:29:14] [WARNING] ⚠️  VPN 断开 (失败次数: 24/3)
+[2026-03-19 12:29:14] [ERROR] ❌ VPN 连续失败 24 次，触发重连
+[2026-03-19 12:29:14] [INFO] ============================================================
+[2026-03-19 12:29:14] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:29:14] [INFO] ============================================================
+[2026-03-19 12:29:14] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:29:14] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:29:17] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:29:17] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:29:17] [INFO] 启动 FortiClient...
+[2026-03-19 12:29:17] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:29:19] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:29:19] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:29:19] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:29:19] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:29:34] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:29:34] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:29:34] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:29:34] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:29:34] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:29:34] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:29:34] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:29:35] [WARNING] 未找到按钮
+[2026-03-19 12:29:35] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:29:35] [ERROR] 所有驱动都失败了
+[2026-03-19 12:29:35] [ERROR] 点击连接按钮失败
+[2026-03-19 12:29:35] [ERROR] ============================================================
+[2026-03-19 12:29:35] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:29:35] [ERROR] ============================================================
+[2026-03-19 12:30:47] [WARNING] ⚠️  VPN 断开 (失败次数: 25/3)
+[2026-03-19 12:30:47] [ERROR] ❌ VPN 连续失败 25 次，触发重连
+[2026-03-19 12:30:47] [INFO] ============================================================
+[2026-03-19 12:30:47] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:30:47] [INFO] ============================================================
+[2026-03-19 12:30:47] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:30:47] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:30:49] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:30:49] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:30:49] [INFO] 启动 FortiClient...
+[2026-03-19 12:30:49] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:30:51] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:30:51] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:30:51] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:30:51] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:31:06] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:31:06] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:31:06] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:31:06] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:31:06] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:31:06] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:31:06] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:31:07] [WARNING] 未找到按钮
+[2026-03-19 12:31:07] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:31:07] [ERROR] 所有驱动都失败了
+[2026-03-19 12:31:07] [ERROR] 点击连接按钮失败
+[2026-03-19 12:31:07] [ERROR] ============================================================
+[2026-03-19 12:31:07] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:31:07] [ERROR] ============================================================
+[2026-03-19 12:32:19] [WARNING] ⚠️  VPN 断开 (失败次数: 26/3)
+[2026-03-19 12:32:19] [ERROR] ❌ VPN 连续失败 26 次，触发重连
+[2026-03-19 12:32:19] [INFO] ============================================================
+[2026-03-19 12:32:19] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:32:19] [INFO] ============================================================
+[2026-03-19 12:32:19] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:32:19] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:32:21] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:32:21] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:32:21] [INFO] 启动 FortiClient...
+[2026-03-19 12:32:21] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:32:23] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:32:23] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:32:23] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:32:23] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:32:39] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:32:39] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:32:39] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:32:39] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:32:39] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:32:39] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:32:39] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:32:39] [WARNING] 未找到按钮
+[2026-03-19 12:32:39] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:32:39] [ERROR] 所有驱动都失败了
+[2026-03-19 12:32:39] [ERROR] 点击连接按钮失败
+[2026-03-19 12:32:39] [ERROR] ============================================================
+[2026-03-19 12:32:39] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:32:39] [ERROR] ============================================================
+[2026-03-19 12:33:51] [WARNING] ⚠️  VPN 断开 (失败次数: 27/3)
+[2026-03-19 12:33:51] [ERROR] ❌ VPN 连续失败 27 次，触发重连
+[2026-03-19 12:33:51] [INFO] ============================================================
+[2026-03-19 12:33:51] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:33:51] [INFO] ============================================================
+[2026-03-19 12:33:51] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:33:51] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:33:53] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:33:53] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:33:53] [INFO] 启动 FortiClient...
+[2026-03-19 12:33:53] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:33:56] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:33:56] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:33:56] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:33:56] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:34:11] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:34:11] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:34:11] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:34:11] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:34:11] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:34:11] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:34:11] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:34:11] [WARNING] 未找到按钮
+[2026-03-19 12:34:11] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:34:11] [ERROR] 所有驱动都失败了
+[2026-03-19 12:34:11] [ERROR] 点击连接按钮失败
+[2026-03-19 12:34:11] [ERROR] ============================================================
+[2026-03-19 12:34:11] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:34:11] [ERROR] ============================================================
+[2026-03-19 12:35:23] [WARNING] ⚠️  VPN 断开 (失败次数: 28/3)
+[2026-03-19 12:35:23] [ERROR] ❌ VPN 连续失败 28 次，触发重连
+[2026-03-19 12:35:23] [INFO] ============================================================
+[2026-03-19 12:35:23] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:35:23] [INFO] ============================================================
+[2026-03-19 12:35:23] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:35:23] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:35:25] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:35:25] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:35:25] [INFO] 启动 FortiClient...
+[2026-03-19 12:35:25] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:35:28] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:35:28] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:35:28] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:35:28] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:35:43] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:35:43] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:35:43] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:35:43] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:35:43] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:35:43] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:35:43] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:35:43] [WARNING] 未找到按钮
+[2026-03-19 12:35:43] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:35:43] [ERROR] 所有驱动都失败了
+[2026-03-19 12:35:43] [ERROR] 点击连接按钮失败
+[2026-03-19 12:35:43] [ERROR] ============================================================
+[2026-03-19 12:35:43] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:35:43] [ERROR] ============================================================
+[2026-03-19 12:36:55] [WARNING] ⚠️  VPN 断开 (失败次数: 29/3)
+[2026-03-19 12:36:55] [ERROR] ❌ VPN 连续失败 29 次，触发重连
+[2026-03-19 12:36:55] [INFO] ============================================================
+[2026-03-19 12:36:55] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:36:55] [INFO] ============================================================
+[2026-03-19 12:36:55] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:36:55] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:36:57] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:36:57] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:36:57] [INFO] 启动 FortiClient...
+[2026-03-19 12:36:57] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:37:00] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:37:00] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:37:00] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:37:00] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:37:15] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:37:15] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:37:15] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:37:15] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:37:15] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:37:15] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:37:15] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:37:15] [WARNING] 未找到按钮
+[2026-03-19 12:37:15] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:37:15] [ERROR] 所有驱动都失败了
+[2026-03-19 12:37:15] [ERROR] 点击连接按钮失败
+[2026-03-19 12:37:15] [ERROR] ============================================================
+[2026-03-19 12:37:15] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:37:15] [ERROR] ============================================================
+[2026-03-19 12:38:28] [WARNING] ⚠️  VPN 断开 (失败次数: 30/3)
+[2026-03-19 12:38:28] [ERROR] ❌ VPN 连续失败 30 次，触发重连
+[2026-03-19 12:38:28] [INFO] ============================================================
+[2026-03-19 12:38:28] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:38:28] [INFO] ============================================================
+[2026-03-19 12:38:28] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:38:28] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:38:30] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:38:30] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:38:30] [INFO] 启动 FortiClient...
+[2026-03-19 12:38:30] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:38:32] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:38:32] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:38:32] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:38:32] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:38:47] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:38:47] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:38:47] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:38:47] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:38:47] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:38:47] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:38:47] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:38:48] [WARNING] 未找到按钮
+[2026-03-19 12:38:48] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:38:48] [ERROR] 所有驱动都失败了
+[2026-03-19 12:38:48] [ERROR] 点击连接按钮失败
+[2026-03-19 12:38:48] [ERROR] ============================================================
+[2026-03-19 12:38:48] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:38:48] [ERROR] ============================================================
+[2026-03-19 12:40:00] [WARNING] ⚠️  VPN 断开 (失败次数: 31/3)
+[2026-03-19 12:40:00] [ERROR] ❌ VPN 连续失败 31 次，触发重连
+[2026-03-19 12:40:00] [INFO] ============================================================
+[2026-03-19 12:40:00] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:40:00] [INFO] ============================================================
+[2026-03-19 12:40:00] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:40:00] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:40:02] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:40:02] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:40:02] [INFO] 启动 FortiClient...
+[2026-03-19 12:40:02] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:40:04] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:40:04] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:40:04] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:40:04] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:40:19] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:40:19] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:40:19] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:40:20] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:40:20] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:40:20] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:40:20] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:40:20] [WARNING] 未找到按钮
+[2026-03-19 12:40:20] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:40:20] [ERROR] 所有驱动都失败了
+[2026-03-19 12:40:20] [ERROR] 点击连接按钮失败
+[2026-03-19 12:40:20] [ERROR] ============================================================
+[2026-03-19 12:40:20] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:40:20] [ERROR] ============================================================
+[2026-03-19 12:41:32] [WARNING] ⚠️  VPN 断开 (失败次数: 32/3)
+[2026-03-19 12:41:32] [ERROR] ❌ VPN 连续失败 32 次，触发重连
+[2026-03-19 12:41:32] [INFO] ============================================================
+[2026-03-19 12:41:32] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:41:32] [INFO] ============================================================
+[2026-03-19 12:41:32] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:41:32] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:41:34] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:41:34] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:41:34] [INFO] 启动 FortiClient...
+[2026-03-19 12:41:34] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:41:37] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:41:37] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:41:37] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:41:37] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:41:52] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:41:52] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:41:52] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:41:52] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:41:52] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:41:52] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:41:52] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:41:52] [WARNING] 未找到按钮
+[2026-03-19 12:41:52] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:41:52] [ERROR] 所有驱动都失败了
+[2026-03-19 12:41:52] [ERROR] 点击连接按钮失败
+[2026-03-19 12:41:52] [ERROR] ============================================================
+[2026-03-19 12:41:52] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:41:52] [ERROR] ============================================================
+[2026-03-19 12:43:04] [WARNING] ⚠️  VPN 断开 (失败次数: 33/3)
+[2026-03-19 12:43:04] [ERROR] ❌ VPN 连续失败 33 次，触发重连
+[2026-03-19 12:43:04] [INFO] ============================================================
+[2026-03-19 12:43:04] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:43:04] [INFO] ============================================================
+[2026-03-19 12:43:04] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:43:04] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:43:06] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:43:06] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:43:06] [INFO] 启动 FortiClient...
+[2026-03-19 12:43:06] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:43:09] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:43:09] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:43:09] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:43:09] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:43:24] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:43:24] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:43:24] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:43:24] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:43:24] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:43:24] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:43:24] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:43:24] [WARNING] 未找到按钮
+[2026-03-19 12:43:24] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:43:24] [ERROR] 所有驱动都失败了
+[2026-03-19 12:43:24] [ERROR] 点击连接按钮失败
+[2026-03-19 12:43:24] [ERROR] ============================================================
+[2026-03-19 12:43:24] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:43:24] [ERROR] ============================================================
+[2026-03-19 12:44:36] [WARNING] ⚠️  VPN 断开 (失败次数: 34/3)
+[2026-03-19 12:44:36] [ERROR] ❌ VPN 连续失败 34 次，触发重连
+[2026-03-19 12:44:36] [INFO] ============================================================
+[2026-03-19 12:44:36] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:44:36] [INFO] ============================================================
+[2026-03-19 12:44:36] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:44:36] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:44:38] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:44:38] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:44:38] [INFO] 启动 FortiClient...
+[2026-03-19 12:44:38] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:44:41] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:44:41] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:44:41] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:44:41] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:44:56] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:44:56] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:44:56] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:44:56] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:44:56] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:44:56] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:44:56] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:44:56] [WARNING] 未找到按钮
+[2026-03-19 12:44:56] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:44:56] [ERROR] 所有驱动都失败了
+[2026-03-19 12:44:56] [ERROR] 点击连接按钮失败
+[2026-03-19 12:44:56] [ERROR] ============================================================
+[2026-03-19 12:44:56] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:44:56] [ERROR] ============================================================
+[2026-03-19 12:46:09] [WARNING] ⚠️  VPN 断开 (失败次数: 35/3)
+[2026-03-19 12:46:09] [ERROR] ❌ VPN 连续失败 35 次，触发重连
+[2026-03-19 12:46:09] [INFO] ============================================================
+[2026-03-19 12:46:09] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:46:09] [INFO] ============================================================
+[2026-03-19 12:46:09] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:46:09] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:46:11] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:46:11] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:46:11] [INFO] 启动 FortiClient...
+[2026-03-19 12:46:11] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:46:13] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:46:13] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:46:13] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:46:13] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:46:28] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:46:28] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:46:28] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:46:28] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:46:28] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:46:28] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:46:28] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:46:29] [WARNING] 未找到按钮
+[2026-03-19 12:46:29] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:46:29] [ERROR] 所有驱动都失败了
+[2026-03-19 12:46:29] [ERROR] 点击连接按钮失败
+[2026-03-19 12:46:29] [ERROR] ============================================================
+[2026-03-19 12:46:29] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:46:29] [ERROR] ============================================================
+[2026-03-19 12:47:41] [WARNING] ⚠️  VPN 断开 (失败次数: 36/3)
+[2026-03-19 12:47:41] [ERROR] ❌ VPN 连续失败 36 次，触发重连
+[2026-03-19 12:47:41] [INFO] ============================================================
+[2026-03-19 12:47:41] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:47:41] [INFO] ============================================================
+[2026-03-19 12:47:41] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:47:41] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:47:43] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:47:43] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:47:43] [INFO] 启动 FortiClient...
+[2026-03-19 12:47:43] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:47:46] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:47:46] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:47:46] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 12:47:46] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:48:01] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:48:01] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:48:01] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:48:01] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:48:01] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:48:01] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:48:01] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:48:01] [WARNING] 未找到按钮
+[2026-03-19 12:48:01] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:48:01] [ERROR] 所有驱动都失败了
+[2026-03-19 12:48:01] [ERROR] 点击连接按钮失败
+[2026-03-19 12:48:01] [ERROR] ============================================================
+[2026-03-19 12:48:01] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:48:01] [ERROR] ============================================================
+[2026-03-19 12:49:13] [WARNING] ⚠️  VPN 断开 (失败次数: 37/3)
+[2026-03-19 12:49:13] [ERROR] ❌ VPN 连续失败 37 次，触发重连
+[2026-03-19 12:49:13] [INFO] ============================================================
+[2026-03-19 12:49:13] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:49:13] [INFO] ============================================================
+[2026-03-19 12:49:13] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:49:13] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:49:15] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:49:15] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:49:15] [INFO] 启动 FortiClient...
+[2026-03-19 12:49:15] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:49:18] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 12:49:18] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 12:49:33] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-03-19 12:49:33] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 12:49:52] [INFO] ✅ 窗口已出现（等待 17 秒）
+[2026-03-19 12:49:52] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 12:50:07] [INFO] 尝试点击连接按钮...
+[2026-03-19 12:50:07] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 12:50:07] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 12:50:07] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 12:50:07] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 12:50:07] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 12:50:07] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 12:50:07] [WARNING] 未找到按钮
+[2026-03-19 12:50:07] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 12:50:07] [ERROR] 所有驱动都失败了
+[2026-03-19 12:50:07] [ERROR] 点击连接按钮失败
+[2026-03-19 12:50:07] [ERROR] ============================================================
+[2026-03-19 12:50:07] [ERROR] ❌ VPN 重连失败
+[2026-03-19 12:50:07] [ERROR] ============================================================
+[2026-03-19 12:51:19] [WARNING] ⚠️  VPN 断开 (失败次数: 38/3)
+[2026-03-19 12:51:19] [ERROR] ❌ VPN 连续失败 38 次，触发重连
+[2026-03-19 12:51:19] [INFO] ============================================================
+[2026-03-19 12:51:19] [INFO] 开始 VPN 重连流程
+[2026-03-19 12:51:19] [INFO] ============================================================
+[2026-03-19 12:51:19] [INFO] 停止 FortiClient 进程...
+[2026-03-19 12:51:19] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 12:51:21] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 12:51:21] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 12:51:21] [INFO] 启动 FortiClient...
+[2026-03-19 12:51:21] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 13:36:08] ==========================================
+[2026-03-19 13:36:08] VPN 自动重连系统启动
+[2026-03-19 13:36:08] ==========================================
+[2026-03-19 13:36:08] DISPLAY: :1
+[2026-03-19 13:36:08] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 13:36:08] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 13:36:08] 
+[2026-03-19 13:36:08] Python 版本: Python 3.8.10
+[2026-03-19 13:36:08] 检查依赖...
+[2026-03-19 13:36:09] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 13:36:09] 
+[2026-03-19 13:36:09] 启动 VPN Watchdog...
+[2026-03-19 13:36:09] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 13:36:21] ==========================================
+[2026-03-19 13:36:21] VPN 自动重连系统启动
+[2026-03-19 13:36:21] ==========================================
+[2026-03-19 13:36:21] DISPLAY: :1
+[2026-03-19 13:36:21] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 13:36:21] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 13:36:21] 
+[2026-03-19 13:36:21] Python 版本: Python 3.8.10
+[2026-03-19 1[2026-03-19 14:57:38] ==========================================
+[2026-03-19 14:57:38] VPN 自动重连系统启动
+[2026-03-19 14:57:38] ==========================================
+[2026-03-19 14:57:38] DISPLAY: :1
+[2026-03-19 14:57:38] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 14:57:38] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 14:57:38] 
+[2026-03-19 14:57:38] Python 版本: Python 3.8.10
+[2026-03-19 14:57:38] 检查依赖...
+[2026-03-19 14:57:39] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 14:57:39] 
+[2026-03-19 14:57:39] 启动 VPN Watchdog...
+[2026-03-19 14:57:39] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 14:57:49] ==========================================
+[2026-03-19 14:57:49] VPN 自动重连系统启动
+[2026-03-19 14:57:49] ==========================================
+[2026-03-19 14:57:49] DISPLAY: :1
+[2026-03-19 14:57:49] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 14:57:49] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 14:57:49] 
+[2026-03-19 14:57:49] Python 版本: Python 3.8.10
+[2026-03-19 14:57:49] 检查依赖...
+[2026-03-19 14:57:50] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 14:57:50] 
+[2026-03-19 14:57:50] 启动 VPN Watchdog...
+[2026-03-19 14:57:50] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 14:58:01] ==========================================
+[2026-03-19 14:58:01] VPN 自动重连系统启动
+[2026-03-19 14:58:01] ==========================================
+[2026-03-19 14:58:01] DISPLAY: :1
+[2026-03-19 14:58:01] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 14:58:01] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 14:58:01] 
+[2026-03-19 14:58:01] Python 版本: Python 3.8.10
+[2026-03-19 14:58:01] 检查依赖...
+[2026-03-19 14:58:02] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 14:58:02] 
+[2026-03-19 14:58:02] 启动 VPN Watchdog...
+[2026-03-19 14:58:02] 
+[2026-03-19 14:58:02] [INFO] PyAutoGUI 驱动已加载
+[2026-03-19 14:58:02] [INFO] OpenCV 驱动已加载
+[2026-03-19 14:58:02] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-19 14:58:02] [INFO] 已加载 2 个驱动
+[2026-03-19 14:58:02] [INFO] VPN Watchdog 已启动
+[2026-03-19 14:58:02] [INFO] 检测间隔: 60 秒
+[2026-03-19 14:58:02] [INFO] 最大失败次数: 3
+[2026-03-19 14:58:03] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-19 14:59:03] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-19 15:00:03] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-19 15:00:03] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-19 15:00:03] [INFO] ============================================================
+[2026-03-19 15:00:03] [INFO] 开始 VPN 重连流程
+[2026-03-19 15:00:03] [INFO] ============================================================
+[2026-03-19 15:00:03] [INFO] 停止 FortiClient 进程...
+[2026-03-19 15:00:03] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 15:00:05] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 15:00:05] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 15:00:05] [INFO] 启动 FortiClient...
+[2026-03-19 15:00:05] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 15:00:08] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 15:00:08] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 15:00:08] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 15:00:08] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 15:00:23] [INFO] 尝试点击连接按钮...
+[2026-03-19 15:00:23] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 15:00:23] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 15:00:23] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-03-19 15:00:23] [INFO] ✅ PyAutoGUI 点击成功
+[2026-03-19 15:00:23] [INFO] ✅ PyAutoDriver 成功
+[2026-03-19 15:00:23] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-19 15:00:33] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-19 15:00:33] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-03-19 15:00:33] [INFO] ============================================================
+[2026-03-19 15:00:33] [INFO] ✅ VPN 重连成功
+[2026-03-19 15:00:33] [INFO] ============================================================
+[2026-03-19 16:35:44] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-03-19 16:35:44] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-19 16:36:53] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-03-19 16:36:53] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-19 16:38:07] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-03-19 16:38:10] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-19 16:38:12] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-19 16:38:15] [INFO] ============================================================
+[2026-03-19 16:38:17] [INFO] 开始 VPN 重连流程
+[2026-03-19 16:38:19] [INFO] ============================================================
+[2026-03-19 16:38:22] [INFO] 停止 FortiClient 进程...
+[2026-03-19 16:39:04] [ERROR] 停止 FortiClient 失败: Command '['sudo', '-n', 'pkill', '-9', '-f', 'forticlient']' timed out after 10 seconds
+[2026-03-19 16:39:05] [ERROR] 停止 FortiClient 失败
+[2026-03-19 16:39:05] [ERROR] ============================================================
+[2026-03-19 16:39:05] [ERROR] ❌ VPN 重连失败
+[2026-03-19 16:39:05] [ERROR] ============================================================
+[2026-03-19 16:40:35] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-03-19 16:40:43] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-19 16:40:49] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-19 16:40:57] [INFO] ============================================================
+[2026-03-19 16:41:08] [INFO] 开始 VPN 重连流程
+[2026-03-19 16:41:25] [INFO] ============================================================
+[2026-03-19 16:41:47] [INFO] 停止 FortiClient 进程...
+[2026-03-19 16:43:09] [ERROR] 停止 FortiClient 失败: Command '['sudo', '-n', 'pkill', '-9', '-f', 'forticlient']' timed out after 10 seconds
+[2026-03-19 16:43:10] [ERROR] 停止 FortiClient 失败
+[2026-03-19 16:43:11] [ERROR] ============================================================
+[2026-03-19 16:43:12] [ERROR] ❌ VPN 重连失败
+[2026-03-19 16:43:12] [ERROR] ============================================================
+[2026-03-19 16:50:01] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-03-19 16:50:04] [WARNING] ⚠️  VPN 断开 (失败次数: 5/3)
+[2026-03-19 16:50:06] [ERROR] ❌ VPN 连续失败 5 次，触发重连
+[2026-03-19 16:50:09] [INFO] ============================================================
+[2026-03-19 16:50:12] [INFO] 开始 VPN 重连流程
+[2026-03-19 16:50:14] [INFO] ============================================================
+[2026-03-19 16:50:17] [INFO] 停止 FortiClient 进程...
+[2026-03-19 16:50:38] [ERROR] 停止 FortiClient 失败: Command '['sudo', '-n', 'pkill', '-9', '-f', 'forticlient']' timed out after 10 seconds
+[2026-03-19 16:50:41] [ERROR] 停止 FortiClient 失败
+[2026-03-19 16:50:44] [ERROR] ============================================================
+[2026-03-19 16:50:46] [ERROR] ❌ VPN 重连失败
+[2026-03-19 16:50:48] [ERROR] ============================================================
+[2026-03-19 16:52:06] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-03-19 16:52:08] [WARNING] ⚠️  VPN 断开 (失败次数: 6/3)
+[2026-03-19 16:52:10] [ERROR] ❌ VPN 连续失败 6 次，触发重连
+[2026-03-19 16:52:12] [INFO] ============================================================
+[2026-03-19 16:52:14] [INFO] 开始 VPN 重连流程
+[2026-03-19 16:52:16] [INFO] ============================================================
+[2026-03-19 16:52:19] [INFO] 停止 FortiClient 进程...
+[2026-03-19 16:52:46] [ERROR] 停止 FortiClient 失败: Command '['sudo', '-n', 'pkill', '-9', '-f', 'forticlient']' timed out after 10 seconds
+[2026-03-19 16:52:52] [ERROR] 停止 FortiClient 失败
+[2026-03-19 16:52:58] [ERROR] ============================================================
+[2026-03-19 16:53:03] [ERROR] ❌ VPN 重连失败
+[2026-03-19 16:53:10] [ERROR] ============================================================
+[2026-03-19 16:59:07] [WARNING] ⚠️  VPN 断开 (失败次数: 7/3)
+[2026-03-19 16:59:07] [ERROR] ❌ VPN 连续失败 7 次，触发重连
+[2026-03-19 16:59:07] [INFO] ============================================================
+[2026-03-19 16:59:07] [INFO] 开始 VPN 重连流程
+[2026-03-19 16:59:07] [INFO] ============================================================
+[2026-03-19 16:59:07] [INFO] 停止 FortiClient 进程...
+[2026-03-19 16:59:07] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 16:59:09] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 16:59:09] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 16:59:09] [INFO] 启动 FortiClient...
+[2026-03-19 16:59:09] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 16:59:12] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 16:59:12] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 16:59:12] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 16:59:12] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 16:59:27] [INFO] 尝试点击连接按钮...
+[2026-03-19 16:59:27] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 16:59:27] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 16:59:27] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 16:59:27] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 16:59:27] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 16:59:27] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 16:59:28] [WARNING] 未找到按钮
+[2026-03-19 16:59:28] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 16:59:28] [ERROR] 所有驱动都失败了
+[2026-03-19 16:59:28] [ERROR] 点击连接按钮失败
+[2026-03-19 16:59:28] [ERROR] ============================================================
+[2026-03-19 16:59:28] [ERROR] ❌ VPN 重连失败
+[2026-03-19 16:59:28] [ERROR] ============================================================
+[2026-03-19 17:00:28] [WARNING] ⚠️  VPN 断开 (失败次数: 8/3)
+[2026-03-19 17:00:28] [ERROR] ❌ VPN 连续失败 8 次，触发重连
+[2026-03-19 17:00:28] [INFO] ============================================================
+[2026-03-19 17:00:28] [INFO] 开始 VPN 重连流程
+[2026-03-19 17:00:28] [INFO] ============================================================
+[2026-03-19 17:00:28] [INFO] 停止 FortiClient 进程...
+[2026-03-19 17:00:28] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 17:00:30] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 17:00:30] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 17:00:30] [INFO] 启动 FortiClient...
+[2026-03-19 17:00:30] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 17:00:33] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 17:00:33] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 17:00:33] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 17:00:33] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 17:00:48] [INFO] 尝试点击连接按钮...
+[2026-03-19 17:00:48] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 17:00:48] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 17:00:48] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-03-19 17:00:48] [INFO] ✅ PyAutoGUI 点击成功
+[2026-03-19 17:00:48] [INFO] ✅ PyAutoDriver 成功
+[2026-03-19 17:00:48] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-19 17:00:58] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-19 17:00:58] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-03-19 17:00:58] [INFO] ============================================================
+[2026-03-19 17:00:58] [INFO] ✅ VPN 重连成功
+[2026-03-19 17:00:58] [INFO] ============================================================
+[2026-03-19 17:40:27] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-03-19 17:40:29] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-19 17:41:42] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-19 17:42:42] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-19 17:42:42] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-19 17:42:42] [INFO] ============================================================
+[2026-03-19 17:42:42] [INFO] 开始 VPN 重连流程
+[2026-03-19 17:42:42] [INFO] ============================================================
+[2026-03-19 17:42:42] [INFO] 停止 FortiClient 进程...
+[2026-03-19 17:42:42] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 17:42:44] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 17:42:44] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 17:42:44] [INFO] 启动 FortiClient...
+[2026-03-19 17:42:44] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 17:42:47] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 17:42:47] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 17:42:47] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 17:42:47] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 17:43:02] [INFO] 尝试点击连接按钮...
+[2026-03-19 17:43:02] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 17:43:02] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 17:43:02] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-03-19 17:43:02] [INFO] ✅ PyAutoGUI 点击成功
+[2026-03-19 17:43:02] [INFO] ✅ PyAutoDriver 成功
+[2026-03-19 17:43:02] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-19 17:43:12] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-19 17:43:12] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-03-19 17:43:12] [INFO] ============================================================
+[2026-03-19 17:43:12] [INFO] ✅ VPN 重连成功
+[2026-03-19 17:43:12] [INFO] ============================================================
+[2026-03-19 18:23:31] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-03-19 18:23:35] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-19 18:24:51] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-03-19 18:24:54] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-19 18:26:10] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-19 18:26:10] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-19 18:26:10] [INFO] ============================================================
+[2026-03-19 18:26:10] [INFO] 开始 VPN 重连流程
+[2026-03-19 18:26:10] [INFO] ============================================================
+[2026-03-19 18:26:10] [INFO] 停止 FortiClient 进程...
+[2026-03-19 18:26:10] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 18:26:12] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 18:26:13] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 18:26:13] [INFO] 启动 FortiClient...
+[2026-03-19 18:26:13] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 18:26:15] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 18:26:15] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 18:26:15] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 18:26:15] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 18:26:30] [INFO] 尝试点击连接按钮...
+[2026-03-19 18:26:30] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 18:26:30] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 18:26:32] [ERROR] PyAutoGUI 驱动异常: 
+[2026-03-19 18:26:32] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-03-19 18:26:32] [INFO] 尝试驱动: VisionDriver
+[2026-03-19 18:26:32] [INFO] 使用 OpenCV 查找按钮...
+[2026-03-19 18:26:33] [WARNING] 未找到按钮
+[2026-03-19 18:26:33] [WARNING] ⚠️  VisionDriver 失败
+[2026-03-19 18:26:33] [ERROR] 所有驱动都失败了
+[2026-03-19 18:26:33] [ERROR] 点击连接按钮失败
+[2026-03-19 18:26:33] [ERROR] ============================================================
+[2026-03-19 18:26:33] [ERROR] ❌ VPN 重连失败
+[2026-03-19 18:26:33] [ERROR] ============================================================
+[2026-03-19 18:27:58] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-03-19 18:28:06] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-03-19 18:28:12] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-03-19 18:28:16] [INFO] ============================================================
+[2026-03-19 18:28:22] [INFO] 开始 VPN 重连流程
+[2026-03-19 18:28:35] [INFO] ============================================================
+[2026-03-19 18:28:46] [INFO] 停止 FortiClient 进程...
+[2026-03-19 18:37:26] [ERROR] 停止 FortiClient 失败: Command '['sudo', '-n', 'pkill', '-9', '-f', 'forticlient']' timed out after 10 seconds
+[2026-03-19 18:40:32] [ERROR] 停止 FortiClient 失败
+[2026-03-19 18:43:18] [ERROR] ============================================================
+[2026-03-19 18:45:49] [ERROR] ❌ VPN 重连失败
+[2026-03-19 18:48:17] [ERROR] ============================================================
+[2026-03-19 19:01:02] ==========================================
+[2026-03-19 19:01:02] VPN 自动重连系统启动
+[2026-03-19 19:01:02] ==========================================
+[2026-03-19 19:01:02] DISPLAY: :1
+[2026-03-19 19:01:02] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 19:01:02] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 19:01:02] 
+[2026-03-19 19:01:02] Python 版本: Python 3.8.10
+[2026-03-19 19:01:02] 检查依赖...
+[2026-03-19 19:01:03] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 19:01:03] 
+[2026-03-19 19:01:03] 启动 VPN Watchdog...
+[2026-03-19 19:01:03] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 19:01:14] ==========================================
+[2026-03-19 19:01:14] VPN 自动重连系统启动
+[2026-03-19 19:01:14] ==========================================
+[2026-03-19 19:01:14] DISPLAY: :1
+[2026-03-19 19:01:14] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 19:01:14] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 19:01:14] 
+[2026-03-19 19:01:14] Python 版本: Python 3.8.10
+[2026-03-19 19:01:14] 检查依赖...
+[2026-03-19 19:01:14] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 19:01:14] 
+[2026-03-19 19:01:14] 启动 VPN Watchdog...
+[2026-03-19 19:01:14] 
+Traceback (most recent call last):
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 76, in get_socket
+    s.connect('/tmp/.X11-unix/X%d' % dno)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 110, in <module>
+    main()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 105, in main
+    watchdog = VPNWatchdog(config_path=args.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/watchdog.py", line 35, in __init__
+    self.orchestrator = ReconnectOrchestrator(self.config)
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 33, in __init__
+    self.drivers = self._init_drivers()
+  File "/home/tsl/openclaw/vpn-auto/v2/core/orchestrator.py", line 54, in _init_drivers
+    drivers.append(PyAutoDriver(self.config))
+  File "/home/tsl/openclaw/vpn-auto/v2/drivers/pyauto_driver.py", line 25, in __init__
+    import pyautogui
+  File "/home/tsl/.local/lib/python3.8/site-packages/pyautogui/__init__.py", line 246, in <module>
+    import mouseinfo
+  File "/home/tsl/.local/lib/python3.8/site-packages/mouseinfo/__init__.py", line 223, in <module>
+    _display = Display(os.environ['DISPLAY'])
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 80, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/display.py", line 62, in __init__
+    display.Display.__init__(*(self, ) + args, **keys)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/protocol/display.py", line 58, in __init__
+    self.socket = connect.get_socket(name, host, displayno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/connect.py", line 76, in get_socket
+    return mod.get_socket(dname, host, dno)
+  File "/home/tsl/.local/lib/python3.8/site-packages/Xlib/support/unix_connect.py", line 78, in get_socket
+    raise error.DisplayConnectionError(dname, str(val))
+Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No such file or directory
+[2026-03-19 19:01:25] ==========================================
+[2026-03-19 19:01:25] VPN 自动重连系统启动
+[2026-03-19 19:01:25] ==========================================
+[2026-03-19 19:01:25] DISPLAY: :1
+[2026-03-19 19:01:25] 工作目录: /home/tsl/openclaw/vpn-auto/v2
+[2026-03-19 19:01:25] 日志文件: /home/tsl/openclaw/vpn-auto/v2/logs/vpn-20260319.log
+[2026-03-19 19:01:25] 
+[2026-03-19 19:01:25] Python 版本: Python 3.8.10
+[2026-03-19 19:01:25] 检查依赖...
+[2026-03-19 19:01:26] ✅ 配置文件: /home/tsl/openclaw/vpn-auto/v2/config/config.yaml
+[2026-03-19 19:01:26] 
+[2026-03-19 19:01:26] 启动 VPN Watchdog...
+[2026-03-19 19:01:26] 
+[2026-03-19 19:01:26] [INFO] PyAutoGUI 驱动已加载
+[2026-03-19 19:01:26] [INFO] OpenCV 驱动已加载
+[2026-03-19 19:01:26] [INFO] 飞书通知已启用，目标用户: ou_b3afb7d2133e4d689be523fc48f3d2b3
+[2026-03-19 19:01:26] [INFO] 已加载 2 个驱动
+[2026-03-19 19:01:26] [INFO] VPN Watchdog 已启动
+[2026-03-19 19:01:26] [INFO] 检测间隔: 60 秒
+[2026-03-19 19:01:26] [INFO] 最大失败次数: 3
+[2026-03-19 19:01:26] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-03-19 19:02:26] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-03-19 19:03:26] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-03-19 19:03:26] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-03-19 19:03:26] [INFO] ============================================================
+[2026-03-19 19:03:26] [INFO] 开始 VPN 重连流程
+[2026-03-19 19:03:26] [INFO] ============================================================
+[2026-03-19 19:03:26] [INFO] 停止 FortiClient 进程...
+[2026-03-19 19:03:26] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-03-19 19:03:28] [INFO] ✅ FortiClient 进程已停止
+[2026-03-19 19:03:28] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-03-19 19:03:28] [INFO] 启动 FortiClient...
+[2026-03-19 19:03:28] [INFO] 点击左边栏图标 (40, 200)...
+[2026-03-19 19:03:31] [INFO] ✅ 已触发 FortiClient 启动
+[2026-03-19 19:03:31] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-03-19 19:03:31] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-03-19 19:03:31] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-03-19 19:03:46] [INFO] 尝试点击连接按钮...
+[2026-03-19 19:03:46] [INFO] 尝试驱动: PyAutoDriver
+[2026-03-19 19:03:46] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-03-19 19:03:46] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-03-19 19:03:46] [INFO] ✅ PyAutoGUI 点击成功
+[2026-03-19 19:03:46] [INFO] ✅ PyAutoDriver 成功
+[2026-03-19 19:03:46] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-03-19 19:03:56] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-03-19 19:03:56] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-03-19 19:03:56] [INFO] ============================================================
+[2026-03-19 19:03:56] [INFO] ✅ VPN 重连成功
+[2026-03-19 19:03:56] [INFO] ============================================================
