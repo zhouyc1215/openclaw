@@ -10567,3 +10567,830 @@ Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id d
 Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
 [info]: [ 'client ready' ]
 ✅ Sent via Feishu. Message ID: om_x100b531350fca0acb38034282960676 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-25 03:13:15] ❌ VPN 未连接
+[2026-03-25 03:13:15] 启动 FortiClient GUI...
+[2026-03-25 03:13:18] ✅ FortiClient GUI 已启动
+[2026-03-25 03:13:18] 尝试触发 VPN 连接...
+[2026-03-25 03:13:18] 触发 VPN 连接...
+[2026-03-25 03:13:18] 使用 GUI 自动化点击连接按钮...
+[2026-03-25 03:13:18] ========================================
+[2026-03-25 03:13:18] 开始 VPN 自动连接
+[2026-03-25 03:13:18] ========================================
+[2026-03-25 03:13:18] 设置 DISPLAY=:1
+[2026-03-25 03:13:19] FortiClient 已在运行
+[2026-03-25 03:13:21] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-25 03:13:21] 尝试 1/5...
+[2026-03-25 03:13:21] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-25 03:13:21] 点击坐标: (60, 17)
+[2026-03-25 03:13:21] ✅ 成功点击连接按钮
+[2026-03-25 03:13:21] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-25 03:13:21] 请在手机上完成 MFA 认证
+[2026-03-25 03:13:21] ✅ GUI 自动化成功
+[2026-03-25 03:13:21] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-25 03:13:21
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-25 03:13:21
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+ ELIFECYCLE  Command failed.
+Terminated
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b531a6bacc8a8b26e6daee8175ca (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-25 03:18:38] ✅ VPN 已连接
+[2026-03-25 03:18:38] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-25 03:18:38
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-25 03:18:38
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b531a77fba0a8b2cee93076ef900 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-25 11:18:19] ❌ VPN 未连接
+[2026-03-25 11:18:19] 启动 FortiClient GUI...
+[2026-03-25 11:18:22] ✅ FortiClient GUI 已启动
+[2026-03-25 11:18:22] 尝试触发 VPN 连接...
+[2026-03-25 11:18:22] 触发 VPN 连接...
+[2026-03-25 11:18:22] 使用 GUI 自动化点击连接按钮...
+[2026-03-25 11:18:23] ========================================
+[2026-03-25 11:18:23] 开始 VPN 自动连接
+[2026-03-25 11:18:23] ========================================
+[2026-03-25 11:18:23] 设置 DISPLAY=:1
+[2026-03-25 11:18:23] FortiClient 已在运行
+[2026-03-25 11:18:25] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-25 11:18:25] 尝试 1/5...
+[2026-03-25 11:18:25] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-25 11:18:26] 点击坐标: (60, 17)
+[2026-03-25 11:18:26] ✅ 成功点击连接按钮
+[2026-03-25 11:18:26] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-25 11:18:26] 请在手机上完成 MFA 认证
+[2026-03-25 11:18:26] ✅ GUI 自动化成功
+[2026-03-25 11:18:26] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-25 11:18:26
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-25 11:18:26
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b53010e4feca4b4cd581169bd758 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-25 11:22:41] ✅ VPN 已连接
+[2026-03-25 11:22:41] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-25 11:22:41
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-25 11:22:41
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b53011e4140a0b2d7edc575f3114 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-25 12:57:21] =========================================
+[2026-03-25 12:57:21] VPN 监控启动（半自动模式）
+[2026-03-25 12:57:21] 检查间隔: 60秒
+[2026-03-25 12:57:21] =========================================
+[2026-03-25 12:57:22] ❌ VPN 未连接
+[2026-03-25 12:57:22] 启动 FortiClient GUI...
+[2026-03-25 12:57:25] ❌ FortiClient GUI 启动失败
+[2026-03-25 12:57:25] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-25 12:57:25
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-25 12:57:25
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+ ELIFECYCLE  Command failed.
+Terminated
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5302fb9678a4b33de1889260366 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-25 13:01:06] ✅ VPN 已连接
+[2026-03-25 13:01:06] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-25 13:01:06
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-25 13:01:06
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b53028f5df0bcb3b10d0b7663573 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-25 14:57:21] ❌ VPN 未连接
+[2026-03-25 14:57:21] 启动 FortiClient GUI...
+[2026-03-25 14:57:24] ✅ FortiClient GUI 已启动
+[2026-03-25 14:57:24] 尝试触发 VPN 连接...
+[2026-03-25 14:57:24] 触发 VPN 连接...
+[2026-03-25 14:57:24] 使用 GUI 自动化点击连接按钮...
+[2026-03-25 14:57:24] ========================================
+[2026-03-25 14:57:24] 开始 VPN 自动连接
+[2026-03-25 14:57:24] ========================================
+[2026-03-25 14:57:24] 设置 DISPLAY=:1
+[2026-03-25 14:57:24] FortiClient 已在运行
+[2026-03-25 14:57:27] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-25 14:57:27] 尝试 1/5...
+[2026-03-25 14:57:27] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-25 14:57:27] 点击坐标: (60, 17)
+[2026-03-25 14:57:27] ✅ 成功点击连接按钮
+[2026-03-25 14:57:27] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-25 14:57:27] 请在手机上完成 MFA 认证
+[2026-03-25 14:57:27] ✅ GUI 自动化成功
+[2026-03-25 14:57:27] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-25 14:57:27
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-25 14:57:27
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+[error]: [
+  AxiosError: getaddrinfo ENOTFOUND open.feishu.cn
+      at AxiosError.from (/home/tsl/.openclaw/extensions/feishu/node_modules/axios/dist/node/axios.cjs:842:28)
+      at RedirectableRequest.handleRequestError (/home/tsl/.openclaw/extensions/feishu/node_modules/axios/dist/node/axios.cjs:3498:27)
+      at RedirectableRequest.emit (node:events:519:28)
+      at eventHandlers.<computed> (/home/tsl/.openclaw/extensions/feishu/node_modules/follow-redirects/index.js:49:24)
+      at ClientRequest.emit (node:events:519:28)
+      at emitErrorEvent (node:_http_client:107:11)
+      at TLSSocket.socketErrorListener (node:_http_client:574:5)
+      at TLSSocket.emit (node:events:519:28)
+      at emitErrorNT (node:internal/streams/destroy:170:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+      at Axios.request (/home/tsl/.openclaw/extensions/feishu/node_modules/axios/dist/node/axios.cjs:4713:41)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+    isAxiosError: true,
+    code: 'ENOTFOUND',
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal',
+      data: '{"app_id":"cli_a90d40fc70b89bc2","app_secret":"jEFgKlvjq5c0aYRuh7YaecohSuV7IPUF"}',
+      allowAbsoluteUrls: true
+    },
+    request: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 81,
+      _requestBodyBuffers: [Array],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [ClientRequest],
+      _currentUrl: 'https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal',
+      _timeout: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    cause: Error: getaddrinfo ENOTFOUND open.feishu.cn
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'open.feishu.cn'
+    }
+  }
+]
+TypeError: Cannot destructure property 'tenant_access_token' of '(intermediate value)' as it is undefined.
+ ELIFECYCLE  Command failed with exit code 1.
+[2026-03-25 15:06:05] ✅ VPN 已连接
+[2026-03-25 15:06:05] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-25 15:06:05
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-25 15:06:05
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b530cd88cc4a4b22cfbd83030542 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-25 23:05:59] ❌ VPN 未连接
+[2026-03-25 23:05:59] 启动 FortiClient GUI...
+[2026-03-25 23:06:02] ✅ FortiClient GUI 已启动
+[2026-03-25 23:06:02] 尝试触发 VPN 连接...
+[2026-03-25 23:06:02] 触发 VPN 连接...
+[2026-03-25 23:06:02] 使用 GUI 自动化点击连接按钮...
+[2026-03-25 23:06:02] ========================================
+[2026-03-25 23:06:02] 开始 VPN 自动连接
+[2026-03-25 23:06:02] ========================================
+[2026-03-25 23:06:02] 设置 DISPLAY=:1
+[2026-03-25 23:06:02] FortiClient 已在运行
+[2026-03-25 23:06:05] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-25 23:06:05] 尝试 1/5...
+[2026-03-25 23:06:05] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-25 23:06:05] 点击坐标: (60, 17)
+[2026-03-25 23:06:05] ✅ 成功点击连接按钮
+[2026-03-25 23:06:05] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-25 23:06:05] 请在手机上完成 MFA 认证
+[2026-03-25 23:06:05] ✅ GUI 自动化成功
+[2026-03-25 23:06:05] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-25 23:06:05
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-25 23:06:05
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+ ELIFECYCLE  Command failed.
+Terminated
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b530bd0f730a0b29989af85e136c (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-25 23:09:18] ✅ VPN 已连接
+[2026-03-25 23:09:18] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-25 23:09:18
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-25 23:09:18
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b530be48ca0b4b257078d4840d1c (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-26 07:10:14] ❌ VPN 未连接
+[2026-03-26 07:10:14] 启动 FortiClient GUI...
+[2026-03-26 07:10:17] ✅ FortiClient GUI 已启动
+[2026-03-26 07:10:17] 尝试触发 VPN 连接...
+[2026-03-26 07:10:17] 触发 VPN 连接...
+[2026-03-26 07:10:17] 使用 GUI 自动化点击连接按钮...
+[2026-03-26 07:10:18] ========================================
+[2026-03-26 07:10:18] 开始 VPN 自动连接
+[2026-03-26 07:10:18] ========================================
+[2026-03-26 07:10:18] 设置 DISPLAY=:1
+[2026-03-26 07:10:18] FortiClient 已在运行
+[2026-03-26 07:10:20] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-26 07:10:20] 尝试 1/5...
+[2026-03-26 07:10:20] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-26 07:10:20] 点击坐标: (60, 17)
+[2026-03-26 07:10:20] ✅ 成功点击连接按钮
+[2026-03-26 07:10:20] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-26 07:10:20] 请在手机上完成 MFA 认证
+[2026-03-26 07:10:21] ✅ GUI 自动化成功
+[2026-03-26 07:10:21] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-26 07:10:21
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-26 07:10:21
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5372f8e648a0b250148cea1dcf8 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-26 07:12:30] ✅ VPN 已连接
+[2026-03-26 07:12:30] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-26 07:12:30
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-26 07:12:30
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5372f0f1b0a0b26bde43a504f30 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-26 15:13:22] ❌ VPN 未连接
+[2026-03-26 15:13:22] 启动 FortiClient GUI...
+[2026-03-26 15:13:25] ✅ FortiClient GUI 已启动
+[2026-03-26 15:13:25] 尝试触发 VPN 连接...
+[2026-03-26 15:13:25] 触发 VPN 连接...
+[2026-03-26 15:13:25] 使用 GUI 自动化点击连接按钮...
+[2026-03-26 15:13:25] ========================================
+[2026-03-26 15:13:25] 开始 VPN 自动连接
+[2026-03-26 15:13:25] ========================================
+[2026-03-26 15:13:25] 设置 DISPLAY=:1
+[2026-03-26 15:13:25] FortiClient 已在运行
+[2026-03-26 15:13:28] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-26 15:13:28] 尝试 1/5...
+[2026-03-26 15:13:28] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-26 15:13:28] 点击坐标: (60, 17)
+[2026-03-26 15:13:28] ✅ 成功点击连接按钮
+[2026-03-26 15:13:28] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-26 15:13:28] 请在手机上完成 MFA 认证
+[2026-03-26 15:13:28] ✅ GUI 自动化成功
+[2026-03-26 15:13:28] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-26 15:13:28
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-26 15:13:28
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+ ELIFECYCLE  Command failed.
+Terminated
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b537984cdeca8b398b07caf5592a (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-26 15:17:45] ✅ VPN 已连接
+[2026-03-26 15:17:45] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-26 15:17:45
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-26 15:17:45
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b53799723dc80b2cbc1ff7772377 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-26 23:17:35] ❌ VPN 未连接
+[2026-03-26 23:17:35] 启动 FortiClient GUI...
+[2026-03-26 23:17:38] ✅ FortiClient GUI 已启动
+[2026-03-26 23:17:38] 尝试触发 VPN 连接...
+[2026-03-26 23:17:38] 触发 VPN 连接...
+[2026-03-26 23:17:38] 使用 GUI 自动化点击连接按钮...
+[2026-03-26 23:17:38] ========================================
+[2026-03-26 23:17:38] 开始 VPN 自动连接
+[2026-03-26 23:17:38] ========================================
+[2026-03-26 23:17:38] 设置 DISPLAY=:1
+[2026-03-26 23:17:38] FortiClient 已在运行
+[2026-03-26 23:17:41] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-03-26 23:17:41] 尝试 1/5...
+[2026-03-26 23:17:41] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-03-26 23:17:41] 点击坐标: (60, 17)
+[2026-03-26 23:17:41] ✅ 成功点击连接按钮
+[2026-03-26 23:17:41] ✅ VPN 连接已触发（SAML 登录）
+[2026-03-26 23:17:41] 请在手机上完成 MFA 认证
+[2026-03-26 23:17:41] ✅ GUI 自动化成功
+[2026-03-26 23:17:41] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-26 23:17:41
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-03-26 23:17:41
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5360af1898acb31c5093ec7f27a (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-03-26 23:21:59] ✅ VPN 已连接
+[2026-03-26 23:21:59] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-26 23:21:59
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-03-26 23:21:59
+
+可以正常访问外网了。'
+
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.feishu: plugin feishu: duplicate plugin id detected;  │
+│    later plugin may be overridden                                        │
+│    (/home/tsl/openclaw/extensions/feishu/index.ts)                       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Config warnings:\n- plugins.entries.feishu: plugin feishu: duplicate plugin id detected; later plugin may be overridden (/home/tsl/openclaw/extensions/feishu/index.ts)
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b5360bf0e58a4b2999181eda6941 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
