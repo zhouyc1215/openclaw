@@ -105,5 +105,6 @@ export function registerCronSimpleCommands(cron: Command) {
           defaultRuntime.exit(1);
         }
       }),
+    { timeoutDefault: "1800000" },
   );
 }

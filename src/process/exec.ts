@@ -2,7 +2,7 @@ import { execFile, spawn } from "node:child_process";
 import path from "node:path";
 import { promisify } from "node:util";
 import { danger, shouldLogVerbose } from "../globals.js";
-import { logDebug, logError } from "../logger.js";
+import { logDebug, logError, logWarn } from "../logger.js";
 import { resolveCommandStdio } from "./spawn-utils.js";
 
 const execFileAsync = promisify(execFile);
@@ -29,6 +29,45 @@ function resolveCommand(command: string): string {
   return command;
 }
 
+function stripNullBytes(value: string): string {
+  return value.includes("\0") ? value.replace(/\0/g, "") : value;
+}
+
+function sanitizeArgv(argv: string[]): string[] {
+  let changed = false;
+  const next = argv.map((value) => {
+    const sanitized = stripNullBytes(value);
+    if (sanitized !== value) {
+      changed = true;
+    }
+    return sanitized;
+  });
+  if (changed) {
+    logWarn("command argv contained null bytes; stripped before spawn");
+  }
+  return next;
+}
+
+function sanitizeEnv(env: NodeJS.ProcessEnv): NodeJS.ProcessEnv {
+  let changed = false;
+  const next: NodeJS.ProcessEnv = {};
+  for (const [key, value] of Object.entries(env)) {
+    if (typeof value !== "string") {
+      next[key] = value;
+      continue;
+    }
+    const sanitized = stripNullBytes(value);
+    if (sanitized !== value) {
+      changed = true;
+    }
+    next[key] = sanitized;
+  }
+  if (changed) {
+    logWarn("command environment contained null bytes; stripped before spawn");
+  }
+  return next;
+}
+
 // Simple promise-wrapped execFile with optional verbosity logging.
 export async function runExec(
   command: string,
@@ -44,7 +83,9 @@ export async function runExec(
           encoding: "utf8" as const,
         };
   try {
-    const { stdout, stderr } = await execFileAsync(resolveCommand(command), args, options);
+    const sanitizedCommand = stripNullBytes(resolveCommand(command));
+    const sanitizedArgs = sanitizeArgv(args);
+    const { stdout, stderr } = await execFileAsync(sanitizedCommand, sanitizedArgs, options);
     if (shouldLogVerbose()) {
       if (stdout.trim()) {
         logDebug(stdout.trim());
@@ -100,7 +141,9 @@ export async function runCommandWithTimeout(
     return false;
   })();
 
-  const resolvedEnv = env ? { ...process.env, ...env } : { ...process.env };
+  const sanitizedArgv = sanitizeArgv(argv);
+  const sanitizedInput = hasInput ? stripNullBytes(input ?? "") : input;
+  const resolvedEnv = sanitizeEnv(env ? { ...process.env, ...env } : { ...process.env });
   if (shouldSuppressNpmFund) {
     if (resolvedEnv.NPM_CONFIG_FUND == null) {
       resolvedEnv.NPM_CONFIG_FUND = "false";
@@ -111,7 +154,7 @@ export async function runCommandWithTimeout(
   }
 
   const stdio = resolveCommandStdio({ hasInput, preferInherit: true });
-  const child = spawn(resolveCommand(argv[0]), argv.slice(1), {
+  const child = spawn(resolveCommand(sanitizedArgv[0]), sanitizedArgv.slice(1), {
     stdio,
     cwd,
     env: resolvedEnv,
@@ -129,7 +172,7 @@ export async function runCommandWithTimeout(
     }, timeoutMs);
 
     if (hasInput && child.stdin) {
-      child.stdin.write(input ?? "");
+      child.stdin.write(sanitizedInput ?? "");
       child.stdin.end();
     }
 

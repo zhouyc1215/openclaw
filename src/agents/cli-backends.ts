@@ -54,16 +54,14 @@ const DEFAULT_CLAUDE_BACKEND: CliBackendConfig = {
 
 const DEFAULT_CODEX_BACKEND: CliBackendConfig = {
   command: "codex",
-  args: ["exec", "--json", "--color", "never", "--sandbox", "read-only", "--skip-git-repo-check"],
+  args: ["exec", "--json", "--dangerously-bypass-approvals-and-sandbox", "--skip-git-repo-check"],
   resumeArgs: [
     "exec",
     "resume",
-    "{sessionId}",
-    "--color",
-    "never",
-    "--sandbox",
-    "read-only",
+    "--json",
+    "--dangerously-bypass-approvals-and-sandbox",
     "--skip-git-repo-check",
+    "{sessionId}",
   ],
   output: "jsonl",
   resumeOutput: "text",

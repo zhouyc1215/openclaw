@@ -41,4 +41,29 @@ describe("runCommandWithTimeout", () => {
       }
     }
   });
+
+  it("strips null bytes from argv before spawn", async () => {
+    const result = await runCommandWithTimeout(
+      [process.execPath, "-e", 'process.stdout.write(process.argv[1] ?? "")', `a\u0000b`],
+      {
+        timeoutMs: 5_000,
+      },
+    );
+
+    expect(result.code).toBe(0);
+    expect(result.stdout).toBe("ab");
+  });
+
+  it("strips null bytes from env before spawn", async () => {
+    const result = await runCommandWithTimeout(
+      [process.execPath, "-e", 'process.stdout.write(process.env.OPENCLAW_TEST_ENV ?? "")'],
+      {
+        timeoutMs: 5_000,
+        env: { OPENCLAW_TEST_ENV: "a\u0000b" },
+      },
+    );
+
+    expect(result.code).toBe(0);
+    expect(result.stdout).toBe("ab");
+  });
 });

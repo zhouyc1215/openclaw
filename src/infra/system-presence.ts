@@ -43,7 +43,14 @@ function normalizePresenceKey(key: string | undefined): string | undefined {
 }
 
 function resolvePrimaryIPv4(): string | undefined {
-  const nets = os.networkInterfaces();
+  let nets: ReturnType<typeof os.networkInterfaces>;
+  try {
+    nets = os.networkInterfaces();
+  } catch {
+    // Some sandboxed/containerized environments can throw here. Presence is
+    // best-effort, so degrade gracefully instead of crashing gateway startup.
+    return undefined;
+  }
   const prefer = ["en0", "eth0"];
   const pick = (names: string[]) => {
     for (const name of names) {
