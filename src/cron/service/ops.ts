@@ -16,7 +16,6 @@ import {
   applyJobResult,
   armTimer,
   emit,
-  executeJob,
   executeJobCore,
   runMissedJobs,
   stopTimer,
