@@ -61967,3 +61967,9 @@ tee: /home/tsl/openclaw/vpn-auto/reconnect.log: No space left on device
 [2026-04-11 00:02:06] 启动 FortiClient GUI...
 [2026-04-11 00:02:09] ❌ FortiClient GUI 启动失败
 [2026-04-11 00:02:09] 重试 2 失败：无法启动 FortiClient
+[2026-04-11 00:02:19] 尝试 3/3...
+[2026-04-11 00:02:19] 启动 FortiClient GUI...
+[2026-04-11 00:02:22] ❌ FortiClient GUI 启动失败
+[2026-04-11 00:02:22] 重试 3 失败：无法启动 FortiClient
+[2026-04-11 00:02:32] ❌ VPN 重连失败（已尝试 3 次）
+[2026-04-11 00:02:32] ========== VPN 重连失败 ==========
