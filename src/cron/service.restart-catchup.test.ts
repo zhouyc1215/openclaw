@@ -98,7 +98,7 @@ describe("CronService restart catch-up", () => {
     await store.cleanup();
   });
 
-  it("clears stale running markers and catches up overdue jobs on startup", async () => {
+  it("preserves fresh running markers on startup", async () => {
     const store = await makeStorePath();
     const enqueueSystemEvent = vi.fn();
     const requestHeartbeatNow = vi.fn();
@@ -147,14 +147,79 @@ describe("CronService restart catch-up", () => {
 
     await cron.start();
 
-    expect(enqueueSystemEvent).toHaveBeenCalledWith("resume stale marker", { agentId: undefined });
-    expect(noopLogger.warn).toHaveBeenCalledWith(
-      expect.objectContaining({ jobId: "restart-stale-running" }),
-      "cron: clearing stale running marker on startup",
-    );
+    expect(enqueueSystemEvent).not.toHaveBeenCalled();
+    expect(noopLogger.warn).not.toHaveBeenCalled();
 
     const jobs = await cron.list({ includeDisabled: true });
     const updated = jobs.find((job) => job.id === "restart-stale-running");
+    expect(updated?.state.runningAtMs).toBe(staleRunningAt);
+    expect(updated?.state.lastStatus).toBeUndefined();
+    expect(updated?.state.lastRunAtMs).toBeUndefined();
+
+    cron.stop();
+    await store.cleanup();
+  });
+
+  it("clears stale running markers older than the stuck window and catches up overdue jobs", async () => {
+    const store = await makeStorePath();
+    const enqueueSystemEvent = vi.fn();
+    const requestHeartbeatNow = vi.fn();
+
+    const dueAt = Date.parse("2025-12-13T16:00:00.000Z");
+    const staleRunningAt = Date.parse("2025-12-13T14:30:00.000Z");
+
+    await fs.mkdir(path.dirname(store.storePath), { recursive: true });
+    await fs.writeFile(
+      store.storePath,
+      JSON.stringify(
+        {
+          version: 1,
+          jobs: [
+            {
+              id: "restart-stale-running-window",
+              name: "daily stale marker",
+              enabled: true,
+              createdAtMs: Date.parse("2025-12-10T12:00:00.000Z"),
+              updatedAtMs: Date.parse("2025-12-13T14:30:00.000Z"),
+              schedule: { kind: "cron", expr: "0 16 * * *", tz: "UTC" },
+              sessionTarget: "main",
+              wakeMode: "next-heartbeat",
+              payload: { kind: "systemEvent", text: "resume stale marker" },
+              state: {
+                nextRunAtMs: dueAt,
+                runningAtMs: staleRunningAt,
+              },
+            },
+          ],
+        },
+        null,
+        2,
+      ),
+      "utf-8",
+    );
+
+    const cron = new CronService({
+      storePath: store.storePath,
+      cronEnabled: true,
+      log: noopLogger,
+      enqueueSystemEvent,
+      requestHeartbeatNow,
+      runIsolatedAgentJob: vi.fn(async () => ({ status: "ok" })),
+    });
+
+    await cron.start();
+
+    expect(enqueueSystemEvent).toHaveBeenCalledWith("resume stale marker", { agentId: undefined });
+    expect(noopLogger.warn).toHaveBeenCalledWith(
+      expect.objectContaining({
+        jobId: "restart-stale-running-window",
+        runningAtMs: staleRunningAt,
+      }),
+      "cron: clearing stuck running marker",
+    );
+
+    const jobs = await cron.list({ includeDisabled: true });
+    const updated = jobs.find((job) => job.id === "restart-stale-running-window");
     expect(updated?.state.runningAtMs).toBeUndefined();
     expect(updated?.state.lastStatus).toBe("ok");
     expect(updated?.state.lastRunAtMs).toBe(Date.parse("2025-12-13T17:00:00.000Z"));

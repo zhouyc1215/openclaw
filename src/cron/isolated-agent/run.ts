@@ -39,6 +39,7 @@ import {
   normalizeVerboseLevel,
   supportsXHighThinking,
 } from "../../auto-reply/thinking.js";
+import { isSilentReplyText } from "../../auto-reply/tokens.js";
 import { createOutboundSendDeps, type CliDeps } from "../../cli/outbound-send-deps.js";
 import { resolveSessionTranscriptPath, updateSessionStore } from "../../config/sessions.js";
 import { registerAgentRunContext } from "../../infra/agent-events.js";
@@ -489,8 +490,18 @@ export async function runCronIsolatedAgentTurn(params: {
         accountId: resolvedDelivery.accountId,
       }),
     );
+  const skipSilentReplyDelivery =
+    deliveryRequested &&
+    !deliveryPayloadHasStructuredContent &&
+    deliveryPayloads.length > 0 &&
+    deliveryPayloads.every((payload) => isSilentReplyText(payload.text));
 
-  if (deliveryRequested && !skipHeartbeatDelivery && !skipMessagingToolDelivery) {
+  if (
+    deliveryRequested &&
+    !skipHeartbeatDelivery &&
+    !skipMessagingToolDelivery &&
+    !skipSilentReplyDelivery
+  ) {
     if (resolvedDelivery.error) {
       if (!deliveryBestEffort) {
         return withRunSession({

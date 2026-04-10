@@ -176,6 +176,8 @@ export type CliOutput = {
   text: string;
   sessionId?: string;
   usage?: CliUsage;
+  completed?: boolean;
+  failed?: boolean;
 };
 
 function buildModelAliasLines(cfg?: OpenClawConfig) {
@@ -368,6 +370,8 @@ export function parseCliJsonl(raw: string, backend: CliBackendConfig): CliOutput
   }
   let sessionId: string | undefined;
   let usage: CliUsage | undefined;
+  let completed = false;
+  let failed = false;
   const texts: string[] = [];
   for (const line of lines) {
     let parsed: unknown;
@@ -385,6 +389,14 @@ export function parseCliJsonl(raw: string, backend: CliBackendConfig): CliOutput
     if (!sessionId && typeof parsed.thread_id === "string") {
       sessionId = parsed.thread_id.trim();
     }
+    if (typeof parsed.type === "string") {
+      if (parsed.type === "turn.completed") {
+        completed = true;
+      }
+      if (parsed.type === "turn.failed") {
+        failed = true;
+      }
+    }
     if (isRecord(parsed.usage)) {
       usage = toUsage(parsed.usage) ?? usage;
     }
@@ -397,10 +409,10 @@ export function parseCliJsonl(raw: string, backend: CliBackendConfig): CliOutput
     }
   }
   const text = texts.join("\n").trim();
-  if (!text) {
+  if (!text && !sessionId && !usage && !completed && !failed) {
     return null;
   }
-  return { text, sessionId, usage };
+  return { text, sessionId, usage, completed, failed };
 }
 
 export function resolveSystemPromptUsage(params: {

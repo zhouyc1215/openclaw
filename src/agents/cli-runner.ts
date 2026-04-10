@@ -259,7 +259,15 @@ export async function runCliAgent(params: {
         }
       }
 
+      const outputMode = useResume ? (backend.resumeOutput ?? backend.output) : backend.output;
+
       if (result.code !== 0) {
+        if (outputMode === "jsonl") {
+          const parsed = parseCliJsonl(stdout, backend);
+          if (parsed?.completed) {
+            return parsed;
+          }
+        }
         const err = stderr || stdout || "CLI failed.";
         const reason = classifyFailoverReason(err) ?? "unknown";
         const status = resolveFailoverStatus(reason);
@@ -270,8 +278,6 @@ export async function runCliAgent(params: {
           status,
         });
       }
-
-      const outputMode = useResume ? (backend.resumeOutput ?? backend.output) : backend.output;
 
       if (outputMode === "text") {
         return { text: stdout, sessionId: undefined };

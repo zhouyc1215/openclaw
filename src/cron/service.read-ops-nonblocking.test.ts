@@ -101,4 +101,77 @@ describe("CronService read ops while job is running", () => {
     cron.stop();
     await store.cleanup();
   });
+
+  it("keeps list responsive and persists running state during a forced manual run", async () => {
+    const store = await makeStorePath();
+    const enqueueSystemEvent = vi.fn();
+    const requestHeartbeatNow = vi.fn();
+
+    let resolveRun:
+      | ((value: { status: "ok" | "error" | "skipped"; summary?: string; error?: string }) => void)
+      | undefined;
+
+    const runIsolatedAgentJob = vi.fn(
+      async () =>
+        await new Promise<{ status: "ok" | "error" | "skipped"; summary?: string; error?: string }>(
+          (resolve) => {
+            resolveRun = resolve;
+          },
+        ),
+    );
+
+    const cron = new CronService({
+      storePath: store.storePath,
+      cronEnabled: true,
+      log: noopLogger,
+      enqueueSystemEvent,
+      requestHeartbeatNow,
+      runIsolatedAgentJob,
+    });
+
+    await cron.start();
+
+    const job = await cron.add({
+      name: "forced isolated",
+      enabled: true,
+      deleteAfterRun: false,
+      schedule: { kind: "at", at: new Date(Date.now() + 60_000).toISOString() },
+      sessionTarget: "isolated",
+      wakeMode: "next-heartbeat",
+      payload: { kind: "agentTurn", message: "long task" },
+      delivery: { mode: "none" },
+    });
+
+    const runPromise = cron.run(job.id, "force");
+
+    for (let i = 0; i < 25 && runIsolatedAgentJob.mock.calls.length === 0; i++) {
+      await delay(20);
+    }
+
+    expect(runIsolatedAgentJob).toHaveBeenCalledTimes(1);
+
+    const listRace = await Promise.race([
+      cron.list({ includeDisabled: true }).then(() => "ok"),
+      delay(200).then(() => "timeout"),
+    ]);
+    expect(listRace).toBe("ok");
+
+    const running = await cron.list({ includeDisabled: true });
+    expect(running[0]?.state.runningAtMs).toBeTypeOf("number");
+
+    const persisted = JSON.parse(await fs.readFile(store.storePath, "utf-8")) as {
+      jobs: Array<{ id: string; state: { runningAtMs?: number } }>;
+    };
+    const persistedJob = persisted.jobs.find((item) => item.id === job.id);
+    expect(persistedJob?.state.runningAtMs).toBeTypeOf("number");
+
+    resolveRun?.({ status: "ok", summary: "done" });
+    await runPromise;
+
+    const finished = await cron.list({ includeDisabled: true });
+    expect(finished[0]?.state.lastStatus).toBe("ok");
+
+    cron.stop();
+    await store.cleanup();
+  });
 });

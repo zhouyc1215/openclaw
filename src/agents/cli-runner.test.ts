@@ -141,6 +141,55 @@ describe("runCliAgent resume cleanup", () => {
     }
     expect(runCommandWithTimeoutMock).not.toHaveBeenCalled();
   });
+
+  it("treats codex jsonl turn.completed as success even when the CLI exits non-zero", async () => {
+    runExecMock.mockResolvedValue({ stdout: "", stderr: "" });
+    runCommandWithTimeoutMock.mockResolvedValueOnce({
+      stdout: [
+        JSON.stringify({ type: "thread.started", thread_id: "thread-xyz" }),
+        JSON.stringify({
+          type: "item.completed",
+          item: {
+            id: "item_1",
+            type: "agent_message",
+            text: "final answer",
+          },
+        }),
+        JSON.stringify({
+          type: "turn.completed",
+          usage: {
+            input_tokens: 123,
+            output_tokens: 45,
+          },
+        }),
+      ].join("\n"),
+      stderr: "",
+      code: 1,
+      signal: null,
+      killed: false,
+    });
+
+    const result = await runCliAgent({
+      sessionId: "s1",
+      sessionFile: "/tmp/session.jsonl",
+      workspaceDir: "/tmp",
+      prompt: "hi",
+      provider: "codex-cli",
+      model: "gpt-5.4",
+      timeoutMs: 1_000,
+      runId: "run-successful-nonzero",
+    });
+
+    expect(result.payloads).toEqual([{ text: "final answer" }]);
+    expect(result.meta.agentMeta?.sessionId).toBe("thread-xyz");
+    expect(result.meta.agentMeta?.usage).toEqual({
+      input: 123,
+      output: 45,
+      cacheRead: undefined,
+      cacheWrite: undefined,
+      total: undefined,
+    });
+  });
 });
 
 describe("cleanupSuspendedCliProcesses", () => {

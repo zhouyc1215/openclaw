@@ -16877,3 +16877,549 @@ VPN 状态：已连接
 [plugins] feishu_bitable: Registered 6 bitable tools
 [info]: [ 'client ready' ]
 ✅ Sent via Feishu. Message ID: om_x100b5248e45c2d34b4c19a642aa9214 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-10 07:49:36] ❌ VPN 未连接
+[2026-04-10 07:49:36] 启动 FortiClient GUI...
+[2026-04-10 07:49:39] ✅ FortiClient GUI 已启动
+[2026-04-10 07:49:39] 尝试触发 VPN 连接...
+[2026-04-10 07:49:39] 触发 VPN 连接...
+[2026-04-10 07:49:39] 使用 GUI 自动化点击连接按钮...
+[2026-04-10 07:49:39] ========================================
+[2026-04-10 07:49:39] 开始 VPN 自动连接
+[2026-04-10 07:49:39] ========================================
+[2026-04-10 07:49:39] 设置 DISPLAY=:1
+[2026-04-10 07:49:39] FortiClient 已在运行
+[2026-04-10 07:49:42] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-04-10 07:49:42] 尝试 1/5...
+[2026-04-10 07:49:42] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-04-10 07:49:42] 点击坐标: (60, 17)
+[2026-04-10 07:49:42] ✅ 成功点击连接按钮
+[2026-04-10 07:49:42] ✅ VPN 连接已触发（SAML 登录）
+[2026-04-10 07:49:42] 请在手机上完成 MFA 认证
+[2026-04-10 07:49:42] ✅ GUI 自动化成功
+[2026-04-10 07:49:42] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-10 07:49:42
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-10 07:49:42
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52b7ff6304a0b4b67198b143d09 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-10 07:54:59] ✅ VPN 已连接
+[2026-04-10 07:54:59] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-04-10 07:54:59
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-04-10 07:54:59
+
+可以正常访问外网了。'
+
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52b78b41e0a0b3b6e36261e0956 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-10 15:55:51] ❌ VPN 未连接
+[2026-04-10 15:55:51] 启动 FortiClient GUI...
+[2026-04-10 15:55:54] ✅ FortiClient GUI 已启动
+[2026-04-10 15:55:54] 尝试触发 VPN 连接...
+[2026-04-10 15:55:54] 触发 VPN 连接...
+[2026-04-10 15:55:54] 使用 GUI 自动化点击连接按钮...
+[2026-04-10 15:55:54] ========================================
+[2026-04-10 15:55:54] 开始 VPN 自动连接
+[2026-04-10 15:55:54] ========================================
+[2026-04-10 15:55:54] 设置 DISPLAY=:1
+[2026-04-10 15:55:54] FortiClient 已在运行
+[2026-04-10 15:55:57] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-04-10 15:55:57] 尝试 1/5...
+[2026-04-10 15:55:57] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-04-10 15:55:57] 点击坐标: (60, 17)
+[2026-04-10 15:55:57] ✅ 成功点击连接按钮
+[2026-04-10 15:55:57] ✅ VPN 连接已触发（SAML 登录）
+[2026-04-10 15:55:57] 请在手机上完成 MFA 认证
+[2026-04-10 15:55:57] ✅ GUI 自动化成功
+[2026-04-10 15:55:57] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-10 15:55:57
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-10 15:55:57
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+[openclaw] Building TypeScript (dist is stale).
+ℹ tsdown v0.20.3 powered by rolldown v1.0.0-rc.3
+ℹ config file: /home/tsl/openclaw/tsdown.config.ts 
+ℹ entry: src/index.ts
+ℹ target: node22.12.0
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/entry.ts
+ℹ target: node22.12.0
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/infra/warning-filter.ts
+ℹ target: node22.12.0
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/extensionAPI.ts
+ℹ target: node22.12.0
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/plugin-sdk/index.ts
+ℹ target: node22.12.0
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+ℹ dist/warning-filter.js  1.74 kB │ gzip: 0.65 kB
+ℹ 1 files, total: 1.74 kB
+✔ Build complete in 216ms
+ℹ Granting execute permission to dist/entry.js
+ℹ Granting execute permission to dist/index.js
+ℹ dist/plugin-sdk/index.js                        823.17 kB │ gzip: 179.98 kB
+ℹ dist/plugin-sdk/pi-model-discovery-Dw3A6oXH.js    1.12 kB │ gzip:   0.52 kB
+ℹ 2 files, total: 824.29 kB
+✔ Build complete in 874ms
+ℹ dist/extensionAPI.js                   2419.20 kB
+ℹ dist/pi-embedded-helpers-Q-PWbYkI.js    300.32 kB │ gzip: 66.46 kB
+ℹ dist/config-VkVrqE0U.js                 200.39 kB │ gzip: 39.87 kB
+ℹ dist/manager-DOXSDMLy.js                118.65 kB │ gzip: 24.63 kB
+ℹ dist/model-selection-BGxoRmUf.js         91.51 kB │ gzip: 20.38 kB
+ℹ dist/deliver-PU-dgveu.js                 83.15 kB │ gzip: 20.83 kB
+ℹ dist/chrome-DWzxAeG0.js                  62.07 kB │ gzip: 15.74 kB
+ℹ dist/pw-ai-B2wTd_lA.js                   54.74 kB │ gzip: 12.63 kB
+ℹ dist/image-DL-fnkwC.js                   38.52 kB │ gzip: 10.07 kB
+ℹ dist/exec-4KLI8NSy.js                    37.16 kB │ gzip: 10.90 kB
+ℹ dist/qmd-manager-e9SNbcZ3.js             23.33 kB │ gzip:  6.67 kB
+ℹ dist/agent-scope-e_yQAu0F.js             22.80 kB │ gzip:  5.44 kB
+ℹ dist/login-qr-CaSmMp-L.js                16.05 kB │ gzip:  5.23 kB
+ℹ dist/paths-rb94mUrR.js                    8.32 kB │ gzip:  2.25 kB
+ℹ dist/sqlite-CJOl_xf8.js                   8.28 kB │ gzip:  2.71 kB
+ℹ dist/github-copilot-token-wCk9Fg_E.js     3.97 kB │ gzip:  1.55 kB
+ℹ dist/redact-BIMJ3ntQ.js                   3.51 kB │ gzip:  1.40 kB
+ℹ dist/paths-BUpTtO3f.js                    2.36 kB │ gzip:  0.78 kB
+ℹ dist/command-format-CFzL448l.js           1.93 kB │ gzip:  0.74 kB
+ℹ dist/pi-model-discovery-EhM2JAQo.js       0.84 kB │ gzip:  0.37 kB
+ℹ dist/transcript-events-JLH5W4He.js        0.59 kB │ gzip:  0.29 kB
+ℹ dist/rolldown-runtime-Cbj13DAv.js         0.42 kB │ gzip:  0.28 kB
+ℹ 22 files, total: 3498.11 kB
+✔ Build complete in 892ms
+ℹ dist/entry.js                              47.98 kB │ gzip:  13.24 kB
+ℹ dist/loader-CUahFcsR.js                  2316.46 kB
+ℹ dist/gateway-cli-C_xYR7eG.js              660.88 kB │ gzip: 154.74 kB
+ℹ dist/config-guard-Co1PFI4O.js             227.31 kB │ gzip:  49.37 kB
+ℹ dist/config-CCFWjLFc.js                   177.79 kB │ gzip:  34.62 kB
+ℹ dist/status-BEirjNmj.js                   119.66 kB │ gzip:  30.89 kB
+ℹ dist/manager-CLk8niqV.js                  118.64 kB │ gzip:  24.62 kB
+ℹ dist/onboard-skills-CUnEvi-n.js           117.38 kB │ gzip:  25.25 kB
+ℹ dist/sandbox-DaN38XWU.js                  108.23 kB │ gzip:  24.04 kB
+ℹ dist/doctor-DlRTbNCB.js                   101.30 kB │ gzip:  25.69 kB
+ℹ dist/auth-profiles-B_2Te6ev.js            100.73 kB │ gzip:  22.41 kB
+ℹ dist/models-cli-BmSJKYdm.js                97.99 kB │ gzip:  22.12 kB
+ℹ dist/deliver-D8M9G_RB.js                   84.53 kB │ gzip:  21.11 kB
+ℹ dist/tui-RY-7TsZH.js                       83.58 kB │ gzip:  19.90 kB
+ℹ dist/routes-QEeRithj.js                    79.09 kB │ gzip:  15.67 kB
+ℹ dist/audit-CYHlQhqd.js                     74.55 kB │ gzip:  18.24 kB
+ℹ dist/client-7gVvXk80.js                    73.45 kB │ gzip:  13.71 kB
+ℹ dist/errors-CJfCJMr2.js                    62.00 kB │ gzip:  15.75 kB
+ℹ dist/channels-cli-C9MfwU5s.js              55.51 kB │ gzip:  14.01 kB
+ℹ dist/pw-ai-Ca4-qW2h.js                     54.74 kB │ gzip:  12.63 kB
+ℹ dist/health-format-qyY4Gyfv.js             53.71 kB │ gzip:  13.04 kB
+ℹ dist/nodes-cli-ywKKoP7o.js                 51.76 kB │ gzip:  11.19 kB
+ℹ dist/node-cli-DLoUGpFL.js                  48.70 kB │ gzip:  12.30 kB
+ℹ dist/pi-embedded-helpers-ts3wJw4h.js       45.43 kB │ gzip:  11.93 kB
+ℹ dist/update-runner-BoiY7Jgv.js             42.52 kB │ gzip:   9.39 kB
+ℹ dist/github-copilot-auth-D01LQPts.js       40.90 kB │ gzip:   7.87 kB
+ℹ dist/update-cli-BSsBNvJ_.js                38.77 kB │ gzip:  10.84 kB
+ℹ dist/hooks-cli-BMNv7G7J.js                 35.47 kB │ gzip:   8.11 kB
+ℹ dist/tui-formatters-CagjGu_I.js            30.54 kB │ gzip:   6.96 kB
+ℹ dist/configure-DLLGYyka.js                 29.85 kB │ gzip:   7.79 kB
+ℹ dist/daemon-cli-BOhXjcaG.js                29.73 kB │ gzip:   7.08 kB
+ℹ dist/exec-approvals-BFwlLJhq.js            29.48 kB │ gzip:   6.89 kB
+ℹ dist/agent-m-7e3sCK.js                     28.99 kB │ gzip:   7.28 kB
+ℹ dist/acp-cli-BrsH4Awh.js                   28.73 kB │ gzip:   7.81 kB
+ℹ dist/server-context-DlT1i7XD.js            27.80 kB │ gzip:   7.23 kB
+ℹ dist/skills-BNWXF5Yr.js                    26.75 kB │ gzip:   6.92 kB
+ℹ dist/session-cost-usage-CjMi32nY.js        25.86 kB │ gzip:   6.05 kB
+ℹ dist/cron-cli-D3iNPnCO.js                  23.43 kB │ gzip:   5.83 kB
+ℹ dist/qmd-manager-wM-AMsPY.js               23.39 kB │ gzip:   6.70 kB
+ℹ dist/service-CBhEXCuh.js                   23.22 kB │ gzip:   5.55 kB
+ℹ dist/onboard-channels-CCwIjFGc.js          22.92 kB │ gzip:   5.85 kB
+ℹ dist/image-CeLGcrLr.js                     22.26 kB │ gzip:   6.53 kB
+ℹ dist/sandbox-cli-W-DiWkP4.js               21.65 kB │ gzip:   5.53 kB
+ℹ dist/manifest-registry-xsRp0Pze.js         20.28 kB │ gzip:   5.10 kB
+ℹ dist/service-audit-DI0UAP3f.js             18.65 kB │ gzip:   4.85 kB
+ℹ dist/daemon-runtime-CmHSdYIu.js            18.23 kB │ gzip:   5.09 kB
+ℹ dist/plugins-Ca7qQOyI.js                   17.93 kB │ gzip:   3.93 kB
+ℹ dist/completion-cli-BzM29s4H.js            16.66 kB │ gzip:   4.44 kB
+ℹ dist/plugin-auto-enable-YOs4zdyX.js        16.60 kB │ gzip:   4.30 kB
+ℹ dist/tool-display-zPRg7PTT.js              16.39 kB │ gzip:   3.81 kB
+ℹ dist/security-cli-B4Xq5CK9.js              16.17 kB │ gzip:   4.61 kB
+ℹ dist/login-qr-BWo8g-zD.js                  16.16 kB │ gzip:   5.26 kB
+ℹ dist/plugins-cli-_5dSTfWR.js               16.13 kB │ gzip:   4.42 kB
+ℹ dist/hooks-status-Ba2RchRL.js              16.06 kB │ gzip:   4.23 kB
+ℹ dist/gmail-setup-utils-Dy_gXoc6.js         15.37 kB │ gzip:   4.46 kB
+ℹ dist/webhooks-cli-BaOR6o7T.js              14.46 kB │ gzip:   3.94 kB
+ℹ dist/systemd-6ABtqEsZ.js                   14.34 kB │ gzip:   4.12 kB
+ℹ dist/installs-BDyWE3JR.js                  14.05 kB │ gzip:   3.49 kB
+ℹ dist/exec-approvals-cli-DmmtHJmv.js        13.75 kB │ gzip:   3.42 kB
+ℹ dist/agent-scope-W3DlH8UB.js               13.48 kB │ gzip:   3.58 kB
+ℹ dist/pairing-store-CoRYVSvL.js             12.00 kB │ gzip:   3.14 kB
+ℹ dist/skills-cli-BYLWJD3U.js                11.83 kB │ gzip:   2.93 kB
+ℹ dist/ws-log-C3o22vc7.js                    11.82 kB │ gzip:   2.86 kB
+ℹ dist/call-DUyICP5R.js                      11.40 kB │ gzip:   3.43 kB
+ℹ dist/register.subclis-hDvDu_RJ.js          10.61 kB │ gzip:   2.90 kB
+ℹ dist/accounts-BBa0tXwh.js                   8.84 kB │ gzip:   2.57 kB
+ℹ dist/commands-5oSATD-H.js                   8.81 kB │ gzip:   2.44 kB
+ℹ dist/update-pXjEulWx.js                     8.71 kB │ gzip:   2.19 kB
+ℹ dist/table-CerhH9E2.js                      8.47 kB │ gzip:   2.75 kB
+ℹ dist/logs-cli-BpJ0niZg.js                   8.22 kB │ gzip:   2.76 kB
+ℹ dist/exec-D_iWJQIg.js                       8.15 kB │ gzip:   2.66 kB
+ℹ dist/program-Du47x0Vo.js                    8.14 kB │ gzip:   3.25 kB
+ℹ dist/tailscale-C7uKekvp.js                  8.09 kB │ gzip:   2.47 kB
+ℹ dist/directory-cli-C_qOs_OM.js              7.79 kB │ gzip:   1.86 kB
+ℹ dist/session-key-BRdRr5Ah.js                7.70 kB │ gzip:   1.88 kB
+ℹ dist/server-node-events-QGs7FL54.js         7.68 kB │ gzip:   2.19 kB
+ℹ dist/dns-cli-BOJBoMwq.js                    7.68 kB │ gzip:   2.84 kB
+ℹ dist/skill-scanner-COatt01v.js              7.68 kB │ gzip:   2.56 kB
+ℹ dist/skills-status-VV3NRQrN.js              7.28 kB │ gzip:   2.27 kB
+ℹ dist/run-main-C1qg4tbX.js                   7.25 kB │ gzip:   2.82 kB
+ℹ dist/utils-iyydkbnu.js                      7.00 kB │ gzip:   2.55 kB
+ℹ dist/devices-cli-CXwShTuJ.js                6.97 kB │ gzip:   2.07 kB
+ℹ dist/sqlite-BjhYBODp.js                     6.67 kB │ gzip:   2.25 kB
+ℹ dist/auth-niEpxWwL.js                       6.36 kB │ gzip:   1.80 kB
+ℹ dist/shared-C9tLI-Fd.js                     5.81 kB │ gzip:   2.08 kB
+ℹ dist/docs-cli-B9Wrs8YH.js                   5.47 kB │ gzip:   1.97 kB
+ℹ dist/pairing-cli-Bqhf1zNb.js                5.09 kB │ gzip:   1.87 kB
+ℹ dist/widearea-dns-BYrQA0kE.js               5.04 kB │ gzip:   1.93 kB
+ℹ dist/nodes-screen-DtXuFQdk.js               4.96 kB │ gzip:   1.32 kB
+ℹ dist/auth-health-CnVxxdgg.js                4.93 kB │ gzip:   1.50 kB
+ℹ dist/message-channel-CQ6DgRUw.js            4.29 kB │ gzip:   1.27 kB
+ℹ dist/progress-Bcjniu7m.js                   4.14 kB │ gzip:   1.37 kB
+ℹ dist/github-copilot-token-SLWintYd.js       3.96 kB │ gzip:   1.54 kB
+ℹ dist/wsl-BLqC6vsg.js                        3.93 kB │ gzip:   1.59 kB
+ℹ dist/rpc-BXDqI6_W.js                        3.84 kB │ gzip:   1.64 kB
+ℹ dist/system-cli-qdzQQ66R.js                 3.79 kB │ gzip:   1.14 kB
+ℹ dist/redact-B8YiFlwn.js                     3.62 kB │ gzip:   1.43 kB
+ℹ dist/shared-CxWH1w-0.js                     3.20 kB │ gzip:   1.15 kB
+ℹ dist/systemd-linger-CrM4x5zG.js             3.19 kB │ gzip:   1.01 kB
+ℹ dist/ports-Bh1pzGuL.js                      3.14 kB │ gzip:   1.11 kB
+ℹ dist/archive-ccN9aDgq.js                    3.00 kB │ gzip:   1.16 kB
+ℹ dist/cli-Dy-LHqpJ.js                        2.97 kB │ gzip:   1.27 kB
+ℹ dist/constants-D1op9uGI.js                  2.88 kB │ gzip:   0.79 kB
+ℹ dist/path-env-h3xp5PqO.js                   2.83 kB │ gzip:   1.10 kB
+ℹ dist/openclaw-root-9ILYSmJ9.js              2.80 kB │ gzip:   0.80 kB
+ℹ dist/tui-cli-CF74cVu4.js                    2.70 kB │ gzip:   1.26 kB
+ℹ dist/clack-prompter-B9yLhyOm.js             2.60 kB │ gzip:   0.84 kB
+ℹ dist/paths-Cn1z_xve.js                      2.57 kB │ gzip:   0.79 kB
+ℹ dist/note-_C44YfAQ.js                       2.45 kB │ gzip:   0.89 kB
+ℹ dist/control-service-Bkw9Nx4q.js            2.42 kB │ gzip:   0.94 kB
+ℹ dist/format-duration-DgTEOMRq.js            2.42 kB │ gzip:   0.91 kB
+ℹ dist/format-relative-C6kUHuOj.js            2.13 kB │ gzip:   0.86 kB
+ℹ dist/node-service-fdNRyn-p.js               2.09 kB │ gzip:   0.62 kB
+ℹ dist/channel-selection-BreK5vXa.js          2.06 kB │ gzip:   0.73 kB
+ℹ dist/brew-CcZV0dSS.js                       1.65 kB │ gzip:   0.58 kB
+ℹ dist/command-format-ayFsmwwz.js             1.58 kB │ gzip:   0.64 kB
+ℹ dist/usage-format-BAirWUSO.js               1.50 kB │ gzip:   0.58 kB
+ℹ dist/tailnet-DAcmnx88.js                    1.27 kB │ gzip:   0.58 kB
+ℹ dist/gateway-rpc-9uiirfnI.js                1.25 kB │ gzip:   0.65 kB
+ℹ dist/parse-log-line-BansDQPa.js             1.23 kB │ gzip:   0.52 kB
+ℹ dist/channel-options-BamO2-qj.js            1.18 kB │ gzip:   0.56 kB
+ℹ dist/command-options-mFOmEMxa.js            1.13 kB │ gzip:   0.51 kB
+ℹ dist/systemd-hints-Dg2ngQkt.js              1.11 kB │ gzip:   0.55 kB
+ℹ dist/is-main-PYGa3tDA.js                    1.00 kB │ gzip:   0.40 kB
+ℹ dist/cli-utils-B8g_-5XH.js                  0.98 kB │ gzip:   0.47 kB
+ℹ dist/status-I3hAbFbg.js                     0.96 kB │ gzip:   0.43 kB
+ℹ dist/pi-model-discovery-DzEIEgHL.js         0.84 kB │ gzip:   0.37 kB
+ℹ dist/status-BbTBC4KO.js                     0.82 kB │ gzip:   0.35 kB
+ℹ dist/deps-rGi_bUcV.js                       0.81 kB │ gzip:   0.32 kB
+ℹ dist/helpers-Cu2lpAMT.js                    0.79 kB │ gzip:   0.39 kB
+ℹ dist/format-C3B4xLIp.js                     0.76 kB │ gzip:   0.40 kB
+ℹ dist/parse-gTOGQPH6.js                      0.70 kB │ gzip:   0.36 kB
+ℹ dist/help-format-C6fHtnxd.js                0.66 kB │ gzip:   0.28 kB
+ℹ dist/transcript-events-Bv_eRVym.js          0.59 kB │ gzip:   0.29 kB
+ℹ dist/channels-status-issues-tF7vbAIF.js     0.55 kB │ gzip:   0.30 kB
+ℹ dist/links-fWsDyfm8.js                      0.49 kB │ gzip:   0.30 kB
+ℹ dist/logging-CHk_Rj6I.js                    0.49 kB │ gzip:   0.29 kB
+ℹ dist/ws-D091yo4M.js                         0.47 kB │ gzip:   0.24 kB
+ℹ dist/parse-timeout-CbVKLZ4B.js              0.46 kB │ gzip:   0.26 kB
+ℹ dist/prompt-style-CFsleyxV.js               0.44 kB │ gzip:   0.23 kB
+ℹ dist/rolldown-runtime-Cbj13DAv.js           0.42 kB │ gzip:   0.28 kB
+ℹ dist/helpers-C5Z7UeFM.js                    0.41 kB │ gzip:   0.26 kB
+ℹ dist/pairing-labels-DoTjT_vC.js             0.26 kB │ gzip:   0.19 kB
+ℹ dist/prompts-CudpZgTI.js                    0.24 kB │ gzip:   0.17 kB
+ℹ dist/logging-pqyrk15z.js                    0.01 kB │ gzip:   0.03 kB
+ℹ 145 files, total: 6122.86 kB
+✔ Build complete in 1009ms
+ℹ dist/index.js                             235.49 kB │ gzip:  52.43 kB
+ℹ dist/reply-C6qD8Ghz.js                   2316.61 kB
+ℹ dist/gateway-cli-BwzdbRZq.js              660.93 kB │ gzip: 154.78 kB
+ℹ dist/config-CcFwVkl-.js                   177.84 kB │ gzip:  34.63 kB
+ℹ dist/onboarding-CcJVKlqV.js               122.72 kB │ gzip:  31.83 kB
+ℹ dist/manager-CW3p_RRR.js                  118.73 kB │ gzip:  24.65 kB
+ℹ dist/onboard-skills-BkWZo384.js           117.39 kB │ gzip:  25.16 kB
+ℹ dist/sandbox-B9Fsi-rI.js                  108.31 kB │ gzip:  24.21 kB
+ℹ dist/doctor-BDeZxMZv.js                   101.40 kB │ gzip:  25.73 kB
+ℹ dist/model-selection-D3lqk8XQ.js          100.82 kB │ gzip:  22.10 kB
+ℹ dist/models-cli-C2xC4MDv.js                98.11 kB │ gzip:  22.20 kB
+ℹ dist/deliver-Ba03oney.js                   84.54 kB │ gzip:  21.11 kB
+ℹ dist/tui-DGtiqtWP.js                       83.63 kB │ gzip:  19.92 kB
+ℹ dist/routes-7uQTo3-x.js                    79.10 kB │ gzip:  15.64 kB
+ℹ dist/audit-DT8yX89V.js                     74.56 kB │ gzip:  18.25 kB
+ℹ dist/net-DVbcbthh.js                       73.46 kB │ gzip:  13.68 kB
+ℹ dist/chrome-IjNjXY3e.js                    63.21 kB │ gzip:  16.15 kB
+ℹ dist/channels-cli-BQJAS9Va.js              55.58 kB │ gzip:  14.05 kB
+ℹ dist/pw-ai-Ddp1xi3L.js                     54.80 kB │ gzip:  12.66 kB
+ℹ dist/health-format-BG2meFz1.js             53.76 kB │ gzip:  13.05 kB
+ℹ dist/nodes-cli-1hqc1lAW.js                 51.86 kB │ gzip:  11.24 kB
+ℹ dist/node-cli-CUEDR6e4.js                  48.81 kB │ gzip:  12.36 kB
+ℹ dist/pi-embedded-helpers-BT2MoH5g.js       45.45 kB │ gzip:  11.97 kB
+ℹ dist/update-runner-BekvzJzP.js             42.52 kB │ gzip:   9.38 kB
+ℹ dist/github-copilot-auth-tAg4fzKj.js       40.92 kB │ gzip:   7.88 kB
+ℹ dist/update-cli-DgLW741L.js                38.85 kB │ gzip:  10.89 kB
+ℹ dist/hooks-cli-ALx6Owbk.js                 35.58 kB │ gzip:   8.18 kB
+ℹ dist/tui-formatters-pAzoXKrN.js            30.55 kB │ gzip:   6.97 kB
+ℹ dist/configure-CR2IXByH.js                 29.91 kB │ gzip:   7.83 kB
+ℹ dist/daemon-cli-DJ0Lmwh7.js                29.79 kB │ gzip:   7.11 kB
+ℹ dist/exec-approvals-BACItfG5.js            29.48 kB │ gzip:   6.88 kB
+ℹ dist/agent-BLOqvDU7.js                     29.00 kB │ gzip:   7.27 kB
+ℹ dist/acp-cli-CB-EzcHs.js                   28.83 kB │ gzip:   7.86 kB
+ℹ dist/subsystem-B4kzjhsh.js                 28.12 kB │ gzip:   8.09 kB
+ℹ dist/server-context-6KrIitAu.js            27.81 kB │ gzip:   7.25 kB
+ℹ dist/skills-C6W7scFn.js                    26.80 kB │ gzip:   6.94 kB
+ℹ dist/completion-cli-DVaOfB5Y.js            26.79 kB │ gzip:   6.87 kB
+ℹ dist/session-cost-usage-Cm_oiDyT.js        25.86 kB │ gzip:   6.05 kB
+ℹ dist/cron-cli-Q7CpYnbT.js                  23.53 kB │ gzip:   5.88 kB
+ℹ dist/qmd-manager-BS2sgZp7.js               23.44 kB │ gzip:   6.72 kB
+ℹ dist/service-Dis30q7Z.js                   23.23 kB │ gzip:   5.57 kB
+ℹ dist/onboard-channels-18KDk27F.js          22.93 kB │ gzip:   5.86 kB
+ℹ dist/image-BdYgE1AT.js                     22.27 kB │ gzip:   6.53 kB
+ℹ dist/sandbox-cli-DSUrHl-v.js               21.75 kB │ gzip:   5.59 kB
+ℹ dist/manifest-registry-3t0Q3zjC.js         20.28 kB │ gzip:   5.10 kB
+ℹ dist/service-audit-4sJ1wnQb.js             18.65 kB │ gzip:   4.85 kB
+ℹ dist/daemon-runtime-BxzPlGf0.js            18.24 kB │ gzip:   5.12 kB
+ℹ dist/plugins-CMvkuQcH.js                   17.98 kB │ gzip:   3.96 kB
+ℹ dist/plugin-auto-enable-mV7l8Xkw.js        16.61 kB │ gzip:   4.32 kB
+ℹ dist/tool-display-ZFn2Us5Z.js              16.39 kB │ gzip:   3.82 kB
+ℹ dist/security-cli-JtIJj01m.js              16.28 kB │ gzip:   4.67 kB
+ℹ dist/plugins-cli-CelkrxrM.js               16.24 kB │ gzip:   4.48 kB
+ℹ dist/login-qr-CDQgxjj0.js                  16.17 kB │ gzip:   5.28 kB
+ℹ dist/hooks-status-ZctAZsuf.js              16.07 kB │ gzip:   4.24 kB
+ℹ dist/gmail-setup-utils-BGr4FgRK.js         15.38 kB │ gzip:   4.47 kB
+ℹ dist/webhooks-cli-DNB7dL95.js              14.57 kB │ gzip:   3.99 kB
+ℹ dist/systemd-CoUwSwva.js                   14.35 kB │ gzip:   4.14 kB
+ℹ dist/installs-DpmnZ4VI.js                  14.05 kB │ gzip:   3.50 kB
+ℹ dist/exec-approvals-cli-CbFBahDO.js        13.85 kB │ gzip:   3.47 kB
+ℹ dist/agent-scope-DYet9dQa.js               13.49 kB │ gzip:   3.59 kB
+ℹ dist/pairing-store-D2TsS8D3.js             12.01 kB │ gzip:   3.14 kB
+ℹ dist/skills-cli-DGI88lXS.js                11.94 kB │ gzip:   2.98 kB
+ℹ dist/ws-log-B48jgoHr.js                    11.83 kB │ gzip:   2.87 kB
+ℹ dist/call-BGaTutjb.js                      11.40 kB │ gzip:   3.43 kB
+ℹ dist/paths-SRVTAxbc.js                      9.12 kB │ gzip:   2.47 kB
+ℹ dist/tailscale-y7Fi_9nC.js                  9.01 kB │ gzip:   2.82 kB
+ℹ dist/accounts-CxV9NFjx.js                   8.89 kB │ gzip:   2.59 kB
+ℹ dist/pi-tools.policy-Cl7Jd_9z.js            8.81 kB │ gzip:   2.44 kB
+ℹ dist/update-CH67TJMi.js                     8.71 kB │ gzip:   2.20 kB
+ℹ dist/table-DSi2l-mO.js                      8.48 kB │ gzip:   2.76 kB
+ℹ dist/logs-cli-CQi80YJi.js                   8.32 kB │ gzip:   2.81 kB
+ℹ dist/sqlite-svkL1VGv.js                     8.28 kB │ gzip:   2.71 kB
+ℹ dist/exec-BmpXTtBi.js                       8.16 kB │ gzip:   2.67 kB
+ℹ dist/directory-cli-i3MCiR7F.js              7.90 kB │ gzip:   1.92 kB
+ℹ dist/server-node-events-BsQivtN2.js         7.80 kB │ gzip:   2.25 kB
+ℹ dist/dns-cli-CF8e7C61.js                    7.79 kB │ gzip:   2.90 kB
+ℹ dist/session-key-fpow76MW.js                7.70 kB │ gzip:   1.88 kB
+ℹ dist/skill-scanner-CUM6Dbt8.js              7.68 kB │ gzip:   2.56 kB
+ℹ dist/skills-status-BfRnBFkY.js              7.29 kB │ gzip:   2.28 kB
+ℹ dist/utils-BYNOwFpc.js                      7.17 kB │ gzip:   2.63 kB
+ℹ dist/devices-cli-Bi3SHnqc.js                7.07 kB │ gzip:   2.12 kB
+ℹ dist/auth-Dmu_4HAv.js                       6.35 kB │ gzip:   1.80 kB
+ℹ dist/shared-BOv3eN3c.js                     5.82 kB │ gzip:   2.08 kB
+ℹ dist/docs-cli-2FpYeJJX.js                   5.55 kB │ gzip:   2.02 kB
+ℹ dist/pairing-cli-FYusRURI.js                5.19 kB │ gzip:   1.93 kB
+ℹ dist/widearea-dns-Bqt1Va10.js               5.04 kB │ gzip:   1.93 kB
+ℹ dist/nodes-screen-DTMjsnoe.js               4.96 kB │ gzip:   1.32 kB
+ℹ dist/auth-health-CXs0N6jk.js                4.94 kB │ gzip:   1.51 kB
+ℹ dist/message-channel-BabDQlTL.js            4.30 kB │ gzip:   1.28 kB
+ℹ dist/progress-BlTNu7qU.js                   4.16 kB │ gzip:   1.38 kB
+ℹ dist/github-copilot-token-BdJzOAgf.js       3.97 kB │ gzip:   1.55 kB
+ℹ dist/dispatcher-DMODakJn.js                 3.93 kB │ gzip:   1.58 kB
+ℹ dist/system-cli-CShEiru1.js                 3.89 kB │ gzip:   1.19 kB
+ℹ dist/rpc-pWyL3S6M.js                        3.84 kB │ gzip:   1.63 kB
+ℹ dist/redact-DJCFY628.js                     3.62 kB │ gzip:   1.43 kB
+ℹ dist/shared-AvBKpDYB.js                     3.21 kB │ gzip:   1.17 kB
+ℹ dist/systemd-linger-fJOR45tO.js             3.19 kB │ gzip:   1.01 kB
+ℹ dist/cli-Ip6e2h_7.js                        3.09 kB │ gzip:   1.32 kB
+ℹ dist/archive-BWQ0r9Dh.js                    3.00 kB │ gzip:   1.16 kB
+ℹ dist/constants-CLUi6T-M.js                  2.88 kB │ gzip:   0.79 kB
+ℹ dist/path-env-CxTVkI4c.js                   2.83 kB │ gzip:   1.11 kB
+ℹ dist/tui-cli-R3pB0TKZ.js                    2.81 kB │ gzip:   1.30 kB
+ℹ dist/openclaw-root-Cvotktkd.js              2.80 kB │ gzip:   0.80 kB
+ℹ dist/clack-prompter-BpAstZ4v.js             2.61 kB │ gzip:   0.86 kB
+ℹ dist/paths-DmunCygQ.js                      2.58 kB │ gzip:   0.80 kB
+ℹ dist/note-CnJ9D5VA.js                       2.46 kB │ gzip:   0.91 kB
+ℹ dist/control-service-DsZbY7Z3.js            2.44 kB │ gzip:   0.95 kB
+ℹ dist/format-duration-OAZcbB85.js            2.42 kB │ gzip:   0.91 kB
+ℹ dist/channel-options-DDBRMyOk.js            2.24 kB │ gzip:   0.92 kB
+ℹ dist/format-relative-CSIe06AP.js            2.13 kB │ gzip:   0.86 kB
+ℹ dist/node-service-ozII2Oyw.js               2.09 kB │ gzip:   0.62 kB
+ℹ dist/channel-selection-D-Q9EYYu.js          2.06 kB │ gzip:   0.73 kB
+ℹ dist/command-format-ChfKqObn.js             1.95 kB │ gzip:   0.74 kB
+ℹ dist/brew-FoIha3w0.js                       1.65 kB │ gzip:   0.58 kB
+ℹ dist/usage-format-C0mOZv3Q.js               1.50 kB │ gzip:   0.58 kB
+ℹ dist/tailnet-C1wV-Bsu.js                    1.27 kB │ gzip:   0.58 kB
+ℹ dist/gateway-rpc-lmFDt7Bp.js                1.25 kB │ gzip:   0.65 kB
+ℹ dist/parse-log-line-BxDgv4Uo.js             1.23 kB │ gzip:   0.52 kB
+ℹ dist/env-CxGlKA1g.js                        1.21 kB │ gzip:   0.58 kB
+ℹ dist/systemd-hints-snqJtVcY.js              1.11 kB │ gzip:   0.55 kB
+ℹ dist/is-main-BI9IbomE.js                    1.00 kB │ gzip:   0.40 kB
+ℹ dist/cli-utils-Yv4G3uEz.js                  0.98 kB │ gzip:   0.47 kB
+ℹ dist/status-DOZnZCer.js                     0.97 kB │ gzip:   0.44 kB
+ℹ dist/boolean-BgXe2hyu.js                    0.86 kB │ gzip:   0.38 kB
+ℹ dist/pi-model-discovery-CV2V1HHz.js         0.84 kB │ gzip:   0.37 kB
+ℹ dist/status-BqtiImKF.js                     0.82 kB │ gzip:   0.35 kB
+ℹ dist/deps-D2whlK3P.js                       0.81 kB │ gzip:   0.32 kB
+ℹ dist/helpers-BewDYqlx.js                    0.79 kB │ gzip:   0.39 kB
+ℹ dist/format-C81JRZRI.js                     0.76 kB │ gzip:   0.40 kB
+ℹ dist/parse-87ybtYW1.js                      0.70 kB │ gzip:   0.36 kB
+ℹ dist/help-format-BNz4LbKq.js                0.67 kB │ gzip:   0.30 kB
+ℹ dist/transcript-events-ChU6IQwp.js          0.59 kB │ gzip:   0.29 kB
+ℹ dist/channels-status-issues-NWt9BRjA.js     0.55 kB │ gzip:   0.30 kB
+ℹ dist/logging-DglXOVol.js                    0.50 kB │ gzip:   0.30 kB
+ℹ dist/links-X2qCZFkO.js                      0.49 kB │ gzip:   0.31 kB
+ℹ dist/ws-CEcdsnN9.js                         0.47 kB │ gzip:   0.24 kB
+ℹ dist/parse-timeout-BIB19Upi.js              0.46 kB │ gzip:   0.26 kB
+ℹ dist/prompt-style-Wng6RpTa.js               0.45 kB │ gzip:   0.24 kB
+ℹ dist/rolldown-runtime-Cbj13DAv.js           0.42 kB │ gzip:   0.28 kB
+ℹ dist/helpers-Ze4BYH3e.js                    0.41 kB │ gzip:   0.26 kB
+ℹ dist/pairing-labels-CGyLzk7h.js             0.26 kB │ gzip:   0.19 kB
+ℹ dist/prompts-DSJM8mlO.js                    0.24 kB │ gzip:   0.17 kB
+ℹ dist/logging-BWRYHvLp.js                    0.01 kB │ gzip:   0.03 kB
+ℹ 143 files, total: 6114.62 kB
+✔ Build complete in 1022ms
+ ELIFECYCLE  Command failed.
+Terminated
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52be9fb5dc8cb4caa5e6f2ebc9e (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-10 15:59:14] ✅ VPN 已连接
+[2026-04-10 15:59:14] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-04-10 15:59:14
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-04-10 15:59:14
+
+可以正常访问外网了。'
+
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52be93b98cb0b22217f2c335b79 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-10 23:58:59] ❌ VPN 未连接
+[2026-04-10 23:58:59] 启动 FortiClient GUI...
+[2026-04-10 23:59:02] ✅ FortiClient GUI 已启动
+[2026-04-10 23:59:02] 尝试触发 VPN 连接...
+[2026-04-10 23:59:02] 触发 VPN 连接...
+[2026-04-10 23:59:02] 使用 GUI 自动化点击连接按钮...
+[2026-04-10 23:59:03] ========================================
+[2026-04-10 23:59:03] 开始 VPN 自动连接
+[2026-04-10 23:59:03] ========================================
+[2026-04-10 23:59:03] 设置 DISPLAY=:1
+[2026-04-10 23:59:03] FortiClient 已在运行
+[2026-04-10 23:59:05] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-04-10 23:59:05] 尝试 1/5...
+[2026-04-10 23:59:06] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-04-10 23:59:06] 点击坐标: (60, 17)
+[2026-04-10 23:59:06] ✅ 成功点击连接按钮
+[2026-04-10 23:59:06] ✅ VPN 连接已触发（SAML 登录）
+[2026-04-10 23:59:06] 请在手机上完成 MFA 认证
+[2026-04-10 23:59:06] ✅ GUI 自动化成功
+[2026-04-10 23:59:06] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-10 23:59:06
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-10 23:59:06
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52a5abc780a0b318644eb527f89 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
