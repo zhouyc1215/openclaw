@@ -1,0 +1,23 @@
+{
+  "id": "claw-finance",
+  "name": "Claw Finance",
+  "description": "Bridge tool: call claw-finance-agent POST /ask (RAG, disclosure, crawl fallback).",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "clawApiUrl": {
+        "type": "string",
+        "description": "claw-api 基址（无尾斜杠），如 http://api:9000；可被 CLAW_API_URL / CLAW_FINANCE_API_URL 覆盖"
+      },
+      "askTimeoutMs": {
+        "type": "number",
+        "description": "/ask 请求超时毫秒，默认 180000，上限 600000；可被 CLAW_FINANCE_ASK_TIMEOUT_MS 覆盖"
+      },
+      "askMaxRetries": {
+        "type": "number",
+        "description": "可重试状态码时的最大重试次数，上限 3；可被 CLAW_FINANCE_ASK_RETRIES 覆盖"
+      }
+    }
+  }
+}

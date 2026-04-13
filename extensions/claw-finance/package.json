@@ -1,0 +1,14 @@
+{
+  "name": "@openclaw/claw-finance",
+  "version": "2026.2.6-3",
+  "description": "Bridge tool: call claw-finance-agent POST /ask from OpenClaw agents",
+  "type": "module",
+  "devDependencies": {
+    "openclaw": "workspace:*"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

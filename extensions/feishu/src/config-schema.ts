@@ -72,6 +72,36 @@ const FeishuToolsConfigSchema = z
   .strict()
   .optional();
 
+/**
+ * 阶段 4：飞书进线后同步触发 Airflow REST `POST …/dagRuns`（异步执行由 DAG 负责）。
+ * 密码请用环境变量 OPENCLAW_FEISHU_AIRFLOW_PASSWORD，勿写入配置文件。
+ */
+const FeishuAirflowIngestConfigSchema = z
+  .object({
+    enabled: z.boolean().optional(),
+    /** Airflow Web 根 URL，如 https://airflow.example.com */
+    baseUrl: z.string().url().optional(),
+    /** 目标 DAG id */
+    dagId: z.string().optional(),
+    /** HTTP 客户端超时（毫秒），默认 8000，上限 120000 */
+    timeoutMs: z.number().int().positive().max(120_000).optional(),
+    /**
+     * 披露/财报类触发词；未配置时使用内置默认列表（年报、财报、巨潮等）。
+     * 正文须包含其中**至少一个**，且能解析出证券代码后才会触发。
+     */
+    filingKeywords: z.array(z.string()).optional(),
+    /** 证券简称 → ts_code（如 浪潮信息 → 000977.SZ） */
+    stockAliases: z.record(z.string(), z.string()).optional(),
+    /** 写入 dag_run.conf.report_type，由 DAG 自行解释 */
+    reportType: z.string().optional(),
+    /**
+     * Basic 用户名（可选）；优先使用环境变量 OPENCLAW_FEISHU_AIRFLOW_USERNAME。
+     * 密码仅支持 OPENCLAW_FEISHU_AIRFLOW_PASSWORD，不在此 schema 中声明。
+     */
+    username: z.string().optional(),
+  })
+  .strict();
+
 export const FeishuGroupSchema = z
   .object({
     requireMention: z.boolean().optional(),
@@ -118,6 +148,7 @@ export const FeishuAccountConfigSchema = z
     heartbeat: ChannelHeartbeatVisibilitySchema,
     renderMode: RenderModeSchema,
     tools: FeishuToolsConfigSchema,
+    airflowIngest: FeishuAirflowIngestConfigSchema.optional(),
   })
   .strict();
 
@@ -152,6 +183,7 @@ export const FeishuConfigSchema = z
     heartbeat: ChannelHeartbeatVisibilitySchema,
     renderMode: RenderModeSchema, // raw = plain text (default), card = interactive card with markdown
     tools: FeishuToolsConfigSchema,
+    airflowIngest: FeishuAirflowIngestConfigSchema.optional(),
     // Multi-account configuration
     accounts: z.record(z.string(), FeishuAccountConfigSchema.optional()).optional(),
   })

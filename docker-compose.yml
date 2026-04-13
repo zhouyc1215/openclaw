@@ -3,6 +3,7 @@ services:
     image: ${OPENCLAW_IMAGE:-openclaw:local}
     environment:
       HOME: /home/node
+      # finance_ask / claw-finance：可选 Docker 网关场景下在此注入 CLAW_API_URL。Gateway 常跑宿主机时见 docs/migration-feishu-finance.md（systemd/shell 配置）
       TERM: xterm-256color
       OPENCLAW_GATEWAY_TOKEN: ${OPENCLAW_GATEWAY_TOKEN}
       CLAUDE_AI_SESSION_KEY: ${CLAUDE_AI_SESSION_KEY}

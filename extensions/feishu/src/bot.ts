@@ -8,6 +8,7 @@ import {
 } from "openclaw/plugin-sdk";
 import type { FeishuMessageContext, FeishuMediaInfo, ResolvedFeishuAccount } from "./types.js";
 import { resolveFeishuAccount } from "./accounts.js";
+import { maybeTriggerAirflowIngest } from "./airflow-ingest.js";
 import { createFeishuClient } from "./client.js";
 import { downloadMessageResourceFeishu } from "./media.js";
 import { extractMentionTargets, extractMessageBody, isMentionForwardRequest } from "./mention.js";
@@ -841,6 +842,18 @@ export async function handleFeishuMessage(params: {
       replyToMessageId: ctx.messageId,
       mentionTargets: ctx.mentionTargets,
       accountId: account.accountId,
+    });
+
+    // 阶段 4：在派发 Agent 前同步触发 Airflow DAG Run（失败不阻塞进线）
+    const ingestUserText = quotedContent ? `[引用]: ${quotedContent}\n${ctx.content}` : ctx.content;
+    await maybeTriggerAirflowIngest({
+      feishuCfg: account.config,
+      userText: ingestUserText,
+      feishuMessageId: ctx.messageId,
+      senderOpenId: ctx.senderOpenId,
+      accountId: account.accountId,
+      log,
+      error,
     });
 
     log(`feishu[${account.accountId}]: dispatching to agent (session=${route.sessionKey})`);

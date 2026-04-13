@@ -19,6 +19,8 @@ metadata:
 
 Query financial data, stock reports, and analysis via the claw-finance-agent API running at http://localhost:9000.
 
+When the OpenClaw Gateway has the **`claw-finance`** plugin enabled, prefer the **`finance_ask`** tool for `/ask` (RAG + disclosure + crawl fallback + LLM) instead of shell `curl` from the agent, so timeouts and JSON fields stay consistent.
+
 ## Query Stock Reports (RAG)
 
 Search for stock reports using semantic search:
