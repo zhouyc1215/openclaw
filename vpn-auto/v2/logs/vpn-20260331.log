@@ -40225,3 +40225,777 @@ Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No s
 [2026-04-13 12:08:49] [INFO] 点击左边栏图标 (40, 200)...
 [2026-04-13 12:08:52] [INFO] ✅ 已触发 FortiClient 启动
 [2026-04-13 12:08:52] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:09:07] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:09:07] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:09:40] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:09:40] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:09:40] [ERROR] ============================================================
+[2026-04-13 12:09:40] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:09:40] [ERROR] ============================================================
+[2026-04-13 12:10:41] [WARNING] ⚠️  VPN 断开 (失败次数: 1914/3)
+[2026-04-13 12:10:41] [ERROR] ❌ VPN 连续失败 1914 次，触发重连
+[2026-04-13 12:10:41] [INFO] ============================================================
+[2026-04-13 12:10:41] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:10:41] [INFO] ============================================================
+[2026-04-13 12:10:41] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:10:41] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:10:43] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:10:43] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:10:43] [INFO] 启动 FortiClient...
+[2026-04-13 12:10:43] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:10:45] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:10:45] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:11:01] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:11:01] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:11:34] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:11:34] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:11:34] [ERROR] ============================================================
+[2026-04-13 12:11:34] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:11:34] [ERROR] ============================================================
+[2026-04-13 12:12:34] [WARNING] ⚠️  VPN 断开 (失败次数: 1915/3)
+[2026-04-13 12:12:34] [ERROR] ❌ VPN 连续失败 1915 次，触发重连
+[2026-04-13 12:12:34] [INFO] ============================================================
+[2026-04-13 12:12:34] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:12:34] [INFO] ============================================================
+[2026-04-13 12:12:34] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:12:34] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:12:36] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:12:36] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:12:36] [INFO] 启动 FortiClient...
+[2026-04-13 12:12:36] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:12:39] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:12:39] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:12:54] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:12:54] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:13:27] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:13:27] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:13:27] [ERROR] ============================================================
+[2026-04-13 12:13:27] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:13:27] [ERROR] ============================================================
+[2026-04-13 12:14:27] [WARNING] ⚠️  VPN 断开 (失败次数: 1916/3)
+[2026-04-13 12:14:27] [ERROR] ❌ VPN 连续失败 1916 次，触发重连
+[2026-04-13 12:14:27] [INFO] ============================================================
+[2026-04-13 12:14:27] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:14:27] [INFO] ============================================================
+[2026-04-13 12:14:27] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:14:27] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:14:29] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:14:29] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:14:29] [INFO] 启动 FortiClient...
+[2026-04-13 12:14:29] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:14:32] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:14:32] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:14:47] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:14:47] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:15:21] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:15:21] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:15:21] [ERROR] ============================================================
+[2026-04-13 12:15:21] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:15:21] [ERROR] ============================================================
+[2026-04-13 12:16:21] [WARNING] ⚠️  VPN 断开 (失败次数: 1917/3)
+[2026-04-13 12:16:21] [ERROR] ❌ VPN 连续失败 1917 次，触发重连
+[2026-04-13 12:16:21] [INFO] ============================================================
+[2026-04-13 12:16:21] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:16:21] [INFO] ============================================================
+[2026-04-13 12:16:21] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:16:21] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:16:23] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:16:23] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:16:23] [INFO] 启动 FortiClient...
+[2026-04-13 12:16:23] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:16:25] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:16:25] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:16:41] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:16:41] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:17:14] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:17:14] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:17:14] [ERROR] ============================================================
+[2026-04-13 12:17:14] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:17:14] [ERROR] ============================================================
+[2026-04-13 12:18:14] [WARNING] ⚠️  VPN 断开 (失败次数: 1918/3)
+[2026-04-13 12:18:14] [ERROR] ❌ VPN 连续失败 1918 次，触发重连
+[2026-04-13 12:18:14] [INFO] ============================================================
+[2026-04-13 12:18:14] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:18:14] [INFO] ============================================================
+[2026-04-13 12:18:14] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:18:14] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:18:16] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:18:16] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:18:16] [INFO] 启动 FortiClient...
+[2026-04-13 12:18:16] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:18:19] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:18:19] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:18:34] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:18:34] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:19:07] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:19:07] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:19:07] [ERROR] ============================================================
+[2026-04-13 12:19:07] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:19:07] [ERROR] ============================================================
+[2026-04-13 12:20:07] [WARNING] ⚠️  VPN 断开 (失败次数: 1919/3)
+[2026-04-13 12:20:07] [ERROR] ❌ VPN 连续失败 1919 次，触发重连
+[2026-04-13 12:20:07] [INFO] ============================================================
+[2026-04-13 12:20:07] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:20:07] [INFO] ============================================================
+[2026-04-13 12:20:07] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:20:07] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:20:09] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:20:09] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:20:09] [INFO] 启动 FortiClient...
+[2026-04-13 12:20:09] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:20:12] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:20:12] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:20:27] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:20:27] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:21:00] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:21:00] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:21:00] [ERROR] ============================================================
+[2026-04-13 12:21:00] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:21:00] [ERROR] ============================================================
+[2026-04-13 12:22:00] [WARNING] ⚠️  VPN 断开 (失败次数: 1920/3)
+[2026-04-13 12:22:00] [ERROR] ❌ VPN 连续失败 1920 次，触发重连
+[2026-04-13 12:22:00] [INFO] ============================================================
+[2026-04-13 12:22:00] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:22:00] [INFO] ============================================================
+[2026-04-13 12:22:00] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:22:01] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:22:03] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:22:03] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:22:03] [INFO] 启动 FortiClient...
+[2026-04-13 12:22:03] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:22:05] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:22:05] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:22:20] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:22:20] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:22:54] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:22:54] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:22:54] [ERROR] ============================================================
+[2026-04-13 12:22:54] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:22:54] [ERROR] ============================================================
+[2026-04-13 12:23:54] [WARNING] ⚠️  VPN 断开 (失败次数: 1921/3)
+[2026-04-13 12:23:54] [ERROR] ❌ VPN 连续失败 1921 次，触发重连
+[2026-04-13 12:23:54] [INFO] ============================================================
+[2026-04-13 12:23:54] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:23:54] [INFO] ============================================================
+[2026-04-13 12:23:54] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:23:54] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:23:56] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:23:56] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:23:56] [INFO] 启动 FortiClient...
+[2026-04-13 12:23:56] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:23:58] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:23:58] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:24:14] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:24:14] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:24:47] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:24:47] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:24:47] [ERROR] ============================================================
+[2026-04-13 12:24:47] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:24:47] [ERROR] ============================================================
+[2026-04-13 12:25:47] [WARNING] ⚠️  VPN 断开 (失败次数: 1922/3)
+[2026-04-13 12:25:47] [ERROR] ❌ VPN 连续失败 1922 次，触发重连
+[2026-04-13 12:25:47] [INFO] ============================================================
+[2026-04-13 12:25:47] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:25:47] [INFO] ============================================================
+[2026-04-13 12:25:47] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:25:47] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:25:49] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:25:49] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:25:49] [INFO] 启动 FortiClient...
+[2026-04-13 12:25:49] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:25:52] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:25:52] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:26:07] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:26:07] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:26:40] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:26:40] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:26:40] [ERROR] ============================================================
+[2026-04-13 12:26:40] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:26:40] [ERROR] ============================================================
+[2026-04-13 12:27:40] [WARNING] ⚠️  VPN 断开 (失败次数: 1923/3)
+[2026-04-13 12:27:40] [ERROR] ❌ VPN 连续失败 1923 次，触发重连
+[2026-04-13 12:27:40] [INFO] ============================================================
+[2026-04-13 12:27:40] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:27:40] [INFO] ============================================================
+[2026-04-13 12:27:40] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:27:40] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:27:42] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:27:42] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:27:42] [INFO] 启动 FortiClient...
+[2026-04-13 12:27:42] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:27:45] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:27:45] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:28:00] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:28:00] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:28:33] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:28:33] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:28:33] [ERROR] ============================================================
+[2026-04-13 12:28:33] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:28:33] [ERROR] ============================================================
+[2026-04-13 12:29:34] [WARNING] ⚠️  VPN 断开 (失败次数: 1924/3)
+[2026-04-13 12:29:34] [ERROR] ❌ VPN 连续失败 1924 次，触发重连
+[2026-04-13 12:29:34] [INFO] ============================================================
+[2026-04-13 12:29:34] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:29:34] [INFO] ============================================================
+[2026-04-13 12:29:34] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:29:34] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:29:36] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:29:36] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:29:36] [INFO] 启动 FortiClient...
+[2026-04-13 12:29:36] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:29:38] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:29:38] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:29:54] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:29:54] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:30:27] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:30:27] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:30:27] [ERROR] ============================================================
+[2026-04-13 12:30:27] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:30:27] [ERROR] ============================================================
+[2026-04-13 12:31:27] [WARNING] ⚠️  VPN 断开 (失败次数: 1925/3)
+[2026-04-13 12:31:27] [ERROR] ❌ VPN 连续失败 1925 次，触发重连
+[2026-04-13 12:31:27] [INFO] ============================================================
+[2026-04-13 12:31:27] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:31:27] [INFO] ============================================================
+[2026-04-13 12:31:27] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:31:27] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:31:29] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:31:29] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:31:29] [INFO] 启动 FortiClient...
+[2026-04-13 12:31:29] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:31:32] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:31:32] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:31:47] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:31:47] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:32:20] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:32:20] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:32:20] [ERROR] ============================================================
+[2026-04-13 12:32:20] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:32:20] [ERROR] ============================================================
+[2026-04-13 12:33:20] [WARNING] ⚠️  VPN 断开 (失败次数: 1926/3)
+[2026-04-13 12:33:20] [ERROR] ❌ VPN 连续失败 1926 次，触发重连
+[2026-04-13 12:33:20] [INFO] ============================================================
+[2026-04-13 12:33:20] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:33:20] [INFO] ============================================================
+[2026-04-13 12:33:20] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:33:20] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:33:22] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:33:22] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:33:22] [INFO] 启动 FortiClient...
+[2026-04-13 12:33:22] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:33:25] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:33:25] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:33:40] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:33:40] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:34:13] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:34:13] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:34:13] [ERROR] ============================================================
+[2026-04-13 12:34:13] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:34:13] [ERROR] ============================================================
+[2026-04-13 12:35:14] [WARNING] ⚠️  VPN 断开 (失败次数: 1927/3)
+[2026-04-13 12:35:14] [ERROR] ❌ VPN 连续失败 1927 次，触发重连
+[2026-04-13 12:35:14] [INFO] ============================================================
+[2026-04-13 12:35:14] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:35:14] [INFO] ============================================================
+[2026-04-13 12:35:14] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:35:14] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:35:16] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:35:16] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:35:16] [INFO] 启动 FortiClient...
+[2026-04-13 12:35:16] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:35:18] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:35:18] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:35:34] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:35:34] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:36:07] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:36:07] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:36:07] [ERROR] ============================================================
+[2026-04-13 12:36:07] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:36:07] [ERROR] ============================================================
+[2026-04-13 12:37:07] [WARNING] ⚠️  VPN 断开 (失败次数: 1928/3)
+[2026-04-13 12:37:07] [ERROR] ❌ VPN 连续失败 1928 次，触发重连
+[2026-04-13 12:37:07] [INFO] ============================================================
+[2026-04-13 12:37:07] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:37:07] [INFO] ============================================================
+[2026-04-13 12:37:07] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:37:07] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:37:09] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:37:09] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:37:09] [INFO] 启动 FortiClient...
+[2026-04-13 12:37:09] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:37:12] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:37:12] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:37:27] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:37:27] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:38:00] [ERROR] ❌ 窗口未在 30 秒内出现
+[2026-04-13 12:38:00] [ERROR] FortiClient 窗口未出现
+[2026-04-13 12:38:00] [ERROR] ============================================================
+[2026-04-13 12:38:00] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:38:00] [ERROR] ============================================================
+[2026-04-13 12:39:00] [WARNING] ⚠️  VPN 断开 (失败次数: 1929/3)
+[2026-04-13 12:39:00] [ERROR] ❌ VPN 连续失败 1929 次，触发重连
+[2026-04-13 12:39:00] [INFO] ============================================================
+[2026-04-13 12:39:00] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:39:00] [INFO] ============================================================
+[2026-04-13 12:39:00] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:39:00] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:39:02] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:39:02] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:39:02] [INFO] 启动 FortiClient...
+[2026-04-13 12:39:02] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:39:05] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:39:05] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:39:20] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-13 12:39:20] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:39:24] [INFO] ✅ 窗口已出现（等待 17 秒）
+[2026-04-13 12:39:24] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-13 12:39:39] [INFO] 尝试点击连接按钮...
+[2026-04-13 12:39:39] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-13 12:39:39] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-13 12:39:40] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-04-13 12:39:41] [INFO] ✅ PyAutoGUI 点击成功
+[2026-04-13 12:39:41] [INFO] ✅ PyAutoDriver 成功
+[2026-04-13 12:39:41] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-04-13 12:39:51] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-04-13 12:40:01] [INFO] 检查 VPN 状态（第 2/6 次）...
+[2026-04-13 12:40:11] [INFO] 检查 VPN 状态（第 3/6 次）...
+[2026-04-13 12:40:21] [INFO] 检查 VPN 状态（第 4/6 次）...
+[2026-04-13 12:40:31] [INFO] 检查 VPN 状态（第 5/6 次）...
+[2026-04-13 12:40:41] [INFO] 检查 VPN 状态（第 6/6 次）...
+[2026-04-13 12:40:41] [WARNING] ⚠️  VPN 在 60 秒内未连接
+[2026-04-13 12:40:41] [WARNING] ⚠️  VPN 需要手动完成 SAML 认证
+[2026-04-13 12:40:41] [INFO] 正在截取屏幕...
+[2026-04-13 12:40:41] [INFO] 截图已保存: /tmp/vpn-saml-8475.png
+[2026-04-13 12:40:52] [ERROR] ❌ 飞书图片发送失败: [openclaw] Building TypeScript (dist is stale).
+[feishu] sendMediaFeishu failed: AxiosError: Request failed with status code 400
+    at settle (/home/tsl/openclaw/node_modules/.pnpm/axios@1.13.5_debug@4.4.3/node_modules/axios/dist/node/axios.cjs:2151:12)
+    at IncomingMessage.handleStreamEnd (/home/tsl/openclaw/node_modules/.pnpm/axios@1.13.5_debug@4.4.3/node_modules/axios/dist/node/axios.cjs:3545:11)
+    at IncomingMessage.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (/home/tsl/openclaw/node_modules/.pnpm/axios@1.13.5_debug@4.4.3/node_modules/axios/dist/node/axios.cjs:4796:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  isAxiosError: true,
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false,
+      legacyInterceptorReqResOrdering: true
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'multipart/form-data; boundary=--------------------------7aba98a04985a43c7b533a92',
+      'User-Agent': 'oapi-node-sdk/1.0.0',
+      Authorization: 'Bearer t-g1044dbK2E4Q4HEP4UAP5RAEYEL6BDYLTFP7Q6ZP',
+      'Content-Length': '316',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    url: 'https://open.feishu.cn/open-apis/im/v1/images',
+    method: 'post',
+    data: FormData {
+      _overheadLength: 253,
+      _valueLength: 7,
+      _valuesToMeasure: [],
+      writable: false,
+      readable: true,
+      dataSize: 0,
+      maxDataSize: 2097152,
+      pauseStreams: true,
+      _released: true,
+      _streams: [],
+      _currentStream: null,
+      _insideLoop: false,
+      _pendingNext: false,
+      _boundary: '--------------------------7aba98a04985a43c7b533a92',
+      _events: [Object: null prototype],
+      _eventsCount: 3
+    },
+    params: {},
+    paramsSerializer: { serialize: [Function: paramsSerializer] },
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 316,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: false,
+    _header: 'POST /open-apis/im/v1/images HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: multipart/form-data; boundary=--------------------------7aba98a04985a43c7b533a92\r\n' +
+      'User-Agent: oapi-node-sdk/1.0.0\r\n' +
+      'Authorization: Bearer t-g1044dbK2E4Q4HEP4UAP5RAEYEL6BDYLTFP7Q6ZP\r\n' +
+      'Content-Length: 316\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: open.feishu.cn\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype] {},
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/open-apis/im/v1/images',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://open.feishu.cn/open-apis/im/v1/images',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 34,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: [Function: emitRequestTimeout],
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: true,
+    host: 'open.feishu.cn',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 2160468,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://open.feishu.cn/open-apis/im/v1/images',
+      _timeout: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: true,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'open.feishu.cn',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'open.feishu.cn',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 0,
+      parser: null,
+      _httpMessage: [Circular *1],
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: 75,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 2160210,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: -1,
+        _idlePrev: null,
+        _idleNext: null,
+        _idleStart: 7912,
+        _onTimeout: null,
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: true,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 71,
+        [Symbol(triggerId)]: 69,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 60,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      authorization: [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      server: 'Tengine',
+      'content-type': 'text/plain; charset=utf-8',
+      'content-length': '26',
+      connection: 'keep-alive',
+      date: 'Mon, 13 Apr 2026 04:40:52 GMT',
+      'x-tt-logid': '202604131240528D412B38B30BE4953B72',
+      'server-timing': 'inner; dur=2, cdn-cache;desc=MISS,edge;dur=0,origin;dur=134',
+      'x-tt-trace-host': '0172714c4f9713e9771ed688feab36340867669f990f85442539b808fd8b3faaa81e9aae3f7dd4ec23c26c0f4221f3488944ae0382f106dba99d08217abead0d5b36905f0ed8925cb36e0f024c945489c56c84ad65372a3d418dacc1ae45ac5d43',
+      'x-tt-trace-tag': 'id=03;cdn-cache=miss;type=dyn',
+      'x-tt-trace-id': '00-2604131240528D412B38B30BE4953B72-5BAA497771345F13-00',
+      'x-request-id': 'b88eb3f1-9ac9-4542-9c8e-67545a24b4ed',
+      'x-timestamp': '1776055252.471',
+      'x-alicdn-da-ups-status': 'endOs,0,400',
+      via: 'dynamic7.cn7817[134,0]',
+      'timing-allow-origin': '*',
+      eagleid: 'db904eb317760552523524885e'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      url: 'https://open.feishu.cn/open-apis/im/v1/images',
+      method: 'post',
+      data: [FormData],
+      params: {},
+      paramsSerializer: [Object],
+      allowAbsoluteUrls: true
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 316,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'POST /open-apis/im/v1/images HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: multipart/form-data; boundary=--------------------------7aba98a04985a43c7b533a92\r\n' +
+        'User-Agent: oapi-node-sdk/1.0.0\r\n' +
+        'Authorization: Bearer t-g1044dbK2E4Q4HEP4UAP5RAEYEL6BDYLTFP7Q6ZP\r\n' +
+        'Content-Length: 316\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: open.feishu.cn\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/open-apis/im/v1/images',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'open.feishu.cn',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: true,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: 'Error when parsing request'
+  },
+  status: 400
+}
+[openclaw] Uncaught exception: Error: write ECONNRESET
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:19)
+
+[2026-04-13 12:40:52] [ERROR] ============================================================
+[2026-04-13 12:40:52] [ERROR] ❌ VPN 重连失败
+[2026-04-13 12:40:52] [ERROR] ============================================================
+[2026-04-13 12:41:52] [WARNING] ⚠️  VPN 断开 (失败次数: 1930/3)
+[2026-04-13 12:41:52] [ERROR] ❌ VPN 连续失败 1930 次，触发重连
+[2026-04-13 12:41:52] [INFO] ============================================================
+[2026-04-13 12:41:52] [INFO] 开始 VPN 重连流程
+[2026-04-13 12:41:52] [INFO] ============================================================
+[2026-04-13 12:41:52] [INFO] 停止 FortiClient 进程...
+[2026-04-13 12:41:52] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-13 12:41:54] [INFO] ✅ FortiClient 进程已停止
+[2026-04-13 12:41:54] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-13 12:41:54] [INFO] 启动 FortiClient...
+[2026-04-13 12:41:54] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-13 12:41:57] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-13 12:41:57] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-13 12:41:57] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-04-13 12:41:57] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-13 12:42:12] [INFO] 尝试点击连接按钮...
+[2026-04-13 12:42:12] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-13 12:42:12] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-13 12:42:13] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-04-13 12:42:13] [INFO] ✅ PyAutoGUI 点击成功
+[2026-04-13 12:42:13] [INFO] ✅ PyAutoDriver 成功
+[2026-04-13 12:42:13] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-04-13 12:42:23] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-04-13 12:42:33] [INFO] 检查 VPN 状态（第 2/6 次）...
+[2026-04-13 12:42:33] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 20 秒
+[2026-04-13 12:42:33] [INFO] ============================================================
+[2026-04-13 12:42:33] [INFO] ✅ VPN 重连成功
+[2026-04-13 12:42:33] [INFO] ============================================================
