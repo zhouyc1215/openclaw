@@ -32,6 +32,24 @@ const DEFAULT_FILING_KEYWORDS = [
   "公告",
 ];
 
+const DEFAULT_RATE_LIMIT_WINDOW_MS = 60_000;
+const DEFAULT_RATE_LIMIT_MAX_PER_SENDER = 5;
+const DEFAULT_RATE_LIMIT_MAX_GLOBAL = 30;
+const DEFAULT_DEDUPE_TTL_MS = 600_000;
+const MIN_RATE_LIMIT_WINDOW_MS = 1_000;
+const MAX_RATE_LIMIT_WINDOW_MS = 86_400_000;
+const MAX_RATE_LIMIT_MAX_PER_SENDER = 1_000;
+const MAX_RATE_LIMIT_MAX_GLOBAL = 10_000;
+
+type RateLimitBucket = {
+  windowStartedAt: number;
+  count: number;
+};
+
+const senderRateBuckets = new Map<string, RateLimitBucket>();
+const globalRateBuckets = new Map<string, RateLimitBucket>();
+const recentIngestKeys = new Map<string, number>();
+
 function normalizeBaseUrl(url: string): string {
   return url.replace(/\/+$/, "");
 }
@@ -96,6 +114,76 @@ function hasFilingIntent(text: string, keywords: string[] | undefined): boolean 
   return list.some((k) => k && text.includes(k));
 }
 
+function normalizeAllowFromEntries(
+  allowFrom: Array<string | number> | undefined,
+): Set<string> | null {
+  if (!allowFrom?.length) {
+    return null;
+  }
+  const entries = allowFrom
+    .map((entry) => String(entry).trim())
+    .filter((entry) => entry.length > 0);
+  return entries.length ? new Set(entries) : null;
+}
+
+function isSenderAllowed(
+  senderOpenId: string,
+  allowFrom: Array<string | number> | undefined,
+): boolean {
+  const allowlist = normalizeAllowFromEntries(allowFrom);
+  if (!allowlist) {
+    return true;
+  }
+  return allowlist.has("*") || allowlist.has(senderOpenId.trim());
+}
+
+function consumeRateLimit(
+  buckets: Map<string, RateLimitBucket>,
+  key: string,
+  now: number,
+  windowMs: number,
+  limit: number,
+): boolean {
+  const existing = buckets.get(key);
+  if (!existing || now - existing.windowStartedAt >= windowMs) {
+    buckets.set(key, { windowStartedAt: now, count: 1 });
+    return true;
+  }
+  if (existing.count >= limit) {
+    return false;
+  }
+  existing.count += 1;
+  return true;
+}
+
+function pruneExpiredRecentIngestKeys(now: number): void {
+  for (const [key, expiresAt] of recentIngestKeys.entries()) {
+    if (expiresAt <= now) {
+      recentIngestKeys.delete(key);
+    }
+  }
+}
+
+function reserveRecentIngestKey(key: string, now: number, ttlMs: number): boolean {
+  pruneExpiredRecentIngestKeys(now);
+  const expiresAt = recentIngestKeys.get(key);
+  if (expiresAt && expiresAt > now) {
+    return false;
+  }
+  recentIngestKeys.set(key, now + ttlMs);
+  return true;
+}
+
+function releaseRecentIngestKey(key: string): void {
+  recentIngestKeys.delete(key);
+}
+
+export function resetAirflowIngestRateLimitStateForTests(): void {
+  senderRateBuckets.clear();
+  globalRateBuckets.clear();
+  recentIngestKeys.clear();
+}
+
 function resolveAuth(feishuCfg: FeishuConfig): { user: string; pass: string } | null {
   const ingest = feishuCfg.airflowIngest;
   const user =
@@ -116,10 +204,13 @@ export async function maybeTriggerAirflowIngest(params: AirflowIngestParams): Pr
   if (!ingest?.enabled) {
     return;
   }
+  const preview = userText.trim().replace(/\s+/g, " ").slice(0, 120);
   const baseUrl = ingest.baseUrl?.trim();
   const dagId = ingest.dagId?.trim();
   if (!baseUrl || !dagId) {
-    log(`feishu[${accountId}]: airflow ingest skipped (missing baseUrl or dagId)`);
+    log(
+      `feishu[${accountId}]: airflow ingest skipped (missing baseUrl or dagId message_id=${feishuMessageId} preview=${preview})`,
+    );
     return;
   }
 
@@ -135,7 +226,16 @@ export async function maybeTriggerAirflowIngest(params: AirflowIngestParams): Pr
   const tsCode =
     resolveTsCodeFromAliases(text, ingest.stockAliases) ?? extractTsCodeFromDigits(text);
   if (!tsCode) {
-    log(`feishu[${accountId}]: airflow ingest skipped (no ts_code from text)`);
+    log(
+      `feishu[${accountId}]: airflow ingest skipped (no ts_code from text message_id=${feishuMessageId} preview=${preview})`,
+    );
+    return;
+  }
+
+  if (!isSenderAllowed(senderOpenId, ingest.allowFrom)) {
+    log(
+      `feishu[${accountId}]: airflow ingest skipped (sender not allowed message_id=${feishuMessageId} sender_open_id=${senderOpenId} preview=${preview})`,
+    );
     return;
   }
 
@@ -150,7 +250,49 @@ export async function maybeTriggerAirflowIngest(params: AirflowIngestParams): Pr
   const auth = resolveAuth(feishuCfg);
   if (!auth) {
     log(
-      `feishu[${accountId}]: airflow ingest skipped (set OPENCLAW_FEISHU_AIRFLOW_USERNAME / OPENCLAW_FEISHU_AIRFLOW_PASSWORD, or username in config + password in env)`,
+      `feishu[${accountId}]: airflow ingest skipped (set OPENCLAW_FEISHU_AIRFLOW_USERNAME / OPENCLAW_FEISHU_AIRFLOW_PASSWORD, or username in config + password in env message_id=${feishuMessageId} preview=${preview})`,
+    );
+    return;
+  }
+
+  const windowMs = Math.min(
+    Math.max(ingest.rateLimitWindowMs ?? DEFAULT_RATE_LIMIT_WINDOW_MS, MIN_RATE_LIMIT_WINDOW_MS),
+    MAX_RATE_LIMIT_WINDOW_MS,
+  );
+  const senderLimit = Math.min(
+    Math.max(ingest.rateLimitMaxPerSender ?? DEFAULT_RATE_LIMIT_MAX_PER_SENDER, 1),
+    MAX_RATE_LIMIT_MAX_PER_SENDER,
+  );
+  const globalLimit = Math.min(
+    Math.max(ingest.rateLimitMaxGlobal ?? DEFAULT_RATE_LIMIT_MAX_GLOBAL, 1),
+    MAX_RATE_LIMIT_MAX_GLOBAL,
+  );
+  const dedupeTtlMs = Math.min(
+    Math.max(ingest.dedupeTtlMs ?? DEFAULT_DEDUPE_TTL_MS, MIN_RATE_LIMIT_WINDOW_MS),
+    MAX_RATE_LIMIT_WINDOW_MS,
+  );
+  const now = Date.now();
+  const recentIngestKey = `${accountId}:${dagId}:${idempotencyKey}`;
+
+  if (!reserveRecentIngestKey(recentIngestKey, now, dedupeTtlMs)) {
+    log(
+      `feishu[${accountId}]: airflow ingest skipped (duplicate message_id=${feishuMessageId} dag_id=${dagId} idempotency_key=${idempotencyKey} dedupe_ttl_ms=${dedupeTtlMs})`,
+    );
+    return;
+  }
+
+  if (
+    !consumeRateLimit(senderRateBuckets, `${accountId}:${senderOpenId}`, now, windowMs, senderLimit)
+  ) {
+    log(
+      `feishu[${accountId}]: airflow ingest skipped (sender rate limited message_id=${feishuMessageId} sender_open_id=${senderOpenId} window_ms=${windowMs} limit=${senderLimit})`,
+    );
+    return;
+  }
+
+  if (!consumeRateLimit(globalRateBuckets, accountId, now, windowMs, globalLimit)) {
+    log(
+      `feishu[${accountId}]: airflow ingest skipped (global rate limited message_id=${feishuMessageId} window_ms=${windowMs} limit=${globalLimit})`,
     );
     return;
   }
@@ -172,7 +314,6 @@ export async function maybeTriggerAirflowIngest(params: AirflowIngestParams): Pr
   if (ingest.reportType) {
     conf.report_type = ingest.reportType;
   }
-  const preview = text.replace(/\s+/g, " ").slice(0, 120);
   conf.raw_question_preview = preview;
 
   const body = JSON.stringify({ conf });
@@ -190,9 +331,10 @@ export async function maybeTriggerAirflowIngest(params: AirflowIngestParams): Pr
 
     const latencyMs = Date.now() - started;
     if (!res.ok) {
+      releaseRecentIngestKey(recentIngestKey);
       const errText = await res.text().catch(() => "");
       error(
-        `feishu[${accountId}]: airflow ingest failed http=${res.status} latency_ms=${latencyMs} dag_id=${dagId} body=${errText.slice(0, 500)}`,
+        `feishu[${accountId}]: airflow ingest failed http=${res.status} latency_ms=${latencyMs} dag_id=${dagId} message_id=${feishuMessageId} idempotency_key=${idempotencyKey} body=${errText.slice(0, 500)}`,
       );
       return;
     }
@@ -205,12 +347,13 @@ export async function maybeTriggerAirflowIngest(params: AirflowIngestParams): Pr
       // 无 JSON 时仍视为已接受
     }
     log(
-      `feishu[${accountId}]: airflow_dag_run_enqueued dag_id=${dagId} dag_run_id=${dagRunId || "(server)"} latency_ms=${latencyMs} ts_code=${tsCode}`,
+      `feishu[${accountId}]: airflow_dag_run_enqueued dag_id=${dagId} dag_run_id=${dagRunId || "(server)"} message_id=${feishuMessageId} idempotency_key=${idempotencyKey} latency_ms=${latencyMs} ts_code=${tsCode}`,
     );
   } catch (e) {
+    releaseRecentIngestKey(recentIngestKey);
     const latencyMs = Date.now() - started;
     error(
-      `feishu[${accountId}]: airflow ingest error latency_ms=${latencyMs} dag_id=${dagId} err=${String(e)}`,
+      `feishu[${accountId}]: airflow ingest error latency_ms=${latencyMs} dag_id=${dagId} message_id=${feishuMessageId} idempotency_key=${idempotencyKey} err=${String(e)}`,
     );
   }
 }

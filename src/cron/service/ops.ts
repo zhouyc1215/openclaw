@@ -1,4 +1,4 @@
-import type { CronJobCreate, CronJobPatch } from "../types.js";
+import type { CronJob, CronJobCreate, CronJobPatch } from "../types.js";
 import type { CronServiceState } from "./state.js";
 import {
   applyJobPatch,
@@ -21,6 +21,19 @@ import {
   stopTimer,
   wake,
 } from "./timer.js";
+
+type PreparedRunResult =
+  | {
+      ok: true;
+      ran: false;
+      reason: "already-running" | "not-due";
+    }
+  | {
+      ok: true;
+      ran: true;
+      job: CronJob;
+      startedAt: number;
+    };
 
 export async function start(state: CronServiceState) {
   await locked(state, async () => {
@@ -183,7 +196,7 @@ export async function remove(state: CronServiceState, id: string) {
 }
 
 export async function run(state: CronServiceState, id: string, mode?: "due" | "force") {
-  const prepared = await locked(state, async () => {
+  const prepared: PreparedRunResult = await locked(state, async () => {
     warnIfDisabled(state, "run");
     await ensureLoaded(state, { skipRecompute: true });
     const job = findJobOrThrow(state, id);

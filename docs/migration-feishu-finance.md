@@ -39,11 +39,12 @@
 
 ### 阶段 1 落地状态（代码已具备）
 
-| 子项                    | 状态                     | 说明                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1.1–1.2 工具实现        | **已完成**               | 插件目录：`extensions/claw-finance/`；**清单** `openclaw.plugin.json` 中 **`id` 为 `claw-finance`**（与 `plugins.entries.claw-finance` 一致，勿与 npm 包名 `@openclaw/claw-finance` 混淆）。入口 `index.ts` 注册 `finance_ask`；实现见 `src/finance-ask-tool.ts`（`fetch` → `POST …/ask`，超时/重试可配）。**沙箱会话不注册**（`sandboxed` 时返回 `null`）。 |
-| 单元测试                | **已通过**               | 在仓库根执行：`pnpm exec vitest run extensions/claw-finance/src/finance-ask-tool.test.ts`                                                                                                                                                                                                                                                                    |
-| 1.3–1.4 联调 / 测试会话 | **待运维在目标环境完成** | 需运行中的 `claw-api` 与已启用插件的 Gateway；见下方「启用与验证」                                                                                                                                                                                                                                                                                           |
+| 子项                    | 状态       | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ----------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.1–1.2 工具实现        | **已完成** | 插件目录：`extensions/claw-finance/`；**清单** `openclaw.plugin.json` 中 **`id` 为 `claw-finance`**（与 `plugins.entries.claw-finance` 一致，勿与 npm 包名 `@openclaw/claw-finance` 混淆）。入口 `index.ts` 注册 `finance_ask`；实现见 `src/finance-ask-tool.ts`（`fetch` → `POST …/ask`，超时/重试可配）。**沙箱会话不注册**（`sandboxed` 时返回 `null`）。                                                                                                                                                                                                                                                                                                                                                              |
+| 1.5–1.6 观测 / 排障文档 | **已完成** | `extensions/claw-finance/src/finance-ask-tool.ts` 已固定结构化日志前缀 `finance_ask`，覆盖 `start / ok / http_retry / timeout_retry / fail`；Runbook 见 `docs/finance-ask-runbook.md`，已补 `FINANCE_ASK_TRACE`、Gateway 日志 grep、`CLAW_API_URL` / `/ask` 冒烟与常见故障对照。                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 单元测试                | **已通过** | 在仓库根执行：`pnpm exec vitest run extensions/claw-finance/src/finance-ask-tool.test.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 1.3–1.4 联调 / 测试会话 | **已完成** | 2026-04-14 已在目标宿主机验证：`plugins.entries.claw-finance.enabled=true`、顶层 `tools.allow` 含 `finance_ask`、`clawApiUrl=http://127.0.0.1:9000`；`curl http://127.0.0.1:9000/health` 返回 `{"status":"ok"}`，披露类与非财报短问的 `/ask` 直连冒烟已通过。**同日已解除测试会话 `codex-cli tools: []` 阻塞**：将当前飞书测试 DM 通过 `bindings` 精确路由到 `finance-tools` agent，模型切至 `minimax/MiniMax-M2.7`；本地 embedded 验证已看到 `finance_ask start`、`finance_ask ok`。随后在目标环境补齐了「年报 + 年份」长路径证据：`claw-api` 日志记录 `question_preview='紫金矿业2025年报'`、`stage=crawl_fallback_ok`、`source='cninfo_crawl_fallback'`，对应飞书样本已返回 `紫金矿业（601899）2025年年度报告已找到`。 |
 
 ### 启用与验证（Gateway + 测试会话）
 
@@ -89,7 +90,7 @@ curl -sS --max-time 600 -X POST "${CLAW_API_URL:-http://127.0.0.1:9000}/ask" \
 
 在 **飞书/WebChat 测试会话** 中则让模型调用 **`finance_ask`**，检查返回 JSON 是否含 `retrieval_breakdown.crawl_fallback`（若该次请求触发了巨潮回退）。
 
-5. **排障**：`claw-api` 侧可开 `FINANCE_ASK_TRACE=1`；Gateway 侧工具日志前缀为 **`finance_ask`**（见 `finance-ask-tool.ts`）。
+5. **排障**：`claw-api` 侧可开 `FINANCE_ASK_TRACE=1`；Gateway 侧工具日志前缀为 **`finance_ask`**（见 `finance-ask-tool.ts`）。完整值班入口见 [finance-ask-runbook.md](/home/tsl/openclaw/docs/finance-ask-runbook.md)。
 
 ---
 
@@ -253,12 +254,18 @@ docker compose --profile standalone-feishu-bot up -d feishu-bot
 - **性能**：开启阶段 4 后，飞书进线 **首包可感知延迟** 相对关闭时增幅 **不超过** SRE 与产品联合签字阈值（建议单独记录 P95/P99）。
 - **安全与合规**：`conf` 中无密钥；审计字段 `trigger_source` 齐全。
 
+**当前灰度性能留样（2026-04-14）**：基于 Gateway 结构化日志中 `airflow_dag_run_enqueued` 的 **7** 条样本，`latency_ms` 实测 **min=199ms / avg=235.57ms / p50=232ms / p95=261ms / max=261ms**，明显低于当前 `channels.feishu.airflowIngest.timeoutMs=8000` 的配置上限。该结果可作为后续 **SRE / 产品签字** 的性能底稿，但尚未替代正式签字。
+
 ### OpenClaw 侧实现与配置（本仓库）
 
-| 子项             | 状态       | 说明                                                                                                                                                                                                                                                                                                                  |
-| ---------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 4.4 Gateway 集成 | **已完成** | `extensions/feishu/src/airflow-ingest.ts`：`maybeTriggerAirflowIngest`；`extensions/feishu/src/bot.ts` 在 **`dispatchReplyFromConfig` 之前** `await` 调用（失败仅 `error` 日志，**不**阻断进线）。Schema：`extensions/feishu/src/config-schema.ts` 中 **`channels.feishu.airflowIngest`**（账号合并配置与顶层一致）。 |
-| 单元测试         | **已通过** | 仓库根：`pnpm exec vitest run extensions/feishu/src/airflow-ingest.test.ts`                                                                                                                                                                                                                                           |
+| 子项               | 状态         | 说明                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 4.3 意图与实体解析 | **部分完成** | `extensions/feishu/src/airflow-ingest.ts` 已具备 `filingKeywords`、6 位代码解析、`stockAliases`、外置 A 股别名字典 `$include` 与 `preview` 诊断日志；`claw-finance-agent` 已补 `scripts/refresh_openclaw_a_share_aliases.py`、`scripts/refresh_openclaw_a_share_aliases_and_reload.sh`、自动刷新 timer。剩余缺口是把**产品确认测试集（建议 ≥10 条）**与命中率/误触发率书面结论补齐。 |
+| 4.4 Gateway 集成   | **已完成**   | `extensions/feishu/src/airflow-ingest.ts`：`maybeTriggerAirflowIngest`；`extensions/feishu/src/bot.ts` 在 **`dispatchReplyFromConfig` 之前** `await` 调用（失败仅 `error` 日志，**不**阻断进线）。Schema：`extensions/feishu/src/config-schema.ts` 中 **`channels.feishu.airflowIngest`**（账号合并配置与顶层一致）。                                                                |
+| 4.5 可观测与告警   | **部分完成** | 结构化日志已覆盖 `airflow_dag_run_enqueued`、`duplicate`、`no ts_code`、失败与异常，成功日志可串 `message_id -> dag_run_id -> idempotency_key`；`claw-finance-agent` 已补 `scripts/trace_feishu_airflow_message.sh`、`scripts/verify_openclaw_a_share_aliases_timer.sh`。剩余缺口是把**告警接线 / 值班告警出口**写成正式 Runbook 并纳入日常值班。                                    |
+| 4.6 滥用治理       | **已完成**   | `extensions/feishu/src/airflow-ingest.ts` 已补 `allowFrom` 白名单、单 sender 窗口限流、单账号全局窗口限流，以及基于 `feishu_message_id + dag_id + ts_code + fiscal_year` 的短期去重；`extensions/feishu/src/config-schema.ts` 已声明对应配置项；超过阈值或命中重复仅记 `skipped` 日志，不阻断主回复链路。                                                                            |
+| 4.7 文档与交付     | **部分完成** | 本文档已补配置、`EnvironmentFile`、追踪命令、别名字典维护、一键刷新/按变更重载、自动刷新 timer 与巡检入口。剩余缺口是把**阶段 4 验证记录表、里程碑日期与 DoD 结论**补齐，并补完值班告警收口。                                                                                                                                                                                        |
+| 单元测试           | **已通过**   | 仓库根：`pnpm exec vitest run extensions/feishu/src/airflow-ingest.test.ts`                                                                                                                                                                                                                                                                                                          |
 
 **`channels.feishu.airflowIngest` 配置示例（JSON5）**
 
@@ -273,18 +280,83 @@ docker compose --profile standalone-feishu-bot up -d feishu-bot
         timeoutMs: 8000,
         // 可选：覆盖默认触发词列表
         // filingKeywords: ["年报", "财报", "年度报告"],
-        // 可选：简称 → ts_code（推荐配置，减少误解析）
+        // 可选：sender_open_id 白名单；配置后仅允许命中的发送者触发
+        // allowFrom: ["ou_xxx", "ou_yyy"],
+        // 可选：简称 → ts_code（推荐用外置 include 文件维护，减少误解析）
         stockAliases: {
-          浪潮信息: "000977.SZ",
+          $include: "./feishu-airflow-stock-aliases.a-share.json",
         },
         // 可选：写入 conf.report_type，由 DAG 解释
         // reportType: "annual",
+        // 可选：窗口限流，默认 60s / 每 sender 5 次 / 每账号 30 次
+        // rateLimitWindowMs: 60000,
+        // rateLimitMaxPerSender: 5,
+        // rateLimitMaxGlobal: 30,
+        // 可选：同一消息短期去重窗口，默认 10 分钟
+        // dedupeTtlMs: 600000,
         // 可选：Basic 用户名（密码必须用环境变量，勿写进文件）
         // username: "openclaw_feishu",
       },
     },
   },
 }
+```
+
+**A 股简称字典维护（推荐）**
+
+建议不要在 `openclaw.json` 里手工维护几千条简称。当前可直接复用 `claw-finance-agent` 的 `data/company_list/a_share_list.json` 生成外置字典：
+
+```bash
+cd /home/tsl/claw-finance-agent
+./.venv/bin/python scripts/refresh_openclaw_a_share_aliases.py
+systemctl --user restart openclaw-gateway
+```
+
+若希望按运维口径一键完成“生成 -> 比较 -> 仅变更时覆盖并重启 Gateway”，推荐直接使用：
+
+```bash
+cd /home/tsl/claw-finance-agent
+bash scripts/refresh_openclaw_a_share_aliases_and_reload.sh
+```
+
+默认输出文件为 `~/.openclaw/feishu-airflow-stock-aliases.a-share.json`，`openclaw.json` 通过 `$include` 引用即可。若需要先刷新全量 A 股清单，再执行：
+
+```bash
+cd /home/tsl/claw-finance-agent
+./.venv/bin/python scripts/refresh_openclaw_a_share_aliases.py --refresh-source
+systemctl --user restart openclaw-gateway
+```
+
+对应的一键入口也支持 `--refresh-source`：
+
+```bash
+cd /home/tsl/claw-finance-agent
+bash scripts/refresh_openclaw_a_share_aliases_and_reload.sh --refresh-source
+```
+
+若希望自动刷新，当前仓库已提供 user systemd timer 安装脚本：
+
+```bash
+cd /home/tsl/claw-finance-agent
+bash scripts/install_openclaw_a_share_aliases_timer.sh
+```
+
+默认会安装并启用：
+
+- `openclaw-a-share-aliases-refresh.service`
+- `openclaw-a-share-aliases-refresh.timer`
+
+默认调度为每天 `06:30`，带 `15m` 随机延迟，任务内容为：
+
+- 使用 `--refresh-source` 拉取最新 A 股清单
+- 重新生成 `~/.openclaw/feishu-airflow-stock-aliases.a-share.json`
+- 仅在字典变化时重启 `openclaw-gateway`
+
+安装后可用以下入口做巡检：
+
+```bash
+cd /home/tsl/claw-finance-agent
+bash scripts/verify_openclaw_a_share_aliases_timer.sh
 ```
 
 **环境变量（必填方可真正发起请求）**
@@ -321,7 +393,7 @@ systemctl --user restart openclaw-gateway
 
 **`dag_run.conf` 实际字段（与 DAG 契约对齐）**：`idempotency_key`、`trigger_source`（固定 **`openclaw_gateway_feishu`**）、`ts_code`、`feishu_message_id`、`sender_open_id`、可选 `fiscal_year`、`report_type`（来自配置）、`raw_question_preview`（截断正文）。
 
-**触发规则（当前实现）**：正文包含 **`filingKeywords` 之一**（未配置则用内置：年报、财报、巨潮、披露等），且能解析 **`ts_code`**（优先 **`stockAliases`** 简称命中，否则 **6 位代码**可选 `.SH/.SZ`；无后缀时 `6` 开头默认 `.SH`，否则 `.SZ`）时发起 `POST …/dagRuns`。**未实现** 4.6 全量限流 / 白名单（可后续在 `airflow-ingest.ts` 或反代层补）。
+**触发规则（当前实现）**：正文包含 **`filingKeywords` 之一**（未配置则用内置：年报、财报、巨潮、披露等），且能解析 **`ts_code`**（优先 **`stockAliases`** 简称命中，否则 **6 位代码**可选 `.SH/.SZ`；无后缀时 `6` 开头默认 `.SH`，否则 `.SZ`）时进入触发判定。若配置了 **`allowFrom`**，则仅白名单 `sender_open_id` 可继续；随后应用短期去重（默认 **10 分钟**，同一消息重复投递只提交一次）与窗口限流（默认 **60s / 每 sender 5 次 / 每账号 30 次**），命中重复或超限仅记 `skipped` 日志，不阻断主回复链路。成功、失败与关键跳过日志均携带 `message_id`、`dag_run_id` / `idempotency_key` 或正文预览，便于串联排障。
 
 ### 设计细节：时序与超时原则
 
@@ -386,7 +458,37 @@ curl -sS --max-time 8 -X POST "${AIRFLOW_URL}/api/v1/dags/${DAG_ID}/dagRuns" \
 - **滥用**：每条消息都触发 DAG → 成本与 Airflow 队列堆积；需 **频率限制、白名单、置信度阈值**。
 - **幂等**：同一 `message_id` 重试飞书事件时，DAG 内须 **可安全重跑或快速 no-op**。
 - **安全**：`conf` 勿带密钥；Airflow 账号权限 **最小化**（仅能触发指定 `dag_id` 若平台支持 RBAC）。
-- **可观测**：Gateway 打结构化日志 `airflow_dag_run_enqueued dag_id=… dag_run_id=… latency_ms=…`；Airflow 侧用标准任务日志关联 `idempotency_key`。
+- **可观测**：Gateway 打结构化日志 `airflow_dag_run_enqueued dag_id=… dag_run_id=… message_id=… idempotency_key=… latency_ms=…`；Airflow 侧用标准任务日志关联 `idempotency_key`。
+
+### 值班排障命令（灰度 / 生产共用）
+
+已知 `message_id` 时，先看 Gateway 是否真正 enqueue，是否命中去重或失败：
+
+```bash
+journalctl --user -u openclaw-gateway --since "15 minutes ago" --no-pager \
+  | grep 'om_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+```
+
+期望至少出现以下之一：
+
+- `airflow_dag_run_enqueued ... message_id=... dag_run_id=...`
+- `airflow ingest skipped (duplicate message_id=...)`
+- `airflow ingest skipped (no ts_code from text message_id=... preview=...)`
+- `airflow ingest failed ... message_id=...`
+
+再到 Airflow 查最近运行：
+
+```bash
+cd /home/tsl/claw-finance-agent
+docker compose exec -T airflow-scheduler airflow dags list-runs -d ingest_cninfo_pdf --no-backfill | tail -n 20
+```
+
+若需要把消息与 DAG 落盘副作用对上，可继续查落盘目录：
+
+```bash
+cd /home/tsl/claw-finance-agent
+find phase4_airflow/logs/phase4_data/openclaw_ingest -type f | tail -n 20
+```
 
 ### 流程示意（Mermaid）
 
@@ -418,64 +520,104 @@ sequenceDiagram
 
 ### 前置条件（启动联调前勾选）
 
-- [ ] Gateway 与 `claw-api` 已部署，且在 **运行 Gateway 的宿主机（或与 Gateway 同网络视角的跳板机）** 上 `curl` 可达 **`CLAW_API_URL` / `clawApiUrl`**（见上文「与 claw-finance-agent Compose 共存」；不要求 Gateway 在容器内）。
-- [ ] `plugins.entries.claw-finance.enabled: true`，`plugins.allow`（若有）含 `claw-finance` 与 `feishu`。
-- [ ] 承接飞书测试会话的 agent 已配置 `finance_ask`（`tools.allow` 或 `tools.alsoAllow` 等，与 profile 策略一致）。
-- [ ] 已选定**测试飞书会话**或 WebChat，且测试账号已知。
+- [x] Gateway 与 `claw-api` 已部署，且在 **运行 Gateway 的宿主机（或与 Gateway 同网络视角的跳板机）** 上 `curl` 可达 **`CLAW_API_URL` / `clawApiUrl`**（2026-04-14 宿主机实测：`http://127.0.0.1:9000/health -> {"status":"ok"}`）。
+- [x] `plugins.entries.claw-finance.enabled: true`，`plugins.allow`（若有）含 `claw-finance` 与 `feishu`（2026-04-14 实测：`claw-finance.enabled=true`，顶层 `tools.allow` 含 `finance_ask`）。
+- [x] 承接飞书测试会话的 agent 已配置 `finance_ask`（`tools.allow` 或 `tools.alsoAllow` 等，与 profile 策略一致）。2026-04-14 已为当前飞书测试 DM 增加 `bindings`：`feishu/direct/ou_b3afb7d2133e4d689be523fc48f3d2b3 -> finance-tools`，路由解析结果为 `agent:finance-tools:feishu:direct:ou_b3afb7d2133e4d689be523fc48f3d2b3`。
+- [x] 已选定**测试飞书会话**或 WebChat，且测试账号已知（当前灰度测试会话已在 2026-04-14 多轮联调中使用）。
 
 ### 阶段 1 DoD 联调记录（须填）
 
-| #   | 用例（附录问句或等价） | 执行时间（UTC+8） | 执行人 | 通过？ | 证据（日志/截图/请求 id） | 爬取回退可观测说明                                                 |
-| --- | ---------------------- | ----------------- | ------ | ------ | ------------------------- | ------------------------------------------------------------------ |
-| 1   | 披露类                 |                   |        | ☐      |                           |                                                                    |
-| 2   | 年报+年份（长路径）    |                   |        | ☐      |                           | 须注明 `retrieval_breakdown` / `crawl_fallback` 或等价字段是否出现 |
-| 3   | 非财报短问             |                   |        | ☐      |                           | 须注明未出现不必要长耗时（与产品预期一致）                         |
+| #   | 用例（附录问句或等价）                         | 执行时间（UTC+8）    | 执行人 | 通过？ | 证据（日志/截图/请求 id）                                                                                                                                                                                                                                                                     | 爬取回退可观测说明                                                                                                  |
+| --- | ---------------------------------------------- | -------------------- | ------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 1   | 披露类：平安银行 2025 年报披露时间是什么时候？ | 2026-04-14 12:42 CST | tsl    | ☑      | 宿主机直连 `/ask` 返回 `disclosure_primary=true`、`disclosure_source=network`、`code_resolution.code=000001`，`response_time=2.305203`                                                                                                                                                        | 本用例为披露主路径，未要求爬取回退                                                                                  |
+| 2   | 年报+年份（长路径）：紫金矿业 2025 年报        | 2026-04-14 13:06 CST | tsl    | ☑      | 飞书样本：`message_id=om_x100b52e8fa0fb88cb4a36a1e62e454f`，Gateway 路由到 `session=agent:finance-tools:feishu:direct:ou_b3afb7d2133e4d689be523fc48f3d2b3`；Airflow `dag_run_id=manual__2026-04-14T05:06:22.438660+00:00` 最终 `success`；飞书回复为 `紫金矿业（601899）2025年年度报告已找到` | `claw-api` 日志已记录 `stage=crawl_fallback_ok`，`source='cninfo_crawl_fallback'`，并落到 `1225023658.PDF` 对应年报 |
+| 3   | 非财报短问：今天天气怎么样？                   | 2026-04-14 12:41 CST | tsl    | ☑      | 宿主机直连 `/ask` 返回 `used_llm=false`、`retrieval_breakdown.total_time=0.30047`、`code_resolution.source=none`                                                                                                                                                                              | 已验证未走财报特定长路径，未出现不必要长耗时                                                                        |
 
-**阶段 1 DoD 判定**：上表三行均为「通过」且第 2 行满足爬取回退可观测要求 → 在下方「里程碑」填写 **阶段 1 完成日期**。
+**阶段 1 DoD 判定**：当前已完成 **1.3 运行与环境** 验证，并补齐了披露类、非财报短问、以及「年报 + 年份」长路径三类目标环境记录；2026-04-14 已解除目标测试会话原先的 `codex-cli` **`tools: []`** 阻塞，且已获得 `claw-api` 侧 `stage=crawl_fallback_ok` 的长路径回退证据。因此阶段 1 当前判定为 **技术闭环完成**；若要在里程碑表正式收口，仅需补录阶段 1 完成日期与关联工单/Release。
 
-### 阶段 2 灰度执行（须填）
+### 阶段 2 灰度执行（执行底稿，待生产环境回填）
 
-| 步骤 | 内容                                                                                           | 计划日期 | 实际日期 | 执行人 | 备注                |
-| ---- | ---------------------------------------------------------------------------------------------- | -------- | -------- | ------ | ------------------- |
-| 2.1  | 拓扑真相表：飞书 App ID、事件订阅 URL、当前接收方（旧 Bot / Gateway）                          |          |          |        | 附件路径：          |
-| 2.2  | 测试租户：仅白名单 `open_id` / 测试群 指向 Gateway Feishu                                      |          |          |        |                     |
-| 2.3  | 并行期启动（建议 ≥7 天）：双写或按流量比例，见运维手册                                         |          |          |        |                     |
-| 2.4  | 回滚演练：恢复事件订阅至旧入口 + `--profile standalone-feishu-bot` 拉起 `feishu-bot`（若适用） |          |          |        | 耗时：\_\_\_\_ 分钟 |
-| 2.5  | 生产全量切 Gateway（或书面保留极小应急旁路）                                                   |          |          |        |                     |
-| 2.6  | Go/No-Go 会议（见下表签字）                                                                    |          |          |        |                     |
+| 步骤 | 内容                                                                                           | 计划日期 | 实际日期   | 执行人 | 备注                                                                                                |
+| ---- | ---------------------------------------------------------------------------------------------- | -------- | ---------- | ------ | --------------------------------------------------------------------------------------------------- |
+| 2.1  | 拓扑真相表：飞书 App ID、事件订阅 URL、当前接收方（旧 Bot / Gateway）                          | 待排期   | 2026-04-14 | tsl    | 已形成单一真相表：`docs/phase2-topology-truth-table-2026-04-14.md`；敏感键值不入 Git                |
+| 2.2  | 测试租户：仅白名单 `open_id` / 测试群 指向 Gateway Feishu                                      | 待排期   | 2026-04-14 | tsl    | 已切到白名单灰度：私聊仅测试 `open_id` 可进 Gateway，群消息关闭，`airflowIngest.allowFrom` 同步收口 |
+| 2.3  | 并行期启动（建议 ≥7 天）：双写或按流量比例，见运维手册                                         | 待排期   | 2026-04-14 | tsl    | Day 0 基线已建档：`docs/phase2-gray-observation-2026-04-14.md`；后续每日回填日报                    |
+| 2.4  | 回滚演练：恢复事件订阅至旧入口 + `--profile standalone-feishu-bot` 拉起 `feishu-bot`（若适用） | 待排期   |            |        | 需实测回切耗时并填入结果                                                                            |
+| 2.5  | 生产全量切 Gateway（或书面保留极小应急旁路）                                                   | 待排期   |            |        | 仅在 2.3、2.4 完成且 Go/No-Go 通过后执行                                                            |
+| 2.6  | Go/No-Go 会议（见下表签字）                                                                    | 待排期   |            |        | 前置：灰度日报、回滚演练、监控结论齐备                                                              |
+
+**阶段 2 当前状态（2026-04-14）**：本阶段已进入**白名单生产灰度测试**；`2.1` 拓扑真相表已补齐，`2.2` 已切到“仅测试租户私聊可进 Gateway、群消息关闭、Airflow ingest 同步白名单”的收口配置。阶段 1 的技术前置已完成并已归档电子签字，见 `docs/phase1-finance-ask-signoff-2026-04-14.md`。下一步进入 `2.3` 并行观察期与日报留样。
 
 ### 阶段 2 Go/No-Go 签字（须填）
 
-| 角色                  | 姓名 | 签字/确认（可电子） | 日期 | 结论（Go / No-Go / 附条件 Go） |
-| --------------------- | ---- | ------------------- | ---- | ------------------------------ |
-| 产品 / 业务负责人     |      |                     |      |                                |
-| 研发负责人            |      |                     |      |                                |
-| 运维 / SRE            |      |                     |      |                                |
-| 安全 / 合规（若需要） |      |                     |      |                                |
+| 角色                  | 姓名   | 签字/确认（可电子）                                            | 日期 | 结论（Go / No-Go / 附条件 Go） |
+| --------------------- | ------ | -------------------------------------------------------------- | ---- | ------------------------------ |
+| 产品 / 业务负责人     | 待补录 | 待阶段 2 灰度结论后补电子确认                                  |      |                                |
+| 研发负责人            | 待补录 | 前置技术结论见 `docs/phase1-finance-ask-signoff-2026-04-14.md` |      |                                |
+| 运维 / SRE            | 待补录 | 待阶段 2 灰度结论后补电子确认                                  |      |                                |
+| 安全 / 合规（若需要） |        |                                                                |      |                                |
 
 **准入指标参考**（会议前填实测值）：`/ask` 5xx 率、P95 延迟、飞书限频错误、与灰度前一周对比结论。
 
 ### 里程碑（完成后填写）
 
-| 里程碑                                      | 完成日期 | 关联工单/Release |
-| ------------------------------------------- | -------- | ---------------- |
-| 阶段 1 DoD（目标环境）                      |          |                  |
-| 阶段 2 灰度开始                             |          |                  |
-| 阶段 2 生产全量 / 书面旁路                  |          |                  |
-| 阶段 3 完成（`feishu_bot` 重复逻辑收敛）    |          |                  |
-| 阶段 4 DoD（若启用：Airflow REST 异步入湖） |          |                  |
+| 里程碑                                      | 完成日期   | 关联工单/Release                                                 |
+| ------------------------------------------- | ---------- | ---------------------------------------------------------------- |
+| 阶段 1 DoD（目标环境）                      | 2026-04-14 | 电子签字确认：`docs/phase1-finance-ask-signoff-2026-04-14.md`    |
+| 阶段 2 灰度开始                             |            |                                                                  |
+| 阶段 2 生产全量 / 书面旁路                  |            |                                                                  |
+| 阶段 3 完成（`feishu_bot` 重复逻辑收敛）    |            |                                                                  |
+| 阶段 4 DoD（若启用：Airflow REST 异步入湖） | 2026-04-14 | 电子签字确认：`docs/phase4-feishu-airflow-signoff-2026-04-14.md` |
+
+**当前状态说明（2026-04-14）**：阶段 1 已完成目标环境技术闭环，并已获得 **产品 / 业务负责人** 与 **运维 / SRE** 的书面同意；电子签字归档见 `docs/phase1-finance-ask-signoff-2026-04-14.md`。阶段 2 已进入白名单生产灰度测试，当前仅放行测试 `open_id` 私聊进 Gateway，群消息关闭，`airflowIngest` 同步应用相同白名单；并行观察与回滚演练仍待执行。阶段 4 已获得 **产品 / 业务负责人** 与 **运维 / SRE** 的书面同意，技术侧灰度证据已完成归档，现已补录里程碑完成日期。签字正文与待补姓名字段见 `docs/phase4-feishu-airflow-signoff-2026-04-14.md`。
 
 ### 阶段 4 验证记录（须填，仅当启用本阶段）
 
-| #   | 场景（飞书原文摘要 / 用例 id） | 应否触发 DAG | 执行时间 | 执行人 | Gateway 2xx / 跳过日志 | Airflow `dag_run_id` / 状态 |
-| --- | ------------------------------ | ------------ | -------- | ------ | ---------------------- | --------------------------- |
-| 1   |                                | ☐ 应 ☐ 否    |          |        |                        |                             |
-| 2   |                                | ☐ 应 ☐ 否    |          |        |                        |                             |
-| 3   |                                | ☐ 应 ☐ 否    |          |        |                        |                             |
-| 4   |                                | ☐ 应 ☐ 否    |          |        |                        |                             |
-| 5   |                                | ☐ 应 ☐ 否    |          |        |                        |                             |
+| #   | 场景（飞书原文摘要 / 用例 id）         | 应否触发 DAG | 执行时间             | 执行人 | Gateway 2xx / 跳过日志                                                                                                          | Airflow `dag_run_id` / 状态                            |
+| --- | -------------------------------------- | ------------ | -------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| 1   | 浪潮信息 2025 财报（去重修复后正例）   | ☑ 应 ☐ 否    | 2026-04-14 10:13 CST | tsl    | `airflow_dag_run_enqueued`，`message_id=om_x100b52ee652dccb8b34a367d3da146f`，`ts_code=000977.SZ`                               | `manual__2026-04-14T02:13:20.102802+00:00` / `success` |
+| 2   | 工业富联 2025 财报（补简称映射后正例） | ☑ 应 ☐ 否    | 2026-04-14 10:28 CST | tsl    | `airflow_dag_run_enqueued`，`message_id=om_x100b52ee2d33f484b2de5ed9a023784`，`ts_code=601138.SH`                               | `manual__2026-04-14T02:28:17.978454+00:00` / `success` |
+| 3   | 外置 A 股别名字典命中样本 A            | ☑ 应 ☐ 否    | 2026-04-14 10:44 CST | tsl    | `airflow_dag_run_enqueued`，`message_id=om_x100b52eeeffda08cb3411b5b8526ace`，`ts_code=603019.SH`                               | `manual__2026-04-14T02:44:36.708427+00:00` / `success` |
+| 4   | 外置 A 股别名字典命中样本 B            | ☑ 应 ☐ 否    | 2026-04-14 10:51 CST | tsl    | `airflow_dag_run_enqueued`，`message_id=om_x100b52eef2da0c8cb2dea197fc669b6`，`ts_code=603690.SH`                               | `manual__2026-04-14T02:51:46.590975+00:00` / `success` |
+| 5   | 外置 A 股别名字典命中样本 C            | ☑ 应 ☐ 否    | 2026-04-14 11:09 CST | tsl    | `airflow_dag_run_enqueued`，`message_id=om_x100b52eeb3ba747cb394d45bb98f723`，`ts_code=002261.SZ`                               | `manual__2026-04-14T03:09:13.954231+00:00` / `success` |
+| 6   | 负例：仅说“把这两份官方公告先拉给我”   | ☐ 应 ☑ 否    | 2026-04-14 10:47 CST | tsl    | `airflow ingest skipped (no ts_code from text message_id=om_x100b52eee40148a4b28079efeec8ba2 preview=把这两份官方公告先拉给我)` | 无 `dag_run_id`；符合预期未触发                        |
 
-**阶段 4 DoD 判定**：上表含至少 **5 条**「应触发」用例均满足 **DoD**（见阶段 4 节）；负例未造成队列异常；性能阈值已由 SRE/产品书面确认 → 在「里程碑」表填写 **阶段 4** 完成日期。
+**阶段 4 DoD 判定**：当前已补齐 **5 条应触发正例 + 1 条负例** 的灰度实测记录，正例对应 `dag_run` 均为 `success`，负例未造成队列异常；并已补充一轮 enqueue 延迟留样（`p95=261ms`）。基于已收到的 **SRE / 产品书面确认**，阶段 4 当前可判定为 **已完成**；电子签字归档见 `docs/phase4-feishu-airflow-signoff-2026-04-14.md`。
+
+### 阶段 4 待签字确认模板（可直接转发）
+
+**建议发送对象**
+
+- SRE / 运维负责人
+- 产品 / 业务负责人
+
+**建议确认文本**
+
+```text
+阶段 4（飞书进线同步触发 Airflow REST、异步入湖）技术验证已完成，现申请书面确认。
+
+当前已完成的技术证据如下：
+1. 灰度实测已留存 5 条“应触发”正例和 1 条“不应触发”负例。
+2. 5 条正例对应 Airflow dag_run 全部 success，无重复副作用。
+3. 负例均在 Gateway 侧按预期 skipped，未误触发队列。
+4. Gateway 结构化日志已可按 message_id 串联 dag_run_id / idempotency_key。
+5. 当前 enqueue 延迟留样 7 条，latency_ms: min=199 / avg=235.57 / p50=232 / p95=261 / max=261，低于当前 timeoutMs=8000 配置上限。
+6. Gateway 侧已具备白名单、窗口限流、短期去重；A 股简称已改为外置字典维护，并已配置自动刷新与巡检入口。
+
+请确认以下两项：
+- 是否接受当前阶段 4 灰度结果，作为“技术完成”的依据
+- 是否同意在迁移文档中补录阶段 4 里程碑完成日期
+
+如同意，请回复：
+结论：同意阶段 4 技术完成，允许补录里程碑日期。
+
+如不同意或附条件同意，请直接列出附加条件。
+```
+
+**建议回填位置**
+
+- 「阶段 2 Go/No-Go 签字（须填）」表
+- 「里程碑」表中的 `阶段 4 DoD（若启用：Airflow REST 异步入湖）`
 
 ---
 
@@ -582,5 +724,7 @@ grep -E 'feishu\\[' /tmp/openclaw/openclaw-*.log | tail -100
 | 2026-04-13 | `openclaw`           | **升格为阶段 4（可选）**：任务清单 4.1–4.7、DoD、里程碑与验证记录表；横切项改为「一至四阶段」                                                                             |
 | 2026-04-13 | `openclaw`           | **阶段 4 代码落地**：`airflow-ingest.ts` + `bot.ts` 挂钩；`config-schema` 增加 `airflowIngest`；环境变量 `OPENCLAW_FEISHU_AIRFLOW_*`；单测 `airflow-ingest.test.ts`       |
 | 2026-04-13 | `openclaw`           | 迁移文档：补充 **systemd user** `EnvironmentFile` 加载 `~/.openclaw/feishu-airflow.env` 的步骤                                                                            |
+| 2026-04-14 | `openclaw`           | 阶段 1：补齐目标环境联调记录、里程碑与电子签字归档；阶段 2：将灰度执行表整理为执行底稿，明确尚未开始生产灰度                                                              |
+| 2026-04-14 | `openclaw`           | 阶段 2：飞书进线切为白名单生产灰度，私聊仅测试 `open_id` 可进 Gateway，群消息关闭，`airflowIngest` 同步白名单                                                             |
 
 后续若迁移完成，可在本节追加 **全量切换完成日期** 与 **退役 compose / commit**；并在该节「里程碑」表中填写实际日期。

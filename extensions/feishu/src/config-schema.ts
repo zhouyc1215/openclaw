@@ -90,10 +90,20 @@ const FeishuAirflowIngestConfigSchema = z
      * 正文须包含其中**至少一个**，且能解析出证券代码后才会触发。
      */
     filingKeywords: z.array(z.string()).optional(),
+    /** 允许触发 ingest 的 sender_open_id 白名单，支持 "*" */
+    allowFrom: z.array(z.union([z.string(), z.number()])).optional(),
     /** 证券简称 → ts_code（如 浪潮信息 → 000977.SZ） */
     stockAliases: z.record(z.string(), z.string()).optional(),
     /** 写入 dag_run.conf.report_type，由 DAG 自行解释 */
     reportType: z.string().optional(),
+    /** 限流窗口（毫秒），默认 60000 */
+    rateLimitWindowMs: z.number().int().positive().max(86_400_000).optional(),
+    /** 单 sender 在窗口内最多触发次数，默认 5 */
+    rateLimitMaxPerSender: z.number().int().positive().max(1_000).optional(),
+    /** 单账号在窗口内全局最多触发次数，默认 30 */
+    rateLimitMaxGlobal: z.number().int().positive().max(10_000).optional(),
+    /** 同一消息短期去重窗口（毫秒），默认 600000 */
+    dedupeTtlMs: z.number().int().positive().max(86_400_000).optional(),
     /**
      * Basic 用户名（可选）；优先使用环境变量 OPENCLAW_FEISHU_AIRFLOW_USERNAME。
      * 密码仅支持 OPENCLAW_FEISHU_AIRFLOW_PASSWORD，不在此 schema 中声明。
