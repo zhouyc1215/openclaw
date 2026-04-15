@@ -18732,3 +18732,225 @@ VPN 状态：已连接
 [plugins] feishu_bitable: Registered 6 bitable tools
 [info]: [ 'client ready' ]
 ✅ Sent via Feishu. Message ID: om_x100b52d7e6b294a8b21511ca087477e (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-15 05:00:34] ❌ VPN 未连接
+[2026-04-15 05:00:34] 启动 FortiClient GUI...
+[2026-04-15 05:00:37] ✅ FortiClient GUI 已启动
+[2026-04-15 05:00:37] 尝试触发 VPN 连接...
+[2026-04-15 05:00:37] 触发 VPN 连接...
+[2026-04-15 05:00:37] 使用 GUI 自动化点击连接按钮...
+[2026-04-15 05:00:37] ========================================
+[2026-04-15 05:00:37] 开始 VPN 自动连接
+[2026-04-15 05:00:37] ========================================
+[2026-04-15 05:00:37] 设置 DISPLAY=:1
+[2026-04-15 05:00:37] FortiClient 已在运行
+[2026-04-15 05:00:40] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-04-15 05:00:40] 尝试 1/5...
+[2026-04-15 05:00:40] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-04-15 05:00:40] 点击坐标: (60, 17)
+[2026-04-15 05:00:40] ✅ 成功点击连接按钮
+[2026-04-15 05:00:40] ✅ VPN 连接已触发（SAML 登录）
+[2026-04-15 05:00:40] 请在手机上完成 MFA 认证
+[2026-04-15 05:00:40] ✅ GUI 自动化成功
+[2026-04-15 05:00:40] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-15 05:00:40
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-15 05:00:40
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52dee138b0a0b3fcc6c9e874c58 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-15 05:06:00] ✅ VPN 已连接
+[2026-04-15 05:06:00] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-04-15 05:06:00
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-04-15 05:06:00
+
+可以正常访问外网了。'
+
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52de8d2c10a0b3686b1646ddf35 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-15 13:05:52] ❌ VPN 未连接
+[2026-04-15 13:05:52] 启动 FortiClient GUI...
+[2026-04-15 13:05:55] ✅ FortiClient GUI 已启动
+[2026-04-15 13:05:55] 尝试触发 VPN 连接...
+[2026-04-15 13:05:55] 触发 VPN 连接...
+[2026-04-15 13:05:55] 使用 GUI 自动化点击连接按钮...
+[2026-04-15 13:05:55] ========================================
+[2026-04-15 13:05:55] 开始 VPN 自动连接
+[2026-04-15 13:05:55] ========================================
+[2026-04-15 13:05:55] 设置 DISPLAY=:1
+[2026-04-15 13:05:55] FortiClient 已在运行
+[2026-04-15 13:05:58] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-04-15 13:05:58] 尝试 1/5...
+[2026-04-15 13:05:58] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-04-15 13:05:58] 点击坐标: (60, 17)
+[2026-04-15 13:05:58] ✅ 成功点击连接按钮
+[2026-04-15 13:05:58] ✅ VPN 连接已触发（SAML 登录）
+[2026-04-15 13:05:58] 请在手机上完成 MFA 认证
+[2026-04-15 13:05:58] ✅ GUI 自动化成功
+[2026-04-15 13:05:58] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-15 13:05:58
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-15 13:05:58
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52c585010930b2d7c2acac7c0fb (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-15 13:09:11] ✅ VPN 已连接
+[2026-04-15 13:09:11] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-04-15 13:09:11
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-04-15 13:09:11
+
+可以正常访问外网了。'
+
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52c5991664b4b105c3c6a3da5fd (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-15 21:09:00] ❌ VPN 未连接
+[2026-04-15 21:09:00] 启动 FortiClient GUI...
+[2026-04-15 21:09:03] ✅ FortiClient GUI 已启动
+[2026-04-15 21:09:03] 尝试触发 VPN 连接...
+[2026-04-15 21:09:03] 触发 VPN 连接...
+[2026-04-15 21:09:03] 使用 GUI 自动化点击连接按钮...
+[2026-04-15 21:09:03] ========================================
+[2026-04-15 21:09:03] 开始 VPN 自动连接
+[2026-04-15 21:09:03] ========================================
+[2026-04-15 21:09:03] 设置 DISPLAY=:1
+[2026-04-15 21:09:03] FortiClient 已在运行
+[2026-04-15 21:09:06] 截图已保存: /home/tsl/openclaw/vpn-auto/debug_screen.png
+[2026-04-15 21:09:06] 尝试 1/5...
+[2026-04-15 21:09:06] 找到图像 saml_button_small.png 在位置: (60, 17)
+[2026-04-15 21:09:06] 点击坐标: (60, 17)
+[2026-04-15 21:09:06] ✅ 成功点击连接按钮
+[2026-04-15 21:09:06] ✅ VPN 连接已触发（SAML 登录）
+[2026-04-15 21:09:06] 请在手机上完成 MFA 认证
+[2026-04-15 21:09:06] ✅ GUI 自动化成功
+[2026-04-15 21:09:06] 发送飞书通知: ⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-15 21:09:06
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '⚠️ VPN 连接已断开
+
+VPN 状态：未连接
+时间：2026-04-15 21:09:06
+
+已自动启动 FortiClient 并触发 VPN 连接。
+请在手机上完成 Microsoft MFA 认证：
+1. 打开 Microsoft Authenticator 应用
+2. 批准登录请求
+3. 或输入验证码
+
+如果未收到 MFA 请求，请手动点击 FortiClient 中的连接按钮。'
+
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52cc9144c4a4b10ece94e7856d5 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
+[2026-04-15 21:15:28] ✅ VPN 已连接
+[2026-04-15 21:15:28] 发送飞书通知: ✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-04-15 21:15:28
+
+可以正常访问外网了。
+
+> openclaw@2026.2.6-3 openclaw /home/tsl/openclaw
+> node scripts/run-node.mjs message send --channel feishu --target ou_b3afb7d2133e4d689be523fc48f3d2b3 --message '✅ VPN 连接已恢复
+
+VPN 状态：已连接
+时间：2026-04-15 21:15:28
+
+可以正常访问外网了。'
+
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered 6 bitable tools
+[info]: [ 'client ready' ]
+✅ Sent via Feishu. Message ID: om_x100b52ccb9a0a0a8b3421f70e6d1096 (chat ou_b3afb7d2133e4d689be523fc48f3d2b3)
