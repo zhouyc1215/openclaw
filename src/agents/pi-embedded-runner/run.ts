@@ -134,6 +134,29 @@ const toNormalizedUsage = (usage: UsageAccumulator) => {
   };
 };
 
+const MINIMAX_TRANSIENT_RETRY_LIMIT = 2;
+const MINIMAX_TRANSIENT_RETRY_BASE_DELAY_MS = 1_000;
+
+function shouldRetryMinimaxTransientFailure(params: {
+  provider: string;
+  reason: FailoverReason | null;
+  timedOut?: boolean;
+}): boolean {
+  if (normalizeProviderId(params.provider) !== "minimax") {
+    return false;
+  }
+  if (params.timedOut) {
+    return true;
+  }
+  return params.reason === "rate_limit" || params.reason === "timeout";
+}
+
+async function waitForMinimaxTransientRetry(attempt: number): Promise<number> {
+  const delayMs = MINIMAX_TRANSIENT_RETRY_BASE_DELAY_MS * 2 ** Math.max(0, attempt - 1);
+  await new Promise((resolve) => setTimeout(resolve, delayMs));
+  return delayMs;
+}
+
 export async function runEmbeddedPiAgent(
   params: RunEmbeddedPiAgentParams,
 ): Promise<EmbeddedPiRunResult> {
@@ -250,6 +273,7 @@ export async function runEmbeddedPiAgent(
       const attemptedThinking = new Set<ThinkLevel>();
       let apiKeyInfo: ApiKeyInfo | null = null;
       let lastProfileId: string | undefined;
+      let transientRetryAttempts = 0;
 
       const resolveAuthProfileFailoverReason = (params: {
         allInCooldown: boolean;
@@ -651,6 +675,20 @@ export async function runEmbeddedPiAgent(
               };
             }
             const promptFailoverReason = classifyFailoverReason(errorText);
+            if (
+              shouldRetryMinimaxTransientFailure({
+                provider,
+                reason: promptFailoverReason,
+              }) &&
+              transientRetryAttempts < MINIMAX_TRANSIENT_RETRY_LIMIT
+            ) {
+              transientRetryAttempts += 1;
+              const delayMs = await waitForMinimaxTransientRetry(transientRetryAttempts);
+              log.warn(
+                `transient provider failure during prompt submission for ${provider}/${modelId}; retrying (${transientRetryAttempts}/${MINIMAX_TRANSIENT_RETRY_LIMIT}) after ${delayMs}ms`,
+              );
+              continue;
+            }
             if (promptFailoverReason && promptFailoverReason !== "timeout" && lastProfileId) {
               await markAuthProfileFailure({
                 store: authStore,
@@ -735,6 +773,21 @@ export async function runEmbeddedPiAgent(
           const shouldRotate = (!aborted && failoverFailure) || timedOut;
 
           if (shouldRotate) {
+            if (
+              shouldRetryMinimaxTransientFailure({
+                provider,
+                reason: assistantFailoverReason,
+                timedOut,
+              }) &&
+              transientRetryAttempts < MINIMAX_TRANSIENT_RETRY_LIMIT
+            ) {
+              transientRetryAttempts += 1;
+              const delayMs = await waitForMinimaxTransientRetry(transientRetryAttempts);
+              log.warn(
+                `transient assistant failure for ${provider}/${modelId}; retrying (${transientRetryAttempts}/${MINIMAX_TRANSIENT_RETRY_LIMIT}) after ${delayMs}ms`,
+              );
+              continue;
+            }
             if (lastProfileId) {
               const reason =
                 timedOut || assistantFailoverReason === "timeout"

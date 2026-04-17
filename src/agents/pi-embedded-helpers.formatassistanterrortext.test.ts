@@ -68,4 +68,13 @@ describe("formatAssistantErrorText", () => {
     const result = formatAssistantErrorText(msg);
     expect(result).toBe(BILLING_ERROR_USER_MESSAGE);
   });
+
+  it("returns a friendly message for MiniMax 529 busy errors", () => {
+    const msg = makeAssistantError(
+      "529 当前服务集群负载较高，请稍后重试，感谢您的耐心等待。 (2064)",
+    );
+    expect(formatAssistantErrorText(msg)).toBe(
+      "The AI service is temporarily overloaded. Please try again in a moment.",
+    );
+  });
 });

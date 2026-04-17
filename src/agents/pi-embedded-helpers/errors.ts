@@ -428,6 +428,10 @@ export function sanitizeUserFacingText(text: string): string {
     return BILLING_ERROR_USER_MESSAGE;
   }
 
+  if (isOverloadedErrorMessage(trimmed)) {
+    return "The AI service is temporarily overloaded. Please try again in a moment.";
+  }
+
   if (isRawApiErrorPayload(trimmed) || isLikelyHttpErrorText(trimmed)) {
     return formatRawAssistantErrorForUi(trimmed);
   }
@@ -463,7 +467,14 @@ const ERROR_PATTERNS = {
     "resource_exhausted",
     "usage limit",
   ],
-  overloaded: [/overloaded_error|"type"\s*:\s*"overloaded_error"/i, "overloaded"],
+  overloaded: [
+    /overloaded_error|"type"\s*:\s*"overloaded_error"/i,
+    "overloaded",
+    "当前服务集群负载较高",
+    "服务集群负载较高",
+    "cluster load too high",
+    "cluster is busy",
+  ],
   timeout: ["timeout", "timed out", "deadline exceeded", "context deadline exceeded"],
   billing: [
     /\b402\b/,

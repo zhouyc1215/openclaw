@@ -51,6 +51,12 @@ describe("sanitizeUserFacingText", () => {
     expect(sanitizeUserFacingText(raw)).toBe("LLM error server_error: Something exploded");
   });
 
+  it("sanitizes MiniMax 529 busy errors", () => {
+    expect(
+      sanitizeUserFacingText("529 当前服务集群负载较高，请稍后重试，感谢您的耐心等待。 (2064)"),
+    ).toBe("The AI service is temporarily overloaded. Please try again in a moment.");
+  });
+
   it("collapses consecutive duplicate paragraphs", () => {
     const text = "Hello there!\n\nHello there!";
     expect(sanitizeUserFacingText(text)).toBe("Hello there!");

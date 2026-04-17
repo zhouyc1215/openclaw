@@ -92,6 +92,37 @@ const makeConfig = (opts?: { fallbacks?: string[]; apiKey?: string }): OpenClawC
     },
   }) satisfies OpenClawConfig;
 
+const makeMinimaxConfig = (): OpenClawConfig =>
+  ({
+    agents: {
+      defaults: {
+        model: {
+          fallbacks: [],
+        },
+      },
+    },
+    models: {
+      providers: {
+        minimax: {
+          api: "openai-completions",
+          apiKey: "sk-minimax-test",
+          baseUrl: "https://example.com",
+          models: [
+            {
+              id: "MiniMax-M2.7",
+              name: "MiniMax M2.7",
+              reasoning: false,
+              input: ["text"],
+              cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+              contextWindow: 16_000,
+              maxTokens: 2048,
+            },
+          ],
+        },
+      },
+    },
+  }) satisfies OpenClawConfig;
+
 const writeAuthStore = async (
   agentDir: string,
   opts?: {
@@ -553,6 +584,131 @@ describe("runEmbeddedPiAgent auth profile rotation", () => {
       }
     } finally {
       vi.useRealTimers();
+    }
+  });
+
+  it("retries transient MiniMax overload errors and succeeds on the next attempt", async () => {
+    const timerSpy = vi.spyOn(globalThis, "setTimeout").mockImplementation(((handler) => {
+      if (typeof handler === "function") {
+        handler();
+      }
+      return 0 as ReturnType<typeof setTimeout>;
+    }) as typeof setTimeout);
+    const agentDir = await fs.mkdtemp(path.join(os.tmpdir(), "openclaw-agent-"));
+    const workspaceDir = await fs.mkdtemp(path.join(os.tmpdir(), "openclaw-workspace-"));
+    try {
+      runEmbeddedAttemptMock
+        .mockResolvedValueOnce(
+          makeAttempt({
+            assistantTexts: [],
+            lastAssistant: buildAssistant({
+              api: "openai-completions",
+              provider: "minimax",
+              model: "MiniMax-M2.7",
+              stopReason: "error",
+              errorMessage: "529 当前服务集群负载较高，请稍后重试，感谢您的耐心等待。 (2064)",
+            }),
+          }),
+        )
+        .mockResolvedValueOnce(
+          makeAttempt({
+            assistantTexts: ["ok"],
+            lastAssistant: buildAssistant({
+              api: "openai-completions",
+              provider: "minimax",
+              model: "MiniMax-M2.7",
+              stopReason: "stop",
+              content: [{ type: "text", text: "ok" }],
+            }),
+          }),
+        );
+
+      const result = await runEmbeddedPiAgent({
+        sessionId: "session:test",
+        sessionKey: "agent:test:minimax-retry-success",
+        sessionFile: path.join(workspaceDir, "session.jsonl"),
+        workspaceDir,
+        agentDir,
+        config: makeMinimaxConfig(),
+        prompt: "hello",
+        provider: "minimax",
+        model: "MiniMax-M2.7",
+        timeoutMs: 5_000,
+        runId: "run:minimax-retry-success",
+      });
+
+      expect(runEmbeddedAttemptMock).toHaveBeenCalledTimes(2);
+      expect(timerSpy).toHaveBeenCalledTimes(1);
+      expect(timerSpy).toHaveBeenLastCalledWith(expect.any(Function), 1_000);
+      expect(result.payloads).toEqual([
+        {
+          text: "ok",
+          mediaUrls: undefined,
+          mediaUrl: undefined,
+          isError: undefined,
+          replyToId: undefined,
+          replyToTag: false,
+          replyToCurrent: false,
+          audioAsVoice: false,
+        },
+      ]);
+    } finally {
+      timerSpy.mockRestore();
+      await fs.rm(agentDir, { recursive: true, force: true });
+      await fs.rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  it("stops retrying MiniMax overload errors after the retry limit and returns a friendly error", async () => {
+    const timerSpy = vi.spyOn(globalThis, "setTimeout").mockImplementation(((handler) => {
+      if (typeof handler === "function") {
+        handler();
+      }
+      return 0 as ReturnType<typeof setTimeout>;
+    }) as typeof setTimeout);
+    const agentDir = await fs.mkdtemp(path.join(os.tmpdir(), "openclaw-agent-"));
+    const workspaceDir = await fs.mkdtemp(path.join(os.tmpdir(), "openclaw-workspace-"));
+    try {
+      runEmbeddedAttemptMock.mockResolvedValue(
+        makeAttempt({
+          assistantTexts: [],
+          lastAssistant: buildAssistant({
+            api: "openai-completions",
+            provider: "minimax",
+            model: "MiniMax-M2.7",
+            stopReason: "error",
+            errorMessage: "529 当前服务集群负载较高，请稍后重试，感谢您的耐心等待。 (2064)",
+          }),
+        }),
+      );
+
+      const result = await runEmbeddedPiAgent({
+        sessionId: "session:test",
+        sessionKey: "agent:test:minimax-retry-failure",
+        sessionFile: path.join(workspaceDir, "session.jsonl"),
+        workspaceDir,
+        agentDir,
+        config: makeMinimaxConfig(),
+        prompt: "hello",
+        provider: "minimax",
+        model: "MiniMax-M2.7",
+        timeoutMs: 5_000,
+        runId: "run:minimax-retry-failure",
+      });
+
+      expect(runEmbeddedAttemptMock).toHaveBeenCalledTimes(3);
+      expect(timerSpy).toHaveBeenCalledTimes(2);
+      expect(timerSpy).toHaveBeenNthCalledWith(1, expect.any(Function), 1_000);
+      expect(timerSpy).toHaveBeenNthCalledWith(2, expect.any(Function), 2_000);
+      expect(result.payloads?.[0]?.text).toBe(
+        "The AI service is temporarily overloaded. Please try again in a moment.",
+      );
+      expect(result.payloads?.[0]?.text).not.toContain("529 当前服务集群负载较高");
+      expect(result.payloads?.[0]?.isError).toBe(true);
+    } finally {
+      timerSpy.mockRestore();
+      await fs.rm(agentDir, { recursive: true, force: true });
+      await fs.rm(workspaceDir, { recursive: true, force: true });
     }
   });
 });
