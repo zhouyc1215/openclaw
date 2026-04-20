@@ -43868,3 +43868,703 @@ Xlib.error.DisplayConnectionError: Can't connect to display ":1": [Errno 2] No s
 [2026-04-19 17:34:04] [INFO] ============================================================
 [2026-04-19 17:34:04] [INFO] ✅ VPN 重连成功
 [2026-04-19 17:34:04] [INFO] ============================================================
+[2026-04-20 01:34:35] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-04-20 01:35:35] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-04-20 01:36:35] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-04-20 01:36:35] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-04-20 01:36:35] [INFO] ============================================================
+[2026-04-20 01:36:35] [INFO] 开始 VPN 重连流程
+[2026-04-20 01:36:35] [INFO] ============================================================
+[2026-04-20 01:36:35] [INFO] 停止 FortiClient 进程...
+[2026-04-20 01:36:35] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-20 01:36:37] [INFO] ✅ FortiClient 进程已停止
+[2026-04-20 01:36:37] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-20 01:36:37] [INFO] 启动 FortiClient...
+[2026-04-20 01:36:37] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-20 01:36:40] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-20 01:36:40] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-20 01:36:40] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-04-20 01:36:40] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-20 01:36:55] [INFO] 尝试点击连接按钮...
+[2026-04-20 01:36:55] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-20 01:36:55] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-20 01:36:56] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-04-20 01:36:56] [INFO] ✅ PyAutoGUI 点击成功
+[2026-04-20 01:36:56] [INFO] ✅ PyAutoDriver 成功
+[2026-04-20 01:36:56] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-04-20 01:37:06] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-04-20 01:37:06] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-04-20 01:37:06] [INFO] ============================================================
+[2026-04-20 01:37:06] [INFO] ✅ VPN 重连成功
+[2026-04-20 01:37:06] [INFO] ============================================================
+[2026-04-20 09:37:39] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-04-20 09:38:39] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-04-20 09:39:39] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-04-20 09:39:39] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-04-20 09:39:39] [INFO] ============================================================
+[2026-04-20 09:39:39] [INFO] 开始 VPN 重连流程
+[2026-04-20 09:39:39] [INFO] ============================================================
+[2026-04-20 09:39:39] [INFO] 停止 FortiClient 进程...
+[2026-04-20 09:39:39] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-20 09:39:41] [INFO] ✅ FortiClient 进程已停止
+[2026-04-20 09:39:41] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-20 09:39:41] [INFO] 启动 FortiClient...
+[2026-04-20 09:39:41] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-20 09:39:44] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-20 09:39:44] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-20 09:39:44] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-04-20 09:39:44] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-20 09:39:59] [INFO] 尝试点击连接按钮...
+[2026-04-20 09:39:59] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-20 09:39:59] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-20 09:40:00] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-04-20 09:40:00] [INFO] ✅ PyAutoGUI 点击成功
+[2026-04-20 09:40:00] [INFO] ✅ PyAutoDriver 成功
+[2026-04-20 09:40:00] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-04-20 09:40:10] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-04-20 09:40:10] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-04-20 09:40:10] [INFO] ============================================================
+[2026-04-20 09:40:10] [INFO] ✅ VPN 重连成功
+[2026-04-20 09:40:10] [INFO] ============================================================
+[2026-04-20 17:02:01] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-04-20 17:02:47] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-04-20 17:03:51] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-04-20 17:05:00] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-04-20 17:05:05] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-04-20 17:05:05] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-04-20 17:05:05] [INFO] ============================================================
+[2026-04-20 17:05:08] [INFO] 开始 VPN 重连流程
+[2026-04-20 17:05:13] [INFO] ============================================================
+[2026-04-20 17:05:13] [INFO] 停止 FortiClient 进程...
+[2026-04-20 17:10:15] [ERROR] 停止 FortiClient 失败: Command '['sudo', '-n', 'pkill', '-9', '-f', 'forticlient']' timed out after 10 seconds
+[2026-04-20 17:12:32] [ERROR] 停止 FortiClient 失败
+[2026-04-20 17:14:49] [ERROR] ============================================================
+[2026-04-20 17:16:45] [ERROR] ❌ VPN 重连失败
+[2026-04-20 17:18:10] [ERROR] ============================================================
+[2026-04-20 17:30:18] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-04-20 17:31:48] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-04-20 17:32:09] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-04-20 17:32:37] [INFO] ============================================================
+[2026-04-20 17:32:52] [INFO] 开始 VPN 重连流程
+[2026-04-20 17:33:18] [INFO] ============================================================
+[2026-04-20 17:34:17] [INFO] 停止 FortiClient 进程...
+[2026-04-20 17:41:29] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-20 17:41:32] [INFO] ✅ FortiClient 进程已停止
+[2026-04-20 17:41:32] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-20 17:41:32] [INFO] 启动 FortiClient...
+[2026-04-20 17:41:32] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-20 17:41:35] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-20 17:41:35] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-20 17:52:15] [WARNING] ⚠️  窗口尚未出现，重试点击左边栏图标...
+[2026-04-20 17:52:15] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-20 17:52:34] [INFO] ✅ 窗口已出现（等待 17 秒）
+[2026-04-20 17:52:34] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-20 17:52:49] [INFO] 尝试点击连接按钮...
+[2026-04-20 17:52:49] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-20 17:52:49] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-20 17:52:50] [ERROR] PyAutoGUI 驱动异常: 
+[2026-04-20 17:52:50] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-04-20 17:52:50] [INFO] 尝试驱动: VisionDriver
+[2026-04-20 17:52:50] [INFO] 使用 OpenCV 查找按钮...
+[2026-04-20 17:52:50] [WARNING] 未找到按钮
+[2026-04-20 17:52:50] [WARNING] ⚠️  VisionDriver 失败
+[2026-04-20 17:52:50] [ERROR] 所有驱动都失败了
+[2026-04-20 17:52:50] [ERROR] 点击连接按钮失败
+[2026-04-20 17:52:50] [ERROR] ============================================================
+[2026-04-20 17:52:50] [ERROR] ❌ VPN 重连失败
+[2026-04-20 17:52:50] [ERROR] ============================================================
+[2026-04-20 17:53:50] [WARNING] ⚠️  VPN 断开 (失败次数: 5/3)
+[2026-04-20 17:53:50] [ERROR] ❌ VPN 连续失败 5 次，触发重连
+[2026-04-20 17:53:50] [INFO] ============================================================
+[2026-04-20 17:53:50] [INFO] 开始 VPN 重连流程
+[2026-04-20 17:53:50] [INFO] ============================================================
+[2026-04-20 17:53:50] [INFO] 停止 FortiClient 进程...
+[2026-04-20 17:53:50] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-20 17:53:52] [INFO] ✅ FortiClient 进程已停止
+[2026-04-20 17:53:52] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-20 17:53:52] [INFO] 启动 FortiClient...
+[2026-04-20 17:53:52] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-20 17:53:55] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-20 17:53:55] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-20 17:53:55] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-04-20 17:53:55] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-20 17:54:10] [INFO] 尝试点击连接按钮...
+[2026-04-20 17:54:10] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-20 17:54:10] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-20 17:54:10] [ERROR] PyAutoGUI 驱动异常: 
+[2026-04-20 17:54:10] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-04-20 17:54:10] [INFO] 尝试驱动: VisionDriver
+[2026-04-20 17:54:10] [INFO] 使用 OpenCV 查找按钮...
+[2026-04-20 17:54:10] [WARNING] 未找到按钮
+[2026-04-20 17:54:10] [WARNING] ⚠️  VisionDriver 失败
+[2026-04-20 17:54:10] [ERROR] 所有驱动都失败了
+[2026-04-20 17:54:10] [ERROR] 点击连接按钮失败
+[2026-04-20 17:54:10] [ERROR] ============================================================
+[2026-04-20 17:54:10] [ERROR] ❌ VPN 重连失败
+[2026-04-20 17:54:10] [ERROR] ============================================================
+[2026-04-20 17:55:10] [WARNING] ⚠️  VPN 断开 (失败次数: 6/3)
+[2026-04-20 17:55:10] [ERROR] ❌ VPN 连续失败 6 次，触发重连
+[2026-04-20 17:55:10] [INFO] ============================================================
+[2026-04-20 17:55:10] [INFO] 开始 VPN 重连流程
+[2026-04-20 17:55:10] [INFO] ============================================================
+[2026-04-20 17:55:10] [INFO] 停止 FortiClient 进程...
+[2026-04-20 17:55:10] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-20 17:55:12] [INFO] ✅ FortiClient 进程已停止
+[2026-04-20 17:55:12] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-20 17:55:12] [INFO] 启动 FortiClient...
+[2026-04-20 17:55:12] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-20 17:55:15] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-20 17:55:15] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-20 17:55:15] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-04-20 17:55:15] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-20 17:55:30] [INFO] 尝试点击连接按钮...
+[2026-04-20 17:55:30] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-20 17:55:30] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-20 17:55:30] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-04-20 17:55:30] [INFO] ✅ PyAutoGUI 点击成功
+[2026-04-20 17:55:30] [INFO] ✅ PyAutoDriver 成功
+[2026-04-20 17:55:30] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-04-20 17:55:40] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-04-20 17:55:50] [INFO] 检查 VPN 状态（第 2/6 次）...
+[2026-04-20 17:56:00] [INFO] 检查 VPN 状态（第 3/6 次）...
+[2026-04-20 17:56:10] [INFO] 检查 VPN 状态（第 4/6 次）...
+[2026-04-20 17:56:21] [INFO] 检查 VPN 状态（第 5/6 次）...
+[2026-04-20 17:56:31] [INFO] 检查 VPN 状态（第 6/6 次）...
+[2026-04-20 17:56:31] [WARNING] ⚠️  VPN 在 60 秒内未连接
+[2026-04-20 17:56:31] [WARNING] ⚠️  VPN 需要手动完成 SAML 认证
+[2026-04-20 17:56:31] [INFO] 正在截取屏幕...
+[2026-04-20 17:56:31] [INFO] 截图已保存: /tmp/vpn-saml-8475.png
+[2026-04-20 17:56:37] [ERROR] ❌ 飞书图片发送失败: [feishu] sendMediaFeishu failed: AxiosError: Request failed with status code 400
+    at settle (/home/tsl/openclaw/node_modules/.pnpm/axios@1.13.5_debug@4.4.3/node_modules/axios/dist/node/axios.cjs:2151:12)
+    at IncomingMessage.handleStreamEnd (/home/tsl/openclaw/node_modules/.pnpm/axios@1.13.5_debug@4.4.3/node_modules/axios/dist/node/axios.cjs:3545:11)
+    at IncomingMessage.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (/home/tsl/openclaw/node_modules/.pnpm/axios@1.13.5_debug@4.4.3/node_modules/axios/dist/node/axios.cjs:4796:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  isAxiosError: true,
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false,
+      legacyInterceptorReqResOrdering: true
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'multipart/form-data; boundary=--------------------------ca50d4bec6c46f5fa40b4090',
+      'User-Agent': 'oapi-node-sdk/1.0.0',
+      Authorization: 'Bearer t-g1044kgM5FFHL5EG4AN2T4LEKUGAZO7JEREWPPRC',
+      'Content-Length': '316',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    url: 'https://open.feishu.cn/open-apis/im/v1/images',
+    method: 'post',
+    data: FormData {
+      _overheadLength: 253,
+      _valueLength: 7,
+      _valuesToMeasure: [],
+      writable: false,
+      readable: true,
+      dataSize: 0,
+      maxDataSize: 2097152,
+      pauseStreams: true,
+      _released: true,
+      _streams: [],
+      _currentStream: null,
+      _insideLoop: false,
+      _pendingNext: false,
+      _boundary: '--------------------------ca50d4bec6c46f5fa40b4090',
+      _events: [Object: null prototype],
+      _eventsCount: 3
+    },
+    params: {},
+    paramsSerializer: { serialize: [Function: paramsSerializer] },
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 316,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: false,
+    _header: 'POST /open-apis/im/v1/images HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: multipart/form-data; boundary=--------------------------ca50d4bec6c46f5fa40b4090\r\n' +
+      'User-Agent: oapi-node-sdk/1.0.0\r\n' +
+      'Authorization: Bearer t-g1044kgM5FFHL5EG4AN2T4LEKUGAZO7JEREWPPRC\r\n' +
+      'Content-Length: 316\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: open.feishu.cn\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype] {},
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/open-apis/im/v1/images',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://open.feishu.cn/open-apis/im/v1/images',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 34,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: [Function: emitRequestTimeout],
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: true,
+    host: 'open.feishu.cn',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 2046880,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://open.feishu.cn/open-apis/im/v1/images',
+      _timeout: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: true,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'open.feishu.cn',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'open.feishu.cn',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 0,
+      parser: null,
+      _httpMessage: [Circular *1],
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: 75,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 2046622,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: -1,
+        _idlePrev: null,
+        _idleNext: null,
+        _idleStart: 5425,
+        _onTimeout: null,
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: true,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 71,
+        [Symbol(triggerId)]: 69,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 60,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      authorization: [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      server: 'Tengine',
+      'content-type': 'text/plain; charset=utf-8',
+      'content-length': '26',
+      connection: 'keep-alive',
+      date: 'Mon, 20 Apr 2026 09:56:37 GMT',
+      'x-tt-logid': '20260420175637B346DACE69E2B25596FC',
+      'server-timing': 'inner; dur=3, cdn-cache;desc=MISS,edge;dur=0,origin;dur=93',
+      'x-tt-trace-host': '019a748e30af54a452d1d7487ab7f16b05fe421997882291912fefb32f585f8cb3fe9aab1b8bec35d28f650db507bfb824e5d6580c86366f6e4e2538f0903ce44db9f4be78f378ad1e538ce7998abd6f3f5304208503341f575e748bde5aaebd4f',
+      'x-tt-trace-tag': 'id=03;cdn-cache=miss;type=dyn',
+      'x-tt-trace-id': '00-260420175637B346DACE69E2B25596FC-27725CA68D7C8DA4-00',
+      'x-request-id': '325ee5e7-cea1-41b5-8c71-658e4a337fa2',
+      'x-timestamp': '1776678997.708',
+      'x-alicdn-da-ups-status': 'endOs,0,400',
+      via: 'ens-dynamic8.cn9424[93,0]',
+      'timing-allow-origin': '*',
+      eagleid: '3cddc23817766789976295401e'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      url: 'https://open.feishu.cn/open-apis/im/v1/images',
+      method: 'post',
+      data: [FormData],
+      params: {},
+      paramsSerializer: [Object],
+      allowAbsoluteUrls: true
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 316,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'POST /open-apis/im/v1/images HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: multipart/form-data; boundary=--------------------------ca50d4bec6c46f5fa40b4090\r\n' +
+        'User-Agent: oapi-node-sdk/1.0.0\r\n' +
+        'Authorization: Bearer t-g1044kgM5FFHL5EG4AN2T4LEKUGAZO7JEREWPPRC\r\n' +
+        'Content-Length: 316\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: open.feishu.cn\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/open-apis/im/v1/images',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'open.feishu.cn',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: true,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: 'Error when parsing request'
+  },
+  status: 400
+}
+[openclaw] Uncaught exception: Error: write ECONNRESET
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:19)
+
+[2026-04-20 17:56:37] [ERROR] ============================================================
+[2026-04-20 17:56:37] [ERROR] ❌ VPN 重连失败
+[2026-04-20 17:56:37] [ERROR] ============================================================
+[2026-04-20 17:57:38] [WARNING] ⚠️  VPN 断开 (失败次数: 7/3)
+[2026-04-20 17:57:38] [ERROR] ❌ VPN 连续失败 7 次，触发重连
+[2026-04-20 17:57:38] [INFO] ============================================================
+[2026-04-20 17:57:38] [INFO] 开始 VPN 重连流程
+[2026-04-20 17:57:38] [INFO] ============================================================
+[2026-04-20 17:57:38] [INFO] 停止 FortiClient 进程...
+[2026-04-20 17:57:38] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-20 17:57:40] [INFO] ✅ FortiClient 进程已停止
+[2026-04-20 17:57:40] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-20 17:57:40] [INFO] 启动 FortiClient...
+[2026-04-20 17:57:40] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-20 17:57:42] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-20 17:57:42] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-20 17:57:42] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-04-20 17:57:42] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-20 17:57:57] [INFO] 尝试点击连接按钮...
+[2026-04-20 17:57:57] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-20 17:57:57] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-20 17:57:58] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-04-20 17:57:58] [INFO] ✅ PyAutoGUI 点击成功
+[2026-04-20 17:57:58] [INFO] ✅ PyAutoDriver 成功
+[2026-04-20 17:57:58] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-04-20 17:58:08] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-04-20 17:58:08] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-04-20 17:58:08] [INFO] ============================================================
+[2026-04-20 17:58:08] [INFO] ✅ VPN 重连成功
+[2026-04-20 17:58:08] [INFO] ============================================================
+[2026-04-20 18:07:16] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-04-20 18:08:03] [WARNING] ⚠️  VPN 断开 (失败次数: 1/3)
+[2026-04-20 18:13:21] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-04-20 18:14:04] [WARNING] ⚠️  VPN 断开 (失败次数: 2/3)
+[2026-04-20 18:20:55] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-04-20 18:25:17] [WARNING] ⚠️  VPN 断开 (失败次数: 3/3)
+[2026-04-20 18:28:18] [ERROR] ❌ VPN 连续失败 3 次，触发重连
+[2026-04-20 18:29:31] [INFO] ============================================================
+[2026-04-20 18:31:21] [INFO] 开始 VPN 重连流程
+[2026-04-20 18:34:27] [INFO] ============================================================
+[2026-04-20 18:38:46] [INFO] 停止 FortiClient 进程...
+[2026-04-20 18:48:48] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-20 18:48:50] [INFO] ✅ FortiClient 进程已停止
+[2026-04-20 18:48:50] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-20 18:48:50] [INFO] 启动 FortiClient...
+[2026-04-20 18:48:50] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-20 18:48:53] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-20 18:48:53] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-20 18:49:17] [INFO] ✅ 窗口已出现（等待 15 秒）
+[2026-04-20 18:49:17] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-20 18:49:32] [INFO] 尝试点击连接按钮...
+[2026-04-20 18:49:32] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-20 18:49:32] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-20 18:49:37] [ERROR] PyAutoGUI 驱动异常: 
+[2026-04-20 18:49:37] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-04-20 18:49:37] [INFO] 尝试驱动: VisionDriver
+[2026-04-20 18:49:37] [INFO] 使用 OpenCV 查找按钮...
+[2026-04-20 18:49:37] [WARNING] 未找到按钮
+[2026-04-20 18:49:37] [WARNING] ⚠️  VisionDriver 失败
+[2026-04-20 18:49:37] [ERROR] 所有驱动都失败了
+[2026-04-20 18:49:37] [ERROR] 点击连接按钮失败
+[2026-04-20 18:49:37] [ERROR] ============================================================
+[2026-04-20 18:49:37] [ERROR] ❌ VPN 重连失败
+[2026-04-20 18:49:37] [ERROR] ============================================================
+[2026-04-20 18:50:56] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-04-20 18:50:56] [WARNING] ⚠️  VPN 断开 (失败次数: 4/3)
+[2026-04-20 18:50:56] [ERROR] ❌ VPN 连续失败 4 次，触发重连
+[2026-04-20 18:50:56] [INFO] ============================================================
+[2026-04-20 18:50:56] [INFO] 开始 VPN 重连流程
+[2026-04-20 18:50:56] [INFO] ============================================================
+[2026-04-20 18:50:56] [INFO] 停止 FortiClient 进程...
+[2026-04-20 18:51:03] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-20 18:51:06] [INFO] ✅ FortiClient 进程已停止
+[2026-04-20 18:51:09] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-20 18:51:10] [INFO] 启动 FortiClient...
+[2026-04-20 18:51:10] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-20 19:17:54] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-20 19:17:54] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-20 19:18:00] [INFO] ✅ 窗口已出现（等待 6 秒）
+[2026-04-20 19:18:00] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-20 19:18:15] [INFO] 尝试点击连接按钮...
+[2026-04-20 19:18:15] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-20 19:18:15] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-20 19:18:16] [ERROR] PyAutoGUI 驱动异常: 
+[2026-04-20 19:18:16] [WARNING] ⚠️  PyAutoDriver 失败
+[2026-04-20 19:18:16] [INFO] 尝试驱动: VisionDriver
+[2026-04-20 19:18:16] [INFO] 使用 OpenCV 查找按钮...
+[2026-04-20 19:18:17] [WARNING] 未找到按钮
+[2026-04-20 19:18:17] [WARNING] ⚠️  VisionDriver 失败
+[2026-04-20 19:18:17] [ERROR] 所有驱动都失败了
+[2026-04-20 19:18:17] [ERROR] 点击连接按钮失败
+[2026-04-20 19:18:17] [ERROR] ============================================================
+[2026-04-20 19:18:17] [ERROR] ❌ VPN 重连失败
+[2026-04-20 19:18:17] [ERROR] ============================================================
+[2026-04-20 19:24:29] [ERROR] 检查 VPN 接口失败: Command '['forticlient', 'vpn', 'status']' timed out after 5 seconds
+[2026-04-20 19:25:50] [WARNING] ⚠️  VPN 断开 (失败次数: 5/3)
+[2026-04-20 19:25:55] [ERROR] ❌ VPN 连续失败 5 次，触发重连
+[2026-04-20 19:26:56] [INFO] ============================================================
+[2026-04-20 19:27:31] [INFO] 开始 VPN 重连流程
+[2026-04-20 19:28:08] [INFO] ============================================================
+[2026-04-20 19:28:24] [INFO] 停止 FortiClient 进程...
+[2026-04-20 19:32:12] [ERROR] 停止 FortiClient 失败: Command '['sudo', '-n', 'pkill', '-9', '-f', 'forticlient']' timed out after 10 seconds
+[2026-04-20 19:32:50] [ERROR] 停止 FortiClient 失败
+[2026-04-20 19:34:14] [ERROR] ============================================================
+[2026-04-20 19:34:43] [ERROR] ❌ VPN 重连失败
+[2026-04-20 19:34:43] [ERROR] ============================================================
+[2026-04-20 19:35:55] [WARNING] ⚠️  VPN 断开 (失败次数: 6/3)
+[2026-04-20 19:35:55] [ERROR] ❌ VPN 连续失败 6 次，触发重连
+[2026-04-20 19:35:55] [INFO] ============================================================
+[2026-04-20 19:35:55] [INFO] 开始 VPN 重连流程
+[2026-04-20 19:35:55] [INFO] ============================================================
+[2026-04-20 19:35:55] [INFO] 停止 FortiClient 进程...
+[2026-04-20 19:35:55] [WARNING] ⚠️  sudo 返回码 -9，尝试不使用 sudo...
+[2026-04-20 19:35:57] [INFO] ✅ FortiClient 进程已停止
+[2026-04-20 19:35:57] [INFO] 将光标移动到屏幕中央 (960, 540)...
+[2026-04-20 19:35:57] [INFO] 启动 FortiClient...
+[2026-04-20 19:35:57] [INFO] 点击左边栏图标 (40, 200)...
+[2026-04-20 19:36:00] [INFO] ✅ 已触发 FortiClient 启动
+[2026-04-20 19:36:00] [INFO] 等待 FortiClient 窗口出现（最多 30 秒）...
+[2026-04-20 19:36:00] [INFO] ✅ 窗口已出现（等待 1 秒）
+[2026-04-20 19:36:00] [INFO] 等待 GUI 加载 (15 秒)...
+[2026-04-20 19:36:15] [INFO] 尝试点击连接按钮...
+[2026-04-20 19:36:15] [INFO] 尝试驱动: PyAutoDriver
+[2026-04-20 19:36:15] [INFO] 使用 PyAutoGUI 查找按钮...
+[2026-04-20 19:36:16] [INFO] 找到按钮: Point(x=992, y=722)
+[2026-04-20 19:36:16] [INFO] ✅ PyAutoGUI 点击成功
+[2026-04-20 19:36:16] [INFO] ✅ PyAutoDriver 成功
+[2026-04-20 19:36:16] [INFO] 等待 VPN 连接（最多 60 秒，每 10 秒检查一次）...
+[2026-04-20 19:36:26] [INFO] 检查 VPN 状态（第 1/6 次）...
+[2026-04-20 19:36:26] [INFO] ✅ VPN 已连接（FortiClient 状态），耗时 10 秒
+[2026-04-20 19:36:26] [INFO] ============================================================
+[2026-04-20 19:36:26] [INFO] ✅ VPN 重连成功
+[2026-04-20 19:36:26] [INFO] ============================================================

@@ -77,4 +77,13 @@ describe("formatAssistantErrorText", () => {
       "The AI service is temporarily overloaded. Please try again in a moment.",
     );
   });
+
+  it("returns a friendly message for MiniMax 529 busy errors with highspeed upsell text", () => {
+    const msg = makeAssistantError(
+      "529 当前时段请求拥挤，极速版套餐可使用highspeed模型，享受更稳定的响应体验。https://platform.minimaxi.com/subscribe/token-plan (2064)",
+    );
+    expect(formatAssistantErrorText(msg)).toBe(
+      "The AI service is temporarily overloaded. Please try again in a moment.",
+    );
+  });
 });

@@ -57,6 +57,14 @@ describe("sanitizeUserFacingText", () => {
     ).toBe("The AI service is temporarily overloaded. Please try again in a moment.");
   });
 
+  it("sanitizes MiniMax 529 busy errors with highspeed upsell text", () => {
+    expect(
+      sanitizeUserFacingText(
+        "529 当前时段请求拥挤，极速版套餐可使用highspeed模型，享受更稳定的响应体验。https://platform.minimaxi.com/subscribe/token-plan (2064)",
+      ),
+    ).toBe("The AI service is temporarily overloaded. Please try again in a moment.");
+  });
+
   it("collapses consecutive duplicate paragraphs", () => {
     const text = "Hello there!\n\nHello there!";
     expect(sanitizeUserFacingText(text)).toBe("Hello there!");
