@@ -9,7 +9,13 @@ import {
 import type { MentionTarget } from "./mention.js";
 import { resolveFeishuAccount } from "./accounts.js";
 import { getFeishuRuntime } from "./runtime.js";
-import { sendMessageFeishu, sendMarkdownCardFeishu } from "./send.js";
+import {
+  buildMarkdownCard,
+  editMessageFeishu,
+  sendMessageFeishu,
+  sendMarkdownCardFeishu,
+  updateCardFeishu,
+} from "./send.js";
 import { addTypingIndicator, removeTypingIndicator, type TypingIndicatorState } from "./typing.js";
 
 /**
@@ -26,6 +32,30 @@ function shouldUseCard(text: string): boolean {
     return true;
   }
   return false;
+}
+
+type FeishuReplyRenderMode = "text" | "card";
+
+type FeishuStreamingState = {
+  accumulatedText: string;
+  messageId?: string;
+  mode?: FeishuReplyRenderMode;
+  sentMentions: boolean;
+};
+
+function resolveReplyRenderMode(params: {
+  renderMode: "auto" | "raw" | "card";
+  text: string;
+  streaming: boolean;
+}): FeishuReplyRenderMode {
+  if (params.renderMode === "raw") {
+    return "text";
+  }
+  if (params.renderMode === "card") {
+    return "card";
+  }
+  // 伪流式优先使用卡片更新，避免后续内容出现 Markdown 时需要切换消息类型。
+  return params.streaming || shouldUseCard(params.text) ? "card" : "text";
 }
 
 export type CreateFeishuReplyDispatcherParams = {
@@ -100,6 +130,128 @@ export function createFeishuReplyDispatcher(params: CreateFeishuReplyDispatcherP
     cfg,
     channel: "feishu",
   });
+  const streamingState: FeishuStreamingState = {
+    accumulatedText: "",
+    sentMentions: false,
+  };
+
+  const sendChunkedReply = async (delivery: {
+    text: string;
+    renderMode: FeishuReplyRenderMode;
+  }) => {
+    let isFirstChunk = true;
+    if (delivery.renderMode === "card") {
+      const chunks = core.channel.text.chunkTextWithMode(delivery.text, textChunkLimit, chunkMode);
+      params.runtime.log?.(
+        `feishu[${account.accountId}] deliver: sending ${chunks.length} card chunks to ${chatId}`,
+      );
+      for (const chunk of chunks) {
+        await sendMarkdownCardFeishu({
+          cfg,
+          to: chatId,
+          text: chunk,
+          replyToMessageId,
+          mentions: isFirstChunk ? mentionTargets : undefined,
+          accountId,
+        });
+        isFirstChunk = false;
+      }
+      return;
+    }
+
+    const converted = core.channel.text.convertMarkdownTables(delivery.text, tableMode);
+    const chunks = core.channel.text.chunkTextWithMode(converted, textChunkLimit, chunkMode);
+    params.runtime.log?.(
+      `feishu[${account.accountId}] deliver: sending ${chunks.length} text chunks to ${chatId}`,
+    );
+    for (const chunk of chunks) {
+      await sendMessageFeishu({
+        cfg,
+        to: chatId,
+        text: chunk,
+        replyToMessageId,
+        mentions: isFirstChunk ? mentionTargets : undefined,
+        accountId,
+      });
+      isFirstChunk = false;
+    }
+  };
+
+  const sendStreamingReply = async (delivery: {
+    text: string;
+    renderMode: FeishuReplyRenderMode;
+  }) => {
+    const nextAccumulatedText = `${streamingState.accumulatedText}${delivery.text}`;
+    if (streamingState.messageId && nextAccumulatedText.length > textChunkLimit) {
+      // 单条飞书消息超过上限时，新开一条流，避免后续更新失败。
+      streamingState.accumulatedText = "";
+      streamingState.messageId = undefined;
+      streamingState.mode = undefined;
+    }
+
+    const nextText = `${streamingState.accumulatedText}${delivery.text}`;
+    const nextMode = streamingState.mode ?? delivery.renderMode;
+
+    if (!streamingState.messageId) {
+      const result =
+        nextMode === "card"
+          ? await sendMarkdownCardFeishu({
+              cfg,
+              to: chatId,
+              text: nextText,
+              replyToMessageId,
+              mentions: streamingState.sentMentions ? undefined : mentionTargets,
+              accountId,
+            })
+          : await sendMessageFeishu({
+              cfg,
+              to: chatId,
+              text: nextText,
+              replyToMessageId,
+              mentions: streamingState.sentMentions ? undefined : mentionTargets,
+              accountId,
+            });
+      streamingState.accumulatedText = nextText;
+      streamingState.messageId = result.messageId;
+      streamingState.mode = nextMode;
+      streamingState.sentMentions = true;
+      params.runtime.log?.(
+        `feishu[${account.accountId}] deliver: started streaming ${nextMode} message ${result.messageId}`,
+      );
+      return;
+    }
+
+    try {
+      if (nextMode === "card") {
+        await updateCardFeishu({
+          cfg,
+          messageId: streamingState.messageId,
+          card: buildMarkdownCard(nextText),
+          accountId,
+        });
+      } else {
+        await editMessageFeishu({
+          cfg,
+          messageId: streamingState.messageId,
+          text: nextText,
+          accountId,
+        });
+      }
+      streamingState.accumulatedText = nextText;
+      streamingState.mode = nextMode;
+      params.runtime.log?.(
+        `feishu[${account.accountId}] deliver: updated streaming ${nextMode} message ${streamingState.messageId}`,
+      );
+    } catch (err) {
+      params.runtime.error?.(
+        `feishu[${account.accountId}] deliver: streaming update failed, falling back to new message: ${String(err)}`,
+      );
+      streamingState.accumulatedText = "";
+      streamingState.messageId = undefined;
+      streamingState.mode = undefined;
+      await sendStreamingReply(delivery);
+    }
+  };
 
   const { dispatcher, replyOptions, markDispatchIdle } =
     core.channel.reply.createReplyDispatcherWithTyping({
@@ -107,7 +259,7 @@ export function createFeishuReplyDispatcher(params: CreateFeishuReplyDispatcherP
       responsePrefixContextProvider: prefixContext.responsePrefixContextProvider,
       humanDelay: core.channel.reply.resolveHumanDelayConfig(cfg, agentId),
       onReplyStart: typingCallbacks.onReplyStart,
-      deliver: async (payload: ReplyPayload) => {
+      deliver: async (payload: ReplyPayload, info) => {
         params.runtime.log?.(
           `feishu[${account.accountId}] deliver called: text=${payload.text?.slice(0, 100)}`,
         );
@@ -120,49 +272,25 @@ export function createFeishuReplyDispatcher(params: CreateFeishuReplyDispatcherP
         // Check render mode: auto (default), raw, or card
         const feishuCfg = account.config;
         const renderMode = feishuCfg?.renderMode ?? "auto";
+        const streamingEnabled = feishuCfg?.streaming === true && info.kind === "block";
+        const replyRenderMode = resolveReplyRenderMode({
+          renderMode,
+          text,
+          streaming: streamingEnabled,
+        });
 
-        // Determine if we should use card for this message
-        const useCard = renderMode === "card" || (renderMode === "auto" && shouldUseCard(text));
-
-        // Only include @mentions in the first chunk (avoid duplicate @s)
-        let isFirstChunk = true;
-
-        if (useCard) {
-          // Card mode: send as interactive card with markdown rendering
-          const chunks = core.channel.text.chunkTextWithMode(text, textChunkLimit, chunkMode);
-          params.runtime.log?.(
-            `feishu[${account.accountId}] deliver: sending ${chunks.length} card chunks to ${chatId}`,
-          );
-          for (const chunk of chunks) {
-            await sendMarkdownCardFeishu({
-              cfg,
-              to: chatId,
-              text: chunk,
-              replyToMessageId,
-              mentions: isFirstChunk ? mentionTargets : undefined,
-              accountId,
-            });
-            isFirstChunk = false;
-          }
-        } else {
-          // Raw mode: send as plain text with table conversion
-          const converted = core.channel.text.convertMarkdownTables(text, tableMode);
-          const chunks = core.channel.text.chunkTextWithMode(converted, textChunkLimit, chunkMode);
-          params.runtime.log?.(
-            `feishu[${account.accountId}] deliver: sending ${chunks.length} text chunks to ${chatId}`,
-          );
-          for (const chunk of chunks) {
-            await sendMessageFeishu({
-              cfg,
-              to: chatId,
-              text: chunk,
-              replyToMessageId,
-              mentions: isFirstChunk ? mentionTargets : undefined,
-              accountId,
-            });
-            isFirstChunk = false;
-          }
+        if (streamingEnabled) {
+          await sendStreamingReply({
+            text,
+            renderMode: replyRenderMode,
+          });
+          return;
         }
+
+        await sendChunkedReply({
+          text,
+          renderMode: replyRenderMode,
+        });
       },
       onError: (err, info) => {
         params.runtime.error?.(

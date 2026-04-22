@@ -35,6 +35,7 @@ const MarkdownConfigSchema = z
 
 // Message render mode: auto (default) = detect markdown, raw = plain text, card = always card
 const RenderModeSchema = z.enum(["auto", "raw", "card"]).optional();
+const StreamingSchema = z.boolean().optional();
 
 const BlockStreamingCoalesceSchema = z
   .object({
@@ -153,6 +154,7 @@ export const FeishuAccountConfigSchema = z
     dms: z.record(z.string(), DmConfigSchema).optional(),
     textChunkLimit: z.number().int().positive().optional(),
     chunkMode: z.enum(["length", "newline"]).optional(),
+    streaming: StreamingSchema,
     blockStreamingCoalesce: BlockStreamingCoalesceSchema,
     mediaMaxMb: z.number().positive().optional(),
     heartbeat: ChannelHeartbeatVisibilitySchema,
@@ -188,6 +190,7 @@ export const FeishuConfigSchema = z
     dms: z.record(z.string(), DmConfigSchema).optional(),
     textChunkLimit: z.number().int().positive().optional(),
     chunkMode: z.enum(["length", "newline"]).optional(),
+    streaming: StreamingSchema,
     blockStreamingCoalesce: BlockStreamingCoalesceSchema,
     mediaMaxMb: z.number().positive().optional(),
     heartbeat: ChannelHeartbeatVisibilitySchema,

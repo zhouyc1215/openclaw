@@ -449,18 +449,27 @@ openclaw pairing list feishu
 
 ### Streaming
 
-Feishu supports streaming replies via interactive cards. When enabled, the bot updates a card as it generates text.
+Feishu supports pseudo-streaming replies by sending the first block and then updating the same
+message as more text arrives. This is block-level streaming, not token-level streaming.
 
 ```json5
 {
   channels: {
     feishu: {
-      streaming: true, // enable streaming card output (default true)
-      blockStreaming: true, // enable block-level streaming (default true)
+      streaming: true, // enable single-message pseudo-streaming (default false)
+    },
+  },
+  agents: {
+    defaults: {
+      blockStreamingDefault: "on",
+      blockStreamingBreak: "text_end",
     },
   },
 }
 ```
+
+With `renderMode: "auto"`, streaming prefers card updates so Markdown-heavy replies can keep
+rendering correctly during updates.
 
 Set `streaming: false` to wait for the full reply before sending.
 
@@ -527,23 +536,23 @@ Full configuration: [Gateway configuration](/gateway/configuration)
 
 Key options:
 
-| Setting                                           | Description                     | Default   |
-| ------------------------------------------------- | ------------------------------- | --------- |
-| `channels.feishu.enabled`                         | Enable/disable channel          | `true`    |
-| `channels.feishu.domain`                          | API domain (`feishu` or `lark`) | `feishu`  |
-| `channels.feishu.accounts.<id>.appId`             | App ID                          | -         |
-| `channels.feishu.accounts.<id>.appSecret`         | App Secret                      | -         |
-| `channels.feishu.accounts.<id>.domain`            | Per-account API domain override | `feishu`  |
-| `channels.feishu.dmPolicy`                        | DM policy                       | `pairing` |
-| `channels.feishu.allowFrom`                       | DM allowlist (open_id list)     | -         |
-| `channels.feishu.groupPolicy`                     | Group policy                    | `open`    |
-| `channels.feishu.groupAllowFrom`                  | Group allowlist                 | -         |
-| `channels.feishu.groups.<chat_id>.requireMention` | Require @mention                | `true`    |
-| `channels.feishu.groups.<chat_id>.enabled`        | Enable group                    | `true`    |
-| `channels.feishu.textChunkLimit`                  | Message chunk size              | `2000`    |
-| `channels.feishu.mediaMaxMb`                      | Media size limit                | `30`      |
-| `channels.feishu.streaming`                       | Enable streaming card output    | `true`    |
-| `channels.feishu.blockStreaming`                  | Enable block streaming          | `true`    |
+| Setting                                           | Description                            | Default   |
+| ------------------------------------------------- | -------------------------------------- | --------- |
+| `channels.feishu.enabled`                         | Enable/disable channel                 | `true`    |
+| `channels.feishu.domain`                          | API domain (`feishu` or `lark`)        | `feishu`  |
+| `channels.feishu.accounts.<id>.appId`             | App ID                                 | -         |
+| `channels.feishu.accounts.<id>.appSecret`         | App Secret                             | -         |
+| `channels.feishu.accounts.<id>.domain`            | Per-account API domain override        | `feishu`  |
+| `channels.feishu.dmPolicy`                        | DM policy                              | `pairing` |
+| `channels.feishu.allowFrom`                       | DM allowlist (open_id list)            | -         |
+| `channels.feishu.groupPolicy`                     | Group policy                           | `open`    |
+| `channels.feishu.groupAllowFrom`                  | Group allowlist                        | -         |
+| `channels.feishu.groups.<chat_id>.requireMention` | Require @mention                       | `true`    |
+| `channels.feishu.groups.<chat_id>.enabled`        | Enable group                           | `true`    |
+| `channels.feishu.textChunkLimit`                  | Message chunk size                     | `2000`    |
+| `channels.feishu.mediaMaxMb`                      | Media size limit                       | `30`      |
+| `channels.feishu.streaming`                       | Enable single-message pseudo-streaming | `false`   |
+| `agents.defaults.blockStreamingDefault`           | Enable block-level streaming source    | `off`     |
 
 ---
 

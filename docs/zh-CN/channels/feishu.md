@@ -459,18 +459,25 @@ openclaw pairing list feishu
 
 ### 流式输出
 
-飞书支持通过交互式卡片实现流式输出，机器人会实时更新卡片内容显示生成进度。默认配置：
+飞书支持通过“首条发送 + 后续 update/patch 更新同一条消息”实现伪流式输出。这里仍是块级流式，不是 token 级流式。默认不开启：
 
 ```json5
 {
   channels: {
     feishu: {
-      streaming: true, // 启用流式卡片输出（默认 true）
-      blockStreaming: true, // 启用块级流式（默认 true）
+      streaming: true, // 启用单消息伪流式（默认 false）
+    },
+  },
+  agents: {
+    defaults: {
+      blockStreamingDefault: "on",
+      blockStreamingBreak: "text_end",
     },
   },
 }
 ```
+
+当 `renderMode: "auto"` 时，流式输出会优先走卡片更新链路，避免后续出现 Markdown 结构时需要切换消息类型。
 
 如需禁用流式输出（等待完整回复后一次性发送），可设置 `streaming: false`。
 
@@ -505,7 +512,7 @@ openclaw pairing list feishu
 | `"first"` | 仅在第一条回复时引用原消息         |
 | `"all"`   | 所有回复都引用原消息（群聊默认值） |
 
-> 注意：消息引用功能与流式卡片输出（`streaming: true`）不能同时使用。当启用流式输出时，回复会以卡片形式呈现，不会显示引用。
+> 注意：消息引用功能与 `renderMode: "auto"` 下的流式卡片更新不完全兼容。若你强依赖引用展示，建议关闭 `streaming`，或显式使用 `renderMode: "raw"`。
 
 ### 多 Agent 路由
 
@@ -593,8 +600,8 @@ openclaw pairing list feishu
 | `channels.feishu.groups.<chat_id>.enabled`        | 是否启用该群组                 | `true`    |
 | `channels.feishu.textChunkLimit`                  | 消息分块大小                   | `2000`    |
 | `channels.feishu.mediaMaxMb`                      | 媒体大小限制                   | `30`      |
-| `channels.feishu.streaming`                       | 启用流式卡片输出               | `true`    |
-| `channels.feishu.blockStreaming`                  | 启用块级流式                   | `true`    |
+| `channels.feishu.streaming`                       | 启用单消息伪流式               | `false`   |
+| `agents.defaults.blockStreamingDefault`           | 启用块级流式源输出             | `off`     |
 
 ---
 

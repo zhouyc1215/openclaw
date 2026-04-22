@@ -97,6 +97,7 @@ export const feishuPlugin: ChannelPlugin<ResolvedFeishuAccount> = {
         dmHistoryLimit: { type: "integer", minimum: 0 },
         textChunkLimit: { type: "integer", minimum: 1 },
         chunkMode: { type: "string", enum: ["length", "newline"] },
+        streaming: { type: "boolean" },
         mediaMaxMb: { type: "number", minimum: 0 },
         renderMode: { type: "string", enum: ["auto", "raw", "card"] },
         accounts: {
@@ -112,6 +113,7 @@ export const feishuPlugin: ChannelPlugin<ResolvedFeishuAccount> = {
               verificationToken: { type: "string" },
               domain: { type: "string", enum: ["feishu", "lark"] },
               connectionMode: { type: "string", enum: ["websocket", "webhook"] },
+              streaming: { type: "boolean" },
             },
           },
         },
